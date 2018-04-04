@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\luac.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lapi.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lcode.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lctype.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\ldebug.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\ldo.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\ldump.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lfunc.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lgc.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\llex.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lmem.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lobject.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lopcodes.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lparser.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lstate.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lstring.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\ltable.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\ltm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lundump.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lvm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lzio.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lauxlib.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lbaselib.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lbitlib.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lcorolib.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\ldblib.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\liolib.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lmathlib.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\loslib.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\ltablib.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\lstrlib.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\loadlib.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLib.dir\$(Configuration)\linit.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{78145C7D-603F-39A6-81E7-4F32B9E5C508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Files">
+      <UniqueIdentifier>{AB1C56A3-4985-334B-821C-EB330C5201B3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

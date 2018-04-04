@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\dummy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\lbitlib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlbind.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlcallb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlconsole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxllua.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlstate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlua_bind.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\atomic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\sharedptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlbind.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlcallb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlconsole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxldefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxllua.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlobject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlstate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlua.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlua_bind.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{78145C7D-603F-39A6-81E7-4F32B9E5C508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B62EC01F-E595-30AF-A9A4-78E95A53495E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

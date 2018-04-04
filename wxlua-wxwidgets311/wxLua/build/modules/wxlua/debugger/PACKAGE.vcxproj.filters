@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\055dca160d4207b7beb931cf1979dbad\PACKAGE_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{75AD2B75-4CF0-3CC3-AEDA-18CC80F20B47}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

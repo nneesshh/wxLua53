@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9BE733E8-E38F-3217-9EC6-0B4187D5F61A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>LuaLibShared</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\bin-shared\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">LuaLibShared.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">lua52</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\bin-shared\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">LuaLibShared.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">lua52</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\bin-shared\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">LuaLibShared.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">lua52</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\bin-shared\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">LuaLibShared.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">lua52</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/zbs/wxlua-wxwidgets311/wxLua/build/bin-shared/Debug/lua52.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/zbs/wxlua-wxwidgets311/wxLua/build/bin-shared/Debug/lua52.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/zbs/wxlua-wxwidgets311/wxLua/build/bin-shared/Release/lua52.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/zbs/wxlua-wxwidgets311/wxLua/build/bin-shared/Release/lua52.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/zbs/wxlua-wxwidgets311/wxLua/build/bin-shared/MinSizeRel/lua52.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/zbs/wxlua-wxwidgets311/wxLua/build/bin-shared/MinSizeRel/lua52.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/zbs/wxlua-wxwidgets311/wxLua/build/bin-shared/RelWithDebInfo/lua52.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/zbs/wxlua-wxwidgets311/wxLua/build/bin-shared/RelWithDebInfo/lua52.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/zbs/wxlua-wxwidgets311/wxLua/modules/lua-5.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/zbs/wxlua-wxwidgets311/wxLua -BD:/zbs/wxlua-wxwidgets311/wxLua/build --check-stamp-file D:/zbs/wxlua-wxwidgets311/wxLua/build/modules/lua-5.2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/zbs/wxlua-wxwidgets311/wxLua/modules/lua-5.2/CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/zbs/wxlua-wxwidgets311/wxLua/modules/lua-5.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/zbs/wxlua-wxwidgets311/wxLua -BD:/zbs/wxlua-wxwidgets311/wxLua/build --check-stamp-file D:/zbs/wxlua-wxwidgets311/wxLua/build/modules/lua-5.2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/zbs/wxlua-wxwidgets311/wxLua/modules/lua-5.2/CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/zbs/wxlua-wxwidgets311/wxLua/modules/lua-5.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/zbs/wxlua-wxwidgets311/wxLua -BD:/zbs/wxlua-wxwidgets311/wxLua/build --check-stamp-file D:/zbs/wxlua-wxwidgets311/wxLua/build/modules/lua-5.2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/zbs/wxlua-wxwidgets311/wxLua/modules/lua-5.2/CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/zbs/wxlua-wxwidgets311/wxLua/modules/lua-5.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/zbs/wxlua-wxwidgets311/wxLua -BD:/zbs/wxlua-wxwidgets311/wxLua/build --check-stamp-file D:/zbs/wxlua-wxwidgets311/wxLua/build/modules/lua-5.2/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/zbs/wxlua-wxwidgets311/wxLua/modules/lua-5.2/CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lapi.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lauxlib.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lcode.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lctype.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\ldebug.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\ldo.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lfunc.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lgc.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\llex.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\llimits.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lmem.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lobject.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lopcodes.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lparser.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lstate.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lstring.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\ltable.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\ltm.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lua.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\luaconf.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lualib.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lundump.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lvm.h" />
+    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lzio.h" />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lapi.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lcode.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lctype.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\ldebug.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\ldo.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\ldump.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lfunc.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lgc.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\llex.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lmem.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lobject.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lopcodes.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lparser.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lstate.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lstring.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\ltable.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\ltm.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lundump.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lvm.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lzio.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lauxlib.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lbaselib.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lbitlib.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lcorolib.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\ldblib.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\liolib.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lmathlib.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\loslib.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\ltablib.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\lstrlib.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\loadlib.c"  />
+    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src\linit.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\ZERO_CHECK.vcxproj">
+      <Project>{0E161B2A-EDE2-3F2B-9810-15BD76572D39}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

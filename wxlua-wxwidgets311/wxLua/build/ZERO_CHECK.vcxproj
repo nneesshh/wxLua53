@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0E161B2A-EDE2-3F2B-9810-15BD76572D39}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ZERO_CHECK</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\7a67915f8cf799ea2bb106e5103955fd\generate.stamp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/zbs/wxlua-wxwidgets311/wxLua -BD:/zbs/wxlua-wxwidgets311/wxLua/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/zbs/wxlua-wxwidgets311/wxLua/build/wxLua.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/zbs/wxlua-wxwidgets311/wxLua/build/CMakeFiles/7a67915f8cf799ea2bb106e5103955fd/generate.stamp.rule;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\UsewxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.9\Templates\CPackConfig.cmake.in;D:\zbs\wxlua-wxwidgets311\wxLua\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxlua\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluaedit\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluafreeze\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\bindings\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeCCompiler.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeCXXCompiler.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeRCCompiler.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeSystem.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFunctions.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeProject.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakewxAppLib.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\FindPackageHandleStandardArgs.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\FindwxWidgets.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\modules\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luaproxydll\lua5.2.dll;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luaproxydll\lua52.dll;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debug\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxbind\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxlua\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxlua\debug\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxlua\debugger\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\luamodule\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxlua\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxluacan\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxluaedit\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxluafreeze\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\bindings\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/zbs/wxlua-wxwidgets311/wxLua -BD:/zbs/wxlua-wxwidgets311/wxLua/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/zbs/wxlua-wxwidgets311/wxLua/build/wxLua.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/zbs/wxlua-wxwidgets311/wxLua/build/CMakeFiles/7a67915f8cf799ea2bb106e5103955fd/generate.stamp.rule;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\UsewxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.9\Templates\CPackConfig.cmake.in;D:\zbs\wxlua-wxwidgets311\wxLua\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxlua\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluaedit\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluafreeze\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\bindings\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeCCompiler.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeCXXCompiler.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeRCCompiler.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeSystem.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFunctions.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeProject.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakewxAppLib.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\FindPackageHandleStandardArgs.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\FindwxWidgets.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\modules\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luaproxydll\lua5.2.dll;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luaproxydll\lua52.dll;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debug\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxbind\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxlua\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxlua\debug\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxlua\debugger\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\luamodule\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxlua\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxluacan\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxluaedit\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxluafreeze\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\bindings\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/zbs/wxlua-wxwidgets311/wxLua -BD:/zbs/wxlua-wxwidgets311/wxLua/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/zbs/wxlua-wxwidgets311/wxLua/build/wxLua.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/zbs/wxlua-wxwidgets311/wxLua/build/CMakeFiles/7a67915f8cf799ea2bb106e5103955fd/generate.stamp.rule;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\UsewxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.9\Templates\CPackConfig.cmake.in;D:\zbs\wxlua-wxwidgets311\wxLua\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxlua\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluaedit\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluafreeze\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\bindings\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeCCompiler.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeCXXCompiler.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeRCCompiler.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeSystem.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFunctions.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeProject.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakewxAppLib.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\FindPackageHandleStandardArgs.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\FindwxWidgets.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\modules\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luaproxydll\lua5.2.dll;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luaproxydll\lua52.dll;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debug\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxbind\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxlua\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxlua\debug\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxlua\debugger\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\luamodule\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxlua\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxluacan\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxluaedit\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxluafreeze\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\bindings\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/zbs/wxlua-wxwidgets311/wxLua -BD:/zbs/wxlua-wxwidgets311/wxLua/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/zbs/wxlua-wxwidgets311/wxLua/build/wxLua.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/zbs/wxlua-wxwidgets311/wxLua/build/CMakeFiles/7a67915f8cf799ea2bb106e5103955fd/generate.stamp.rule;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\UsewxWidgets.cmake;C:\Program Files\CMake\share\cmake-3.9\Templates\CPackConfig.cmake.in;D:\zbs\wxlua-wxwidgets311\wxLua\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxlua\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluaedit\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluafreeze\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\bindings\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeCCompiler.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeCXXCompiler.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeRCCompiler.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\3.9.0\CMakeSystem.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFunctions.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeProject.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakewxAppLib.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\FindPackageHandleStandardArgs.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\build\FindwxWidgets.cmake;D:\zbs\wxlua-wxwidgets311\wxLua\modules\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luaproxydll\lua5.2.dll;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luaproxydll\lua52.dll;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debug\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxbind\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxlua\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxlua\debug\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\wxlua\debugger\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\luamodule\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxlua\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxluacan\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxluaedit\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\apps\wxluafreeze\CMakeFiles\generate.stamp;D:\zbs\wxlua-wxwidgets311\wxLua\build\bindings\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
