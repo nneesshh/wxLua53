@@ -69,26 +69,26 @@ static int LUACALL wxLua_wxXmlResource_ClearHandlers(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_CompareVersion[] = { &wxluatype_wxXmlResource, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_CompareVersion[] = { &wxluatype_wxXmlResource, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxXmlResource_CompareVersion(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_CompareVersion[1] = {{ wxLua_wxXmlResource_CompareVersion, WXLUAMETHOD_METHOD, 5, 5, s_wxluatypeArray_wxLua_wxXmlResource_CompareVersion }};
 //     int CompareVersion(int major, int minor, int release, int revision) const;
 static int LUACALL wxLua_wxXmlResource_CompareVersion(lua_State *L)
 {
     // int revision
-    int revision = (int)wxlua_getnumbertype(L, 5);
+    int revision = (int)wxlua_getintegertype(L, 5);
     // int release
-    int release = (int)wxlua_getnumbertype(L, 4);
+    int release = (int)wxlua_getintegertype(L, 4);
     // int minor
-    int minor = (int)wxlua_getnumbertype(L, 3);
+    int minor = (int)wxlua_getintegertype(L, 3);
     // int major
-    int major = (int)wxlua_getnumbertype(L, 2);
+    int major = (int)wxlua_getintegertype(L, 2);
     // get this
     wxXmlResource * self = (wxXmlResource *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlResource);
     // call CompareVersion
     int returns = (self->CompareVersion(major, minor, release, revision));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -116,8 +116,8 @@ static int LUACALL wxLua_wxXmlResource_GetFlags(lua_State *L)
     wxXmlResource * self = (wxXmlResource *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlResource);
     // call GetFlags
     int returns = (self->GetFlags());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -132,13 +132,13 @@ static int LUACALL wxLua_wxXmlResource_GetVersion(lua_State *L)
     wxXmlResource * self = (wxXmlResource *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlResource);
     // call GetVersion
     long  returns = (self->GetVersion());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_GetXRCID[] = { &wxluatype_TSTRING, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_GetXRCID[] = { &wxluatype_TSTRING, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxXmlResource_GetXRCID(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_GetXRCID[1] = {{ wxLua_wxXmlResource_GetXRCID, WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, 1, 2, s_wxluatypeArray_wxLua_wxXmlResource_GetXRCID }};
 //     static int GetXRCID(const wxString &stringID, int value_if_not_found = wxID_NONE);
@@ -147,13 +147,13 @@ static int LUACALL wxLua_wxXmlResource_GetXRCID(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int value_if_not_found = wxID_NONE
-    int value_if_not_found = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : wxID_NONE);
+    int value_if_not_found = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : wxID_NONE);
     // const wxString stringID
     const wxString stringID = wxlua_getwxStringtype(L, 1);
     // call GetXRCID
     int returns = (wxXmlResource::GetXRCID(stringID, value_if_not_found));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -468,14 +468,14 @@ static int LUACALL wxLua_wxXmlResource_SetDomain(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_SetFlags[] = { &wxluatype_wxXmlResource, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_SetFlags[] = { &wxluatype_wxXmlResource, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxXmlResource_SetFlags(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_SetFlags[1] = {{ wxLua_wxXmlResource_SetFlags, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxXmlResource_SetFlags }};
 //     void SetFlags(int flags);
 static int LUACALL wxLua_wxXmlResource_SetFlags(lua_State *L)
 {
     // int flags
-    int flags = (int)wxlua_getnumbertype(L, 2);
+    int flags = (int)wxlua_getintegertype(L, 2);
     // get this
     wxXmlResource * self = (wxXmlResource *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlResource);
     // call SetFlags
@@ -505,7 +505,7 @@ static int LUACALL wxLua_wxXmlResource_Unload(lua_State *L)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_delete[] = { &wxluatype_wxXmlResource, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxXmlResource_delete }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_constructor1[] = { &wxluatype_TSTRING, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_constructor1[] = { &wxluatype_TSTRING, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxXmlResource_constructor1(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_constructor1[1] = {{ wxLua_wxXmlResource_constructor1, WXLUAMETHOD_CONSTRUCTOR, 1, 3, s_wxluatypeArray_wxLua_wxXmlResource_constructor1 }};
 //     wxXmlResource(const wxString& filemask, int flags = wxXRC_USE_LOCALE, const wxString& domain = "");
@@ -516,7 +516,7 @@ static int LUACALL wxLua_wxXmlResource_constructor1(lua_State *L)
     // const wxString domain = ""
     const wxString domain = (argCount >= 3 ? wxlua_getwxStringtype(L, 3) : wxString(wxEmptyString));
     // int flags = wxXRC_USE_LOCALE
-    int flags = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : wxXRC_USE_LOCALE);
+    int flags = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : wxXRC_USE_LOCALE);
     // const wxString filemask
     const wxString filemask = wxlua_getwxStringtype(L, 1);
     // call constructor
@@ -529,7 +529,7 @@ static int LUACALL wxLua_wxXmlResource_constructor1(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_constructor[] = { &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxXmlResource_constructor(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_constructor[1] = {{ wxLua_wxXmlResource_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 2, s_wxluatypeArray_wxLua_wxXmlResource_constructor }};
 //     wxXmlResource(int flags = wxXRC_USE_LOCALE, const wxString& domain = "");
@@ -540,7 +540,7 @@ static int LUACALL wxLua_wxXmlResource_constructor(lua_State *L)
     // const wxString domain = ""
     const wxString domain = (argCount >= 2 ? wxlua_getwxStringtype(L, 2) : wxString(wxEmptyString));
     // int flags = wxXRC_USE_LOCALE
-    int flags = (argCount >= 1 ? (int)wxlua_getnumbertype(L, 1) : wxXRC_USE_LOCALE);
+    int flags = (argCount >= 1 ? (int)wxlua_getintegertype(L, 1) : wxXRC_USE_LOCALE);
     // call constructor
     wxXmlResource* returns = new wxXmlResource(flags, domain);
     // add to tracked memory list

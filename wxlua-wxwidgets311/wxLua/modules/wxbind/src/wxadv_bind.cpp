@@ -23,7 +23,7 @@
 #endif // __GNUC__
 
 
-#if wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
+#if wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
 // ---------------------------------------------------------------------------
 // Bind class wxAboutDialogInfo
 // ---------------------------------------------------------------------------
@@ -96,7 +96,7 @@ static int LUACALL wxLua_wxAboutDialogInfo_AddTranslator(lua_State *L)
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_GetArtists[] = { &wxluatype_wxAboutDialogInfo, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_GetArtists(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAboutDialogInfo_GetArtists[1] = {{ wxLua_wxAboutDialogInfo_GetArtists, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxAboutDialogInfo_GetArtists }};
@@ -116,7 +116,7 @@ static int LUACALL wxLua_wxAboutDialogInfo_GetArtists(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_GetCopyright[] = { &wxluatype_wxAboutDialogInfo, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_GetCopyright(lua_State *L);
@@ -167,7 +167,7 @@ static int LUACALL wxLua_wxAboutDialogInfo_GetDescriptionAndCredits(lua_State *L
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_GetDevelopers[] = { &wxluatype_wxAboutDialogInfo, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_GetDevelopers(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAboutDialogInfo_GetDevelopers[1] = {{ wxLua_wxAboutDialogInfo_GetDevelopers, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxAboutDialogInfo_GetDevelopers }};
@@ -203,9 +203,9 @@ static int LUACALL wxLua_wxAboutDialogInfo_GetDocWriters(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxIcon)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxIcon)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_GetIcon[] = { &wxluatype_wxAboutDialogInfo, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_GetIcon(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAboutDialogInfo_GetIcon[1] = {{ wxLua_wxAboutDialogInfo_GetIcon, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxAboutDialogInfo_GetIcon }};
@@ -225,7 +225,7 @@ static int LUACALL wxLua_wxAboutDialogInfo_GetIcon(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxIcon)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxIcon)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_GetLicence[] = { &wxluatype_wxAboutDialogInfo, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_GetLicence(lua_State *L);
@@ -260,7 +260,7 @@ static int LUACALL wxLua_wxAboutDialogInfo_GetName(lua_State *L)
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_GetTranslators[] = { &wxluatype_wxAboutDialogInfo, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_GetTranslators(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAboutDialogInfo_GetTranslators[1] = {{ wxLua_wxAboutDialogInfo_GetTranslators, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxAboutDialogInfo_GetTranslators }};
@@ -280,7 +280,7 @@ static int LUACALL wxLua_wxAboutDialogInfo_GetTranslators(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_GetVersion[] = { &wxluatype_wxAboutDialogInfo, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_GetVersion(lua_State *L);
@@ -507,7 +507,7 @@ static int LUACALL wxLua_wxAboutDialogInfo_IsSimple(lua_State *L)
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_SetArtists[] = { &wxluatype_wxAboutDialogInfo, &wxluatype_wxArrayString, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_SetArtists(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAboutDialogInfo_SetArtists[1] = {{ wxLua_wxAboutDialogInfo_SetArtists, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxAboutDialogInfo_SetArtists }};
@@ -524,7 +524,7 @@ static int LUACALL wxLua_wxAboutDialogInfo_SetArtists(lua_State *L)
     return 0;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_SetCopyright[] = { &wxluatype_wxAboutDialogInfo, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_SetCopyright(lua_State *L);
@@ -559,7 +559,7 @@ static int LUACALL wxLua_wxAboutDialogInfo_SetDescription(lua_State *L)
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_SetDevelopers[] = { &wxluatype_wxAboutDialogInfo, &wxluatype_wxArrayString, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_SetDevelopers(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAboutDialogInfo_SetDevelopers[1] = {{ wxLua_wxAboutDialogInfo_SetDevelopers, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxAboutDialogInfo_SetDevelopers }};
@@ -592,9 +592,9 @@ static int LUACALL wxLua_wxAboutDialogInfo_SetDocWriters(lua_State *L)
     return 0;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxIcon)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxIcon)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_SetIcon[] = { &wxluatype_wxAboutDialogInfo, &wxluatype_wxIcon, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_SetIcon(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAboutDialogInfo_SetIcon[1] = {{ wxLua_wxAboutDialogInfo_SetIcon, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxAboutDialogInfo_SetIcon }};
@@ -611,7 +611,7 @@ static int LUACALL wxLua_wxAboutDialogInfo_SetIcon(lua_State *L)
     return 0;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxIcon)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxIcon)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_SetLicence[] = { &wxluatype_wxAboutDialogInfo, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_SetLicence(lua_State *L);
@@ -662,7 +662,7 @@ static int LUACALL wxLua_wxAboutDialogInfo_SetName(lua_State *L)
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_SetTranslators[] = { &wxluatype_wxAboutDialogInfo, &wxluatype_wxArrayString, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_SetTranslators(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAboutDialogInfo_SetTranslators[1] = {{ wxLua_wxAboutDialogInfo_SetTranslators, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxAboutDialogInfo_SetTranslators }};
@@ -679,7 +679,7 @@ static int LUACALL wxLua_wxAboutDialogInfo_SetTranslators(lua_State *L)
     return 0;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAboutDialogInfo_SetVersion[] = { &wxluatype_wxAboutDialogInfo, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxAboutDialogInfo_SetVersion(lua_State *L);
@@ -751,29 +751,29 @@ wxLuaBindMethod wxAboutDialogInfo_methods[] = {
     { "AddDocWriter", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_AddDocWriter, 1, NULL },
     { "AddTranslator", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_AddTranslator, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
     { "GetArtists", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_GetArtists, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 
     { "GetCopyright", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_GetCopyright, 1, NULL },
     { "GetDescription", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_GetDescription, 1, NULL },
     { "GetDescriptionAndCredits", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_GetDescriptionAndCredits, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
     { "GetDevelopers", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_GetDevelopers, 1, NULL },
     { "GetDocWriters", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_GetDocWriters, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxIcon)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxIcon)
     { "GetIcon", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_GetIcon, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxIcon)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxIcon)
 
     { "GetLicence", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_GetLicence, 1, NULL },
     { "GetName", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_GetName, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
     { "GetTranslators", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_GetTranslators, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 
     { "GetVersion", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_GetVersion, 1, NULL },
     { "GetWebSiteDescription", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_GetWebSiteDescription, 1, NULL },
@@ -790,29 +790,29 @@ wxLuaBindMethod wxAboutDialogInfo_methods[] = {
     { "HasWebSite", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_HasWebSite, 1, NULL },
     { "IsSimple", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_IsSimple, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
     { "SetArtists", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_SetArtists, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 
     { "SetCopyright", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_SetCopyright, 1, NULL },
     { "SetDescription", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_SetDescription, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
     { "SetDevelopers", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_SetDevelopers, 1, NULL },
     { "SetDocWriters", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_SetDocWriters, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxIcon)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxIcon)
     { "SetIcon", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_SetIcon, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxIcon)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxIcon)
 
     { "SetLicence", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_SetLicence, 1, NULL },
     { "SetLicense", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_SetLicense, 1, NULL },
     { "SetName", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_SetName, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#if (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
     { "SetTranslators", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_SetTranslators, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog) && (wxLUA_USE_wxArrayString)
+#endif // (wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG) && (wxLUA_USE_wxArrayString)
 
     { "SetVersion", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_SetVersion, 1, NULL },
     { "SetWebSite", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAboutDialogInfo_SetWebSite, 1, NULL },
@@ -824,10 +824,10 @@ wxLuaBindMethod wxAboutDialogInfo_methods[] = {
 
 int wxAboutDialogInfo_methodCount = sizeof(wxAboutDialogInfo_methods)/sizeof(wxLuaBindMethod) - 1;
 
-#endif  // wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
+#endif  // wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
 
 
-#if wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+#if wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
 // ---------------------------------------------------------------------------
 // Bind class wxAnimation
 // ---------------------------------------------------------------------------
@@ -847,14 +847,14 @@ static int LUACALL wxLua_wxAnimation_GetDelay(lua_State *L)
     wxAnimation * self = (wxAnimation *)wxluaT_getuserdatatype(L, 1, wxluatype_wxAnimation);
     // call GetDelay
     int returns = (self->GetDelay(frame));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxImage && wxUSE_IMAGE)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxImage && wxUSE_IMAGE)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimation_GetFrame[] = { &wxluatype_wxAnimation, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxAnimation_GetFrame(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimation_GetFrame[1] = {{ wxLua_wxAnimation_GetFrame, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxAnimation_GetFrame }};
@@ -876,7 +876,7 @@ static int LUACALL wxLua_wxAnimation_GetFrame(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxImage && wxUSE_IMAGE)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxImage && wxUSE_IMAGE)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimation_GetFrameCount[] = { &wxluatype_wxAnimation, NULL };
 static int LUACALL wxLua_wxAnimation_GetFrameCount(lua_State *L);
@@ -888,14 +888,14 @@ static int LUACALL wxLua_wxAnimation_GetFrameCount(lua_State *L)
     wxAnimation * self = (wxAnimation *)wxluaT_getuserdatatype(L, 1, wxluatype_wxAnimation);
     // call GetFrameCount
     unsigned int returns = (self->GetFrameCount());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimation_GetSize[] = { &wxluatype_wxAnimation, NULL };
 static int LUACALL wxLua_wxAnimation_GetSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimation_GetSize[1] = {{ wxLua_wxAnimation_GetSize, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxAnimation_GetSize }};
@@ -915,7 +915,7 @@ static int LUACALL wxLua_wxAnimation_GetSize(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimation_IsOk[] = { &wxluatype_wxAnimation, NULL };
 static int LUACALL wxLua_wxAnimation_IsOk(lua_State *L);
@@ -934,7 +934,7 @@ static int LUACALL wxLua_wxAnimation_IsOk(lua_State *L)
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxUSE_STREAMS)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxUSE_STREAMS)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimation_Load[] = { &wxluatype_wxAnimation, &wxluatype_wxInputStream, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxAnimation_Load(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimation_Load[1] = {{ wxLua_wxAnimation_Load, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxAnimation_Load }};
@@ -957,7 +957,7 @@ static int LUACALL wxLua_wxAnimation_Load(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxUSE_STREAMS)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxUSE_STREAMS)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimation_LoadFile[] = { &wxluatype_wxAnimation, &wxluatype_TSTRING, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxAnimation_LoadFile(lua_State *L);
@@ -1020,7 +1020,7 @@ static int LUACALL wxLua_wxAnimation_constructor(lua_State *L)
 
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimation_constructor_overload[] =
 {
@@ -1029,7 +1029,7 @@ static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimation_constructor_overload[] =
 };
 static int s_wxluafunc_wxLua_wxAnimation_constructor_overload_count = sizeof(s_wxluafunc_wxLua_wxAnimation_constructor_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
 
 void wxLua_wxAnimation_delete_function(void** p)
 {
@@ -1041,38 +1041,38 @@ void wxLua_wxAnimation_delete_function(void** p)
 wxLuaBindMethod wxAnimation_methods[] = {
     { "GetDelay", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimation_GetDelay, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxImage && wxUSE_IMAGE)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxImage && wxUSE_IMAGE)
     { "GetFrame", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimation_GetFrame, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxImage && wxUSE_IMAGE)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxImage && wxUSE_IMAGE)
 
     { "GetFrameCount", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimation_GetFrameCount, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
     { "GetSize", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimation_GetSize, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
 
     { "IsOk", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimation_IsOk, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxUSE_STREAMS)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxUSE_STREAMS)
     { "Load", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimation_Load, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxUSE_STREAMS)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxUSE_STREAMS)
 
     { "LoadFile", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimation_LoadFile, 1, NULL },
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxAnimation_delete, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
     { "wxAnimation", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxAnimation_constructor_overload, s_wxluafunc_wxLua_wxAnimation_constructor_overload_count, 0 },
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
 
     { 0, 0, 0, 0 },
 };
 
 int wxAnimation_methodCount = sizeof(wxAnimation_methods)/sizeof(wxLuaBindMethod) - 1;
 
-#endif  // wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+#endif  // wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
 
 
-#if wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+#if wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
 // ---------------------------------------------------------------------------
 // Bind class wxAnimationCtrl
 // ---------------------------------------------------------------------------
@@ -1080,8 +1080,8 @@ int wxAnimation_methodCount = sizeof(wxAnimation_methods)/sizeof(wxLuaBindMethod
 // Lua MetaTable Tag for Class 'wxAnimationCtrl'
 int wxluatype_wxAnimationCtrl = WXLUA_TUNKNOWN;
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimationCtrl_Create[] = { &wxluatype_wxAnimationCtrl, &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxAnimation, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
+static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimationCtrl_Create[] = { &wxluatype_wxAnimationCtrl, &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxAnimation, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxAnimationCtrl_Create(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimationCtrl_Create[1] = {{ wxLua_wxAnimationCtrl_Create, WXLUAMETHOD_METHOD, 4, 8, s_wxluatypeArray_wxLua_wxAnimationCtrl_Create }};
 //     bool Create(wxWindow *parent, wxWindowID id, const wxAnimation& anim, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxAC_DEFAULT_STYLE, const wxString& name = "wxAnimationCtrl" );
@@ -1092,7 +1092,7 @@ static int LUACALL wxLua_wxAnimationCtrl_Create(lua_State *L)
     // const wxString name = "wxAnimationCtrl"
     const wxString name = (argCount >= 8 ? wxlua_getwxStringtype(L, 8) : wxString(wxT("wxAnimationCtrl")));
     // long style = wxAC_DEFAULT_STYLE
-    long style = (argCount >= 7 ? (long)wxlua_getnumbertype(L, 7) : wxAC_DEFAULT_STYLE);
+    long style = (argCount >= 7 ? (long)wxlua_getintegertype(L, 7) : wxAC_DEFAULT_STYLE);
     // const wxSize size = wxDefaultSize
     const wxSize * size = (argCount >= 6 ? (const wxSize *)wxluaT_getuserdatatype(L, 6, wxluatype_wxSize) : &wxDefaultSize);
     // const wxPoint pos = wxDefaultPosition
@@ -1113,7 +1113,7 @@ static int LUACALL wxLua_wxAnimationCtrl_Create(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimationCtrl_GetAnimation[] = { &wxluatype_wxAnimationCtrl, NULL };
 static int LUACALL wxLua_wxAnimationCtrl_GetAnimation(lua_State *L);
@@ -1135,7 +1135,7 @@ static int LUACALL wxLua_wxAnimationCtrl_GetAnimation(lua_State *L)
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimationCtrl_GetInactiveBitmap[] = { &wxluatype_wxAnimationCtrl, NULL };
 static int LUACALL wxLua_wxAnimationCtrl_GetInactiveBitmap(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimationCtrl_GetInactiveBitmap[1] = {{ wxLua_wxAnimationCtrl_GetInactiveBitmap, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxAnimationCtrl_GetInactiveBitmap }};
@@ -1155,7 +1155,7 @@ static int LUACALL wxLua_wxAnimationCtrl_GetInactiveBitmap(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimationCtrl_IsPlaying[] = { &wxluatype_wxAnimationCtrl, NULL };
 static int LUACALL wxLua_wxAnimationCtrl_IsPlaying(lua_State *L);
@@ -1250,7 +1250,7 @@ static int LUACALL wxLua_wxAnimationCtrl_SetAnimation(lua_State *L)
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimationCtrl_SetInactiveBitmap[] = { &wxluatype_wxAnimationCtrl, &wxluatype_wxBitmap, NULL };
 static int LUACALL wxLua_wxAnimationCtrl_SetInactiveBitmap(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimationCtrl_SetInactiveBitmap[1] = {{ wxLua_wxAnimationCtrl_SetInactiveBitmap, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxAnimationCtrl_SetInactiveBitmap }};
@@ -1267,7 +1267,7 @@ static int LUACALL wxLua_wxAnimationCtrl_SetInactiveBitmap(lua_State *L)
     return 0;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimationCtrl_Stop[] = { &wxluatype_wxAnimationCtrl, NULL };
 static int LUACALL wxLua_wxAnimationCtrl_Stop(lua_State *L);
@@ -1284,8 +1284,8 @@ static int LUACALL wxLua_wxAnimationCtrl_Stop(lua_State *L)
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimationCtrl_constructor1[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxAnimation, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
+static wxLuaArgType s_wxluatypeArray_wxLua_wxAnimationCtrl_constructor1[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxAnimation, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxAnimationCtrl_constructor1(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimationCtrl_constructor1[1] = {{ wxLua_wxAnimationCtrl_constructor1, WXLUAMETHOD_CONSTRUCTOR, 3, 7, s_wxluatypeArray_wxLua_wxAnimationCtrl_constructor1 }};
 //     wxAnimationCtrl(wxWindow *parent, wxWindowID id, const wxAnimation& anim, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxAC_DEFAULT_STYLE, const wxString& name = "wxAnimationCtrl" );
@@ -1296,7 +1296,7 @@ static int LUACALL wxLua_wxAnimationCtrl_constructor1(lua_State *L)
     // const wxString name = "wxAnimationCtrl"
     const wxString name = (argCount >= 7 ? wxlua_getwxStringtype(L, 7) : wxString(wxT("wxAnimationCtrl")));
     // long style = wxAC_DEFAULT_STYLE
-    long style = (argCount >= 6 ? (long)wxlua_getnumbertype(L, 6) : wxAC_DEFAULT_STYLE);
+    long style = (argCount >= 6 ? (long)wxlua_getintegertype(L, 6) : wxAC_DEFAULT_STYLE);
     // const wxSize size = wxDefaultSize
     const wxSize * size = (argCount >= 5 ? (const wxSize *)wxluaT_getuserdatatype(L, 5, wxluatype_wxSize) : &wxDefaultSize);
     // const wxPoint pos = wxDefaultPosition
@@ -1317,7 +1317,7 @@ static int LUACALL wxLua_wxAnimationCtrl_constructor1(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
 
 static int LUACALL wxLua_wxAnimationCtrl_constructor(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimationCtrl_constructor[1] = {{ wxLua_wxAnimationCtrl_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 0, g_wxluaargtypeArray_None }};
@@ -1337,7 +1337,7 @@ static int LUACALL wxLua_wxAnimationCtrl_constructor(lua_State *L)
 
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimationCtrl_LoadFile_overload[] =
 {
@@ -1346,21 +1346,21 @@ static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimationCtrl_LoadFile_overload[] =
 };
 static int s_wxluafunc_wxLua_wxAnimationCtrl_LoadFile_overload_count = sizeof(s_wxluafunc_wxLua_wxAnimationCtrl_LoadFile_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
 
-#if ((wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect))||(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
+#if ((wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect))||(wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxAnimationCtrl_constructor_overload[] =
 {
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
     { wxLua_wxAnimationCtrl_constructor1, WXLUAMETHOD_CONSTRUCTOR, 3, 7, s_wxluatypeArray_wxLua_wxAnimationCtrl_constructor1 },
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
     { wxLua_wxAnimationCtrl_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 0, g_wxluaargtypeArray_None },
 };
 static int s_wxluafunc_wxLua_wxAnimationCtrl_constructor_overload_count = sizeof(s_wxluafunc_wxLua_wxAnimationCtrl_constructor_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect))||(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
+#endif // ((wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect))||(wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
 
 void wxLua_wxAnimationCtrl_delete_function(void** p)
 {
@@ -1370,41 +1370,41 @@ void wxLua_wxAnimationCtrl_delete_function(void** p)
 
 // Map Lua Class Methods to C Binding Functions
 wxLuaBindMethod wxAnimationCtrl_methods[] = {
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
     { "Create", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimationCtrl_Create, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect)
 
     { "GetAnimation", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimationCtrl_GetAnimation, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
     { "GetInactiveBitmap", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimationCtrl_GetInactiveBitmap, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
 
     { "IsPlaying", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimationCtrl_IsPlaying, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
     { "LoadFile", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimationCtrl_LoadFile_overload, s_wxluafunc_wxLua_wxAnimationCtrl_LoadFile_overload_count, 0 },
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
 
     { "Play", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimationCtrl_Play, 1, NULL },
     { "SetAnimation", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimationCtrl_SetAnimation, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
+#if (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
     { "SetInactiveBitmap", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimationCtrl_SetInactiveBitmap, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
+#endif // (wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxBitmap)
 
     { "Stop", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxAnimationCtrl_Stop, 1, NULL },
 
-#if ((wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect))||(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
+#if ((wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect))||(wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
     { "wxAnimationCtrl", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxAnimationCtrl_constructor_overload, s_wxluafunc_wxLua_wxAnimationCtrl_constructor_overload_count, 0 },
-#endif // ((wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect))||(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
+#endif // ((wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL) && (wxLUA_USE_wxPointSizeRect))||(wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL)
 
     { 0, 0, 0, 0 },
 };
 
 int wxAnimationCtrl_methodCount = sizeof(wxAnimationCtrl_methods)/sizeof(wxLuaBindMethod) - 1;
 
-#endif  // wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+#endif  // wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
 
 
 #if wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX
@@ -1432,20 +1432,20 @@ static int LUACALL wxLua_wxBitmapComboBox_Append2(lua_State *L)
     wxBitmapComboBox * self = (wxBitmapComboBox *)wxluaT_getuserdatatype(L, 1, wxluatype_wxBitmapComboBox);
     // call Append
     int returns = (self->Append(item, *bitmap, clientData));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_Append1[] = { &wxluatype_wxBitmapComboBox, &wxluatype_TSTRING, &wxluatype_wxBitmap, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_Append1[] = { &wxluatype_wxBitmapComboBox, &wxluatype_TSTRING, &wxluatype_wxBitmap, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxBitmapComboBox_Append1(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_Append1[1] = {{ wxLua_wxBitmapComboBox_Append1, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxBitmapComboBox_Append1 }};
 //     int Append(const wxString& item, const wxBitmap& bitmap, voidptr_long data ); // C++ is (void *clientData) You can put a number here
 static int LUACALL wxLua_wxBitmapComboBox_Append1(lua_State *L)
 {
     // voidptr_long data
-    long data = (long)wxlua_getnumbertype(L, 4);
+    long data = (long)wxlua_getintegertype(L, 4);
     // const wxBitmap bitmap
     const wxBitmap * bitmap = (const wxBitmap *)wxluaT_getuserdatatype(L, 3, wxluatype_wxBitmap);
     // const wxString item
@@ -1454,8 +1454,8 @@ static int LUACALL wxLua_wxBitmapComboBox_Append1(lua_State *L)
     wxBitmapComboBox * self = (wxBitmapComboBox *)wxluaT_getuserdatatype(L, 1, wxluatype_wxBitmapComboBox);
     // call Append
     int returns = (self->Append(item, *bitmap, (void*)data));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -1476,8 +1476,8 @@ static int LUACALL wxLua_wxBitmapComboBox_Append(lua_State *L)
     wxBitmapComboBox * self = (wxBitmapComboBox *)wxluaT_getuserdatatype(L, 1, wxluatype_wxBitmapComboBox);
     // call Append
     int returns = (self->Append(item, *bitmap));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -1499,8 +1499,8 @@ static int LUACALL wxLua_wxBitmapComboBox_Clear(lua_State *L)
 }
 
 
-#if (((wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_Create[] = { &wxluatype_wxBitmapComboBox, &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_TSTRING, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_wxArrayString, &wxluatype_TNUMBER, &wxluatype_wxValidator, &wxluatype_TSTRING, NULL };
+#if (((wxLUA_USE_wxArrayString) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
+static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_Create[] = { &wxluatype_wxBitmapComboBox, &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_TSTRING, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_wxArrayString, &wxluatype_TINTEGER, &wxluatype_wxValidator, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxBitmapComboBox_Create(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_Create[1] = {{ wxLua_wxBitmapComboBox_Create, WXLUAMETHOD_METHOD, 4, 10, s_wxluatypeArray_wxLua_wxBitmapComboBox_Create }};
 //     bool Create(wxWindow* parent, wxWindowID id, const wxString& value, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, const wxArrayString& choices = wxLuaNullSmartwxArrayString, long style = 0, const wxValidator& validator = wxDefaultValidator, const wxString& name = "wxBitmapComboBox" );
@@ -1513,7 +1513,7 @@ static int LUACALL wxLua_wxBitmapComboBox_Create(lua_State *L)
     // const wxValidator validator = wxDefaultValidator
     const wxValidator * validator = (argCount >= 9 ? (const wxValidator *)wxluaT_getuserdatatype(L, 9, wxluatype_wxValidator) : &wxDefaultValidator);
     // long style = 0
-    long style = (argCount >= 8 ? (long)wxlua_getnumbertype(L, 8) : 0);
+    long style = (argCount >= 8 ? (long)wxlua_getintegertype(L, 8) : 0);
     // const wxArrayString choices = wxLuaNullSmartwxArrayString
     wxLuaSmartwxArrayString choices = (argCount >= 7 ? wxlua_getwxArrayString(L, 7) : wxLuaNullSmartwxArrayString);
     // const wxSize size = wxDefaultSize
@@ -1536,7 +1536,7 @@ static int LUACALL wxLua_wxBitmapComboBox_Create(lua_State *L)
     return 1;
 }
 
-#endif // (((wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)
+#endif // (((wxLUA_USE_wxArrayString) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_Delete[] = { &wxluatype_wxBitmapComboBox, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxBitmapComboBox_Delete(lua_State *L);
@@ -1570,8 +1570,8 @@ static int LUACALL wxLua_wxBitmapComboBox_FindString(lua_State *L)
     wxBitmapComboBox * self = (wxBitmapComboBox *)wxluaT_getuserdatatype(L, 1, wxluatype_wxBitmapComboBox);
     // call FindString
     int returns = (self->FindString(s, bCase));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -1609,8 +1609,8 @@ static int LUACALL wxLua_wxBitmapComboBox_GetCount(lua_State *L)
     wxBitmapComboBox * self = (wxBitmapComboBox *)wxluaT_getuserdatatype(L, 1, wxluatype_wxBitmapComboBox);
     // call GetCount
     unsigned int returns = (self->GetCount());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -1650,8 +1650,8 @@ static int LUACALL wxLua_wxBitmapComboBox_GetSelection(lua_State *L)
     wxBitmapComboBox * self = (wxBitmapComboBox *)wxluaT_getuserdatatype(L, 1, wxluatype_wxBitmapComboBox);
     // call GetSelection
     int returns = (self->GetSelection());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -1694,23 +1694,20 @@ static int LUACALL wxLua_wxBitmapComboBox_Insert2(lua_State *L)
     wxBitmapComboBox * self = (wxBitmapComboBox *)wxluaT_getuserdatatype(L, 1, wxluatype_wxBitmapComboBox);
     // call Insert
     int returns = (self->Insert(item, *bitmap, pos, clientData));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-#endif // (wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
-
-#if ((!wxCHECK_VERSION(2,9,0) || wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)) && (wxLUA_USE_wxBitmap)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_Insert1[] = { &wxluatype_wxBitmapComboBox, &wxluatype_TSTRING, &wxluatype_wxBitmap, &wxluatype_TINTEGER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_Insert1[] = { &wxluatype_wxBitmapComboBox, &wxluatype_TSTRING, &wxluatype_wxBitmap, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxBitmapComboBox_Insert1(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_Insert1[1] = {{ wxLua_wxBitmapComboBox_Insert1, WXLUAMETHOD_METHOD, 5, 5, s_wxluatypeArray_wxLua_wxBitmapComboBox_Insert1 }};
 //     int Insert(const wxString& item, const wxBitmap& bitmap, unsigned int pos, voidptr_long data ); // C++ is (void *clientData) You can put a number here
 static int LUACALL wxLua_wxBitmapComboBox_Insert1(lua_State *L)
 {
     // voidptr_long data
-    long data = (long)wxlua_getnumbertype(L, 5);
+    long data = (long)wxlua_getintegertype(L, 5);
     // unsigned int pos
     unsigned int pos = (unsigned int)wxlua_getuintegertype(L, 4);
     // const wxBitmap bitmap
@@ -1721,15 +1718,12 @@ static int LUACALL wxLua_wxBitmapComboBox_Insert1(lua_State *L)
     wxBitmapComboBox * self = (wxBitmapComboBox *)wxluaT_getuserdatatype(L, 1, wxluatype_wxBitmapComboBox);
     // call Insert
     int returns = (self->Insert(item, *bitmap, pos, (void*)data));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-#endif // ((!wxCHECK_VERSION(2,9,0) || wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)) && (wxLUA_USE_wxBitmap)
-
-#if (wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_Insert[] = { &wxluatype_wxBitmapComboBox, &wxluatype_TSTRING, &wxluatype_wxBitmap, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxBitmapComboBox_Insert(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_Insert[1] = {{ wxLua_wxBitmapComboBox_Insert, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxBitmapComboBox_Insert }};
@@ -1746,22 +1740,22 @@ static int LUACALL wxLua_wxBitmapComboBox_Insert(lua_State *L)
     wxBitmapComboBox * self = (wxBitmapComboBox *)wxluaT_getuserdatatype(L, 1, wxluatype_wxBitmapComboBox);
     // call Insert
     int returns = (self->Insert(item, *bitmap, pos));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
 #endif // (wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_Select[] = { &wxluatype_wxBitmapComboBox, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_Select[] = { &wxluatype_wxBitmapComboBox, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxBitmapComboBox_Select(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_Select[1] = {{ wxLua_wxBitmapComboBox_Select, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxBitmapComboBox_Select }};
 //     void Select(int n );
 static int LUACALL wxLua_wxBitmapComboBox_Select(lua_State *L)
 {
     // int n
-    int n = (int)wxlua_getnumbertype(L, 2);
+    int n = (int)wxlua_getintegertype(L, 2);
     // get this
     wxBitmapComboBox * self = (wxBitmapComboBox *)wxluaT_getuserdatatype(L, 1, wxluatype_wxBitmapComboBox);
     // call Select
@@ -1792,14 +1786,14 @@ static int LUACALL wxLua_wxBitmapComboBox_SetItemBitmap(lua_State *L)
 
 #endif // (wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_SetSelection[] = { &wxluatype_wxBitmapComboBox, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_SetSelection[] = { &wxluatype_wxBitmapComboBox, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxBitmapComboBox_SetSelection(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_SetSelection[1] = {{ wxLua_wxBitmapComboBox_SetSelection, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxBitmapComboBox_SetSelection }};
 //     void SetSelection(int n );
 static int LUACALL wxLua_wxBitmapComboBox_SetSelection(lua_State *L)
 {
     // int n
-    int n = (int)wxlua_getnumbertype(L, 2);
+    int n = (int)wxlua_getintegertype(L, 2);
     // get this
     wxBitmapComboBox * self = (wxBitmapComboBox *)wxluaT_getuserdatatype(L, 1, wxluatype_wxBitmapComboBox);
     // call SetSelection
@@ -1879,8 +1873,8 @@ static int LUACALL wxLua_wxBitmapComboBox_SetValue(lua_State *L)
 }
 
 
-#if (((wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_constructor1[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_TSTRING, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_wxArrayString, &wxluatype_TNUMBER, &wxluatype_wxValidator, &wxluatype_TSTRING, NULL };
+#if (((wxLUA_USE_wxArrayString) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
+static wxLuaArgType s_wxluatypeArray_wxLua_wxBitmapComboBox_constructor1[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_TSTRING, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_wxArrayString, &wxluatype_TINTEGER, &wxluatype_wxValidator, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxBitmapComboBox_constructor1(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_constructor1[1] = {{ wxLua_wxBitmapComboBox_constructor1, WXLUAMETHOD_CONSTRUCTOR, 3, 9, s_wxluatypeArray_wxLua_wxBitmapComboBox_constructor1 }};
 //     wxBitmapComboBox(wxWindow* parent, wxWindowID id, const wxString& value, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, const wxArrayString& choices = wxLuaNullSmartwxArrayString, long style = 0, const wxValidator& validator = wxDefaultValidator, const wxString& name = "wxBitmapComboBox" );
@@ -1893,7 +1887,7 @@ static int LUACALL wxLua_wxBitmapComboBox_constructor1(lua_State *L)
     // const wxValidator validator = wxDefaultValidator
     const wxValidator * validator = (argCount >= 8 ? (const wxValidator *)wxluaT_getuserdatatype(L, 8, wxluatype_wxValidator) : &wxDefaultValidator);
     // long style = 0
-    long style = (argCount >= 7 ? (long)wxlua_getnumbertype(L, 7) : 0);
+    long style = (argCount >= 7 ? (long)wxlua_getintegertype(L, 7) : 0);
     // const wxArrayString choices = wxLuaNullSmartwxArrayString
     wxLuaSmartwxArrayString choices = (argCount >= 6 ? wxlua_getwxArrayString(L, 6) : wxLuaNullSmartwxArrayString);
     // const wxSize size = wxDefaultSize
@@ -1916,7 +1910,7 @@ static int LUACALL wxLua_wxBitmapComboBox_constructor1(lua_State *L)
     return 1;
 }
 
-#endif // (((wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)
+#endif // (((wxLUA_USE_wxArrayString) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 
 static int LUACALL wxLua_wxBitmapComboBox_constructor(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_constructor[1] = {{ wxLua_wxBitmapComboBox_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 0, g_wxluaargtypeArray_None }};
@@ -1955,9 +1949,6 @@ static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_Append_overload[] =
 };
 static int s_wxluafunc_wxLua_wxBitmapComboBox_Append_overload_count = sizeof(s_wxluafunc_wxLua_wxBitmapComboBox_Append_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX))
-
-#if ((wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX))||(((!wxCHECK_VERSION(2,9,0) || wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)) && (wxLUA_USE_wxBitmap))
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_Insert_overload[] =
 {
@@ -1966,9 +1957,9 @@ static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_Insert_overload[] =
     { wxLua_wxBitmapComboBox_Insert2, WXLUAMETHOD_METHOD, 5, 5, s_wxluatypeArray_wxLua_wxBitmapComboBox_Insert2 },
 #endif // (wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 
-#if ((!wxCHECK_VERSION(2,9,0) || wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)) && (wxLUA_USE_wxBitmap)
+#if (wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
     { wxLua_wxBitmapComboBox_Insert1, WXLUAMETHOD_METHOD, 5, 5, s_wxluatypeArray_wxLua_wxBitmapComboBox_Insert1 },
-#endif // ((!wxCHECK_VERSION(2,9,0) || wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)) && (wxLUA_USE_wxBitmap)
+#endif // (wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 
 #if (wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
     { wxLua_wxBitmapComboBox_Insert, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxBitmapComboBox_Insert },
@@ -1976,7 +1967,7 @@ static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_Insert_overload[] =
 };
 static int s_wxluafunc_wxLua_wxBitmapComboBox_Insert_overload_count = sizeof(s_wxluafunc_wxLua_wxBitmapComboBox_Insert_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX))||(((!wxCHECK_VERSION(2,9,0) || wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)) && (wxLUA_USE_wxBitmap))
+#endif // ((wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX))
 
 #if (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 // function overload table
@@ -1989,19 +1980,19 @@ static int s_wxluafunc_wxLua_wxBitmapComboBox_SetString_overload_count = sizeof(
 
 #endif // (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 
-#if ((((wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS))||(wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
+#if ((((wxLUA_USE_wxArrayString) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX))||(wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxBitmapComboBox_constructor_overload[] =
 {
 
-#if (((wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)
+#if (((wxLUA_USE_wxArrayString) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
     { wxLua_wxBitmapComboBox_constructor1, WXLUAMETHOD_CONSTRUCTOR, 3, 9, s_wxluatypeArray_wxLua_wxBitmapComboBox_constructor1 },
-#endif // (((wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)
+#endif // (((wxLUA_USE_wxArrayString) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
     { wxLua_wxBitmapComboBox_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 0, g_wxluaargtypeArray_None },
 };
 static int s_wxluafunc_wxLua_wxBitmapComboBox_constructor_overload_count = sizeof(s_wxluafunc_wxLua_wxBitmapComboBox_constructor_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((((wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS))||(wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
+#endif // ((((wxLUA_USE_wxArrayString) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX))||(wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 
 void wxLua_wxBitmapComboBox_delete_function(void** p)
 {
@@ -2017,9 +2008,9 @@ wxLuaBindMethod wxBitmapComboBox_methods[] = {
 
     { "Clear", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxBitmapComboBox_Clear, 1, NULL },
 
-#if (((wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)
+#if (((wxLUA_USE_wxArrayString) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
     { "Create", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxBitmapComboBox_Create, 1, NULL },
-#endif // (((wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)
+#endif // (((wxLUA_USE_wxArrayString) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 
     { "Delete", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxBitmapComboBox_Delete, 1, NULL },
     { "FindString", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxBitmapComboBox_FindString, 1, NULL },
@@ -2037,9 +2028,9 @@ wxLuaBindMethod wxBitmapComboBox_methods[] = {
     { "GetSelection", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxBitmapComboBox_GetSelection, 1, NULL },
     { "GetString", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxBitmapComboBox_GetString, 1, NULL },
 
-#if ((wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX))||(((!wxCHECK_VERSION(2,9,0) || wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)) && (wxLUA_USE_wxBitmap))
+#if ((wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX))
     { "Insert", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxBitmapComboBox_Insert_overload, s_wxluafunc_wxLua_wxBitmapComboBox_Insert_overload_count, 0 },
-#endif // ((wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX))||(((!wxCHECK_VERSION(2,9,0) || wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)) && (wxLUA_USE_wxBitmap))
+#endif // ((wxLUA_USE_wxBitmap) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX))
 
     { "Select", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxBitmapComboBox_Select, 1, NULL },
 
@@ -2056,9 +2047,9 @@ wxLuaBindMethod wxBitmapComboBox_methods[] = {
     { "SetStringSelection", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxBitmapComboBox_SetStringSelection, 1, NULL },
     { "SetValue", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxBitmapComboBox_SetValue, 1, NULL },
 
-#if ((((wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS))||(wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
+#if ((((wxLUA_USE_wxArrayString) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX))||(wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
     { "wxBitmapComboBox", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxBitmapComboBox_constructor_overload, s_wxluafunc_wxLua_wxBitmapComboBox_constructor_overload_count, 0 },
-#endif // ((((wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS))||(wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
+#endif // ((((wxLUA_USE_wxArrayString) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS)) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX))||(wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX)
 
     { 0, 0, 0, 0 },
 };
@@ -2111,28 +2102,6 @@ static int LUACALL wxLua_wxCalendarCtrl_EnableMonthChange(lua_State *L)
 
     return 0;
 }
-
-
-#if (!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxCalendarCtrl_EnableYearChange[] = { &wxluatype_wxCalendarCtrl, &wxluatype_TBOOLEAN, NULL };
-static int LUACALL wxLua_wxCalendarCtrl_EnableYearChange(lua_State *L);
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalendarCtrl_EnableYearChange[1] = {{ wxLua_wxCalendarCtrl_EnableYearChange, WXLUAMETHOD_METHOD, 1, 2, s_wxluatypeArray_wxLua_wxCalendarCtrl_EnableYearChange }};
-//         void     EnableYearChange(bool enable = true );
-static int LUACALL wxLua_wxCalendarCtrl_EnableYearChange(lua_State *L)
-{
-    // get number of arguments
-    int argCount = lua_gettop(L);
-    // bool enable = true
-    bool enable = (argCount >= 2 ? wxlua_getbooleantype(L, 2) : true);
-    // get this
-    wxCalendarCtrl * self = (wxCalendarCtrl *)wxluaT_getuserdatatype(L, 1, wxluatype_wxCalendarCtrl);
-    // call EnableYearChange
-    self->EnableYearChange(enable);
-
-    return 0;
-}
-
-#endif // (!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxCalendarCtrl_GetAttr[] = { &wxluatype_wxCalendarCtrl, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxCalendarCtrl_GetAttr(lua_State *L);
@@ -2452,8 +2421,8 @@ static int LUACALL wxLua_wxCalendarCtrl_SetHolidayColours(lua_State *L)
 
 #endif // (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush)
 
-#if ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)) && (wxLUA_USE_wxPointSizeRect)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxCalendarCtrl_constructor[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxDateTime, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+#if ((wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
+static wxLuaArgType s_wxluatypeArray_wxLua_wxCalendarCtrl_constructor[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxDateTime, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxCalendarCtrl_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalendarCtrl_constructor[1] = {{ wxLua_wxCalendarCtrl_constructor, WXLUAMETHOD_CONSTRUCTOR, 2, 7, s_wxluatypeArray_wxLua_wxCalendarCtrl_constructor }};
 //     wxCalendarCtrl(wxWindow* parent, wxWindowID id, const wxDateTime& date = wxDefaultDateTime, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxCAL_SHOW_HOLIDAYS, const wxString& name = "wxCalendarCtrl" );
@@ -2464,7 +2433,7 @@ static int LUACALL wxLua_wxCalendarCtrl_constructor(lua_State *L)
     // const wxString name = "wxCalendarCtrl"
     const wxString name = (argCount >= 7 ? wxlua_getwxStringtype(L, 7) : wxString(wxT("wxCalendarCtrl")));
     // long style = wxCAL_SHOW_HOLIDAYS
-    long style = (argCount >= 6 ? (long)wxlua_getnumbertype(L, 6) : wxCAL_SHOW_HOLIDAYS);
+    long style = (argCount >= 6 ? (long)wxlua_getintegertype(L, 6) : wxCAL_SHOW_HOLIDAYS);
     // const wxSize size = wxDefaultSize
     const wxSize * size = (argCount >= 5 ? (const wxSize *)wxluaT_getuserdatatype(L, 5, wxluatype_wxSize) : &wxDefaultSize);
     // const wxPoint pos = wxDefaultPosition
@@ -2485,7 +2454,7 @@ static int LUACALL wxLua_wxCalendarCtrl_constructor(lua_State *L)
     return 1;
 }
 
-#endif // ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)) && (wxLUA_USE_wxPointSizeRect)
+#endif // ((wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 
 
 
@@ -2499,11 +2468,6 @@ void wxLua_wxCalendarCtrl_delete_function(void** p)
 wxLuaBindMethod wxCalendarCtrl_methods[] = {
     { "EnableHolidayDisplay", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxCalendarCtrl_EnableHolidayDisplay, 1, NULL },
     { "EnableMonthChange", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxCalendarCtrl_EnableMonthChange, 1, NULL },
-
-#if (!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
-    { "EnableYearChange", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxCalendarCtrl_EnableYearChange, 1, NULL },
-#endif // (!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
-
     { "GetAttr", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxCalendarCtrl_GetAttr, 1, NULL },
 
 #if (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
@@ -2541,9 +2505,9 @@ wxLuaBindMethod wxCalendarCtrl_methods[] = {
     { "SetHolidayColours", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxCalendarCtrl_SetHolidayColours, 1, NULL },
 #endif // (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush)
 
-#if ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)) && (wxLUA_USE_wxPointSizeRect)
+#if ((wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
     { "wxCalendarCtrl", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxCalendarCtrl_constructor, 1, NULL },
-#endif // ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)) && (wxLUA_USE_wxPointSizeRect)
+#endif // ((wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 
     { 0, 0, 0, 0 },
 };
@@ -2902,7 +2866,7 @@ static int LUACALL wxLua_wxCalendarDateAttr_constructor2(lua_State *L)
 
 #endif // (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush)
 
-#if ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush)) && (wxLUA_USE_wxFont)
+#if ((wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxFont)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxCalendarDateAttr_constructor1[] = { &wxluatype_wxColour, &wxluatype_wxColour, &wxluatype_wxColour, &wxluatype_wxFont, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxCalendarDateAttr_constructor1(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalendarDateAttr_constructor1[1] = {{ wxLua_wxCalendarDateAttr_constructor1, WXLUAMETHOD_CONSTRUCTOR, 1, 5, s_wxluatypeArray_wxLua_wxCalendarDateAttr_constructor1 }};
@@ -2931,7 +2895,7 @@ static int LUACALL wxLua_wxCalendarDateAttr_constructor1(lua_State *L)
     return 1;
 }
 
-#endif // ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush)) && (wxLUA_USE_wxFont)
+#endif // ((wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxFont)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 
 static int LUACALL wxLua_wxCalendarDateAttr_constructor(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalendarDateAttr_constructor[1] = {{ wxLua_wxCalendarDateAttr_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 0, g_wxluaargtypeArray_None }};
@@ -2951,7 +2915,7 @@ static int LUACALL wxLua_wxCalendarDateAttr_constructor(lua_State *L)
 
 
 
-#if ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush))||(((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush)) && (wxLUA_USE_wxFont))||(wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
+#if ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush))||(((wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxFont)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL))||(wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalendarDateAttr_constructor_overload[] =
 {
@@ -2960,14 +2924,14 @@ static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalendarDateAttr_constructor_overload[
     { wxLua_wxCalendarDateAttr_constructor2, WXLUAMETHOD_CONSTRUCTOR, 1, 2, s_wxluatypeArray_wxLua_wxCalendarDateAttr_constructor2 },
 #endif // (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush)
 
-#if ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush)) && (wxLUA_USE_wxFont)
+#if ((wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxFont)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
     { wxLua_wxCalendarDateAttr_constructor1, WXLUAMETHOD_CONSTRUCTOR, 1, 5, s_wxluatypeArray_wxLua_wxCalendarDateAttr_constructor1 },
-#endif // ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush)) && (wxLUA_USE_wxFont)
+#endif // ((wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxFont)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
     { wxLua_wxCalendarDateAttr_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 0, g_wxluaargtypeArray_None },
 };
 static int s_wxluafunc_wxLua_wxCalendarDateAttr_constructor_overload_count = sizeof(s_wxluafunc_wxLua_wxCalendarDateAttr_constructor_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush))||(((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush)) && (wxLUA_USE_wxFont))||(wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
+#endif // ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush))||(((wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxFont)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL))||(wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 
 void wxLua_wxCalendarDateAttr_delete_function(void** p)
 {
@@ -3024,9 +2988,9 @@ wxLuaBindMethod wxCalendarDateAttr_methods[] = {
 
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxCalendarDateAttr_delete, 1, NULL },
 
-#if ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush))||(((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush)) && (wxLUA_USE_wxFont))||(wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
+#if ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush))||(((wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxFont)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL))||(wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
     { "wxCalendarDateAttr", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxCalendarDateAttr_constructor_overload, s_wxluafunc_wxLua_wxCalendarDateAttr_constructor_overload_count, 0 },
-#endif // ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush))||(((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush)) && (wxLUA_USE_wxFont))||(wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
+#endif // ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxColourPenBrush))||(((wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxFont)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL))||(wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 
     { 0, 0, 0, 0 },
 };
@@ -3187,12 +3151,12 @@ static wxLuaArgType s_wxluatypeArray_wxLua_wxCalendarEvent_delete[] = { &wxluaty
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalendarEvent_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxCalendarEvent_delete }};
 
 
-#if ((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME))
-static wxLuaArgType s_wxluatypeArray_wxLua_wxCalendarEvent_constructor2[] = { &wxluatype_wxWindow, &wxluatype_wxDateTime, &wxluatype_TNUMBER, NULL };
-static int LUACALL wxLua_wxCalendarEvent_constructor2(lua_State *L);
-// // static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalendarEvent_constructor2[1] = {{ wxLua_wxCalendarEvent_constructor2, WXLUAMETHOD_CONSTRUCTOR, 3, 3, s_wxluatypeArray_wxLua_wxCalendarEvent_constructor2 }};
-//     %wxchkver_2_9_2 wxCalendarEvent(wxWindow *win, const wxDateTime& dt, wxEventType type );
-static int LUACALL wxLua_wxCalendarEvent_constructor2(lua_State *L)
+#if (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
+static wxLuaArgType s_wxluatypeArray_wxLua_wxCalendarEvent_constructor1[] = { &wxluatype_wxWindow, &wxluatype_wxDateTime, &wxluatype_TNUMBER, NULL };
+static int LUACALL wxLua_wxCalendarEvent_constructor1(lua_State *L);
+// // static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalendarEvent_constructor1[1] = {{ wxLua_wxCalendarEvent_constructor1, WXLUAMETHOD_CONSTRUCTOR, 3, 3, s_wxluatypeArray_wxLua_wxCalendarEvent_constructor1 }};
+//     wxCalendarEvent(wxWindow *win, const wxDateTime& dt, wxEventType type );
+static int LUACALL wxLua_wxCalendarEvent_constructor1(lua_State *L)
 {
     // wxEventType type
     wxEventType type = (wxEventType)wxlua_getnumbertype(L, 3);
@@ -3210,36 +3174,12 @@ static int LUACALL wxLua_wxCalendarEvent_constructor2(lua_State *L)
     return 1;
 }
 
-#endif // ((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME))
+#endif // (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
 
-#if ((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxCalendarEvent_constructor1[] = { &wxluatype_wxCalendarCtrl, &wxluatype_TNUMBER, NULL };
-static int LUACALL wxLua_wxCalendarEvent_constructor1(lua_State *L);
-// // static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalendarEvent_constructor1[1] = {{ wxLua_wxCalendarEvent_constructor1, WXLUAMETHOD_CONSTRUCTOR, 2, 2, s_wxluatypeArray_wxLua_wxCalendarEvent_constructor1 }};
-//     !%wxchkver_2_9_2 wxCalendarEvent(wxCalendarCtrl *cal, wxEventType type );
-static int LUACALL wxLua_wxCalendarEvent_constructor1(lua_State *L)
-{
-    // wxEventType type
-    wxEventType type = (wxEventType)wxlua_getnumbertype(L, 2);
-    // wxCalendarCtrl cal
-    wxCalendarCtrl * cal = (wxCalendarCtrl *)wxluaT_getuserdatatype(L, 1, wxluatype_wxCalendarCtrl);
-    // call constructor
-    wxCalendarEvent* returns = new wxCalendarEvent(cal, type);
-    // add to tracked memory list
-    wxluaO_addgcobject(L, returns, wxluatype_wxCalendarEvent);
-    // push the constructed class pointer
-    wxluaT_pushuserdatatype(L, returns, wxluatype_wxCalendarEvent);
-
-    return 1;
-}
-
-#endif // ((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
-
-#if ((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxCalendarEvent_constructor[] = { &wxluatype_wxCalendarEvent, NULL };
 static int LUACALL wxLua_wxCalendarEvent_constructor(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalendarEvent_constructor[1] = {{ wxLua_wxCalendarEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 1, 1, s_wxluatypeArray_wxLua_wxCalendarEvent_constructor }};
-//     %wxchkver_2_9_2 wxCalendarEvent(const wxCalendarEvent& event );
+//     wxCalendarEvent(const wxCalendarEvent& event );
 static int LUACALL wxLua_wxCalendarEvent_constructor(lua_State *L)
 {
     // const wxCalendarEvent event
@@ -3254,30 +3194,22 @@ static int LUACALL wxLua_wxCalendarEvent_constructor(lua_State *L)
     return 1;
 }
 
-#endif // ((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 
 
 
-#if (((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)))||(((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL))||(((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL))
+#if ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME))||(wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalendarEvent_constructor_overload[] =
 {
 
-#if ((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME))
-    { wxLua_wxCalendarEvent_constructor2, WXLUAMETHOD_CONSTRUCTOR, 3, 3, s_wxluatypeArray_wxLua_wxCalendarEvent_constructor2 },
-#endif // ((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME))
-
-#if ((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
-    { wxLua_wxCalendarEvent_constructor1, WXLUAMETHOD_CONSTRUCTOR, 2, 2, s_wxluatypeArray_wxLua_wxCalendarEvent_constructor1 },
-#endif // ((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
-
-#if ((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
+#if (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
+    { wxLua_wxCalendarEvent_constructor1, WXLUAMETHOD_CONSTRUCTOR, 3, 3, s_wxluatypeArray_wxLua_wxCalendarEvent_constructor1 },
+#endif // (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
     { wxLua_wxCalendarEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 1, 1, s_wxluatypeArray_wxLua_wxCalendarEvent_constructor },
-#endif // ((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 };
 static int s_wxluafunc_wxLua_wxCalendarEvent_constructor_overload_count = sizeof(s_wxluafunc_wxLua_wxCalendarEvent_constructor_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // (((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)))||(((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL))||(((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL))
+#endif // ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME))||(wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 
 void wxLua_wxCalendarEvent_delete_function(void** p)
 {
@@ -3294,9 +3226,9 @@ wxLuaBindMethod wxCalendarEvent_methods[] = {
 
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxCalendarEvent_delete, 1, NULL },
 
-#if (((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)))||(((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL))||(((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL))
+#if ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME))||(wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
     { "wxCalendarEvent", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxCalendarEvent_constructor_overload, s_wxluafunc_wxLua_wxCalendarEvent_constructor_overload_count, 0 },
-#endif // (((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)))||(((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL))||(((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)) && (wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL))
+#endif // ((wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME))||(wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL)
 
     { 0, 0, 0, 0 },
 };
@@ -3306,7 +3238,7 @@ int wxCalendarEvent_methodCount = sizeof(wxCalendarEvent_methods)/sizeof(wxLuaBi
 #endif  // wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL
 
 
-#if wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#if wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
 // ---------------------------------------------------------------------------
 // Bind class wxHyperlinkCtrl
 // ---------------------------------------------------------------------------
@@ -3314,8 +3246,8 @@ int wxCalendarEvent_methodCount = sizeof(wxCalendarEvent_methods)/sizeof(wxLuaBi
 // Lua MetaTable Tag for Class 'wxHyperlinkCtrl'
 int wxluatype_wxHyperlinkCtrl = WXLUA_TUNKNOWN;
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxPointSizeRect)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxHyperlinkCtrl_Create[] = { &wxluatype_wxHyperlinkCtrl, &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+#if (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL) && (wxLUA_USE_wxPointSizeRect)
+static wxLuaArgType s_wxluatypeArray_wxLua_wxHyperlinkCtrl_Create[] = { &wxluatype_wxHyperlinkCtrl, &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxHyperlinkCtrl_Create(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxHyperlinkCtrl_Create[1] = {{ wxLua_wxHyperlinkCtrl_Create, WXLUAMETHOD_METHOD, 5, 9, s_wxluatypeArray_wxLua_wxHyperlinkCtrl_Create }};
 //     bool Create(wxWindow *parent, wxWindowID id, const wxString& label, const wxString& url, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxHL_DEFAULT_STYLE, const wxString& name = "wxHyperlinkCtrl");
@@ -3326,7 +3258,7 @@ static int LUACALL wxLua_wxHyperlinkCtrl_Create(lua_State *L)
     // const wxString name = "wxHyperlinkCtrl"
     const wxString name = (argCount >= 9 ? wxlua_getwxStringtype(L, 9) : wxString(wxT("wxHyperlinkCtrl")));
     // long style = wxHL_DEFAULT_STYLE
-    long style = (argCount >= 8 ? (long)wxlua_getnumbertype(L, 8) : wxHL_DEFAULT_STYLE);
+    long style = (argCount >= 8 ? (long)wxlua_getintegertype(L, 8) : wxHL_DEFAULT_STYLE);
     // const wxSize size = wxDefaultSize
     const wxSize * size = (argCount >= 7 ? (const wxSize *)wxluaT_getuserdatatype(L, 7, wxluatype_wxSize) : &wxDefaultSize);
     // const wxPoint pos = wxDefaultPosition
@@ -3349,9 +3281,9 @@ static int LUACALL wxLua_wxHyperlinkCtrl_Create(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL) && (wxLUA_USE_wxPointSizeRect)
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxHyperlinkCtrl_GetHoverColour[] = { &wxluatype_wxHyperlinkCtrl, NULL };
 static int LUACALL wxLua_wxHyperlinkCtrl_GetHoverColour(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxHyperlinkCtrl_GetHoverColour[1] = {{ wxLua_wxHyperlinkCtrl_GetHoverColour, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxHyperlinkCtrl_GetHoverColour }};
@@ -3390,7 +3322,7 @@ static int LUACALL wxLua_wxHyperlinkCtrl_GetNormalColour(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxHyperlinkCtrl_GetURL[] = { &wxluatype_wxHyperlinkCtrl, NULL };
 static int LUACALL wxLua_wxHyperlinkCtrl_GetURL(lua_State *L);
@@ -3425,7 +3357,7 @@ static int LUACALL wxLua_wxHyperlinkCtrl_GetVisited(lua_State *L)
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxHyperlinkCtrl_GetVisitedColour[] = { &wxluatype_wxHyperlinkCtrl, NULL };
 static int LUACALL wxLua_wxHyperlinkCtrl_GetVisitedColour(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxHyperlinkCtrl_GetVisitedColour[1] = {{ wxLua_wxHyperlinkCtrl_GetVisitedColour, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxHyperlinkCtrl_GetVisitedColour }};
@@ -3477,7 +3409,7 @@ static int LUACALL wxLua_wxHyperlinkCtrl_SetNormalColour(lua_State *L)
     return 0;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxHyperlinkCtrl_SetURL[] = { &wxluatype_wxHyperlinkCtrl, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxHyperlinkCtrl_SetURL(lua_State *L);
@@ -3514,7 +3446,7 @@ static int LUACALL wxLua_wxHyperlinkCtrl_SetVisited(lua_State *L)
 }
 
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxHyperlinkCtrl_SetVisitedColour[] = { &wxluatype_wxHyperlinkCtrl, &wxluatype_wxColour, NULL };
 static int LUACALL wxLua_wxHyperlinkCtrl_SetVisitedColour(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxHyperlinkCtrl_SetVisitedColour[1] = {{ wxLua_wxHyperlinkCtrl_SetVisitedColour, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxHyperlinkCtrl_SetVisitedColour }};
@@ -3531,10 +3463,10 @@ static int LUACALL wxLua_wxHyperlinkCtrl_SetVisitedColour(lua_State *L)
     return 0;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxPointSizeRect)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxHyperlinkCtrl_constructor1[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+#if (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL) && (wxLUA_USE_wxPointSizeRect)
+static wxLuaArgType s_wxluatypeArray_wxLua_wxHyperlinkCtrl_constructor1[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxHyperlinkCtrl_constructor1(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxHyperlinkCtrl_constructor1[1] = {{ wxLua_wxHyperlinkCtrl_constructor1, WXLUAMETHOD_CONSTRUCTOR, 4, 8, s_wxluatypeArray_wxLua_wxHyperlinkCtrl_constructor1 }};
 //     wxHyperlinkCtrl(wxWindow *parent, wxWindowID id, const wxString& label, const wxString& url, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxHL_DEFAULT_STYLE, const wxString& name = "wxHyperlinkCtrl" );
@@ -3545,7 +3477,7 @@ static int LUACALL wxLua_wxHyperlinkCtrl_constructor1(lua_State *L)
     // const wxString name = "wxHyperlinkCtrl"
     const wxString name = (argCount >= 8 ? wxlua_getwxStringtype(L, 8) : wxString(wxT("wxHyperlinkCtrl")));
     // long style = wxHL_DEFAULT_STYLE
-    long style = (argCount >= 7 ? (long)wxlua_getnumbertype(L, 7) : wxHL_DEFAULT_STYLE);
+    long style = (argCount >= 7 ? (long)wxlua_getintegertype(L, 7) : wxHL_DEFAULT_STYLE);
     // const wxSize size = wxDefaultSize
     const wxSize * size = (argCount >= 6 ? (const wxSize *)wxluaT_getuserdatatype(L, 6, wxluatype_wxSize) : &wxDefaultSize);
     // const wxPoint pos = wxDefaultPosition
@@ -3568,7 +3500,7 @@ static int LUACALL wxLua_wxHyperlinkCtrl_constructor1(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL) && (wxLUA_USE_wxPointSizeRect)
 
 static int LUACALL wxLua_wxHyperlinkCtrl_constructor(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxHyperlinkCtrl_constructor[1] = {{ wxLua_wxHyperlinkCtrl_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 0, g_wxluaargtypeArray_None }};
@@ -3588,19 +3520,19 @@ static int LUACALL wxLua_wxHyperlinkCtrl_constructor(lua_State *L)
 
 
 
-#if ((wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxPointSizeRect))||(wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl)
+#if ((wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL) && (wxLUA_USE_wxPointSizeRect))||(wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxHyperlinkCtrl_constructor_overload[] =
 {
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxPointSizeRect)
+#if (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL) && (wxLUA_USE_wxPointSizeRect)
     { wxLua_wxHyperlinkCtrl_constructor1, WXLUAMETHOD_CONSTRUCTOR, 4, 8, s_wxluatypeArray_wxLua_wxHyperlinkCtrl_constructor1 },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL) && (wxLUA_USE_wxPointSizeRect)
     { wxLua_wxHyperlinkCtrl_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 0, g_wxluaargtypeArray_None },
 };
 static int s_wxluafunc_wxLua_wxHyperlinkCtrl_constructor_overload_count = sizeof(s_wxluafunc_wxLua_wxHyperlinkCtrl_constructor_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxPointSizeRect))||(wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl)
+#endif // ((wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL) && (wxLUA_USE_wxPointSizeRect))||(wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
 
 void wxLua_wxHyperlinkCtrl_delete_function(void** p)
 {
@@ -3610,44 +3542,44 @@ void wxLua_wxHyperlinkCtrl_delete_function(void** p)
 
 // Map Lua Class Methods to C Binding Functions
 wxLuaBindMethod wxHyperlinkCtrl_methods[] = {
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxPointSizeRect)
+#if (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL) && (wxLUA_USE_wxPointSizeRect)
     { "Create", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkCtrl_Create, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL) && (wxLUA_USE_wxPointSizeRect)
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
     { "GetHoverColour", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkCtrl_GetHoverColour, 1, NULL },
     { "GetNormalColour", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkCtrl_GetNormalColour, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
 
     { "GetURL", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkCtrl_GetURL, 1, NULL },
     { "GetVisited", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkCtrl_GetVisited, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
     { "GetVisitedColour", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkCtrl_GetVisitedColour, 1, NULL },
     { "SetHoverColour", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkCtrl_SetHoverColour, 1, NULL },
     { "SetNormalColour", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkCtrl_SetNormalColour, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
 
     { "SetURL", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkCtrl_SetURL, 1, NULL },
     { "SetVisited", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkCtrl_SetVisited, 1, NULL },
 
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
     { "SetVisitedColour", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkCtrl_SetVisitedColour, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
 
-#if ((wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxPointSizeRect))||(wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl)
+#if ((wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL) && (wxLUA_USE_wxPointSizeRect))||(wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
     { "wxHyperlinkCtrl", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxHyperlinkCtrl_constructor_overload, s_wxluafunc_wxLua_wxHyperlinkCtrl_constructor_overload_count, 0 },
-#endif // ((wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxPointSizeRect))||(wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl)
+#endif // ((wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL) && (wxLUA_USE_wxPointSizeRect))||(wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL)
 
     { 0, 0, 0, 0 },
 };
 
 int wxHyperlinkCtrl_methodCount = sizeof(wxHyperlinkCtrl_methods)/sizeof(wxLuaBindMethod) - 1;
 
-#endif  // wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#endif  // wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
 
 
-#if wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#if wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
 // ---------------------------------------------------------------------------
 // Bind class wxHyperlinkEvent
 // ---------------------------------------------------------------------------
@@ -3690,8 +3622,6 @@ static int LUACALL wxLua_wxHyperlinkEvent_SetURL(lua_State *L)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxHyperlinkEvent_delete[] = { &wxluatype_wxHyperlinkEvent, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxHyperlinkEvent_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxHyperlinkEvent_delete }};
 
-
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxObject)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxHyperlinkEvent_constructor[] = { &wxluatype_wxObject, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxHyperlinkEvent_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxHyperlinkEvent_constructor[1] = {{ wxLua_wxHyperlinkEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 3, 3, s_wxluatypeArray_wxLua_wxHyperlinkEvent_constructor }};
@@ -3714,7 +3644,6 @@ static int LUACALL wxLua_wxHyperlinkEvent_constructor(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxObject)
 
 
 
@@ -3729,17 +3658,14 @@ wxLuaBindMethod wxHyperlinkEvent_methods[] = {
     { "GetURL", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkEvent_GetURL, 1, NULL },
     { "SetURL", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHyperlinkEvent_SetURL, 1, NULL },
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxHyperlinkEvent_delete, 1, NULL },
-
-#if (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxObject)
     { "wxHyperlinkEvent", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxHyperlinkEvent_constructor, 1, NULL },
-#endif // (wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl) && (wxLUA_USE_wxObject)
 
     { 0, 0, 0, 0 },
 };
 
 int wxHyperlinkEvent_methodCount = sizeof(wxHyperlinkEvent_methods)/sizeof(wxLuaBindMethod) - 1;
 
-#endif  // wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#endif  // wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
 
 
 #if wxLUA_USE_wxSashWindow && wxUSE_SASH
@@ -3760,8 +3686,8 @@ static int LUACALL wxLua_wxSashWindow_GetMaximumSizeX(lua_State *L)
     wxSashWindow * self = (wxSashWindow *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSashWindow);
     // call GetMaximumSizeX
     int returns = (self->GetMaximumSizeX());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -3776,8 +3702,8 @@ static int LUACALL wxLua_wxSashWindow_GetMaximumSizeY(lua_State *L)
     wxSashWindow * self = (wxSashWindow *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSashWindow);
     // call GetMaximumSizeY
     int returns = (self->GetMaximumSizeY());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -3792,8 +3718,8 @@ static int LUACALL wxLua_wxSashWindow_GetMinimumSizeX(lua_State *L)
     wxSashWindow * self = (wxSashWindow *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSashWindow);
     // call GetMinimumSizeX
     int returns = (self->GetMinimumSizeX());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -3808,8 +3734,8 @@ static int LUACALL wxLua_wxSashWindow_GetMinimumSizeY(lua_State *L)
     wxSashWindow * self = (wxSashWindow *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSashWindow);
     // call GetMinimumSizeY
     int returns = (self->GetMinimumSizeY());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -3854,14 +3780,14 @@ static int LUACALL wxLua_wxSashWindow_HasBorder(lua_State *L)
 
 #endif // (((defined(WXWIN_COMPATIBILITY_2_6) && WXWIN_COMPATIBILITY_2_6)) && (wxLUA_USE_wxSashWindow && wxUSE_SASH)) && (wxLUA_USE_wxSashWindow && wxUSE_SASH)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSashWindow_SetMaximumSizeX[] = { &wxluatype_wxSashWindow, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSashWindow_SetMaximumSizeX[] = { &wxluatype_wxSashWindow, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSashWindow_SetMaximumSizeX(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSashWindow_SetMaximumSizeX[1] = {{ wxLua_wxSashWindow_SetMaximumSizeX, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxSashWindow_SetMaximumSizeX }};
 //     void SetMaximumSizeX(int min );
 static int LUACALL wxLua_wxSashWindow_SetMaximumSizeX(lua_State *L)
 {
     // int min
-    int min = (int)wxlua_getnumbertype(L, 2);
+    int min = (int)wxlua_getintegertype(L, 2);
     // get this
     wxSashWindow * self = (wxSashWindow *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSashWindow);
     // call SetMaximumSizeX
@@ -3870,14 +3796,14 @@ static int LUACALL wxLua_wxSashWindow_SetMaximumSizeX(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSashWindow_SetMaximumSizeY[] = { &wxluatype_wxSashWindow, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSashWindow_SetMaximumSizeY[] = { &wxluatype_wxSashWindow, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSashWindow_SetMaximumSizeY(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSashWindow_SetMaximumSizeY[1] = {{ wxLua_wxSashWindow_SetMaximumSizeY, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxSashWindow_SetMaximumSizeY }};
 //     void SetMaximumSizeY(int min );
 static int LUACALL wxLua_wxSashWindow_SetMaximumSizeY(lua_State *L)
 {
     // int min
-    int min = (int)wxlua_getnumbertype(L, 2);
+    int min = (int)wxlua_getintegertype(L, 2);
     // get this
     wxSashWindow * self = (wxSashWindow *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSashWindow);
     // call SetMaximumSizeY
@@ -3886,14 +3812,14 @@ static int LUACALL wxLua_wxSashWindow_SetMaximumSizeY(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSashWindow_SetMinimumSizeX[] = { &wxluatype_wxSashWindow, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSashWindow_SetMinimumSizeX[] = { &wxluatype_wxSashWindow, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSashWindow_SetMinimumSizeX(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSashWindow_SetMinimumSizeX[1] = {{ wxLua_wxSashWindow_SetMinimumSizeX, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxSashWindow_SetMinimumSizeX }};
 //     void SetMinimumSizeX(int min );
 static int LUACALL wxLua_wxSashWindow_SetMinimumSizeX(lua_State *L)
 {
     // int min
-    int min = (int)wxlua_getnumbertype(L, 2);
+    int min = (int)wxlua_getintegertype(L, 2);
     // get this
     wxSashWindow * self = (wxSashWindow *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSashWindow);
     // call SetMinimumSizeX
@@ -3902,14 +3828,14 @@ static int LUACALL wxLua_wxSashWindow_SetMinimumSizeX(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSashWindow_SetMinimumSizeY[] = { &wxluatype_wxSashWindow, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSashWindow_SetMinimumSizeY[] = { &wxluatype_wxSashWindow, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSashWindow_SetMinimumSizeY(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSashWindow_SetMinimumSizeY[1] = {{ wxLua_wxSashWindow_SetMinimumSizeY, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxSashWindow_SetMinimumSizeY }};
 //     void SetMinimumSizeY(int min );
 static int LUACALL wxLua_wxSashWindow_SetMinimumSizeY(lua_State *L)
 {
     // int min
-    int min = (int)wxlua_getnumbertype(L, 2);
+    int min = (int)wxlua_getintegertype(L, 2);
     // get this
     wxSashWindow * self = (wxSashWindow *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSashWindow);
     // call SetMinimumSizeY
@@ -3960,7 +3886,7 @@ static int LUACALL wxLua_wxSashWindow_SetSashVisible(lua_State *L)
 
 
 #if (wxLUA_USE_wxPointSizeRect) && (wxLUA_USE_wxSashWindow && wxUSE_SASH)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSashWindow_constructor1[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSashWindow_constructor1[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxSashWindow_constructor1(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxSashWindow_constructor1[1] = {{ wxLua_wxSashWindow_constructor1, WXLUAMETHOD_CONSTRUCTOR, 1, 6, s_wxluatypeArray_wxLua_wxSashWindow_constructor1 }};
 //     wxSashWindow(wxWindow *parent, wxWindowID id = -1, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxSW_3D|wxCLIP_CHILDREN, const wxString& name = "wxSashWindow" );
@@ -3971,7 +3897,7 @@ static int LUACALL wxLua_wxSashWindow_constructor1(lua_State *L)
     // const wxString name = "wxSashWindow"
     const wxString name = (argCount >= 6 ? wxlua_getwxStringtype(L, 6) : wxString(wxT("wxSashWindow")));
     // long style = wxSW_3D | wxCLIP_CHILDREN
-    long style = (argCount >= 5 ? (long)wxlua_getnumbertype(L, 5) : wxSW_3D | wxCLIP_CHILDREN);
+    long style = (argCount >= 5 ? (long)wxlua_getintegertype(L, 5) : wxSW_3D | wxCLIP_CHILDREN);
     // const wxSize size = wxDefaultSize
     const wxSize * size = (argCount >= 4 ? (const wxSize *)wxluaT_getuserdatatype(L, 4, wxluatype_wxSize) : &wxDefaultSize);
     // const wxPoint pos = wxDefaultPosition
@@ -4074,7 +4000,7 @@ int wxSashWindow_methodCount = sizeof(wxSashWindow_methods)/sizeof(wxLuaBindMeth
 int wxluatype_wxSashLayoutWindow = WXLUA_TUNKNOWN;
 
 #if (wxLUA_USE_wxPointSizeRect) && (wxLUA_USE_wxSashWindow && wxUSE_SASH)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSashLayoutWindow_Create[] = { &wxluatype_wxSashLayoutWindow, &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSashLayoutWindow_Create[] = { &wxluatype_wxSashLayoutWindow, &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxSashLayoutWindow_Create(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSashLayoutWindow_Create[1] = {{ wxLua_wxSashLayoutWindow_Create, WXLUAMETHOD_METHOD, 2, 7, s_wxluatypeArray_wxLua_wxSashLayoutWindow_Create }};
 //     bool Create(wxWindow *parent, wxWindowID id = -1, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxSW_3D|wxCLIP_CHILDREN, const wxString& name = "wxSashLayoutWindow" );
@@ -4085,7 +4011,7 @@ static int LUACALL wxLua_wxSashLayoutWindow_Create(lua_State *L)
     // const wxString name = "wxSashLayoutWindow"
     const wxString name = (argCount >= 7 ? wxlua_getwxStringtype(L, 7) : wxString(wxT("wxSashLayoutWindow")));
     // long style = wxSW_3D | wxCLIP_CHILDREN
-    long style = (argCount >= 6 ? (long)wxlua_getnumbertype(L, 6) : wxSW_3D | wxCLIP_CHILDREN);
+    long style = (argCount >= 6 ? (long)wxlua_getintegertype(L, 6) : wxSW_3D | wxCLIP_CHILDREN);
     // const wxSize size = wxDefaultSize
     const wxSize * size = (argCount >= 5 ? (const wxSize *)wxluaT_getuserdatatype(L, 5, wxluatype_wxSize) : &wxDefaultSize);
     // const wxPoint pos = wxDefaultPosition
@@ -4192,7 +4118,7 @@ static int LUACALL wxLua_wxSashLayoutWindow_SetOrientation(lua_State *L)
 
 
 #if (wxLUA_USE_wxPointSizeRect) && (wxLUA_USE_wxSashWindow && wxUSE_SASH)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSashLayoutWindow_constructor1[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSashLayoutWindow_constructor1[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxSashLayoutWindow_constructor1(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxSashLayoutWindow_constructor1[1] = {{ wxLua_wxSashLayoutWindow_constructor1, WXLUAMETHOD_CONSTRUCTOR, 1, 6, s_wxluatypeArray_wxLua_wxSashLayoutWindow_constructor1 }};
 //     wxSashLayoutWindow(wxWindow *parent, wxWindowID id = -1, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxSW_3D|wxCLIP_CHILDREN, const wxString& name = "wxSashLayoutWindow" );
@@ -4203,7 +4129,7 @@ static int LUACALL wxLua_wxSashLayoutWindow_constructor1(lua_State *L)
     // const wxString name = "wxSashLayoutWindow"
     const wxString name = (argCount >= 6 ? wxlua_getwxStringtype(L, 6) : wxString(wxT("wxSashLayoutWindow")));
     // long style = wxSW_3D | wxCLIP_CHILDREN
-    long style = (argCount >= 5 ? (long)wxlua_getnumbertype(L, 5) : wxSW_3D | wxCLIP_CHILDREN);
+    long style = (argCount >= 5 ? (long)wxlua_getintegertype(L, 5) : wxSW_3D | wxCLIP_CHILDREN);
     // const wxSize size = wxDefaultSize
     const wxSize * size = (argCount >= 4 ? (const wxSize *)wxluaT_getuserdatatype(L, 4, wxluatype_wxSize) : &wxDefaultSize);
     // const wxPoint pos = wxDefaultPosition
@@ -4453,8 +4379,8 @@ static int LUACALL wxLua_wxQueryLayoutInfoEvent_GetFlags(lua_State *L)
     wxQueryLayoutInfoEvent * self = (wxQueryLayoutInfoEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxQueryLayoutInfoEvent);
     // call GetFlags
     int returns = (self->GetFlags());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -4485,8 +4411,8 @@ static int LUACALL wxLua_wxQueryLayoutInfoEvent_GetRequestedLength(lua_State *L)
     wxQueryLayoutInfoEvent * self = (wxQueryLayoutInfoEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxQueryLayoutInfoEvent);
     // call GetRequestedLength
     int returns = (self->GetRequestedLength());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -4530,14 +4456,14 @@ static int LUACALL wxLua_wxQueryLayoutInfoEvent_SetAlignment(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxQueryLayoutInfoEvent_SetFlags[] = { &wxluatype_wxQueryLayoutInfoEvent, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxQueryLayoutInfoEvent_SetFlags[] = { &wxluatype_wxQueryLayoutInfoEvent, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxQueryLayoutInfoEvent_SetFlags(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxQueryLayoutInfoEvent_SetFlags[1] = {{ wxLua_wxQueryLayoutInfoEvent_SetFlags, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxQueryLayoutInfoEvent_SetFlags }};
 //     void SetFlags(int flags );
 static int LUACALL wxLua_wxQueryLayoutInfoEvent_SetFlags(lua_State *L)
 {
     // int flags
-    int flags = (int)wxlua_getnumbertype(L, 2);
+    int flags = (int)wxlua_getintegertype(L, 2);
     // get this
     wxQueryLayoutInfoEvent * self = (wxQueryLayoutInfoEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxQueryLayoutInfoEvent);
     // call SetFlags
@@ -4562,14 +4488,14 @@ static int LUACALL wxLua_wxQueryLayoutInfoEvent_SetOrientation(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxQueryLayoutInfoEvent_SetRequestedLength[] = { &wxluatype_wxQueryLayoutInfoEvent, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxQueryLayoutInfoEvent_SetRequestedLength[] = { &wxluatype_wxQueryLayoutInfoEvent, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxQueryLayoutInfoEvent_SetRequestedLength(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxQueryLayoutInfoEvent_SetRequestedLength[1] = {{ wxLua_wxQueryLayoutInfoEvent_SetRequestedLength, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxQueryLayoutInfoEvent_SetRequestedLength }};
 //     void SetRequestedLength(int length );
 static int LUACALL wxLua_wxQueryLayoutInfoEvent_SetRequestedLength(lua_State *L)
 {
     // int length
-    int length = (int)wxlua_getnumbertype(L, 2);
+    int length = (int)wxlua_getintegertype(L, 2);
     // get this
     wxQueryLayoutInfoEvent * self = (wxQueryLayoutInfoEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxQueryLayoutInfoEvent);
     // call SetRequestedLength
@@ -4679,8 +4605,8 @@ static int LUACALL wxLua_wxCalculateLayoutEvent_GetFlags(lua_State *L)
     wxCalculateLayoutEvent * self = (wxCalculateLayoutEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxCalculateLayoutEvent);
     // call GetFlags
     int returns = (self->GetFlags());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -4708,14 +4634,14 @@ static int LUACALL wxLua_wxCalculateLayoutEvent_GetRect(lua_State *L)
 
 #endif // (wxLUA_USE_wxPointSizeRect) && (wxLUA_USE_wxSashWindow && wxUSE_SASH)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxCalculateLayoutEvent_SetFlags[] = { &wxluatype_wxCalculateLayoutEvent, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxCalculateLayoutEvent_SetFlags[] = { &wxluatype_wxCalculateLayoutEvent, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxCalculateLayoutEvent_SetFlags(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxCalculateLayoutEvent_SetFlags[1] = {{ wxLua_wxCalculateLayoutEvent_SetFlags, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxCalculateLayoutEvent_SetFlags }};
 //     void SetFlags(int flags );
 static int LUACALL wxLua_wxCalculateLayoutEvent_SetFlags(lua_State *L)
 {
     // int flags
-    int flags = (int)wxlua_getnumbertype(L, 2);
+    int flags = (int)wxlua_getintegertype(L, 2);
     // get this
     wxCalculateLayoutEvent * self = (wxCalculateLayoutEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxCalculateLayoutEvent);
     // call SetFlags
@@ -4841,8 +4767,8 @@ static int LUACALL wxLua_wxSashEvent_GetDragStatus(lua_State *L)
     wxSashEvent * self = (wxSashEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSashEvent);
     // call GetDragStatus
     int returns = (self->GetDragStatus());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -4857,8 +4783,8 @@ static int LUACALL wxLua_wxSashEvent_GetEdge(lua_State *L)
     wxSashEvent * self = (wxSashEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSashEvent);
     // call GetEdge
     int returns = (self->GetEdge());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -4918,7 +4844,7 @@ static int LUACALL wxLua_wxSashEvent_SetEdge(lua_State *L)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxSashEvent_delete[] = { &wxluatype_wxSashEvent, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSashEvent_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxSashEvent_delete }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSashEvent_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TINTEGER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSashEvent_constructor[] = { &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSashEvent_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSashEvent_constructor[1] = {{ wxLua_wxSashEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 2, s_wxluatypeArray_wxLua_wxSashEvent_constructor }};
 //     wxSashEvent(int id = 0, wxSashEdgePosition edge = wxSASH_NONE );
@@ -4929,7 +4855,7 @@ static int LUACALL wxLua_wxSashEvent_constructor(lua_State *L)
     // wxSashEdgePosition edge = wxSASH_NONE
     wxSashEdgePosition edge = (argCount >= 2 ? (wxSashEdgePosition)wxlua_getenumtype(L, 2) : wxSASH_NONE);
     // int id = 0
-    int id = (argCount >= 1 ? (int)wxlua_getnumbertype(L, 1) : 0);
+    int id = (argCount >= 1 ? (int)wxlua_getintegertype(L, 1) : 0);
     // call constructor
     wxSashEvent* returns = new wxSashEvent(id, edge);
     // add to tracked memory list
@@ -4993,8 +4919,8 @@ static int LUACALL wxLua_wxSplashScreen_GetSplashStyle(lua_State *L)
     wxSplashScreen * self = (wxSplashScreen *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSplashScreen);
     // call GetSplashStyle
     long  returns = (self->GetSplashStyle());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -5025,15 +4951,15 @@ static int LUACALL wxLua_wxSplashScreen_GetTimeout(lua_State *L)
     wxSplashScreen * self = (wxSplashScreen *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSplashScreen);
     // call GetTimeout
     int returns = (self->GetTimeout());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
 
 #if ((wxLUA_USE_wxBitmap) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxSplashScreen)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSplashScreen_constructor[] = { &wxluatype_wxBitmap, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSplashScreen_constructor[] = { &wxluatype_wxBitmap, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSplashScreen_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSplashScreen_constructor[1] = {{ wxLua_wxSplashScreen_constructor, WXLUAMETHOD_CONSTRUCTOR, 5, 8, s_wxluatypeArray_wxLua_wxSplashScreen_constructor }};
 //     wxSplashScreen(const wxBitmap& bitmap, long splashStyle, int milliseconds, wxWindow* parent, wxWindowID id, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxSIMPLE_BORDER|wxFRAME_NO_TASKBAR|wxSTAY_ON_TOP );
@@ -5042,7 +4968,7 @@ static int LUACALL wxLua_wxSplashScreen_constructor(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // long style = wxSIMPLE_BORDER | wxFRAME_NO_TASKBAR | wxSTAY_ON_TOP
-    long style = (argCount >= 8 ? (long)wxlua_getnumbertype(L, 8) : wxSIMPLE_BORDER | wxFRAME_NO_TASKBAR | wxSTAY_ON_TOP);
+    long style = (argCount >= 8 ? (long)wxlua_getintegertype(L, 8) : wxSIMPLE_BORDER | wxFRAME_NO_TASKBAR | wxSTAY_ON_TOP);
     // const wxSize size = wxDefaultSize
     const wxSize * size = (argCount >= 7 ? (const wxSize *)wxluaT_getuserdatatype(L, 7, wxluatype_wxSize) : &wxDefaultSize);
     // const wxPoint pos = wxDefaultPosition
@@ -5052,9 +4978,9 @@ static int LUACALL wxLua_wxSplashScreen_constructor(lua_State *L)
     // wxWindow parent
     wxWindow * parent = (wxWindow *)wxluaT_getuserdatatype(L, 4, wxluatype_wxWindow);
     // int milliseconds
-    int milliseconds = (int)wxlua_getnumbertype(L, 3);
+    int milliseconds = (int)wxlua_getintegertype(L, 3);
     // long splashStyle
-    long splashStyle = (long)wxlua_getnumbertype(L, 2);
+    long splashStyle = (long)wxlua_getintegertype(L, 2);
     // const wxBitmap bitmap
     const wxBitmap * bitmap = (const wxBitmap *)wxluaT_getuserdatatype(L, 1, wxluatype_wxBitmap);
     // call constructor
@@ -5170,7 +5096,7 @@ int wxSplashScreenWindow_methodCount = sizeof(wxSplashScreenWindow_methods)/size
 int wxluatype_wxWizard = WXLUA_TUNKNOWN;
 
 #if ((wxLUA_USE_wxBitmap) && (wxLUA_USE_wxPointSizeRect)) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxWizard_Create[] = { &wxluatype_wxWizard, &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_TSTRING, &wxluatype_wxBitmap, &wxluatype_wxPoint, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxWizard_Create[] = { &wxluatype_wxWizard, &wxluatype_wxWindow, &wxluatype_TINTEGER, &wxluatype_TSTRING, &wxluatype_wxBitmap, &wxluatype_wxPoint, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxWizard_Create(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxWizard_Create[1] = {{ wxLua_wxWizard_Create, WXLUAMETHOD_METHOD, 2, 7, s_wxluatypeArray_wxLua_wxWizard_Create }};
 //     bool Create(wxWindow* parent, int id = -1, const wxString& title = "", const wxBitmap& bitmap = wxNullBitmap, const wxPoint& pos = wxDefaultPosition, long style = wxDEFAULT_DIALOG_STYLE );
@@ -5179,7 +5105,7 @@ static int LUACALL wxLua_wxWizard_Create(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // long style = wxDEFAULT_DIALOG_STYLE
-    long style = (argCount >= 7 ? (long)wxlua_getnumbertype(L, 7) : wxDEFAULT_DIALOG_STYLE);
+    long style = (argCount >= 7 ? (long)wxlua_getintegertype(L, 7) : wxDEFAULT_DIALOG_STYLE);
     // const wxPoint pos = wxDefaultPosition
     const wxPoint * pos = (argCount >= 6 ? (const wxPoint *)wxluaT_getuserdatatype(L, 6, wxluatype_wxPoint) : &wxDefaultPosition);
     // const wxBitmap bitmap = wxNullBitmap
@@ -5187,7 +5113,7 @@ static int LUACALL wxLua_wxWizard_Create(lua_State *L)
     // const wxString title = ""
     const wxString title = (argCount >= 4 ? wxlua_getwxStringtype(L, 4) : wxString(wxEmptyString));
     // int id = -1
-    int id = (argCount >= 3 ? (int)wxlua_getnumbertype(L, 3) : -1);
+    int id = (argCount >= 3 ? (int)wxlua_getintegertype(L, 3) : -1);
     // wxWindow parent
     wxWindow * parent = (wxWindow *)wxluaT_getuserdatatype(L, 2, wxluatype_wxWindow);
     // get this
@@ -5219,7 +5145,7 @@ static int LUACALL wxLua_wxWizard_GetCurrentPage(lua_State *L)
 }
 
 
-#if ((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
+#if (wxLUA_USE_wxSizer) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxWizard_GetPageAreaSizer[] = { &wxluatype_wxWizard, NULL };
 static int LUACALL wxLua_wxWizard_GetPageAreaSizer(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxWizard_GetPageAreaSizer[1] = {{ wxLua_wxWizard_GetPageAreaSizer, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxWizard_GetPageAreaSizer }};
@@ -5236,7 +5162,7 @@ static int LUACALL wxLua_wxWizard_GetPageAreaSizer(lua_State *L)
     return 1;
 }
 
-#endif // ((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
+#endif // (wxLUA_USE_wxSizer) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
 
 #if (wxLUA_USE_wxPointSizeRect) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxWizard_GetPageSize[] = { &wxluatype_wxWizard, NULL };
@@ -5314,14 +5240,14 @@ static int LUACALL wxLua_wxWizard_RunWizard(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxWizard_SetBorder[] = { &wxluatype_wxWizard, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxWizard_SetBorder[] = { &wxluatype_wxWizard, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxWizard_SetBorder(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxWizard_SetBorder[1] = {{ wxLua_wxWizard_SetBorder, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxWizard_SetBorder }};
 //     void SetBorder(int border );
 static int LUACALL wxLua_wxWizard_SetBorder(lua_State *L)
 {
     // int border
-    int border = (int)wxlua_getnumbertype(L, 2);
+    int border = (int)wxlua_getintegertype(L, 2);
     // get this
     wxWizard * self = (wxWizard *)wxluaT_getuserdatatype(L, 1, wxluatype_wxWizard);
     // call SetBorder
@@ -5351,7 +5277,7 @@ static int LUACALL wxLua_wxWizard_SetPageSize(lua_State *L)
 #endif // (wxLUA_USE_wxPointSizeRect) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
 
 #if ((wxLUA_USE_wxBitmap) && (wxLUA_USE_wxPointSizeRect)) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxWizard_constructor1[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_TSTRING, &wxluatype_wxBitmap, &wxluatype_wxPoint, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxWizard_constructor1[] = { &wxluatype_wxWindow, &wxluatype_TINTEGER, &wxluatype_TSTRING, &wxluatype_wxBitmap, &wxluatype_wxPoint, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxWizard_constructor1(lua_State *L);
 // // static wxLuaBindCFunc s_wxluafunc_wxLua_wxWizard_constructor1[1] = {{ wxLua_wxWizard_constructor1, WXLUAMETHOD_CONSTRUCTOR, 1, 6, s_wxluatypeArray_wxLua_wxWizard_constructor1 }};
 //     wxWizard(wxWindow* parent, int id = -1, const wxString& title = "", const wxBitmap& bitmap = wxNullBitmap, const wxPoint& pos = wxDefaultPosition, long style = wxDEFAULT_DIALOG_STYLE );
@@ -5360,7 +5286,7 @@ static int LUACALL wxLua_wxWizard_constructor1(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // long style = wxDEFAULT_DIALOG_STYLE
-    long style = (argCount >= 6 ? (long)wxlua_getnumbertype(L, 6) : wxDEFAULT_DIALOG_STYLE);
+    long style = (argCount >= 6 ? (long)wxlua_getintegertype(L, 6) : wxDEFAULT_DIALOG_STYLE);
     // const wxPoint pos = wxDefaultPosition
     const wxPoint * pos = (argCount >= 5 ? (const wxPoint *)wxluaT_getuserdatatype(L, 5, wxluatype_wxPoint) : &wxDefaultPosition);
     // const wxBitmap bitmap = wxNullBitmap
@@ -5368,7 +5294,7 @@ static int LUACALL wxLua_wxWizard_constructor1(lua_State *L)
     // const wxString title = ""
     const wxString title = (argCount >= 3 ? wxlua_getwxStringtype(L, 3) : wxString(wxEmptyString));
     // int id = -1
-    int id = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : -1);
+    int id = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : -1);
     // wxWindow parent
     wxWindow * parent = (wxWindow *)wxluaT_getuserdatatype(L, 1, wxluatype_wxWindow);
     // call constructor
@@ -5429,9 +5355,9 @@ wxLuaBindMethod wxWizard_methods[] = {
 
     { "GetCurrentPage", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxWizard_GetCurrentPage, 1, NULL },
 
-#if ((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
+#if (wxLUA_USE_wxSizer) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
     { "GetPageAreaSizer", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxWizard_GetPageAreaSizer, 1, NULL },
-#endif // ((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
+#endif // (wxLUA_USE_wxSizer) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
 
 #if (wxLUA_USE_wxPointSizeRect) && (wxUSE_WIZARDDLG && wxLUA_USE_wxWizard)
     { "GetPageSize", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxWizard_GetPageSize, 1, NULL },
@@ -5699,7 +5625,7 @@ static int LUACALL wxLua_wxWizardEvent_GetPage(lua_State *L)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxWizardEvent_delete[] = { &wxluatype_wxWizardEvent, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxWizardEvent_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxWizardEvent_delete }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxWizardEvent_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxWizardEvent_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxWizardEvent_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxWizardEvent_constructor[1] = {{ wxLua_wxWizardEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 3, s_wxluatypeArray_wxLua_wxWizardEvent_constructor }};
 //     wxWizardEvent(wxEventType type = wxEVT_NULL, int id = -1, bool direction = true );
@@ -5710,7 +5636,7 @@ static int LUACALL wxLua_wxWizardEvent_constructor(lua_State *L)
     // bool direction = true
     bool direction = (argCount >= 3 ? wxlua_getbooleantype(L, 3) : true);
     // int id = -1
-    int id = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : -1);
+    int id = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : -1);
     // wxEventType type = wxEVT_NULL
     wxEventType type = (argCount >= 1 ? (wxEventType)wxlua_getnumbertype(L, 1) : wxEVT_NULL);
     // call constructor
@@ -5771,12 +5697,10 @@ static int LUACALL wxLua_wxTaskBarIcon_IsIconInstalled(lua_State *L)
     return 1;
 }
 
-
-#if (wxCHECK_VERSION(2,4,0)) && (wxLUA_USE_wxTaskBarIcon && defined (wxHAS_TASK_BAR_ICON ))
 static wxLuaArgType s_wxluatypeArray_wxLua_wxTaskBarIcon_IsOk[] = { &wxluatype_wxTaskBarIcon, NULL };
 static int LUACALL wxLua_wxTaskBarIcon_IsOk(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxTaskBarIcon_IsOk[1] = {{ wxLua_wxTaskBarIcon_IsOk, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxTaskBarIcon_IsOk }};
-//     %wxchkver_2_4 bool IsOk( );
+//     bool IsOk( );
 static int LUACALL wxLua_wxTaskBarIcon_IsOk(lua_State *L)
 {
     // get this
@@ -5789,7 +5713,6 @@ static int LUACALL wxLua_wxTaskBarIcon_IsOk(lua_State *L)
     return 1;
 }
 
-#endif // (wxCHECK_VERSION(2,4,0)) && (wxLUA_USE_wxTaskBarIcon && defined (wxHAS_TASK_BAR_ICON ))
 
 #if (wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxTaskBarIcon && defined (wxHAS_TASK_BAR_ICON ))
 static wxLuaArgType s_wxluatypeArray_wxLua_wxTaskBarIcon_PopupMenu[] = { &wxluatype_wxTaskBarIcon, &wxluatype_wxMenu, NULL };
@@ -5882,10 +5805,7 @@ void wxLua_wxTaskBarIcon_delete_function(void** p)
 // Map Lua Class Methods to C Binding Functions
 wxLuaBindMethod wxTaskBarIcon_methods[] = {
     { "IsIconInstalled", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxTaskBarIcon_IsIconInstalled, 1, NULL },
-
-#if (wxCHECK_VERSION(2,4,0)) && (wxLUA_USE_wxTaskBarIcon && defined (wxHAS_TASK_BAR_ICON ))
     { "IsOk", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxTaskBarIcon_IsOk, 1, NULL },
-#endif // (wxCHECK_VERSION(2,4,0)) && (wxLUA_USE_wxTaskBarIcon && defined (wxHAS_TASK_BAR_ICON ))
 
 #if (wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxTaskBarIcon && defined (wxHAS_TASK_BAR_ICON ))
     { "PopupMenu", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxTaskBarIcon_PopupMenu, 1, NULL },
@@ -5979,8 +5899,8 @@ static int LUACALL wxLua_wxJoystick_GetButtonState(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetButtonState
     int returns = (self->GetButtonState());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -5995,8 +5915,8 @@ static int LUACALL wxLua_wxJoystick_GetManufacturerId(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetManufacturerId
     int returns = (self->GetManufacturerId());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6011,8 +5931,8 @@ static int LUACALL wxLua_wxJoystick_GetMovementThreshold(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetMovementThreshold
     int returns = (self->GetMovementThreshold());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6027,8 +5947,8 @@ static int LUACALL wxLua_wxJoystick_GetNumberAxes(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetNumberAxes
     int returns = (self->GetNumberAxes());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6043,47 +5963,24 @@ static int LUACALL wxLua_wxJoystick_GetNumberButtons(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetNumberButtons
     int returns = (self->GetNumberButtons());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-
-#if (!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystick_GetNumberJoysticks1[] = { &wxluatype_wxJoystick, NULL };
-static int LUACALL wxLua_wxJoystick_GetNumberJoysticks1(lua_State *L);
-// // static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystick_GetNumberJoysticks1[1] = {{ wxLua_wxJoystick_GetNumberJoysticks1, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxJoystick_GetNumberJoysticks1 }};
-//     !%wxchkver_2_8 int GetNumberJoysticks() const;
-static int LUACALL wxLua_wxJoystick_GetNumberJoysticks1(lua_State *L)
-{
-    // get this
-    wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
-    // call GetNumberJoysticks
-    int returns = (self->GetNumberJoysticks());
-    // push the result number
-    lua_pushnumber(L, returns);
-
-    return 1;
-}
-
-#endif // (!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK)
-
-#if (wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK)
 static int LUACALL wxLua_wxJoystick_GetNumberJoysticks(lua_State *L);
-// // static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystick_GetNumberJoysticks[1] = {{ wxLua_wxJoystick_GetNumberJoysticks, WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, 0, 0, g_wxluaargtypeArray_None }};
-//     %wxchkver_2_8 static int GetNumberJoysticks() const;
+static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystick_GetNumberJoysticks[1] = {{ wxLua_wxJoystick_GetNumberJoysticks, WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, 0, 0, g_wxluaargtypeArray_None }};
+//     static int GetNumberJoysticks() const;
 static int LUACALL wxLua_wxJoystick_GetNumberJoysticks(lua_State *L)
 {
     // call GetNumberJoysticks
     int returns = (wxJoystick::GetNumberJoysticks());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
-
-#endif // (wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystick_GetPOVCTSPosition[] = { &wxluatype_wxJoystick, NULL };
 static int LUACALL wxLua_wxJoystick_GetPOVCTSPosition(lua_State *L);
@@ -6095,8 +5992,8 @@ static int LUACALL wxLua_wxJoystick_GetPOVCTSPosition(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetPOVCTSPosition
     int returns = (self->GetPOVCTSPosition());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6111,8 +6008,8 @@ static int LUACALL wxLua_wxJoystick_GetPOVPosition(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetPOVPosition
     int returns = (self->GetPOVPosition());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6127,8 +6024,8 @@ static int LUACALL wxLua_wxJoystick_GetPollingMax(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetPollingMax
     int returns = (self->GetPollingMax());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6143,8 +6040,8 @@ static int LUACALL wxLua_wxJoystick_GetPollingMin(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetPollingMin
     int returns = (self->GetPollingMin());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6182,8 +6079,8 @@ static int LUACALL wxLua_wxJoystick_GetProductId(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetProductId
     int returns = (self->GetProductId());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6214,8 +6111,8 @@ static int LUACALL wxLua_wxJoystick_GetRudderMax(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetRudderMax
     int returns = (self->GetRudderMax());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6230,8 +6127,8 @@ static int LUACALL wxLua_wxJoystick_GetRudderMin(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetRudderMin
     int returns = (self->GetRudderMin());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6246,8 +6143,8 @@ static int LUACALL wxLua_wxJoystick_GetRudderPosition(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetRudderPosition
     int returns = (self->GetRudderPosition());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6262,8 +6159,8 @@ static int LUACALL wxLua_wxJoystick_GetUMax(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetUMax
     int returns = (self->GetUMax());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6278,8 +6175,8 @@ static int LUACALL wxLua_wxJoystick_GetUMin(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetUMin
     int returns = (self->GetUMin());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6294,8 +6191,8 @@ static int LUACALL wxLua_wxJoystick_GetUPosition(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetUPosition
     int returns = (self->GetUPosition());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6310,8 +6207,8 @@ static int LUACALL wxLua_wxJoystick_GetVMax(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetVMax
     int returns = (self->GetVMax());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6326,8 +6223,8 @@ static int LUACALL wxLua_wxJoystick_GetVMin(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetVMin
     int returns = (self->GetVMin());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6342,8 +6239,8 @@ static int LUACALL wxLua_wxJoystick_GetVPosition(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetVPosition
     int returns = (self->GetVPosition());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6358,8 +6255,8 @@ static int LUACALL wxLua_wxJoystick_GetXMax(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetXMax
     int returns = (self->GetXMax());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6374,8 +6271,8 @@ static int LUACALL wxLua_wxJoystick_GetXMin(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetXMin
     int returns = (self->GetXMin());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6390,8 +6287,8 @@ static int LUACALL wxLua_wxJoystick_GetYMax(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetYMax
     int returns = (self->GetYMax());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6406,8 +6303,8 @@ static int LUACALL wxLua_wxJoystick_GetYMin(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetYMin
     int returns = (self->GetYMin());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6422,8 +6319,8 @@ static int LUACALL wxLua_wxJoystick_GetZMax(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetZMax
     int returns = (self->GetZMax());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6438,8 +6335,8 @@ static int LUACALL wxLua_wxJoystick_GetZMin(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetZMin
     int returns = (self->GetZMin());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6454,8 +6351,8 @@ static int LUACALL wxLua_wxJoystick_GetZPosition(lua_State *L)
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call GetZPosition
     int returns = (self->GetZPosition());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6604,7 +6501,7 @@ static int LUACALL wxLua_wxJoystick_ReleaseCapture(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystick_SetCapture[] = { &wxluatype_wxJoystick, &wxluatype_wxWindow, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystick_SetCapture[] = { &wxluatype_wxJoystick, &wxluatype_wxWindow, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxJoystick_SetCapture(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystick_SetCapture[1] = {{ wxLua_wxJoystick_SetCapture, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxJoystick_SetCapture }};
 //     bool SetCapture(wxWindow* win, int pollingFreq = 0 );
@@ -6613,7 +6510,7 @@ static int LUACALL wxLua_wxJoystick_SetCapture(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int pollingFreq = 0
-    int pollingFreq = (argCount >= 3 ? (int)wxlua_getnumbertype(L, 3) : 0);
+    int pollingFreq = (argCount >= 3 ? (int)wxlua_getintegertype(L, 3) : 0);
     // wxWindow win
     wxWindow * win = (wxWindow *)wxluaT_getuserdatatype(L, 2, wxluatype_wxWindow);
     // get this
@@ -6626,14 +6523,14 @@ static int LUACALL wxLua_wxJoystick_SetCapture(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystick_SetMovementThreshold[] = { &wxluatype_wxJoystick, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystick_SetMovementThreshold[] = { &wxluatype_wxJoystick, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxJoystick_SetMovementThreshold(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystick_SetMovementThreshold[1] = {{ wxLua_wxJoystick_SetMovementThreshold, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxJoystick_SetMovementThreshold }};
 //     void SetMovementThreshold(int threshold );
 static int LUACALL wxLua_wxJoystick_SetMovementThreshold(lua_State *L)
 {
     // int threshold
-    int threshold = (int)wxlua_getnumbertype(L, 2);
+    int threshold = (int)wxlua_getintegertype(L, 2);
     // get this
     wxJoystick * self = (wxJoystick *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystick);
     // call SetMovementThreshold
@@ -6645,7 +6542,7 @@ static int LUACALL wxLua_wxJoystick_SetMovementThreshold(lua_State *L)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystick_delete[] = { &wxluatype_wxJoystick, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystick_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxJoystick_delete }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystick_constructor[] = { &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystick_constructor[] = { &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxJoystick_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystick_constructor[1] = {{ wxLua_wxJoystick_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 1, s_wxluatypeArray_wxLua_wxJoystick_constructor }};
 //     wxJoystick(int joystick = wxJOYSTICK1 );
@@ -6654,7 +6551,7 @@ static int LUACALL wxLua_wxJoystick_constructor(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int joystick = wxJOYSTICK1
-    int joystick = (argCount >= 1 ? (int)wxlua_getnumbertype(L, 1) : wxJOYSTICK1);
+    int joystick = (argCount >= 1 ? (int)wxlua_getintegertype(L, 1) : wxJOYSTICK1);
     // call constructor
     wxJoystick* returns = new wxJoystick(joystick);
     // add to tracked memory list
@@ -6667,23 +6564,6 @@ static int LUACALL wxLua_wxJoystick_constructor(lua_State *L)
 
 
 
-
-#if ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK))||((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK))
-// function overload table
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystick_GetNumberJoysticks_overload[] =
-{
-
-#if (!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK)
-    { wxLua_wxJoystick_GetNumberJoysticks1, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxJoystick_GetNumberJoysticks1 },
-#endif // (!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK)
-
-#if (wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK)
-    { wxLua_wxJoystick_GetNumberJoysticks, WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, 0, 0, g_wxluaargtypeArray_None },
-#endif // (wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK)
-};
-static int s_wxluafunc_wxLua_wxJoystick_GetNumberJoysticks_overload_count = sizeof(s_wxluafunc_wxLua_wxJoystick_GetNumberJoysticks_overload)/sizeof(wxLuaBindCFunc);
-
-#endif // ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK))||((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK))
 
 void wxLua_wxJoystick_delete_function(void** p)
 {
@@ -6698,11 +6578,7 @@ wxLuaBindMethod wxJoystick_methods[] = {
     { "GetMovementThreshold", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxJoystick_GetMovementThreshold, 1, NULL },
     { "GetNumberAxes", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxJoystick_GetNumberAxes, 1, NULL },
     { "GetNumberButtons", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxJoystick_GetNumberButtons, 1, NULL },
-
-#if ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK))||((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK))
-    { "GetNumberJoysticks", WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, s_wxluafunc_wxLua_wxJoystick_GetNumberJoysticks_overload, s_wxluafunc_wxLua_wxJoystick_GetNumberJoysticks_overload_count, 0 },
-#endif // ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK))||((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxJoystick && wxUSE_JOYSTICK))
-
+    { "GetNumberJoysticks", WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, s_wxluafunc_wxLua_wxJoystick_GetNumberJoysticks, 1, NULL },
     { "GetPOVCTSPosition", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxJoystick_GetPOVCTSPosition, 1, NULL },
     { "GetPOVPosition", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxJoystick_GetPOVPosition, 1, NULL },
     { "GetPollingMax", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxJoystick_GetPollingMax, 1, NULL },
@@ -6760,7 +6636,7 @@ int wxJoystick_methodCount = sizeof(wxJoystick_methods)/sizeof(wxLuaBindMethod) 
 // Lua MetaTable Tag for Class 'wxJoystickEvent'
 int wxluatype_wxJoystickEvent = WXLUA_TUNKNOWN;
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystickEvent_ButtonDown[] = { &wxluatype_wxJoystickEvent, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystickEvent_ButtonDown[] = { &wxluatype_wxJoystickEvent, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxJoystickEvent_ButtonDown(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystickEvent_ButtonDown[1] = {{ wxLua_wxJoystickEvent_ButtonDown, WXLUAMETHOD_METHOD, 1, 2, s_wxluatypeArray_wxLua_wxJoystickEvent_ButtonDown }};
 //     bool ButtonDown(int button = wxJOY_BUTTON_ANY) const;
@@ -6769,7 +6645,7 @@ static int LUACALL wxLua_wxJoystickEvent_ButtonDown(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int button = wxJOY_BUTTON_ANY
-    int button = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : wxJOY_BUTTON_ANY);
+    int button = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : wxJOY_BUTTON_ANY);
     // get this
     wxJoystickEvent * self = (wxJoystickEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystickEvent);
     // call ButtonDown
@@ -6780,7 +6656,7 @@ static int LUACALL wxLua_wxJoystickEvent_ButtonDown(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystickEvent_ButtonIsDown[] = { &wxluatype_wxJoystickEvent, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystickEvent_ButtonIsDown[] = { &wxluatype_wxJoystickEvent, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxJoystickEvent_ButtonIsDown(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystickEvent_ButtonIsDown[1] = {{ wxLua_wxJoystickEvent_ButtonIsDown, WXLUAMETHOD_METHOD, 1, 2, s_wxluatypeArray_wxLua_wxJoystickEvent_ButtonIsDown }};
 //     bool ButtonIsDown(int button = wxJOY_BUTTON_ANY) const;
@@ -6789,7 +6665,7 @@ static int LUACALL wxLua_wxJoystickEvent_ButtonIsDown(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int button = wxJOY_BUTTON_ANY
-    int button = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : wxJOY_BUTTON_ANY);
+    int button = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : wxJOY_BUTTON_ANY);
     // get this
     wxJoystickEvent * self = (wxJoystickEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystickEvent);
     // call ButtonIsDown
@@ -6800,7 +6676,7 @@ static int LUACALL wxLua_wxJoystickEvent_ButtonIsDown(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystickEvent_ButtonUp[] = { &wxluatype_wxJoystickEvent, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystickEvent_ButtonUp[] = { &wxluatype_wxJoystickEvent, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxJoystickEvent_ButtonUp(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystickEvent_ButtonUp[1] = {{ wxLua_wxJoystickEvent_ButtonUp, WXLUAMETHOD_METHOD, 1, 2, s_wxluatypeArray_wxLua_wxJoystickEvent_ButtonUp }};
 //     bool ButtonUp(int button = wxJOY_BUTTON_ANY) const;
@@ -6809,7 +6685,7 @@ static int LUACALL wxLua_wxJoystickEvent_ButtonUp(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int button = wxJOY_BUTTON_ANY
-    int button = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : wxJOY_BUTTON_ANY);
+    int button = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : wxJOY_BUTTON_ANY);
     // get this
     wxJoystickEvent * self = (wxJoystickEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystickEvent);
     // call ButtonUp
@@ -6830,8 +6706,8 @@ static int LUACALL wxLua_wxJoystickEvent_GetButtonChange(lua_State *L)
     wxJoystickEvent * self = (wxJoystickEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystickEvent);
     // call GetButtonChange
     int returns = (self->GetButtonChange());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6846,8 +6722,8 @@ static int LUACALL wxLua_wxJoystickEvent_GetButtonState(lua_State *L)
     wxJoystickEvent * self = (wxJoystickEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystickEvent);
     // call GetButtonState
     int returns = (self->GetButtonState());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6862,8 +6738,8 @@ static int LUACALL wxLua_wxJoystickEvent_GetJoystick(lua_State *L)
     wxJoystickEvent * self = (wxJoystickEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystickEvent);
     // call GetJoystick
     int returns = (self->GetJoystick());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6901,8 +6777,8 @@ static int LUACALL wxLua_wxJoystickEvent_GetZPosition(lua_State *L)
     wxJoystickEvent * self = (wxJoystickEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxJoystickEvent);
     // call GetZPosition
     int returns = (self->GetZPosition());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -6958,7 +6834,7 @@ static int LUACALL wxLua_wxJoystickEvent_IsZMove(lua_State *L)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystickEvent_delete[] = { &wxluatype_wxJoystickEvent, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystickEvent_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxJoystickEvent_delete }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystickEvent_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxJoystickEvent_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxJoystickEvent_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxJoystickEvent_constructor[1] = {{ wxLua_wxJoystickEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 4, s_wxluatypeArray_wxLua_wxJoystickEvent_constructor }};
 //     wxJoystickEvent(wxEventType eventType = wxEVT_NULL, int state = 0, int joystick = wxJOYSTICK1, int change = 0 );
@@ -6967,11 +6843,11 @@ static int LUACALL wxLua_wxJoystickEvent_constructor(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int change = 0
-    int change = (argCount >= 4 ? (int)wxlua_getnumbertype(L, 4) : 0);
+    int change = (argCount >= 4 ? (int)wxlua_getintegertype(L, 4) : 0);
     // int joystick = wxJOYSTICK1
-    int joystick = (argCount >= 3 ? (int)wxlua_getnumbertype(L, 3) : wxJOYSTICK1);
+    int joystick = (argCount >= 3 ? (int)wxlua_getintegertype(L, 3) : wxJOYSTICK1);
     // int state = 0
-    int state = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : 0);
+    int state = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : 0);
     // wxEventType eventType = wxEVT_NULL
     wxEventType eventType = (argCount >= 1 ? (wxEventType)wxlua_getnumbertype(L, 1) : wxEVT_NULL);
     // call constructor
@@ -7021,7 +6897,7 @@ int wxJoystickEvent_methodCount = sizeof(wxJoystickEvent_methods)/sizeof(wxLuaBi
 #endif  // wxLUA_USE_wxJoystick && wxUSE_JOYSTICK
 
 
-#if (wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave)
+#if (wxLUA_USE_wxWave) && (wxUSE_SOUND)
 // ---------------------------------------------------------------------------
 // Bind class wxSound
 // ---------------------------------------------------------------------------
@@ -7068,7 +6944,7 @@ static int LUACALL wxLua_wxSound_IsOk(lua_State *L)
 }
 
 
-#if (!defined(__WXMSW__)) && ((wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave))
+#if (!defined(__WXMSW__)) && ((wxLUA_USE_wxWave) && (wxUSE_SOUND))
 static int LUACALL wxLua_wxSound_IsPlaying(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSound_IsPlaying[1] = {{ wxLua_wxSound_IsPlaying, WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, 0, 0, g_wxluaargtypeArray_None }};
 //     !%win static bool IsPlaying() const;
@@ -7082,7 +6958,7 @@ static int LUACALL wxLua_wxSound_IsPlaying(lua_State *L)
     return 1;
 }
 
-#endif // (!defined(__WXMSW__)) && ((wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave))
+#endif // (!defined(__WXMSW__)) && ((wxLUA_USE_wxWave) && (wxUSE_SOUND))
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxSound_Play1[] = { &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxSound_Play1(lua_State *L);
@@ -7174,7 +7050,7 @@ static int LUACALL wxLua_wxSound_constructor(lua_State *L)
 
 
 
-#if ((wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave))
+#if ((wxLUA_USE_wxWave) && (wxUSE_SOUND))
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSound_Play_overload[] =
 {
@@ -7191,7 +7067,7 @@ static wxLuaBindCFunc s_wxluafunc_wxLua_wxSound_constructor_overload[] =
 };
 static int s_wxluafunc_wxLua_wxSound_constructor_overload_count = sizeof(s_wxluafunc_wxLua_wxSound_constructor_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave))
+#endif // ((wxLUA_USE_wxWave) && (wxUSE_SOUND))
 
 void wxLua_wxSound_delete_function(void** p)
 {
@@ -7204,222 +7080,27 @@ wxLuaBindMethod wxSound_methods[] = {
     { "Create", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxSound_Create, 1, NULL },
     { "IsOk", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxSound_IsOk, 1, NULL },
 
-#if (!defined(__WXMSW__)) && ((wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave))
+#if (!defined(__WXMSW__)) && ((wxLUA_USE_wxWave) && (wxUSE_SOUND))
     { "IsPlaying", WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, s_wxluafunc_wxLua_wxSound_IsPlaying, 1, NULL },
-#endif // (!defined(__WXMSW__)) && ((wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave))
+#endif // (!defined(__WXMSW__)) && ((wxLUA_USE_wxWave) && (wxUSE_SOUND))
 
-#if ((wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave))
+#if ((wxLUA_USE_wxWave) && (wxUSE_SOUND))
     { "Play", WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, s_wxluafunc_wxLua_wxSound_Play_overload, s_wxluafunc_wxLua_wxSound_Play_overload_count, 0 },
-#endif // ((wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave))
+#endif // ((wxLUA_USE_wxWave) && (wxUSE_SOUND))
 
     { "Stop", WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, s_wxluafunc_wxLua_wxSound_Stop, 1, NULL },
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxSound_delete, 1, NULL },
 
-#if ((wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave))
+#if ((wxLUA_USE_wxWave) && (wxUSE_SOUND))
     { "wxSound", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxSound_constructor_overload, s_wxluafunc_wxLua_wxSound_constructor_overload_count, 0 },
-#endif // ((wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave))
+#endif // ((wxLUA_USE_wxWave) && (wxUSE_SOUND))
 
     { 0, 0, 0, 0 },
 };
 
 int wxSound_methodCount = sizeof(wxSound_methods)/sizeof(wxLuaBindMethod) - 1;
 
-#endif  // (wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave)
-
-
-#if (defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)
-// ---------------------------------------------------------------------------
-// Bind class wxWave
-// ---------------------------------------------------------------------------
-
-// Lua MetaTable Tag for Class 'wxWave'
-int wxluatype_wxWave = WXLUA_TUNKNOWN;
-
-static wxLuaArgType s_wxluatypeArray_wxLua_wxWave_Create[] = { &wxluatype_wxWave, &wxluatype_TSTRING, &wxluatype_TBOOLEAN, NULL };
-static int LUACALL wxLua_wxWave_Create(lua_State *L);
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxWave_Create[1] = {{ wxLua_wxWave_Create, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxWave_Create }};
-//     bool Create(const wxString& fileName, bool isResource = false );
-static int LUACALL wxLua_wxWave_Create(lua_State *L)
-{
-    // get number of arguments
-    int argCount = lua_gettop(L);
-    // bool isResource = false
-    bool isResource = (argCount >= 3 ? wxlua_getbooleantype(L, 3) : false);
-    // const wxString fileName
-    const wxString fileName = wxlua_getwxStringtype(L, 2);
-    // get this
-    wxWave * self = (wxWave *)wxluaT_getuserdatatype(L, 1, wxluatype_wxWave);
-    // call Create
-    bool returns = (self->Create(fileName, isResource));
-    // push the result flag
-    lua_pushboolean(L, returns);
-
-    return 1;
-}
-
-static wxLuaArgType s_wxluatypeArray_wxLua_wxWave_IsOk[] = { &wxluatype_wxWave, NULL };
-static int LUACALL wxLua_wxWave_IsOk(lua_State *L);
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxWave_IsOk[1] = {{ wxLua_wxWave_IsOk, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxWave_IsOk }};
-//     bool IsOk() const;
-static int LUACALL wxLua_wxWave_IsOk(lua_State *L)
-{
-    // get this
-    wxWave * self = (wxWave *)wxluaT_getuserdatatype(L, 1, wxluatype_wxWave);
-    // call IsOk
-    bool returns = (self->IsOk());
-    // push the result flag
-    lua_pushboolean(L, returns);
-
-    return 1;
-}
-
-
-#if ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)) && (wxCHECK_VERSION(2,6,0))
-static wxLuaArgType s_wxluatypeArray_wxLua_wxWave_Play1[] = { &wxluatype_wxWave, &wxluatype_TINTEGER, NULL };
-static int LUACALL wxLua_wxWave_Play1(lua_State *L);
-// // static wxLuaBindCFunc s_wxluafunc_wxLua_wxWave_Play1[1] = {{ wxLua_wxWave_Play1, WXLUAMETHOD_METHOD, 1, 2, s_wxluatypeArray_wxLua_wxWave_Play1 }};
-//     %wxchkver_2_6 bool Play(unsigned int flags = wxSOUND_ASYNC) const;
-static int LUACALL wxLua_wxWave_Play1(lua_State *L)
-{
-    // get number of arguments
-    int argCount = lua_gettop(L);
-    // unsigned int flags = wxSOUND_ASYNC
-    unsigned int flags = (argCount >= 2 ? (unsigned int)wxlua_getuintegertype(L, 2) : wxSOUND_ASYNC);
-    // get this
-    wxWave * self = (wxWave *)wxluaT_getuserdatatype(L, 1, wxluatype_wxWave);
-    // call Play
-    bool returns = (self->Play(flags));
-    // push the result flag
-    lua_pushboolean(L, returns);
-
-    return 1;
-}
-
-#endif // ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)) && (wxCHECK_VERSION(2,6,0))
-
-#if (!wxCHECK_VERSION(2,6,0)) && ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave))
-static wxLuaArgType s_wxluatypeArray_wxLua_wxWave_Play[] = { &wxluatype_wxWave, &wxluatype_TBOOLEAN, &wxluatype_TBOOLEAN, NULL };
-static int LUACALL wxLua_wxWave_Play(lua_State *L);
-// // static wxLuaBindCFunc s_wxluafunc_wxLua_wxWave_Play[1] = {{ wxLua_wxWave_Play, WXLUAMETHOD_METHOD, 1, 3, s_wxluatypeArray_wxLua_wxWave_Play }};
-//     !%wxchkver_2_6 bool Play(bool async = true, bool looped = false) const;
-static int LUACALL wxLua_wxWave_Play(lua_State *L)
-{
-    // get number of arguments
-    int argCount = lua_gettop(L);
-    // bool looped = false
-    bool looped = (argCount >= 3 ? wxlua_getbooleantype(L, 3) : false);
-    // bool async = true
-    bool async = (argCount >= 2 ? wxlua_getbooleantype(L, 2) : true);
-    // get this
-    wxWave * self = (wxWave *)wxluaT_getuserdatatype(L, 1, wxluatype_wxWave);
-    // call Play
-    bool returns = (self->Play(async, looped));
-    // push the result flag
-    lua_pushboolean(L, returns);
-
-    return 1;
-}
-
-#endif // (!wxCHECK_VERSION(2,6,0)) && ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave))
-
-static wxLuaArgType s_wxluatypeArray_wxLua_wxWave_delete[] = { &wxluatype_wxWave, NULL };
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxWave_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxWave_delete }};
-
-static wxLuaArgType s_wxluatypeArray_wxLua_wxWave_constructor1[] = { &wxluatype_TSTRING, &wxluatype_TBOOLEAN, NULL };
-static int LUACALL wxLua_wxWave_constructor1(lua_State *L);
-// // static wxLuaBindCFunc s_wxluafunc_wxLua_wxWave_constructor1[1] = {{ wxLua_wxWave_constructor1, WXLUAMETHOD_CONSTRUCTOR, 1, 2, s_wxluatypeArray_wxLua_wxWave_constructor1 }};
-//     wxWave(const wxString& fileName, bool isResource = false );
-static int LUACALL wxLua_wxWave_constructor1(lua_State *L)
-{
-    // get number of arguments
-    int argCount = lua_gettop(L);
-    // bool isResource = false
-    bool isResource = (argCount >= 2 ? wxlua_getbooleantype(L, 2) : false);
-    // const wxString fileName
-    const wxString fileName = wxlua_getwxStringtype(L, 1);
-    // call constructor
-    wxWave* returns = new wxWave(fileName, isResource);
-    // add to tracked memory list
-    wxluaO_addgcobject(L, returns, wxluatype_wxWave);
-    // push the constructed class pointer
-    wxluaT_pushuserdatatype(L, returns, wxluatype_wxWave);
-
-    return 1;
-}
-
-static int LUACALL wxLua_wxWave_constructor(lua_State *L);
-// // static wxLuaBindCFunc s_wxluafunc_wxLua_wxWave_constructor[1] = {{ wxLua_wxWave_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 0, g_wxluaargtypeArray_None }};
-//     wxWave( );
-static int LUACALL wxLua_wxWave_constructor(lua_State *L)
-{
-    // call constructor
-    wxWave* returns = new wxWave();
-    // add to tracked memory list
-    wxluaO_addgcobject(L, returns, wxluatype_wxWave);
-    // push the constructed class pointer
-    wxluaT_pushuserdatatype(L, returns, wxluatype_wxWave);
-
-    return 1;
-}
-
-
-
-
-#if (((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)) && (wxCHECK_VERSION(2,6,0)))||((!wxCHECK_VERSION(2,6,0)) && ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)))
-// function overload table
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxWave_Play_overload[] =
-{
-
-#if ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)) && (wxCHECK_VERSION(2,6,0))
-    { wxLua_wxWave_Play1, WXLUAMETHOD_METHOD, 1, 2, s_wxluatypeArray_wxLua_wxWave_Play1 },
-#endif // ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)) && (wxCHECK_VERSION(2,6,0))
-
-#if (!wxCHECK_VERSION(2,6,0)) && ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave))
-    { wxLua_wxWave_Play, WXLUAMETHOD_METHOD, 1, 3, s_wxluatypeArray_wxLua_wxWave_Play },
-#endif // (!wxCHECK_VERSION(2,6,0)) && ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave))
-};
-static int s_wxluafunc_wxLua_wxWave_Play_overload_count = sizeof(s_wxluafunc_wxLua_wxWave_Play_overload)/sizeof(wxLuaBindCFunc);
-
-#endif // (((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)) && (wxCHECK_VERSION(2,6,0)))||((!wxCHECK_VERSION(2,6,0)) && ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)))
-
-#if ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave))
-// function overload table
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxWave_constructor_overload[] =
-{
-    { wxLua_wxWave_constructor1, WXLUAMETHOD_CONSTRUCTOR, 1, 2, s_wxluatypeArray_wxLua_wxWave_constructor1 },
-    { wxLua_wxWave_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 0, g_wxluaargtypeArray_None },
-};
-static int s_wxluafunc_wxLua_wxWave_constructor_overload_count = sizeof(s_wxluafunc_wxLua_wxWave_constructor_overload)/sizeof(wxLuaBindCFunc);
-
-#endif // ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave))
-
-void wxLua_wxWave_delete_function(void** p)
-{
-    wxWave* o = (wxWave*)(*p);
-    delete o;
-}
-
-// Map Lua Class Methods to C Binding Functions
-wxLuaBindMethod wxWave_methods[] = {
-    { "Create", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxWave_Create, 1, NULL },
-    { "IsOk", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxWave_IsOk, 1, NULL },
-
-#if (((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)) && (wxCHECK_VERSION(2,6,0)))||((!wxCHECK_VERSION(2,6,0)) && ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)))
-    { "Play", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxWave_Play_overload, s_wxluafunc_wxLua_wxWave_Play_overload_count, 0 },
-#endif // (((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)) && (wxCHECK_VERSION(2,6,0)))||((!wxCHECK_VERSION(2,6,0)) && ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)))
-
-    { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxWave_delete, 1, NULL },
-
-#if ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave))
-    { "wxWave", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxWave_constructor_overload, s_wxluafunc_wxLua_wxWave_constructor_overload_count, 0 },
-#endif // ((defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave))
-
-    { 0, 0, 0, 0 },
-};
-
-int wxWave_methodCount = sizeof(wxWave_methods)/sizeof(wxLuaBindMethod) - 1;
-
-#endif  // (defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)
+#endif  // (wxLUA_USE_wxWave) && (wxUSE_SOUND)
 
 
 
@@ -7520,16 +7201,16 @@ int wxGridCellWorker_methodCount = sizeof(wxGridCellWorker_methods)/sizeof(wxLua
 int wxluatype_wxGridCellRenderer = WXLUA_TUNKNOWN;
 
 #if ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxDC)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellRenderer_GetBestSize[] = { &wxluatype_wxGridCellRenderer, &wxluatype_wxGrid, &wxluatype_wxGridCellAttr, &wxluatype_wxDC, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellRenderer_GetBestSize[] = { &wxluatype_wxGridCellRenderer, &wxluatype_wxGrid, &wxluatype_wxGridCellAttr, &wxluatype_wxDC, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellRenderer_GetBestSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellRenderer_GetBestSize[1] = {{ wxLua_wxGridCellRenderer_GetBestSize, WXLUAMETHOD_METHOD, 6, 6, s_wxluatypeArray_wxLua_wxGridCellRenderer_GetBestSize }};
 //     virtual wxSize GetBestSize(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, int row, int col );
 static int LUACALL wxLua_wxGridCellRenderer_GetBestSize(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 6);
+    int col = (int)wxlua_getintegertype(L, 6);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 5);
+    int row = (int)wxlua_getintegertype(L, 5);
     // wxDC dc
     wxDC * dc = (wxDC *)wxluaT_getuserdatatype(L, 4, wxluatype_wxDC);
     // wxGridCellAttr attr
@@ -7696,8 +7377,8 @@ static int LUACALL wxLua_wxGridCellFloatRenderer_GetPrecision(lua_State *L)
     wxGridCellFloatRenderer * self = (wxGridCellFloatRenderer *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellFloatRenderer);
     // call GetPrecision
     int returns = (self->GetPrecision());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -7712,20 +7393,20 @@ static int LUACALL wxLua_wxGridCellFloatRenderer_GetWidth(lua_State *L)
     wxGridCellFloatRenderer * self = (wxGridCellFloatRenderer *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellFloatRenderer);
     // call GetWidth
     int returns = (self->GetWidth());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellFloatRenderer_SetPrecision[] = { &wxluatype_wxGridCellFloatRenderer, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellFloatRenderer_SetPrecision[] = { &wxluatype_wxGridCellFloatRenderer, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellFloatRenderer_SetPrecision(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellFloatRenderer_SetPrecision[1] = {{ wxLua_wxGridCellFloatRenderer_SetPrecision, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGridCellFloatRenderer_SetPrecision }};
 //     void SetPrecision(int precision );
 static int LUACALL wxLua_wxGridCellFloatRenderer_SetPrecision(lua_State *L)
 {
     // int precision
-    int precision = (int)wxlua_getnumbertype(L, 2);
+    int precision = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridCellFloatRenderer * self = (wxGridCellFloatRenderer *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellFloatRenderer);
     // call SetPrecision
@@ -7734,14 +7415,14 @@ static int LUACALL wxLua_wxGridCellFloatRenderer_SetPrecision(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellFloatRenderer_SetWidth[] = { &wxluatype_wxGridCellFloatRenderer, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellFloatRenderer_SetWidth[] = { &wxluatype_wxGridCellFloatRenderer, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellFloatRenderer_SetWidth(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellFloatRenderer_SetWidth[1] = {{ wxLua_wxGridCellFloatRenderer_SetWidth, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGridCellFloatRenderer_SetWidth }};
 //     void SetWidth(int width );
 static int LUACALL wxLua_wxGridCellFloatRenderer_SetWidth(lua_State *L)
 {
     // int width
-    int width = (int)wxlua_getnumbertype(L, 2);
+    int width = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridCellFloatRenderer * self = (wxGridCellFloatRenderer *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellFloatRenderer);
     // call SetWidth
@@ -7753,7 +7434,7 @@ static int LUACALL wxLua_wxGridCellFloatRenderer_SetWidth(lua_State *L)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellFloatRenderer_delete[] = { &wxluatype_wxGridCellFloatRenderer, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellFloatRenderer_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxGridCellFloatRenderer_delete }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellFloatRenderer_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellFloatRenderer_constructor[] = { &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellFloatRenderer_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellFloatRenderer_constructor[1] = {{ wxLua_wxGridCellFloatRenderer_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 2, s_wxluatypeArray_wxLua_wxGridCellFloatRenderer_constructor }};
 //     wxGridCellFloatRenderer(int width = -1, int precision = -1 );
@@ -7762,9 +7443,9 @@ static int LUACALL wxLua_wxGridCellFloatRenderer_constructor(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int precision = -1
-    int precision = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : -1);
+    int precision = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : -1);
     // int width = -1
-    int width = (argCount >= 1 ? (int)wxlua_getnumbertype(L, 1) : -1);
+    int width = (argCount >= 1 ? (int)wxlua_getintegertype(L, 1) : -1);
     // call constructor
     wxGridCellFloatRenderer* returns = new wxGridCellFloatRenderer(width, precision);
     // add to tracked memory list
@@ -8018,7 +7699,7 @@ int wxGridCellAutoWrapStringRenderer_methodCount = sizeof(wxGridCellAutoWrapStri
 // Lua MetaTable Tag for Class 'wxGridCellEditor'
 int wxluatype_wxGridCellEditor = WXLUA_TUNKNOWN;
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellEditor_BeginEdit[] = { &wxluatype_wxGridCellEditor, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxGrid, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellEditor_BeginEdit[] = { &wxluatype_wxGridCellEditor, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxGrid, NULL };
 static int LUACALL wxLua_wxGridCellEditor_BeginEdit(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellEditor_BeginEdit[1] = {{ wxLua_wxGridCellEditor_BeginEdit, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridCellEditor_BeginEdit }};
 //     virtual void BeginEdit(int row, int col, wxGrid* grid );
@@ -8027,9 +7708,9 @@ static int LUACALL wxLua_wxGridCellEditor_BeginEdit(lua_State *L)
     // wxGrid grid
     wxGrid * grid = (wxGrid *)wxluaT_getuserdatatype(L, 4, wxluatype_wxGrid);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridCellEditor * self = (wxGridCellEditor *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellEditor);
     // call BeginEdit
@@ -8052,13 +7733,11 @@ static int LUACALL wxLua_wxGridCellEditor_Destroy(lua_State *L)
     return 0;
 }
 
-
-#if ((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellEditor_EndEdit1[] = { &wxluatype_wxGridCellEditor, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxGrid, &wxluatype_TSTRING, &wxluatype_TLIGHTUSERDATA, NULL };
-static int LUACALL wxLua_wxGridCellEditor_EndEdit1(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellEditor_EndEdit1[1] = {{ wxLua_wxGridCellEditor_EndEdit1, WXLUAMETHOD_METHOD, 6, 6, s_wxluatypeArray_wxLua_wxGridCellEditor_EndEdit1 }};
-//     %wxchkver_2_9_2 virtual bool EndEdit(int row, int col, const wxGrid *grid, const wxString& oldval, wxString *newval );
-static int LUACALL wxLua_wxGridCellEditor_EndEdit1(lua_State *L)
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellEditor_EndEdit[] = { &wxluatype_wxGridCellEditor, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxGrid, &wxluatype_TSTRING, &wxluatype_TLIGHTUSERDATA, NULL };
+static int LUACALL wxLua_wxGridCellEditor_EndEdit(lua_State *L);
+static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellEditor_EndEdit[1] = {{ wxLua_wxGridCellEditor_EndEdit, WXLUAMETHOD_METHOD, 6, 6, s_wxluatypeArray_wxLua_wxGridCellEditor_EndEdit }};
+//     virtual bool EndEdit(int row, int col, const wxGrid *grid, const wxString& oldval, wxString *newval);
+static int LUACALL wxLua_wxGridCellEditor_EndEdit(lua_State *L)
 {
     // wxString newval
     wxString * newval = (wxString *)wxlua_touserdata(L, 6);
@@ -8067,9 +7746,9 @@ static int LUACALL wxLua_wxGridCellEditor_EndEdit1(lua_State *L)
     // const wxGrid grid
     const wxGrid * grid = (const wxGrid *)wxluaT_getuserdatatype(L, 4, wxluatype_wxGrid);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridCellEditor * self = (wxGridCellEditor *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellEditor);
     // call EndEdit
@@ -8079,33 +7758,6 @@ static int LUACALL wxLua_wxGridCellEditor_EndEdit1(lua_State *L)
 
     return 1;
 }
-
-#endif // ((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-
-#if ((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellEditor_EndEdit[] = { &wxluatype_wxGridCellEditor, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxGrid, NULL };
-static int LUACALL wxLua_wxGridCellEditor_EndEdit(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellEditor_EndEdit[1] = {{ wxLua_wxGridCellEditor_EndEdit, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridCellEditor_EndEdit }};
-//     !%wxchkver_2_9_2 virtual bool EndEdit(int row, int col, wxGrid* grid );
-static int LUACALL wxLua_wxGridCellEditor_EndEdit(lua_State *L)
-{
-    // wxGrid grid
-    wxGrid * grid = (wxGrid *)wxluaT_getuserdatatype(L, 4, wxluatype_wxGrid);
-    // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
-    // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
-    // get this
-    wxGridCellEditor * self = (wxGridCellEditor *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellEditor);
-    // call EndEdit
-    bool returns = (self->EndEdit(row, col, grid));
-    // push the result flag
-    lua_pushboolean(L, returns);
-
-    return 1;
-}
-
-#endif // ((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellEditor_GetCellAttr[] = { &wxluatype_wxGridCellEditor, NULL };
 static int LUACALL wxLua_wxGridCellEditor_GetCellAttr(lua_State *L);
@@ -8190,12 +7842,12 @@ static int LUACALL wxLua_wxGridCellEditor_IsCreated(lua_State *L)
 }
 
 
-#if (((wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect))) && (wxLUA_USE_wxDC)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellEditor_PaintBackground1[] = { &wxluatype_wxGridCellEditor, &wxluatype_wxDC, &wxluatype_wxRect, &wxluatype_wxGridCellAttr, NULL };
-static int LUACALL wxLua_wxGridCellEditor_PaintBackground1(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellEditor_PaintBackground1[1] = {{ wxLua_wxGridCellEditor_PaintBackground1, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridCellEditor_PaintBackground1 }};
-//     %wxchkver_2_9_5  virtual void PaintBackground(wxDC& dc, const wxRect& rectCell, const wxGridCellAttr &attr );
-static int LUACALL wxLua_wxGridCellEditor_PaintBackground1(lua_State *L)
+#if ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxDC)
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellEditor_PaintBackground[] = { &wxluatype_wxGridCellEditor, &wxluatype_wxDC, &wxluatype_wxRect, &wxluatype_wxGridCellAttr, NULL };
+static int LUACALL wxLua_wxGridCellEditor_PaintBackground(lua_State *L);
+static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellEditor_PaintBackground[1] = {{ wxLua_wxGridCellEditor_PaintBackground, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridCellEditor_PaintBackground }};
+//     virtual void PaintBackground(wxDC& dc, const wxRect& rectCell, const wxGridCellAttr &attr);
+static int LUACALL wxLua_wxGridCellEditor_PaintBackground(lua_State *L)
 {
     // const wxGridCellAttr attr
     const wxGridCellAttr * attr = (const wxGridCellAttr *)wxluaT_getuserdatatype(L, 4, wxluatype_wxGridCellAttr);
@@ -8211,28 +7863,7 @@ static int LUACALL wxLua_wxGridCellEditor_PaintBackground1(lua_State *L)
     return 0;
 }
 
-#endif // (((wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect))) && (wxLUA_USE_wxDC)
-
-#if ((!wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect))
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellEditor_PaintBackground[] = { &wxluatype_wxGridCellEditor, &wxluatype_wxRect, &wxluatype_wxGridCellAttr, NULL };
-static int LUACALL wxLua_wxGridCellEditor_PaintBackground(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellEditor_PaintBackground[1] = {{ wxLua_wxGridCellEditor_PaintBackground, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridCellEditor_PaintBackground }};
-//     !%wxchkver_2_9_5 virtual void PaintBackground(const wxRect& rectCell, wxGridCellAttr *attr );
-static int LUACALL wxLua_wxGridCellEditor_PaintBackground(lua_State *L)
-{
-    // wxGridCellAttr attr
-    wxGridCellAttr * attr = (wxGridCellAttr *)wxluaT_getuserdatatype(L, 3, wxluatype_wxGridCellAttr);
-    // const wxRect rectCell
-    const wxRect * rectCell = (const wxRect *)wxluaT_getuserdatatype(L, 2, wxluatype_wxRect);
-    // get this
-    wxGridCellEditor * self = (wxGridCellEditor *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellEditor);
-    // call PaintBackground
-    self->PaintBackground(*rectCell, attr);
-
-    return 0;
-}
-
-#endif // ((!wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect))
+#endif // ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxDC)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellEditor_Reset[] = { &wxluatype_wxGridCellEditor, NULL };
 static int LUACALL wxLua_wxGridCellEditor_Reset(lua_State *L);
@@ -8357,40 +7988,6 @@ static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellEditor_delete[1] = {{ wxlua_us
 
 
 
-#if (((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID))||(((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID))
-// function overload table
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellEditor_EndEdit_overload[] =
-{
-
-#if ((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-    { wxLua_wxGridCellEditor_EndEdit1, WXLUAMETHOD_METHOD, 6, 6, s_wxluatypeArray_wxLua_wxGridCellEditor_EndEdit1 },
-#endif // ((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-
-#if ((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-    { wxLua_wxGridCellEditor_EndEdit, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridCellEditor_EndEdit },
-#endif // ((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-};
-static int s_wxluafunc_wxLua_wxGridCellEditor_EndEdit_overload_count = sizeof(s_wxluafunc_wxLua_wxGridCellEditor_EndEdit_overload)/sizeof(wxLuaBindCFunc);
-
-#endif // (((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID))||(((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID))
-
-#if ((((wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect))) && (wxLUA_USE_wxDC))||(((!wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)))
-// function overload table
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellEditor_PaintBackground_overload[] =
-{
-
-#if (((wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect))) && (wxLUA_USE_wxDC)
-    { wxLua_wxGridCellEditor_PaintBackground1, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridCellEditor_PaintBackground1 },
-#endif // (((wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect))) && (wxLUA_USE_wxDC)
-
-#if ((!wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect))
-    { wxLua_wxGridCellEditor_PaintBackground, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridCellEditor_PaintBackground },
-#endif // ((!wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect))
-};
-static int s_wxluafunc_wxLua_wxGridCellEditor_PaintBackground_overload_count = sizeof(s_wxluafunc_wxLua_wxGridCellEditor_PaintBackground_overload)/sizeof(wxLuaBindCFunc);
-
-#endif // ((((wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect))) && (wxLUA_USE_wxDC))||(((!wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)))
-
 // %override wxLua_wxGridCellEditor_delete_function
 // delete is private in wxGridCellWorker, DecRef() it in derived classes
 void wxLua_wxGridCellEditor_delete_function(void** p)
@@ -8402,20 +7999,16 @@ void wxLua_wxGridCellEditor_delete_function(void** p)
 wxLuaBindMethod wxGridCellEditor_methods[] = {
     { "BeginEdit", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_BeginEdit, 1, NULL },
     { "Destroy", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_Destroy, 1, NULL },
-
-#if (((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID))||(((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID))
-    { "EndEdit", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_EndEdit_overload, s_wxluafunc_wxLua_wxGridCellEditor_EndEdit_overload_count, 0 },
-#endif // (((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID))||(((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxGrid && wxUSE_GRID))
-
+    { "EndEdit", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_EndEdit, 1, NULL },
     { "GetCellAttr", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_GetCellAttr, 1, NULL },
     { "GetControl", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_GetControl, 1, NULL },
     { "HandleReturn", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_HandleReturn, 1, NULL },
     { "IsAcceptedKey", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_IsAcceptedKey, 1, NULL },
     { "IsCreated", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_IsCreated, 1, NULL },
 
-#if ((((wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect))) && (wxLUA_USE_wxDC))||(((!wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)))
-    { "PaintBackground", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_PaintBackground_overload, s_wxluafunc_wxLua_wxGridCellEditor_PaintBackground_overload_count, 0 },
-#endif // ((((wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect))) && (wxLUA_USE_wxDC))||(((!wxCHECK_VERSION(2,9,5)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)))
+#if ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxDC)
+    { "PaintBackground", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_PaintBackground, 1, NULL },
+#endif // ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxDC)
 
     { "Reset", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_Reset, 1, NULL },
     { "SetCellAttr", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridCellEditor_SetCellAttr, 1, NULL },
@@ -8498,7 +8091,7 @@ int wxluatype_wxGridCellNumberEditor = WXLUA_TUNKNOWN;
 static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellNumberEditor_delete[] = { &wxluatype_wxGridCellNumberEditor, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellNumberEditor_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxGridCellNumberEditor_delete }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellNumberEditor_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellNumberEditor_constructor[] = { &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellNumberEditor_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellNumberEditor_constructor[1] = {{ wxLua_wxGridCellNumberEditor_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 2, s_wxluatypeArray_wxLua_wxGridCellNumberEditor_constructor }};
 //     wxGridCellNumberEditor(int min = -1, int max = -1 );
@@ -8507,9 +8100,9 @@ static int LUACALL wxLua_wxGridCellNumberEditor_constructor(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int max = -1
-    int max = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : -1);
+    int max = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : -1);
     // int min = -1
-    int min = (argCount >= 1 ? (int)wxlua_getnumbertype(L, 1) : -1);
+    int min = (argCount >= 1 ? (int)wxlua_getintegertype(L, 1) : -1);
     // call constructor
     wxGridCellNumberEditor* returns = new wxGridCellNumberEditor(min, max);
     // add to tracked memory list
@@ -8554,7 +8147,7 @@ int wxluatype_wxGridCellFloatEditor = WXLUA_TUNKNOWN;
 static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellFloatEditor_delete[] = { &wxluatype_wxGridCellFloatEditor, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellFloatEditor_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxGridCellFloatEditor_delete }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellFloatEditor_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellFloatEditor_constructor[] = { &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellFloatEditor_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellFloatEditor_constructor[1] = {{ wxLua_wxGridCellFloatEditor_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 2, s_wxluatypeArray_wxLua_wxGridCellFloatEditor_constructor }};
 //     wxGridCellFloatEditor(int width = -1, int precision = -1 );
@@ -8563,9 +8156,9 @@ static int LUACALL wxLua_wxGridCellFloatEditor_constructor(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int precision = -1
-    int precision = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : -1);
+    int precision = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : -1);
     // int width = -1
-    int width = (argCount >= 1 ? (int)wxlua_getnumbertype(L, 1) : -1);
+    int width = (argCount >= 1 ? (int)wxlua_getintegertype(L, 1) : -1);
     // call constructor
     wxGridCellFloatEditor* returns = new wxGridCellFloatEditor(width, precision);
     // add to tracked memory list
@@ -8880,16 +8473,16 @@ static int LUACALL wxLua_wxGridCellAttr_GetBackgroundColour(lua_State *L)
 
 #endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttr_GetEditor[] = { &wxluatype_wxGridCellAttr, &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttr_GetEditor[] = { &wxluatype_wxGridCellAttr, &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellAttr_GetEditor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellAttr_GetEditor[1] = {{ wxLua_wxGridCellAttr_GetEditor, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridCellAttr_GetEditor }};
 //     %gc wxGridCellEditor *GetEditor(wxGrid* grid, int row, int col) const;
 static int LUACALL wxLua_wxGridCellAttr_GetEditor(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 4);
+    int col = (int)wxlua_getintegertype(L, 4);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 3);
+    int row = (int)wxlua_getintegertype(L, 3);
     // wxGrid grid
     wxGrid * grid = (wxGrid *)wxluaT_getuserdatatype(L, 2, wxluatype_wxGrid);
     // get this
@@ -8958,16 +8551,16 @@ static int LUACALL wxLua_wxGridCellAttr_GetOverflow(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttr_GetRenderer[] = { &wxluatype_wxGridCellAttr, &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttr_GetRenderer[] = { &wxluatype_wxGridCellAttr, &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellAttr_GetRenderer(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellAttr_GetRenderer[1] = {{ wxLua_wxGridCellAttr_GetRenderer, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridCellAttr_GetRenderer }};
 //     %gc wxGridCellRenderer *GetRenderer(wxGrid* grid, int row, int col) const;
 static int LUACALL wxLua_wxGridCellAttr_GetRenderer(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 4);
+    int col = (int)wxlua_getintegertype(L, 4);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 3);
+    int row = (int)wxlua_getintegertype(L, 3);
     // wxGrid grid
     wxGrid * grid = (wxGrid *)wxluaT_getuserdatatype(L, 2, wxluatype_wxGrid);
     // get this
@@ -9216,16 +8809,16 @@ static int LUACALL wxLua_wxGridCellAttr_MergeWith(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttr_SetAlignment[] = { &wxluatype_wxGridCellAttr, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttr_SetAlignment[] = { &wxluatype_wxGridCellAttr, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellAttr_SetAlignment(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellAttr_SetAlignment[1] = {{ wxLua_wxGridCellAttr_SetAlignment, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridCellAttr_SetAlignment }};
 //     void SetAlignment(int hAlign, int vAlign );
 static int LUACALL wxLua_wxGridCellAttr_SetAlignment(lua_State *L)
 {
     // int vAlign
-    int vAlign = (int)wxlua_getnumbertype(L, 3);
+    int vAlign = (int)wxlua_getintegertype(L, 3);
     // int hAlign
-    int hAlign = (int)wxlua_getnumbertype(L, 2);
+    int hAlign = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridCellAttr * self = (wxGridCellAttr *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellAttr);
     // call SetAlignment
@@ -9378,16 +8971,16 @@ static int LUACALL wxLua_wxGridCellAttr_SetRenderer(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttr_SetSize[] = { &wxluatype_wxGridCellAttr, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttr_SetSize[] = { &wxluatype_wxGridCellAttr, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellAttr_SetSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellAttr_SetSize[1] = {{ wxLua_wxGridCellAttr_SetSize, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridCellAttr_SetSize }};
 //     void SetSize(int num_rows, int num_cols );
 static int LUACALL wxLua_wxGridCellAttr_SetSize(lua_State *L)
 {
     // int num_cols
-    int num_cols = (int)wxlua_getnumbertype(L, 3);
+    int num_cols = (int)wxlua_getintegertype(L, 3);
     // int num_rows
-    int num_rows = (int)wxlua_getnumbertype(L, 2);
+    int num_rows = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridCellAttr * self = (wxGridCellAttr *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellAttr);
     // call SetSize
@@ -9421,16 +9014,16 @@ static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellAttr_delete[1] = {{ wxlua_user
 
 
 #if ((wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxFont)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttr_constructor1[] = { &wxluatype_wxColour, &wxluatype_wxColour, &wxluatype_wxFont, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttr_constructor1[] = { &wxluatype_wxColour, &wxluatype_wxColour, &wxluatype_wxFont, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellAttr_constructor1(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellAttr_constructor1[1] = {{ wxLua_wxGridCellAttr_constructor1, WXLUAMETHOD_CONSTRUCTOR, 5, 5, s_wxluatypeArray_wxLua_wxGridCellAttr_constructor1 }};
 //     wxGridCellAttr(const wxColour& colText, const wxColour& colBack, const wxFont& font, int hAlign, int vAlign );
 static int LUACALL wxLua_wxGridCellAttr_constructor1(lua_State *L)
 {
     // int vAlign
-    int vAlign = (int)wxlua_getnumbertype(L, 5);
+    int vAlign = (int)wxlua_getintegertype(L, 5);
     // int hAlign
-    int hAlign = (int)wxlua_getnumbertype(L, 4);
+    int hAlign = (int)wxlua_getintegertype(L, 4);
     // const wxFont font
     const wxFont * font = (const wxFont *)wxluaT_getuserdatatype(L, 3, wxluatype_wxFont);
     // const wxColour colBack
@@ -9582,7 +9175,7 @@ int wxGridCellAttr_enumCount = sizeof(wxGridCellAttr_enums)/sizeof(wxLuaBindNumb
 // Lua MetaTable Tag for Class 'wxGridCellAttrProvider'
 int wxluatype_wxGridCellAttrProvider = WXLUA_TUNKNOWN;
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttrProvider_GetAttr[] = { &wxluatype_wxGridCellAttrProvider, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TINTEGER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttrProvider_GetAttr[] = { &wxluatype_wxGridCellAttrProvider, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellAttrProvider_GetAttr(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellAttrProvider_GetAttr[1] = {{ wxLua_wxGridCellAttrProvider_GetAttr, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridCellAttrProvider_GetAttr }};
 //     %gc wxGridCellAttr *GetAttr(int row, int col, wxGridCellAttr::wxAttrKind  kind) const;
@@ -9591,9 +9184,9 @@ static int LUACALL wxLua_wxGridCellAttrProvider_GetAttr(lua_State *L)
     // wxGridCellAttr::wxAttrKind kind
     wxGridCellAttr::wxAttrKind kind = (wxGridCellAttr::wxAttrKind)wxlua_getenumtype(L, 4);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridCellAttrProvider * self = (wxGridCellAttrProvider *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellAttrProvider);
     // call GetAttr
@@ -9605,16 +9198,16 @@ static int LUACALL wxLua_wxGridCellAttrProvider_GetAttr(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttrProvider_SetAttr[] = { &wxluatype_wxGridCellAttrProvider, &wxluatype_wxGridCellAttr, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttrProvider_SetAttr[] = { &wxluatype_wxGridCellAttrProvider, &wxluatype_wxGridCellAttr, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellAttrProvider_SetAttr(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellAttrProvider_SetAttr[1] = {{ wxLua_wxGridCellAttrProvider_SetAttr, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridCellAttrProvider_SetAttr }};
 //     void SetAttr(%IncRef wxGridCellAttr *attr, int row, int col );
 static int LUACALL wxLua_wxGridCellAttrProvider_SetAttr(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 4);
+    int col = (int)wxlua_getintegertype(L, 4);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 3);
+    int row = (int)wxlua_getintegertype(L, 3);
     // wxGridCellAttr attr
     wxGridCellAttr * attr = (wxGridCellAttr *)wxluaT_getuserdatatype(L, 2, wxluatype_wxGridCellAttr);
     // This param will have DecRef() called on it so we IncRef() it to not have to worry about the Lua gc
@@ -9627,14 +9220,14 @@ static int LUACALL wxLua_wxGridCellAttrProvider_SetAttr(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttrProvider_SetColAttr[] = { &wxluatype_wxGridCellAttrProvider, &wxluatype_wxGridCellAttr, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttrProvider_SetColAttr[] = { &wxluatype_wxGridCellAttrProvider, &wxluatype_wxGridCellAttr, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellAttrProvider_SetColAttr(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellAttrProvider_SetColAttr[1] = {{ wxLua_wxGridCellAttrProvider_SetColAttr, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridCellAttrProvider_SetColAttr }};
 //     void SetColAttr(%IncRef wxGridCellAttr *attr, int col );
 static int LUACALL wxLua_wxGridCellAttrProvider_SetColAttr(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // wxGridCellAttr attr
     wxGridCellAttr * attr = (wxGridCellAttr *)wxluaT_getuserdatatype(L, 2, wxluatype_wxGridCellAttr);
     // This param will have DecRef() called on it so we IncRef() it to not have to worry about the Lua gc
@@ -9647,14 +9240,14 @@ static int LUACALL wxLua_wxGridCellAttrProvider_SetColAttr(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttrProvider_SetRowAttr[] = { &wxluatype_wxGridCellAttrProvider, &wxluatype_wxGridCellAttr, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttrProvider_SetRowAttr[] = { &wxluatype_wxGridCellAttrProvider, &wxluatype_wxGridCellAttr, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellAttrProvider_SetRowAttr(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellAttrProvider_SetRowAttr[1] = {{ wxLua_wxGridCellAttrProvider_SetRowAttr, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridCellAttrProvider_SetRowAttr }};
 //     void SetRowAttr(%IncRef wxGridCellAttr *attr, int row );
 static int LUACALL wxLua_wxGridCellAttrProvider_SetRowAttr(lua_State *L)
 {
     // int row
-    int row = (int)wxlua_getnumbertype(L, 3);
+    int row = (int)wxlua_getintegertype(L, 3);
     // wxGridCellAttr attr
     wxGridCellAttr * attr = (wxGridCellAttr *)wxluaT_getuserdatatype(L, 2, wxluatype_wxGridCellAttr);
     // This param will have DecRef() called on it so we IncRef() it to not have to worry about the Lua gc
@@ -9667,14 +9260,14 @@ static int LUACALL wxLua_wxGridCellAttrProvider_SetRowAttr(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttrProvider_UpdateAttrCols[] = { &wxluatype_wxGridCellAttrProvider, &wxluatype_TINTEGER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttrProvider_UpdateAttrCols[] = { &wxluatype_wxGridCellAttrProvider, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellAttrProvider_UpdateAttrCols(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellAttrProvider_UpdateAttrCols[1] = {{ wxLua_wxGridCellAttrProvider_UpdateAttrCols, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridCellAttrProvider_UpdateAttrCols }};
 //     void UpdateAttrCols( size_t pos, int numCols );
 static int LUACALL wxLua_wxGridCellAttrProvider_UpdateAttrCols(lua_State *L)
 {
     // int numCols
-    int numCols = (int)wxlua_getnumbertype(L, 3);
+    int numCols = (int)wxlua_getintegertype(L, 3);
     // size_t pos
     size_t pos = (size_t)wxlua_getuintegertype(L, 2);
     // get this
@@ -9685,14 +9278,14 @@ static int LUACALL wxLua_wxGridCellAttrProvider_UpdateAttrCols(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttrProvider_UpdateAttrRows[] = { &wxluatype_wxGridCellAttrProvider, &wxluatype_TINTEGER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellAttrProvider_UpdateAttrRows[] = { &wxluatype_wxGridCellAttrProvider, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellAttrProvider_UpdateAttrRows(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellAttrProvider_UpdateAttrRows[1] = {{ wxLua_wxGridCellAttrProvider_UpdateAttrRows, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridCellAttrProvider_UpdateAttrRows }};
 //     void UpdateAttrRows( size_t pos, int numRows );
 static int LUACALL wxLua_wxGridCellAttrProvider_UpdateAttrRows(lua_State *L)
 {
     // int numRows
-    int numRows = (int)wxlua_getnumbertype(L, 3);
+    int numRows = (int)wxlua_getintegertype(L, 3);
     // size_t pos
     size_t pos = (size_t)wxlua_getuintegertype(L, 2);
     // get this
@@ -9797,7 +9390,7 @@ static int LUACALL wxLua_wxGridTableBase_AppendRows(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_CanGetValueAs[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_CanGetValueAs[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxGridTableBase_CanGetValueAs(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_CanGetValueAs[1] = {{ wxLua_wxGridTableBase_CanGetValueAs, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridTableBase_CanGetValueAs }};
 //     virtual bool CanGetValueAs( int row, int col, const wxString& typeName );
@@ -9806,9 +9399,9 @@ static int LUACALL wxLua_wxGridTableBase_CanGetValueAs(lua_State *L)
     // const wxString typeName
     const wxString typeName = wxlua_getwxStringtype(L, 4);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call CanGetValueAs
@@ -9835,7 +9428,7 @@ static int LUACALL wxLua_wxGridTableBase_CanHaveAttributes(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_CanSetValueAs[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_CanSetValueAs[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxGridTableBase_CanSetValueAs(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_CanSetValueAs[1] = {{ wxLua_wxGridTableBase_CanSetValueAs, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridTableBase_CanSetValueAs }};
 //     virtual bool CanSetValueAs( int row, int col, const wxString& typeName );
@@ -9844,9 +9437,9 @@ static int LUACALL wxLua_wxGridTableBase_CanSetValueAs(lua_State *L)
     // const wxString typeName
     const wxString typeName = wxlua_getwxStringtype(L, 4);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call CanSetValueAs
@@ -9915,7 +9508,7 @@ static int LUACALL wxLua_wxGridTableBase_DeleteRows(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetAttr[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TINTEGER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetAttr[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_GetAttr(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_GetAttr[1] = {{ wxLua_wxGridTableBase_GetAttr, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridTableBase_GetAttr }};
 //     virtual %gc wxGridCellAttr* GetAttr( int row, int col, wxGridCellAttr::wxAttrKind  kind );
@@ -9924,9 +9517,9 @@ static int LUACALL wxLua_wxGridTableBase_GetAttr(lua_State *L)
     // wxGridCellAttr::wxAttrKind kind
     wxGridCellAttr::wxAttrKind kind = (wxGridCellAttr::wxAttrKind)wxlua_getenumtype(L, 4);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call GetAttr
@@ -9954,14 +9547,14 @@ static int LUACALL wxLua_wxGridTableBase_GetAttrProvider(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetColLabelValue[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetColLabelValue[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_GetColLabelValue(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_GetColLabelValue[1] = {{ wxLua_wxGridTableBase_GetColLabelValue, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGridTableBase_GetColLabelValue }};
 //     virtual wxString GetColLabelValue( int col );
 static int LUACALL wxLua_wxGridTableBase_GetColLabelValue(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call GetColLabelValue
@@ -9982,8 +9575,8 @@ static int LUACALL wxLua_wxGridTableBase_GetNumberCols(lua_State *L)
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call GetNumberCols
     int returns = (self->GetNumberCols());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -9998,20 +9591,20 @@ static int LUACALL wxLua_wxGridTableBase_GetNumberRows(lua_State *L)
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call GetNumberRows
     int returns = (self->GetNumberRows());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetRowLabelValue[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetRowLabelValue[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_GetRowLabelValue(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_GetRowLabelValue[1] = {{ wxLua_wxGridTableBase_GetRowLabelValue, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGridTableBase_GetRowLabelValue }};
 //     virtual wxString GetRowLabelValue( int row );
 static int LUACALL wxLua_wxGridTableBase_GetRowLabelValue(lua_State *L)
 {
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call GetRowLabelValue
@@ -10022,16 +9615,16 @@ static int LUACALL wxLua_wxGridTableBase_GetRowLabelValue(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetTypeName[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetTypeName[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_GetTypeName(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_GetTypeName[1] = {{ wxLua_wxGridTableBase_GetTypeName, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridTableBase_GetTypeName }};
 //     virtual wxString GetTypeName( int row, int col );
 static int LUACALL wxLua_wxGridTableBase_GetTypeName(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call GetTypeName
@@ -10042,16 +9635,16 @@ static int LUACALL wxLua_wxGridTableBase_GetTypeName(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetValue[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetValue[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_GetValue(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_GetValue[1] = {{ wxLua_wxGridTableBase_GetValue, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridTableBase_GetValue }};
 //     virtual wxString GetValue( int row, int col );
 static int LUACALL wxLua_wxGridTableBase_GetValue(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call GetValue
@@ -10062,16 +9655,16 @@ static int LUACALL wxLua_wxGridTableBase_GetValue(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetValueAsBool[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetValueAsBool[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_GetValueAsBool(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_GetValueAsBool[1] = {{ wxLua_wxGridTableBase_GetValueAsBool, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridTableBase_GetValueAsBool }};
 //     virtual bool GetValueAsBool( int row, int col );
 static int LUACALL wxLua_wxGridTableBase_GetValueAsBool(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call GetValueAsBool
@@ -10082,16 +9675,16 @@ static int LUACALL wxLua_wxGridTableBase_GetValueAsBool(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetValueAsDouble[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetValueAsDouble[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_GetValueAsDouble(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_GetValueAsDouble[1] = {{ wxLua_wxGridTableBase_GetValueAsDouble, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridTableBase_GetValueAsDouble }};
 //     virtual double GetValueAsDouble( int row, int col );
 static int LUACALL wxLua_wxGridTableBase_GetValueAsDouble(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call GetValueAsDouble
@@ -10102,22 +9695,22 @@ static int LUACALL wxLua_wxGridTableBase_GetValueAsDouble(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetValueAsLong[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_GetValueAsLong[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_GetValueAsLong(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_GetValueAsLong[1] = {{ wxLua_wxGridTableBase_GetValueAsLong, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridTableBase_GetValueAsLong }};
 //     virtual long GetValueAsLong( int row, int col );
 static int LUACALL wxLua_wxGridTableBase_GetValueAsLong(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call GetValueAsLong
     long  returns = (self->GetValueAsLong(row, col));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -10182,16 +9775,16 @@ static int LUACALL wxLua_wxGridTableBase_InsertRows(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_IsEmptyCell[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_IsEmptyCell[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_IsEmptyCell(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_IsEmptyCell[1] = {{ wxLua_wxGridTableBase_IsEmptyCell, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridTableBase_IsEmptyCell }};
 //     virtual bool IsEmptyCell( int row, int col );
 static int LUACALL wxLua_wxGridTableBase_IsEmptyCell(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call IsEmptyCell
@@ -10202,16 +9795,16 @@ static int LUACALL wxLua_wxGridTableBase_IsEmptyCell(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetAttr[] = { &wxluatype_wxGridTableBase, &wxluatype_wxGridCellAttr, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetAttr[] = { &wxluatype_wxGridTableBase, &wxluatype_wxGridCellAttr, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_SetAttr(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_SetAttr[1] = {{ wxLua_wxGridTableBase_SetAttr, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridTableBase_SetAttr }};
 //     void SetAttr(%IncRef wxGridCellAttr* attr, int row, int col );
 static int LUACALL wxLua_wxGridTableBase_SetAttr(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 4);
+    int col = (int)wxlua_getintegertype(L, 4);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 3);
+    int row = (int)wxlua_getintegertype(L, 3);
     // wxGridCellAttr attr
     wxGridCellAttr * attr = (wxGridCellAttr *)wxluaT_getuserdatatype(L, 2, wxluatype_wxGridCellAttr);
     // This param will have DecRef() called on it so we IncRef() it to not have to worry about the Lua gc
@@ -10240,14 +9833,14 @@ static int LUACALL wxLua_wxGridTableBase_SetAttrProvider(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetColAttr[] = { &wxluatype_wxGridTableBase, &wxluatype_wxGridCellAttr, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetColAttr[] = { &wxluatype_wxGridTableBase, &wxluatype_wxGridCellAttr, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_SetColAttr(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_SetColAttr[1] = {{ wxLua_wxGridTableBase_SetColAttr, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridTableBase_SetColAttr }};
 //     void SetColAttr(%IncRef wxGridCellAttr *attr, int col );
 static int LUACALL wxLua_wxGridTableBase_SetColAttr(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // wxGridCellAttr attr
     wxGridCellAttr * attr = (wxGridCellAttr *)wxluaT_getuserdatatype(L, 2, wxluatype_wxGridCellAttr);
     // This param will have DecRef() called on it so we IncRef() it to not have to worry about the Lua gc
@@ -10260,7 +9853,7 @@ static int LUACALL wxLua_wxGridTableBase_SetColAttr(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetColLabelValue[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetColLabelValue[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxGridTableBase_SetColLabelValue(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_SetColLabelValue[1] = {{ wxLua_wxGridTableBase_SetColLabelValue, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridTableBase_SetColLabelValue }};
 //     virtual void SetColLabelValue( int col, const wxString& value );
@@ -10269,7 +9862,7 @@ static int LUACALL wxLua_wxGridTableBase_SetColLabelValue(lua_State *L)
     // const wxString value
     const wxString value = wxlua_getwxStringtype(L, 3);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call SetColLabelValue
@@ -10278,14 +9871,14 @@ static int LUACALL wxLua_wxGridTableBase_SetColLabelValue(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetRowAttr[] = { &wxluatype_wxGridTableBase, &wxluatype_wxGridCellAttr, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetRowAttr[] = { &wxluatype_wxGridTableBase, &wxluatype_wxGridCellAttr, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_SetRowAttr(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_SetRowAttr[1] = {{ wxLua_wxGridTableBase_SetRowAttr, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridTableBase_SetRowAttr }};
 //     void SetRowAttr(%IncRef wxGridCellAttr *attr, int row );
 static int LUACALL wxLua_wxGridTableBase_SetRowAttr(lua_State *L)
 {
     // int row
-    int row = (int)wxlua_getnumbertype(L, 3);
+    int row = (int)wxlua_getintegertype(L, 3);
     // wxGridCellAttr attr
     wxGridCellAttr * attr = (wxGridCellAttr *)wxluaT_getuserdatatype(L, 2, wxluatype_wxGridCellAttr);
     // This param will have DecRef() called on it so we IncRef() it to not have to worry about the Lua gc
@@ -10298,7 +9891,7 @@ static int LUACALL wxLua_wxGridTableBase_SetRowAttr(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetRowLabelValue[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetRowLabelValue[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxGridTableBase_SetRowLabelValue(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_SetRowLabelValue[1] = {{ wxLua_wxGridTableBase_SetRowLabelValue, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridTableBase_SetRowLabelValue }};
 //     virtual void SetRowLabelValue( int row, const wxString& value );
@@ -10307,7 +9900,7 @@ static int LUACALL wxLua_wxGridTableBase_SetRowLabelValue(lua_State *L)
     // const wxString value
     const wxString value = wxlua_getwxStringtype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call SetRowLabelValue
@@ -10316,7 +9909,7 @@ static int LUACALL wxLua_wxGridTableBase_SetRowLabelValue(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetValue[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetValue[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxGridTableBase_SetValue(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_SetValue[1] = {{ wxLua_wxGridTableBase_SetValue, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridTableBase_SetValue }};
 //     virtual void SetValue( int row, int col, const wxString& value );
@@ -10325,9 +9918,9 @@ static int LUACALL wxLua_wxGridTableBase_SetValue(lua_State *L)
     // const wxString value
     const wxString value = wxlua_getwxStringtype(L, 4);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call SetValue
@@ -10336,7 +9929,7 @@ static int LUACALL wxLua_wxGridTableBase_SetValue(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetValueAsBool[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetValueAsBool[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGridTableBase_SetValueAsBool(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_SetValueAsBool[1] = {{ wxLua_wxGridTableBase_SetValueAsBool, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridTableBase_SetValueAsBool }};
 //     virtual void SetValueAsBool( int row, int col, bool value );
@@ -10345,9 +9938,9 @@ static int LUACALL wxLua_wxGridTableBase_SetValueAsBool(lua_State *L)
     // bool value
     bool value = wxlua_getbooleantype(L, 4);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call SetValueAsBool
@@ -10356,7 +9949,7 @@ static int LUACALL wxLua_wxGridTableBase_SetValueAsBool(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetValueAsDouble[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetValueAsDouble[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TNUMBER, NULL };
 static int LUACALL wxLua_wxGridTableBase_SetValueAsDouble(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_SetValueAsDouble[1] = {{ wxLua_wxGridTableBase_SetValueAsDouble, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridTableBase_SetValueAsDouble }};
 //     virtual void SetValueAsDouble( int row, int col, double value );
@@ -10365,9 +9958,9 @@ static int LUACALL wxLua_wxGridTableBase_SetValueAsDouble(lua_State *L)
     // double value
     double value = (double)wxlua_getnumbertype(L, 4);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call SetValueAsDouble
@@ -10376,18 +9969,18 @@ static int LUACALL wxLua_wxGridTableBase_SetValueAsDouble(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetValueAsLong[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableBase_SetValueAsLong[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableBase_SetValueAsLong(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableBase_SetValueAsLong[1] = {{ wxLua_wxGridTableBase_SetValueAsLong, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGridTableBase_SetValueAsLong }};
 //     virtual void SetValueAsLong( int row, int col, long value );
 static int LUACALL wxLua_wxGridTableBase_SetValueAsLong(lua_State *L)
 {
     // long value
-    long value = (long)wxlua_getnumbertype(L, 4);
+    long value = (long)wxlua_getintegertype(L, 4);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableBase * self = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call SetValueAsLong
@@ -10529,7 +10122,7 @@ int wxluatype_wxGridStringTable = WXLUA_TUNKNOWN;
 static wxLuaArgType s_wxluatypeArray_wxLua_wxGridStringTable_delete[] = { &wxluatype_wxGridStringTable, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridStringTable_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxGridStringTable_delete }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridStringTable_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridStringTable_constructor[] = { &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridStringTable_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridStringTable_constructor[1] = {{ wxLua_wxGridStringTable_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 2, s_wxluatypeArray_wxLua_wxGridStringTable_constructor }};
 //     wxGridStringTable( int numRows=0, int numCols=0 );
@@ -10538,9 +10131,9 @@ static int LUACALL wxLua_wxGridStringTable_constructor(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int numCols = 0
-    int numCols = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : 0);
+    int numCols = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : 0);
     // int numRows = 0
-    int numRows = (argCount >= 1 ? (int)wxlua_getnumbertype(L, 1) : 0);
+    int numRows = (argCount >= 1 ? (int)wxlua_getintegertype(L, 1) : 0);
     // call constructor
     wxGridStringTable* returns = new wxGridStringTable(numRows, numCols);
     // add to tracked memory list
@@ -10591,8 +10184,8 @@ static int LUACALL wxLua_wxGridTableMessage_GetCommandInt(lua_State *L)
     wxGridTableMessage * self = (wxGridTableMessage *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableMessage);
     // call GetCommandInt
     int returns = (self->GetCommandInt());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -10607,8 +10200,8 @@ static int LUACALL wxLua_wxGridTableMessage_GetCommandInt2(lua_State *L)
     wxGridTableMessage * self = (wxGridTableMessage *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableMessage);
     // call GetCommandInt2
     int returns = (self->GetCommandInt2());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -10623,8 +10216,8 @@ static int LUACALL wxLua_wxGridTableMessage_GetId(lua_State *L)
     wxGridTableMessage * self = (wxGridTableMessage *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableMessage);
     // call GetId
     int returns = (self->GetId());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -10645,14 +10238,14 @@ static int LUACALL wxLua_wxGridTableMessage_GetTableObject(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableMessage_SetCommandInt[] = { &wxluatype_wxGridTableMessage, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableMessage_SetCommandInt[] = { &wxluatype_wxGridTableMessage, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableMessage_SetCommandInt(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableMessage_SetCommandInt[1] = {{ wxLua_wxGridTableMessage_SetCommandInt, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGridTableMessage_SetCommandInt }};
 //     void SetCommandInt( int comInt1 );
 static int LUACALL wxLua_wxGridTableMessage_SetCommandInt(lua_State *L)
 {
     // int comInt1
-    int comInt1 = (int)wxlua_getnumbertype(L, 2);
+    int comInt1 = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableMessage * self = (wxGridTableMessage *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableMessage);
     // call SetCommandInt
@@ -10661,14 +10254,14 @@ static int LUACALL wxLua_wxGridTableMessage_SetCommandInt(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableMessage_SetCommandInt2[] = { &wxluatype_wxGridTableMessage, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableMessage_SetCommandInt2[] = { &wxluatype_wxGridTableMessage, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableMessage_SetCommandInt2(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableMessage_SetCommandInt2[1] = {{ wxLua_wxGridTableMessage_SetCommandInt2, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGridTableMessage_SetCommandInt2 }};
 //     void SetCommandInt2( int comInt2 );
 static int LUACALL wxLua_wxGridTableMessage_SetCommandInt2(lua_State *L)
 {
     // int comInt2
-    int comInt2 = (int)wxlua_getnumbertype(L, 2);
+    int comInt2 = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableMessage * self = (wxGridTableMessage *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableMessage);
     // call SetCommandInt2
@@ -10677,14 +10270,14 @@ static int LUACALL wxLua_wxGridTableMessage_SetCommandInt2(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableMessage_SetId[] = { &wxluatype_wxGridTableMessage, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableMessage_SetId[] = { &wxluatype_wxGridTableMessage, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableMessage_SetId(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableMessage_SetId[1] = {{ wxLua_wxGridTableMessage_SetId, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGridTableMessage_SetId }};
 //     void SetId( int id );
 static int LUACALL wxLua_wxGridTableMessage_SetId(lua_State *L)
 {
     // int id
-    int id = (int)wxlua_getnumbertype(L, 2);
+    int id = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridTableMessage * self = (wxGridTableMessage *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableMessage);
     // call SetId
@@ -10712,7 +10305,7 @@ static int LUACALL wxLua_wxGridTableMessage_SetTableObject(lua_State *L)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableMessage_delete[] = { &wxluatype_wxGridTableMessage, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableMessage_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxGridTableMessage_delete }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableMessage_constructor[] = { &wxluatype_wxGridTableBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridTableMessage_constructor[] = { &wxluatype_wxGridTableBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridTableMessage_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridTableMessage_constructor[1] = {{ wxLua_wxGridTableMessage_constructor, WXLUAMETHOD_CONSTRUCTOR, 2, 4, s_wxluatypeArray_wxLua_wxGridTableMessage_constructor }};
 //     wxGridTableMessage( wxGridTableBase *table, int id, int comInt1 = -1, int comInt2 = -1 );
@@ -10721,11 +10314,11 @@ static int LUACALL wxLua_wxGridTableMessage_constructor(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int comInt2 = -1
-    int comInt2 = (argCount >= 4 ? (int)wxlua_getnumbertype(L, 4) : -1);
+    int comInt2 = (argCount >= 4 ? (int)wxlua_getintegertype(L, 4) : -1);
     // int comInt1 = -1
-    int comInt1 = (argCount >= 3 ? (int)wxlua_getnumbertype(L, 3) : -1);
+    int comInt1 = (argCount >= 3 ? (int)wxlua_getintegertype(L, 3) : -1);
     // int id
-    int id = (int)wxlua_getnumbertype(L, 2);
+    int id = (int)wxlua_getintegertype(L, 2);
     // wxGridTableBase table
     wxGridTableBase * table = (wxGridTableBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridTableBase);
     // call constructor
@@ -10786,8 +10379,8 @@ static int LUACALL wxLua_wxGridCellCoords_GetCol(lua_State *L)
     wxGridCellCoords * self = (wxGridCellCoords *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellCoords);
     // call GetCol
     int returns = (self->GetCol());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -10802,22 +10395,22 @@ static int LUACALL wxLua_wxGridCellCoords_GetRow(lua_State *L)
     wxGridCellCoords * self = (wxGridCellCoords *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellCoords);
     // call GetRow
     int returns = (self->GetRow());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellCoords_Set[] = { &wxluatype_wxGridCellCoords, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellCoords_Set[] = { &wxluatype_wxGridCellCoords, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellCoords_Set(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellCoords_Set[1] = {{ wxLua_wxGridCellCoords_Set, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGridCellCoords_Set }};
 //     void Set(int row, int col );
 static int LUACALL wxLua_wxGridCellCoords_Set(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridCellCoords * self = (wxGridCellCoords *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellCoords);
     // call Set
@@ -10826,14 +10419,14 @@ static int LUACALL wxLua_wxGridCellCoords_Set(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellCoords_SetCol[] = { &wxluatype_wxGridCellCoords, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellCoords_SetCol[] = { &wxluatype_wxGridCellCoords, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellCoords_SetCol(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellCoords_SetCol[1] = {{ wxLua_wxGridCellCoords_SetCol, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGridCellCoords_SetCol }};
 //     void SetCol( int n );
 static int LUACALL wxLua_wxGridCellCoords_SetCol(lua_State *L)
 {
     // int n
-    int n = (int)wxlua_getnumbertype(L, 2);
+    int n = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridCellCoords * self = (wxGridCellCoords *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellCoords);
     // call SetCol
@@ -10842,14 +10435,14 @@ static int LUACALL wxLua_wxGridCellCoords_SetCol(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellCoords_SetRow[] = { &wxluatype_wxGridCellCoords, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellCoords_SetRow[] = { &wxluatype_wxGridCellCoords, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellCoords_SetRow(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellCoords_SetRow[1] = {{ wxLua_wxGridCellCoords_SetRow, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGridCellCoords_SetRow }};
 //     void SetRow( int n );
 static int LUACALL wxLua_wxGridCellCoords_SetRow(lua_State *L)
 {
     // int n
-    int n = (int)wxlua_getnumbertype(L, 2);
+    int n = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridCellCoords * self = (wxGridCellCoords *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellCoords);
     // call SetRow
@@ -10914,7 +10507,7 @@ static int LUACALL wxLua_wxGridCellCoords_op_set(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellCoords_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellCoords_constructor[] = { &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellCoords_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellCoords_constructor[1] = {{ wxLua_wxGridCellCoords_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 2, s_wxluatypeArray_wxLua_wxGridCellCoords_constructor }};
 //     wxGridCellCoords( int r = -1, int c = -1 );
@@ -10923,9 +10516,9 @@ static int LUACALL wxLua_wxGridCellCoords_constructor(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int c = -1
-    int c = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : -1);
+    int c = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : -1);
     // int r = -1
-    int r = (argCount >= 1 ? (int)wxlua_getnumbertype(L, 1) : -1);
+    int r = (argCount >= 1 ? (int)wxlua_getintegertype(L, 1) : -1);
     // call constructor
     wxGridCellCoords* returns = new wxGridCellCoords(r, c);
     // add to tracked memory list
@@ -11030,13 +10623,13 @@ static int LUACALL wxLua_wxGridCellCoordsArray_GetCount(lua_State *L)
     wxGridCellCoordsArray * self = (wxGridCellCoordsArray *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellCoordsArray);
     // call GetCount
     int returns = (self->GetCount());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellCoordsArray_Insert[] = { &wxluatype_wxGridCellCoordsArray, &wxluatype_wxGridCellCoords, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellCoordsArray_Insert[] = { &wxluatype_wxGridCellCoordsArray, &wxluatype_wxGridCellCoords, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellCoordsArray_Insert(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellCoordsArray_Insert[1] = {{ wxLua_wxGridCellCoordsArray_Insert, WXLUAMETHOD_METHOD, 3, 4, s_wxluatypeArray_wxLua_wxGridCellCoordsArray_Insert }};
 //     void Insert( const wxGridCellCoords& c, int n, int copies = 1 );
@@ -11045,9 +10638,9 @@ static int LUACALL wxLua_wxGridCellCoordsArray_Insert(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int copies = 1
-    int copies = (argCount >= 4 ? (int)wxlua_getnumbertype(L, 4) : 1);
+    int copies = (argCount >= 4 ? (int)wxlua_getintegertype(L, 4) : 1);
     // int n
-    int n = (int)wxlua_getnumbertype(L, 3);
+    int n = (int)wxlua_getintegertype(L, 3);
     // const wxGridCellCoords c
     const wxGridCellCoords * c = (const wxGridCellCoords *)wxluaT_getuserdatatype(L, 2, wxluatype_wxGridCellCoords);
     // get this
@@ -11074,14 +10667,14 @@ static int LUACALL wxLua_wxGridCellCoordsArray_IsEmpty(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellCoordsArray_Item[] = { &wxluatype_wxGridCellCoordsArray, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridCellCoordsArray_Item[] = { &wxluatype_wxGridCellCoordsArray, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridCellCoordsArray_Item(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridCellCoordsArray_Item[1] = {{ wxLua_wxGridCellCoordsArray_Item, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGridCellCoordsArray_Item }};
 //     wxGridCellCoords Item( int n );
 static int LUACALL wxLua_wxGridCellCoordsArray_Item(lua_State *L)
 {
     // int n
-    int n = (int)wxlua_getnumbertype(L, 2);
+    int n = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridCellCoordsArray * self = (wxGridCellCoordsArray *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridCellCoordsArray);
     // call Item
@@ -11236,7 +10829,7 @@ int wxGridCellCoordsArray_methodCount = sizeof(wxGridCellCoordsArray_methods)/si
 // Lua MetaTable Tag for Class 'wxGrid'
 int wxluatype_wxGrid = WXLUA_TUNKNOWN;
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_AppendCols[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_AppendCols[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_AppendCols(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_AppendCols[1] = {{ wxLua_wxGrid_AppendCols, WXLUAMETHOD_METHOD, 1, 3, s_wxluatypeArray_wxLua_wxGrid_AppendCols }};
 //     bool    AppendCols( int numCols = 1, bool updateLabels=true );
@@ -11247,7 +10840,7 @@ static int LUACALL wxLua_wxGrid_AppendCols(lua_State *L)
     // bool updateLabels = true
     bool updateLabels = (argCount >= 3 ? wxlua_getbooleantype(L, 3) : true);
     // int numCols = 1
-    int numCols = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : 1);
+    int numCols = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : 1);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call AppendCols
@@ -11258,7 +10851,7 @@ static int LUACALL wxLua_wxGrid_AppendCols(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_AppendRows[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_AppendRows[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_AppendRows(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_AppendRows[1] = {{ wxLua_wxGrid_AppendRows, WXLUAMETHOD_METHOD, 1, 3, s_wxluatypeArray_wxLua_wxGrid_AppendRows }};
 //     bool    AppendRows( int numRows = 1, bool updateLabels=true );
@@ -11269,7 +10862,7 @@ static int LUACALL wxLua_wxGrid_AppendRows(lua_State *L)
     // bool updateLabels = true
     bool updateLabels = (argCount >= 3 ? wxlua_getbooleantype(L, 3) : true);
     // int numRows = 1
-    int numRows = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : 1);
+    int numRows = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : 1);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call AppendRows
@@ -11294,14 +10887,14 @@ static int LUACALL wxLua_wxGrid_AutoSize(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_AutoSizeColLabelSize[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_AutoSizeColLabelSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_AutoSizeColLabelSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_AutoSizeColLabelSize[1] = {{ wxLua_wxGrid_AutoSizeColLabelSize, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_AutoSizeColLabelSize }};
 //     void    AutoSizeColLabelSize( int col );
 static int LUACALL wxLua_wxGrid_AutoSizeColLabelSize(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call AutoSizeColLabelSize
@@ -11310,7 +10903,7 @@ static int LUACALL wxLua_wxGrid_AutoSizeColLabelSize(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_AutoSizeColumn[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_AutoSizeColumn[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_AutoSizeColumn(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_AutoSizeColumn[1] = {{ wxLua_wxGrid_AutoSizeColumn, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxGrid_AutoSizeColumn }};
 //     void    AutoSizeColumn( int col, bool setAsMin = true );
@@ -11321,7 +10914,7 @@ static int LUACALL wxLua_wxGrid_AutoSizeColumn(lua_State *L)
     // bool setAsMin = true
     bool setAsMin = (argCount >= 3 ? wxlua_getbooleantype(L, 3) : true);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call AutoSizeColumn
@@ -11348,7 +10941,7 @@ static int LUACALL wxLua_wxGrid_AutoSizeColumns(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_AutoSizeRow[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_AutoSizeRow[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_AutoSizeRow(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_AutoSizeRow[1] = {{ wxLua_wxGrid_AutoSizeRow, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxGrid_AutoSizeRow }};
 //     void    AutoSizeRow( int row, bool setAsMin = true );
@@ -11359,7 +10952,7 @@ static int LUACALL wxLua_wxGrid_AutoSizeRow(lua_State *L)
     // bool setAsMin = true
     bool setAsMin = (argCount >= 3 ? wxlua_getbooleantype(L, 3) : true);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call AutoSizeRow
@@ -11368,14 +10961,14 @@ static int LUACALL wxLua_wxGrid_AutoSizeRow(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_AutoSizeRowLabelSize[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_AutoSizeRowLabelSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_AutoSizeRowLabelSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_AutoSizeRowLabelSize[1] = {{ wxLua_wxGrid_AutoSizeRowLabelSize, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_AutoSizeRowLabelSize }};
 //     void    AutoSizeRowLabelSize( int row );
 static int LUACALL wxLua_wxGrid_AutoSizeRowLabelSize(lua_State *L)
 {
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call AutoSizeRowLabelSize
@@ -11459,16 +11052,14 @@ static int LUACALL wxLua_wxGrid_CanDragCell(lua_State *L)
     return 1;
 }
 
-
-#if (wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_CanDragColSize1[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
-static int LUACALL wxLua_wxGrid_CanDragColSize1(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_CanDragColSize1[1] = {{ wxLua_wxGrid_CanDragColSize1, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_CanDragColSize1 }};
-//         bool CanDragColSize( int col );
-static int LUACALL wxLua_wxGrid_CanDragColSize1(lua_State *L)
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_CanDragColSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
+static int LUACALL wxLua_wxGrid_CanDragColSize(lua_State *L);
+static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_CanDragColSize[1] = {{ wxLua_wxGrid_CanDragColSize, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_CanDragColSize }};
+//     bool    CanDragColSize( int col );
+static int LUACALL wxLua_wxGrid_CanDragColSize(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call CanDragColSize
@@ -11478,27 +11069,6 @@ static int LUACALL wxLua_wxGrid_CanDragColSize1(lua_State *L)
 
     return 1;
 }
-
-#endif // (wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-
-#if (!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_CanDragColSize[] = { &wxluatype_wxGrid, NULL };
-static int LUACALL wxLua_wxGrid_CanDragColSize(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_CanDragColSize[1] = {{ wxLua_wxGrid_CanDragColSize, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxGrid_CanDragColSize }};
-//         bool CanDragColSize( );
-static int LUACALL wxLua_wxGrid_CanDragColSize(lua_State *L)
-{
-    // get this
-    wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
-    // call CanDragColSize
-    bool returns = (self->CanDragColSize());
-    // push the result flag
-    lua_pushboolean(L, returns);
-
-    return 1;
-}
-
-#endif // (!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_CanDragGridSize[] = { &wxluatype_wxGrid, NULL };
 static int LUACALL wxLua_wxGrid_CanDragGridSize(lua_State *L);
@@ -11516,16 +11086,14 @@ static int LUACALL wxLua_wxGrid_CanDragGridSize(lua_State *L)
     return 1;
 }
 
-
-#if (wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_CanDragRowSize1[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
-static int LUACALL wxLua_wxGrid_CanDragRowSize1(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_CanDragRowSize1[1] = {{ wxLua_wxGrid_CanDragRowSize1, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_CanDragRowSize1 }};
-//         bool CanDragRowSize( int row );
-static int LUACALL wxLua_wxGrid_CanDragRowSize1(lua_State *L)
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_CanDragRowSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
+static int LUACALL wxLua_wxGrid_CanDragRowSize(lua_State *L);
+static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_CanDragRowSize[1] = {{ wxLua_wxGrid_CanDragRowSize, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_CanDragRowSize }};
+//     bool    CanDragRowSize( int row );
+static int LUACALL wxLua_wxGrid_CanDragRowSize(lua_State *L)
 {
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call CanDragRowSize
@@ -11535,27 +11103,6 @@ static int LUACALL wxLua_wxGrid_CanDragRowSize1(lua_State *L)
 
     return 1;
 }
-
-#endif // (wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-
-#if (!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_CanDragRowSize[] = { &wxluatype_wxGrid, NULL };
-static int LUACALL wxLua_wxGrid_CanDragRowSize(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_CanDragRowSize[1] = {{ wxLua_wxGrid_CanDragRowSize, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxGrid_CanDragRowSize }};
-//         bool CanDragRowSize( );
-static int LUACALL wxLua_wxGrid_CanDragRowSize(lua_State *L)
-{
-    // get this
-    wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
-    // call CanDragRowSize
-    bool returns = (self->CanDragRowSize());
-    // push the result flag
-    lua_pushboolean(L, returns);
-
-    return 1;
-}
-
-#endif // (!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_CanEnableCellControl[] = { &wxluatype_wxGrid, NULL };
 static int LUACALL wxLua_wxGrid_CanEnableCellControl(lua_State *L);
@@ -11575,16 +11122,16 @@ static int LUACALL wxLua_wxGrid_CanEnableCellControl(lua_State *L)
 
 
 #if (wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_CellToRect[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_CellToRect[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_CellToRect(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_CellToRect[1] = {{ wxLua_wxGrid_CellToRect, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_CellToRect }};
 //     wxRect  CellToRect( int row, int col );
 static int LUACALL wxLua_wxGrid_CellToRect(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call CellToRect
@@ -11628,7 +11175,7 @@ static int LUACALL wxLua_wxGrid_ClearSelection(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_CreateGrid[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TINTEGER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_CreateGrid[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_CreateGrid(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_CreateGrid[1] = {{ wxLua_wxGrid_CreateGrid, WXLUAMETHOD_METHOD, 3, 4, s_wxluatypeArray_wxLua_wxGrid_CreateGrid }};
 //     bool    CreateGrid( int numRows, int numCols, wxGrid::wxGridSelectionModes selmode = wxGrid::wxGridSelectCells );
@@ -11639,9 +11186,9 @@ static int LUACALL wxLua_wxGrid_CreateGrid(lua_State *L)
     // wxGrid::wxGridSelectionModes selmode = wxGrid::wxGridSelectCells
     wxGrid::wxGridSelectionModes selmode = (argCount >= 4 ? (wxGrid::wxGridSelectionModes)wxlua_getenumtype(L, 4) : wxGrid::wxGridSelectCells);
     // int numCols
-    int numCols = (int)wxlua_getnumbertype(L, 3);
+    int numCols = (int)wxlua_getintegertype(L, 3);
     // int numRows
-    int numRows = (int)wxlua_getnumbertype(L, 2);
+    int numRows = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call CreateGrid
@@ -11652,7 +11199,7 @@ static int LUACALL wxLua_wxGrid_CreateGrid(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_DeleteCols[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_DeleteCols[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_DeleteCols(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_DeleteCols[1] = {{ wxLua_wxGrid_DeleteCols, WXLUAMETHOD_METHOD, 1, 4, s_wxluatypeArray_wxLua_wxGrid_DeleteCols }};
 //     bool    DeleteCols( int pos = 0, int numCols = 1, bool updateLabels=true );
@@ -11663,9 +11210,9 @@ static int LUACALL wxLua_wxGrid_DeleteCols(lua_State *L)
     // bool updateLabels = true
     bool updateLabels = (argCount >= 4 ? wxlua_getbooleantype(L, 4) : true);
     // int numCols = 1
-    int numCols = (argCount >= 3 ? (int)wxlua_getnumbertype(L, 3) : 1);
+    int numCols = (argCount >= 3 ? (int)wxlua_getintegertype(L, 3) : 1);
     // int pos = 0
-    int pos = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : 0);
+    int pos = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : 0);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call DeleteCols
@@ -11676,7 +11223,7 @@ static int LUACALL wxLua_wxGrid_DeleteCols(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_DeleteRows[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_DeleteRows[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_DeleteRows(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_DeleteRows[1] = {{ wxLua_wxGrid_DeleteRows, WXLUAMETHOD_METHOD, 1, 4, s_wxluatypeArray_wxLua_wxGrid_DeleteRows }};
 //     bool    DeleteRows( int pos = 0, int numRows = 1, bool updateLabels=true );
@@ -11687,9 +11234,9 @@ static int LUACALL wxLua_wxGrid_DeleteRows(lua_State *L)
     // bool updateLabels = true
     bool updateLabels = (argCount >= 4 ? wxlua_getbooleantype(L, 4) : true);
     // int numRows = 1
-    int numRows = (argCount >= 3 ? (int)wxlua_getnumbertype(L, 3) : 1);
+    int numRows = (argCount >= 3 ? (int)wxlua_getintegertype(L, 3) : 1);
     // int pos = 0
-    int pos = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : 0);
+    int pos = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : 0);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call DeleteRows
@@ -11700,16 +11247,16 @@ static int LUACALL wxLua_wxGrid_DeleteRows(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_DeselectCell[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_DeselectCell[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_DeselectCell(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_DeselectCell[1] = {{ wxLua_wxGrid_DeselectCell, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_DeselectCell }};
 //     void DeselectCell( int row, int col );
 static int LUACALL wxLua_wxGrid_DeselectCell(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call DeselectCell
@@ -11718,14 +11265,14 @@ static int LUACALL wxLua_wxGrid_DeselectCell(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_DeselectCol[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_DeselectCol[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_DeselectCol(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_DeselectCol[1] = {{ wxLua_wxGrid_DeselectCol, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_DeselectCol }};
 //     void DeselectCol( int col );
 static int LUACALL wxLua_wxGrid_DeselectCol(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call DeselectCol
@@ -11734,14 +11281,14 @@ static int LUACALL wxLua_wxGrid_DeselectCol(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_DeselectRow[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_DeselectRow[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_DeselectRow(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_DeselectRow[1] = {{ wxLua_wxGrid_DeselectRow, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_DeselectRow }};
 //     void DeselectRow( int row );
 static int LUACALL wxLua_wxGrid_DeselectRow(lua_State *L)
 {
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call DeselectRow
@@ -11822,7 +11369,7 @@ static int LUACALL wxLua_wxGrid_DisableDragRowSize(lua_State *L)
 
 
 #if ((wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxDC)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_DrawTextRectangle[] = { &wxluatype_wxGrid, &wxluatype_wxDC, &wxluatype_TSTRING, &wxluatype_wxRect, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_DrawTextRectangle[] = { &wxluatype_wxGrid, &wxluatype_wxDC, &wxluatype_TSTRING, &wxluatype_wxRect, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_DrawTextRectangle(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_DrawTextRectangle[1] = {{ wxLua_wxGrid_DrawTextRectangle, WXLUAMETHOD_METHOD, 4, 7, s_wxluatypeArray_wxLua_wxGrid_DrawTextRectangle }};
 //     void DrawTextRectangle( wxDC& dc, const wxString&, const wxRect&, int horizontalAlignment = wxALIGN_LEFT, int verticalAlignment = wxALIGN_TOP, int textOrientation = wxHORIZONTAL );
@@ -11831,11 +11378,11 @@ static int LUACALL wxLua_wxGrid_DrawTextRectangle(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int textOrientation = wxHORIZONTAL
-    int textOrientation = (argCount >= 7 ? (int)wxlua_getnumbertype(L, 7) : wxHORIZONTAL);
+    int textOrientation = (argCount >= 7 ? (int)wxlua_getintegertype(L, 7) : wxHORIZONTAL);
     // int verticalAlignment = wxALIGN_TOP
-    int verticalAlignment = (argCount >= 6 ? (int)wxlua_getnumbertype(L, 6) : wxALIGN_TOP);
+    int verticalAlignment = (argCount >= 6 ? (int)wxlua_getintegertype(L, 6) : wxALIGN_TOP);
     // int horizontalAlignment = wxALIGN_LEFT
-    int horizontalAlignment = (argCount >= 5 ? (int)wxlua_getnumbertype(L, 5) : wxALIGN_LEFT);
+    int horizontalAlignment = (argCount >= 5 ? (int)wxlua_getintegertype(L, 5) : wxALIGN_LEFT);
     // const wxRect arg3
     const wxRect * arg3 = (const wxRect *)wxluaT_getuserdatatype(L, 4, wxluatype_wxRect);
     // const wxString arg2
@@ -12014,13 +11561,13 @@ static int LUACALL wxLua_wxGrid_GetBatchCount(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetBatchCount
     int returns = (self->GetBatchCount());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellAlignment[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellAlignment[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetCellAlignment(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetCellAlignment[1] = {{ wxLua_wxGrid_GetCellAlignment, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_GetCellAlignment }};
 // %override wxLua_wxGrid_GetCellAlignment
@@ -12047,16 +11594,16 @@ static int LUACALL wxLua_wxGrid_GetCellAlignment(lua_State *L)
 
 
 #if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellBackgroundColour[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellBackgroundColour[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetCellBackgroundColour(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetCellBackgroundColour[1] = {{ wxLua_wxGrid_GetCellBackgroundColour, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_GetCellBackgroundColour }};
 //     wxColour GetCellBackgroundColour( int row, int col );
 static int LUACALL wxLua_wxGrid_GetCellBackgroundColour(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetCellBackgroundColour
@@ -12072,16 +11619,16 @@ static int LUACALL wxLua_wxGrid_GetCellBackgroundColour(lua_State *L)
 
 #endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellEditor[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellEditor[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetCellEditor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetCellEditor[1] = {{ wxLua_wxGrid_GetCellEditor, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_GetCellEditor }};
 //     %gc wxGridCellEditor* GetCellEditor(int row, int col );
 static int LUACALL wxLua_wxGrid_GetCellEditor(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetCellEditor
@@ -12095,16 +11642,16 @@ static int LUACALL wxLua_wxGrid_GetCellEditor(lua_State *L)
 
 
 #if (wxLUA_USE_wxFont) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellFont[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellFont[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetCellFont(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetCellFont[1] = {{ wxLua_wxGrid_GetCellFont, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_GetCellFont }};
 //     wxFont   GetCellFont( int row, int col );
 static int LUACALL wxLua_wxGrid_GetCellFont(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetCellFont
@@ -12152,8 +11699,8 @@ static int LUACALL wxLua_wxGrid_GetCellHighlightPenWidth(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetCellHighlightPenWidth
     int returns = (self->GetCellHighlightPenWidth());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -12168,22 +11715,22 @@ static int LUACALL wxLua_wxGrid_GetCellHighlightROPenWidth(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetCellHighlightROPenWidth
     int returns = (self->GetCellHighlightROPenWidth());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellOverflow[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellOverflow[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetCellOverflow(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetCellOverflow[1] = {{ wxLua_wxGrid_GetCellOverflow, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_GetCellOverflow }};
 //     bool     GetCellOverflow( int row, int col );
 static int LUACALL wxLua_wxGrid_GetCellOverflow(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetCellOverflow
@@ -12194,16 +11741,16 @@ static int LUACALL wxLua_wxGrid_GetCellOverflow(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellRenderer[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellRenderer[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetCellRenderer(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetCellRenderer[1] = {{ wxLua_wxGrid_GetCellRenderer, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_GetCellRenderer }};
 //     %gc wxGridCellRenderer* GetCellRenderer(int row, int col );
 static int LUACALL wxLua_wxGrid_GetCellRenderer(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetCellRenderer
@@ -12215,7 +11762,7 @@ static int LUACALL wxLua_wxGrid_GetCellRenderer(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellSize[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetCellSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetCellSize[1] = {{ wxLua_wxGrid_GetCellSize, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_GetCellSize }};
 // %override wxLua_wxGrid_GetCellSize
@@ -12242,16 +11789,16 @@ static int LUACALL wxLua_wxGrid_GetCellSize(lua_State *L)
 
 
 #if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellTextColour[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellTextColour[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetCellTextColour(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetCellTextColour[1] = {{ wxLua_wxGrid_GetCellTextColour, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_GetCellTextColour }};
 //     wxColour GetCellTextColour( int row, int col );
 static int LUACALL wxLua_wxGrid_GetCellTextColour(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetCellTextColour
@@ -12267,16 +11814,16 @@ static int LUACALL wxLua_wxGrid_GetCellTextColour(lua_State *L)
 
 #endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellValue[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetCellValue[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetCellValue(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetCellValue[1] = {{ wxLua_wxGrid_GetCellValue, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_GetCellValue }};
 //     wxString GetCellValue( int row, int col );
 static int LUACALL wxLua_wxGrid_GetCellValue(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetCellValue
@@ -12318,8 +11865,8 @@ static int LUACALL wxLua_wxGrid_GetColLabelSize(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetColLabelSize
     int returns = (self->GetColLabelSize());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -12334,20 +11881,20 @@ static int LUACALL wxLua_wxGrid_GetColLabelTextOrientation(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetColLabelTextOrientation
     int returns = (self->GetColLabelTextOrientation());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetColLabelValue[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetColLabelValue[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetColLabelValue(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetColLabelValue[1] = {{ wxLua_wxGrid_GetColLabelValue, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_GetColLabelValue }};
 //     wxString GetColLabelValue( int col );
 static int LUACALL wxLua_wxGrid_GetColLabelValue(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetColLabelValue
@@ -12368,26 +11915,26 @@ static int LUACALL wxLua_wxGrid_GetColMinimalAcceptableWidth(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetColMinimalAcceptableWidth
     int returns = (self->GetColMinimalAcceptableWidth());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetColSize[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetColSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetColSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetColSize[1] = {{ wxLua_wxGrid_GetColSize, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_GetColSize }};
 //     int      GetColSize( int col );
 static int LUACALL wxLua_wxGrid_GetColSize(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetColSize
     int returns = (self->GetColSize(col));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -12507,8 +12054,8 @@ static int LUACALL wxLua_wxGrid_GetDefaultColLabelSize(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetDefaultColLabelSize
     int returns = (self->GetDefaultColLabelSize());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -12523,8 +12070,8 @@ static int LUACALL wxLua_wxGrid_GetDefaultColSize(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetDefaultColSize
     int returns = (self->GetDefaultColSize());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -12546,16 +12093,16 @@ static int LUACALL wxLua_wxGrid_GetDefaultEditor(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetDefaultEditorForCell[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetDefaultEditorForCell[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetDefaultEditorForCell(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetDefaultEditorForCell[1] = {{ wxLua_wxGrid_GetDefaultEditorForCell, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_GetDefaultEditorForCell }};
 //     %gc wxGridCellEditor* GetDefaultEditorForCell(int row, int col) const;
 static int LUACALL wxLua_wxGrid_GetDefaultEditorForCell(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetDefaultEditorForCell
@@ -12603,16 +12150,16 @@ static int LUACALL wxLua_wxGrid_GetDefaultRenderer(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetDefaultRendererForCell[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetDefaultRendererForCell[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetDefaultRendererForCell(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetDefaultRendererForCell[1] = {{ wxLua_wxGrid_GetDefaultRendererForCell, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_GetDefaultRendererForCell }};
 //     %gc wxGridCellRenderer* GetDefaultRendererForCell(int row, int col) const;
 static int LUACALL wxLua_wxGrid_GetDefaultRendererForCell(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetDefaultRendererForCell
@@ -12653,8 +12200,8 @@ static int LUACALL wxLua_wxGrid_GetDefaultRowLabelSize(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetDefaultRowLabelSize
     int returns = (self->GetDefaultRowLabelSize());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -12669,8 +12216,8 @@ static int LUACALL wxLua_wxGrid_GetDefaultRowSize(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetDefaultRowSize
     int returns = (self->GetDefaultRowSize());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -12717,8 +12264,8 @@ static int LUACALL wxLua_wxGrid_GetGridCursorCol(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetGridCursorCol
     int returns = (self->GetGridCursorCol());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -12733,8 +12280,8 @@ static int LUACALL wxLua_wxGrid_GetGridCursorRow(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetGridCursorRow
     int returns = (self->GetGridCursorRow());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -12871,8 +12418,8 @@ static int LUACALL wxLua_wxGrid_GetNumberCols(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetNumberCols
     int returns = (self->GetNumberCols());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -12887,22 +12434,22 @@ static int LUACALL wxLua_wxGrid_GetNumberRows(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetNumberRows
     int returns = (self->GetNumberRows());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetOrCreateCellAttr[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetOrCreateCellAttr[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetOrCreateCellAttr(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetOrCreateCellAttr[1] = {{ wxLua_wxGrid_GetOrCreateCellAttr, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_GetOrCreateCellAttr }};
 //     %gc wxGridCellAttr *GetOrCreateCellAttr(int row, int col) const;
 static int LUACALL wxLua_wxGrid_GetOrCreateCellAttr(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetOrCreateCellAttr
@@ -12945,20 +12492,20 @@ static int LUACALL wxLua_wxGrid_GetRowLabelSize(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetRowLabelSize
     int returns = (self->GetRowLabelSize());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetRowLabelValue[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetRowLabelValue[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetRowLabelValue(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetRowLabelValue[1] = {{ wxLua_wxGrid_GetRowLabelValue, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_GetRowLabelValue }};
 //     wxString GetRowLabelValue( int row );
 static int LUACALL wxLua_wxGrid_GetRowLabelValue(lua_State *L)
 {
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetRowLabelValue
@@ -12979,26 +12526,26 @@ static int LUACALL wxLua_wxGrid_GetRowMinimalAcceptableHeight(lua_State *L)
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetRowMinimalAcceptableHeight
     int returns = (self->GetRowMinimalAcceptableHeight());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetRowSize[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_GetRowSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_GetRowSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_GetRowSize[1] = {{ wxLua_wxGrid_GetRowSize, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_GetRowSize }};
 //     int      GetRowSize( int row );
 static int LUACALL wxLua_wxGrid_GetRowSize(lua_State *L)
 {
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call GetRowSize
     int returns = (self->GetRowSize(row));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -13237,7 +12784,7 @@ static int LUACALL wxLua_wxGrid_HideCellEditControl(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_InsertCols[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_InsertCols[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_InsertCols(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_InsertCols[1] = {{ wxLua_wxGrid_InsertCols, WXLUAMETHOD_METHOD, 1, 4, s_wxluatypeArray_wxLua_wxGrid_InsertCols }};
 //     bool    InsertCols( int pos = 0, int numCols = 1, bool updateLabels=true );
@@ -13248,9 +12795,9 @@ static int LUACALL wxLua_wxGrid_InsertCols(lua_State *L)
     // bool updateLabels = true
     bool updateLabels = (argCount >= 4 ? wxlua_getbooleantype(L, 4) : true);
     // int numCols = 1
-    int numCols = (argCount >= 3 ? (int)wxlua_getnumbertype(L, 3) : 1);
+    int numCols = (argCount >= 3 ? (int)wxlua_getintegertype(L, 3) : 1);
     // int pos = 0
-    int pos = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : 0);
+    int pos = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : 0);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call InsertCols
@@ -13261,7 +12808,7 @@ static int LUACALL wxLua_wxGrid_InsertCols(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_InsertRows[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_InsertRows[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_InsertRows(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_InsertRows[1] = {{ wxLua_wxGrid_InsertRows, WXLUAMETHOD_METHOD, 1, 4, s_wxluatypeArray_wxLua_wxGrid_InsertRows }};
 //     bool    InsertRows( int pos = 0, int numRows = 1, bool updateLabels=true );
@@ -13272,9 +12819,9 @@ static int LUACALL wxLua_wxGrid_InsertRows(lua_State *L)
     // bool updateLabels = true
     bool updateLabels = (argCount >= 4 ? wxlua_getbooleantype(L, 4) : true);
     // int numRows = 1
-    int numRows = (argCount >= 3 ? (int)wxlua_getnumbertype(L, 3) : 1);
+    int numRows = (argCount >= 3 ? (int)wxlua_getintegertype(L, 3) : 1);
     // int pos = 0
-    int pos = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : 0);
+    int pos = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : 0);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call InsertRows
@@ -13349,16 +12896,16 @@ static int LUACALL wxLua_wxGrid_IsEditable(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_IsInSelection[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_IsInSelection[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_IsInSelection(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_IsInSelection[1] = {{ wxLua_wxGrid_IsInSelection, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_IsInSelection }};
 //     bool    IsInSelection( int row, int col );
 static int LUACALL wxLua_wxGrid_IsInSelection(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call IsInSelection
@@ -13369,16 +12916,16 @@ static int LUACALL wxLua_wxGrid_IsInSelection(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_IsReadOnly[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_IsReadOnly[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_IsReadOnly(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_IsReadOnly[1] = {{ wxLua_wxGrid_IsReadOnly, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_IsReadOnly }};
 //     bool    IsReadOnly(int row, int col) const;
 static int LUACALL wxLua_wxGrid_IsReadOnly(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call IsReadOnly
@@ -13405,7 +12952,7 @@ static int LUACALL wxLua_wxGrid_IsSelection(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_IsVisible[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_IsVisible[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_IsVisible(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_IsVisible[1] = {{ wxLua_wxGrid_IsVisible, WXLUAMETHOD_METHOD, 3, 4, s_wxluatypeArray_wxLua_wxGrid_IsVisible }};
 //     bool    IsVisible( int row, int col, bool wholeCellVisible = true );
@@ -13416,9 +12963,9 @@ static int LUACALL wxLua_wxGrid_IsVisible(lua_State *L)
     // bool wholeCellVisible = true
     bool wholeCellVisible = (argCount >= 4 ? wxlua_getbooleantype(L, 4) : true);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call IsVisible
@@ -13429,16 +12976,16 @@ static int LUACALL wxLua_wxGrid_IsVisible(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_MakeCellVisible[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_MakeCellVisible[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_MakeCellVisible(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_MakeCellVisible[1] = {{ wxLua_wxGrid_MakeCellVisible, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_MakeCellVisible }};
 //     void    MakeCellVisible( int row, int col );
 static int LUACALL wxLua_wxGrid_MakeCellVisible(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call MakeCellVisible
@@ -13693,7 +13240,7 @@ static int LUACALL wxLua_wxGrid_SelectAll(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SelectBlock[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SelectBlock[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_SelectBlock(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SelectBlock[1] = {{ wxLua_wxGrid_SelectBlock, WXLUAMETHOD_METHOD, 5, 6, s_wxluatypeArray_wxLua_wxGrid_SelectBlock }};
 //     void    SelectBlock( int topRow, int leftCol, int bottomRow, int rightCol, bool addToSelected = false );
@@ -13704,13 +13251,13 @@ static int LUACALL wxLua_wxGrid_SelectBlock(lua_State *L)
     // bool addToSelected = false
     bool addToSelected = (argCount >= 6 ? wxlua_getbooleantype(L, 6) : false);
     // int rightCol
-    int rightCol = (int)wxlua_getnumbertype(L, 5);
+    int rightCol = (int)wxlua_getintegertype(L, 5);
     // int bottomRow
-    int bottomRow = (int)wxlua_getnumbertype(L, 4);
+    int bottomRow = (int)wxlua_getintegertype(L, 4);
     // int leftCol
-    int leftCol = (int)wxlua_getnumbertype(L, 3);
+    int leftCol = (int)wxlua_getintegertype(L, 3);
     // int topRow
-    int topRow = (int)wxlua_getnumbertype(L, 2);
+    int topRow = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SelectBlock
@@ -13719,7 +13266,7 @@ static int LUACALL wxLua_wxGrid_SelectBlock(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SelectCol[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SelectCol[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_SelectCol(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SelectCol[1] = {{ wxLua_wxGrid_SelectCol, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxGrid_SelectCol }};
 //     void    SelectCol( int col, bool addToSelected = false );
@@ -13730,7 +13277,7 @@ static int LUACALL wxLua_wxGrid_SelectCol(lua_State *L)
     // bool addToSelected = false
     bool addToSelected = (argCount >= 3 ? wxlua_getbooleantype(L, 3) : false);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SelectCol
@@ -13739,7 +13286,7 @@ static int LUACALL wxLua_wxGrid_SelectCol(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SelectRow[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SelectRow[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_SelectRow(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SelectRow[1] = {{ wxLua_wxGrid_SelectRow, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxGrid_SelectRow }};
 //     void    SelectRow( int row, bool addToSelected = false );
@@ -13750,7 +13297,7 @@ static int LUACALL wxLua_wxGrid_SelectRow(lua_State *L)
     // bool addToSelected = false
     bool addToSelected = (argCount >= 3 ? wxlua_getbooleantype(L, 3) : false);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SelectRow
@@ -13759,7 +13306,7 @@ static int LUACALL wxLua_wxGrid_SelectRow(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetAttr[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxGridCellAttr, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetAttr[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxGridCellAttr, NULL };
 static int LUACALL wxLua_wxGrid_SetAttr(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetAttr[1] = {{ wxLua_wxGrid_SetAttr, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGrid_SetAttr }};
 //     void    SetAttr(int row, int col, %IncRef wxGridCellAttr *attr );
@@ -13768,9 +13315,9 @@ static int LUACALL wxLua_wxGrid_SetAttr(lua_State *L)
     // wxGridCellAttr attr
     wxGridCellAttr * attr = (wxGridCellAttr *)wxluaT_getuserdatatype(L, 4, wxluatype_wxGridCellAttr);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // This param will have DecRef() called on it so we IncRef() it to not have to worry about the Lua gc
     attr->IncRef();
     // get this
@@ -13781,20 +13328,20 @@ static int LUACALL wxLua_wxGrid_SetAttr(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellAlignment[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellAlignment[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetCellAlignment(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetCellAlignment[1] = {{ wxLua_wxGrid_SetCellAlignment, WXLUAMETHOD_METHOD, 5, 5, s_wxluatypeArray_wxLua_wxGrid_SetCellAlignment }};
 //     void    SetCellAlignment( int row, int col, int horiz, int vert );
 static int LUACALL wxLua_wxGrid_SetCellAlignment(lua_State *L)
 {
     // int vert
-    int vert = (int)wxlua_getnumbertype(L, 5);
+    int vert = (int)wxlua_getintegertype(L, 5);
     // int horiz
-    int horiz = (int)wxlua_getnumbertype(L, 4);
+    int horiz = (int)wxlua_getintegertype(L, 4);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetCellAlignment
@@ -13805,7 +13352,7 @@ static int LUACALL wxLua_wxGrid_SetCellAlignment(lua_State *L)
 
 
 #if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellBackgroundColour[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxColour, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellBackgroundColour[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxColour, NULL };
 static int LUACALL wxLua_wxGrid_SetCellBackgroundColour(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetCellBackgroundColour[1] = {{ wxLua_wxGrid_SetCellBackgroundColour, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGrid_SetCellBackgroundColour }};
 //     void    SetCellBackgroundColour( int row, int col, const wxColour& backColour );
@@ -13814,9 +13361,9 @@ static int LUACALL wxLua_wxGrid_SetCellBackgroundColour(lua_State *L)
     // const wxColour backColour
     const wxColour * backColour = (const wxColour *)wxluaT_getuserdatatype(L, 4, wxluatype_wxColour);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetCellBackgroundColour
@@ -13827,7 +13374,7 @@ static int LUACALL wxLua_wxGrid_SetCellBackgroundColour(lua_State *L)
 
 #endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellEditor[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxGridCellEditor, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellEditor[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxGridCellEditor, NULL };
 static int LUACALL wxLua_wxGrid_SetCellEditor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetCellEditor[1] = {{ wxLua_wxGrid_SetCellEditor, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGrid_SetCellEditor }};
 //     void    SetCellEditor(int row, int col, %IncRef wxGridCellEditor *editor );
@@ -13836,9 +13383,9 @@ static int LUACALL wxLua_wxGrid_SetCellEditor(lua_State *L)
     // wxGridCellEditor editor
     wxGridCellEditor * editor = (wxGridCellEditor *)wxluaT_getuserdatatype(L, 4, wxluatype_wxGridCellEditor);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // This param will have DecRef() called on it so we IncRef() it to not have to worry about the Lua gc
     editor->IncRef();
     // get this
@@ -13851,7 +13398,7 @@ static int LUACALL wxLua_wxGrid_SetCellEditor(lua_State *L)
 
 
 #if (wxLUA_USE_wxFont) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellFont[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxFont, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellFont[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxFont, NULL };
 static int LUACALL wxLua_wxGrid_SetCellFont(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetCellFont[1] = {{ wxLua_wxGrid_SetCellFont, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGrid_SetCellFont }};
 //     void    SetCellFont( int row, int col, const wxFont& cellFont );
@@ -13860,9 +13407,9 @@ static int LUACALL wxLua_wxGrid_SetCellFont(lua_State *L)
     // const wxFont cellFont
     const wxFont * cellFont = (const wxFont *)wxluaT_getuserdatatype(L, 4, wxluatype_wxFont);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetCellFont
@@ -13892,14 +13439,14 @@ static int LUACALL wxLua_wxGrid_SetCellHighlightColour(lua_State *L)
 
 #endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellHighlightPenWidth[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellHighlightPenWidth[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetCellHighlightPenWidth(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetCellHighlightPenWidth[1] = {{ wxLua_wxGrid_SetCellHighlightPenWidth, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_SetCellHighlightPenWidth }};
 //     void    SetCellHighlightPenWidth(int width );
 static int LUACALL wxLua_wxGrid_SetCellHighlightPenWidth(lua_State *L)
 {
     // int width
-    int width = (int)wxlua_getnumbertype(L, 2);
+    int width = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetCellHighlightPenWidth
@@ -13908,14 +13455,14 @@ static int LUACALL wxLua_wxGrid_SetCellHighlightPenWidth(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellHighlightROPenWidth[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellHighlightROPenWidth[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetCellHighlightROPenWidth(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetCellHighlightROPenWidth[1] = {{ wxLua_wxGrid_SetCellHighlightROPenWidth, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_SetCellHighlightROPenWidth }};
 //     void    SetCellHighlightROPenWidth(int width );
 static int LUACALL wxLua_wxGrid_SetCellHighlightROPenWidth(lua_State *L)
 {
     // int width
-    int width = (int)wxlua_getnumbertype(L, 2);
+    int width = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetCellHighlightROPenWidth
@@ -13924,7 +13471,7 @@ static int LUACALL wxLua_wxGrid_SetCellHighlightROPenWidth(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellOverflow[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellOverflow[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_SetCellOverflow(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetCellOverflow[1] = {{ wxLua_wxGrid_SetCellOverflow, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGrid_SetCellOverflow }};
 //     void    SetCellOverflow( int row, int col, bool allow );
@@ -13933,9 +13480,9 @@ static int LUACALL wxLua_wxGrid_SetCellOverflow(lua_State *L)
     // bool allow
     bool allow = wxlua_getbooleantype(L, 4);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetCellOverflow
@@ -13944,7 +13491,7 @@ static int LUACALL wxLua_wxGrid_SetCellOverflow(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellRenderer[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxGridCellRenderer, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellRenderer[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxGridCellRenderer, NULL };
 static int LUACALL wxLua_wxGrid_SetCellRenderer(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetCellRenderer[1] = {{ wxLua_wxGrid_SetCellRenderer, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGrid_SetCellRenderer }};
 //     void    SetCellRenderer(int row, int col, %IncRef wxGridCellRenderer *renderer );
@@ -13953,9 +13500,9 @@ static int LUACALL wxLua_wxGrid_SetCellRenderer(lua_State *L)
     // wxGridCellRenderer renderer
     wxGridCellRenderer * renderer = (wxGridCellRenderer *)wxluaT_getuserdatatype(L, 4, wxluatype_wxGridCellRenderer);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // This param will have DecRef() called on it so we IncRef() it to not have to worry about the Lua gc
     renderer->IncRef();
     // get this
@@ -13966,20 +13513,20 @@ static int LUACALL wxLua_wxGrid_SetCellRenderer(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellSize[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetCellSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetCellSize[1] = {{ wxLua_wxGrid_SetCellSize, WXLUAMETHOD_METHOD, 5, 5, s_wxluatypeArray_wxLua_wxGrid_SetCellSize }};
 //     void    SetCellSize( int row, int col, int num_rows, int num_cols );
 static int LUACALL wxLua_wxGrid_SetCellSize(lua_State *L)
 {
     // int num_cols
-    int num_cols = (int)wxlua_getnumbertype(L, 5);
+    int num_cols = (int)wxlua_getintegertype(L, 5);
     // int num_rows
-    int num_rows = (int)wxlua_getnumbertype(L, 4);
+    int num_rows = (int)wxlua_getintegertype(L, 4);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetCellSize
@@ -13990,7 +13537,7 @@ static int LUACALL wxLua_wxGrid_SetCellSize(lua_State *L)
 
 
 #if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellTextColour[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxColour, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellTextColour[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxColour, NULL };
 static int LUACALL wxLua_wxGrid_SetCellTextColour(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetCellTextColour[1] = {{ wxLua_wxGrid_SetCellTextColour, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGrid_SetCellTextColour }};
 //     void    SetCellTextColour( int row, int col, const wxColour& textColour );
@@ -13999,9 +13546,9 @@ static int LUACALL wxLua_wxGrid_SetCellTextColour(lua_State *L)
     // const wxColour textColour
     const wxColour * textColour = (const wxColour *)wxluaT_getuserdatatype(L, 4, wxluatype_wxColour);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetCellTextColour
@@ -14012,7 +13559,7 @@ static int LUACALL wxLua_wxGrid_SetCellTextColour(lua_State *L)
 
 #endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellValue[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetCellValue[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxGrid_SetCellValue(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetCellValue[1] = {{ wxLua_wxGrid_SetCellValue, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGrid_SetCellValue }};
 //     void SetCellValue( int row, int col, const wxString& s );
@@ -14021,9 +13568,9 @@ static int LUACALL wxLua_wxGrid_SetCellValue(lua_State *L)
     // const wxString s
     const wxString s = wxlua_getwxStringtype(L, 4);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetCellValue
@@ -14032,7 +13579,7 @@ static int LUACALL wxLua_wxGrid_SetCellValue(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColAttr[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_wxGridCellAttr, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColAttr[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_wxGridCellAttr, NULL };
 static int LUACALL wxLua_wxGrid_SetColAttr(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetColAttr[1] = {{ wxLua_wxGrid_SetColAttr, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetColAttr }};
 //     void    SetColAttr(int col, %IncRef wxGridCellAttr *attr );
@@ -14041,7 +13588,7 @@ static int LUACALL wxLua_wxGrid_SetColAttr(lua_State *L)
     // wxGridCellAttr attr
     wxGridCellAttr * attr = (wxGridCellAttr *)wxluaT_getuserdatatype(L, 3, wxluatype_wxGridCellAttr);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // This param will have DecRef() called on it so we IncRef() it to not have to worry about the Lua gc
     attr->IncRef();
     // get this
@@ -14052,14 +13599,14 @@ static int LUACALL wxLua_wxGrid_SetColAttr(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColFormatBool[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColFormatBool[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetColFormatBool(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetColFormatBool[1] = {{ wxLua_wxGrid_SetColFormatBool, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_SetColFormatBool }};
 //     void    SetColFormatBool(int col );
 static int LUACALL wxLua_wxGrid_SetColFormatBool(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetColFormatBool
@@ -14068,7 +13615,7 @@ static int LUACALL wxLua_wxGrid_SetColFormatBool(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColFormatCustom[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColFormatCustom[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxGrid_SetColFormatCustom(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetColFormatCustom[1] = {{ wxLua_wxGrid_SetColFormatCustom, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetColFormatCustom }};
 //     void    SetColFormatCustom(int col, const wxString& typeName );
@@ -14077,7 +13624,7 @@ static int LUACALL wxLua_wxGrid_SetColFormatCustom(lua_State *L)
     // const wxString typeName
     const wxString typeName = wxlua_getwxStringtype(L, 3);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetColFormatCustom
@@ -14086,7 +13633,7 @@ static int LUACALL wxLua_wxGrid_SetColFormatCustom(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColFormatFloat[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColFormatFloat[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetColFormatFloat(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetColFormatFloat[1] = {{ wxLua_wxGrid_SetColFormatFloat, WXLUAMETHOD_METHOD, 2, 4, s_wxluatypeArray_wxLua_wxGrid_SetColFormatFloat }};
 //     void    SetColFormatFloat(int col, int width = -1, int precision = -1 );
@@ -14095,11 +13642,11 @@ static int LUACALL wxLua_wxGrid_SetColFormatFloat(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int precision = -1
-    int precision = (argCount >= 4 ? (int)wxlua_getnumbertype(L, 4) : -1);
+    int precision = (argCount >= 4 ? (int)wxlua_getintegertype(L, 4) : -1);
     // int width = -1
-    int width = (argCount >= 3 ? (int)wxlua_getnumbertype(L, 3) : -1);
+    int width = (argCount >= 3 ? (int)wxlua_getintegertype(L, 3) : -1);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetColFormatFloat
@@ -14108,14 +13655,14 @@ static int LUACALL wxLua_wxGrid_SetColFormatFloat(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColFormatNumber[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColFormatNumber[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetColFormatNumber(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetColFormatNumber[1] = {{ wxLua_wxGrid_SetColFormatNumber, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_SetColFormatNumber }};
 //     void    SetColFormatNumber(int col );
 static int LUACALL wxLua_wxGrid_SetColFormatNumber(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetColFormatNumber
@@ -14124,16 +13671,16 @@ static int LUACALL wxLua_wxGrid_SetColFormatNumber(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColLabelAlignment[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColLabelAlignment[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetColLabelAlignment(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetColLabelAlignment[1] = {{ wxLua_wxGrid_SetColLabelAlignment, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetColLabelAlignment }};
 //     void    SetColLabelAlignment( int horiz, int vert );
 static int LUACALL wxLua_wxGrid_SetColLabelAlignment(lua_State *L)
 {
     // int vert
-    int vert = (int)wxlua_getnumbertype(L, 3);
+    int vert = (int)wxlua_getintegertype(L, 3);
     // int horiz
-    int horiz = (int)wxlua_getnumbertype(L, 2);
+    int horiz = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetColLabelAlignment
@@ -14142,14 +13689,14 @@ static int LUACALL wxLua_wxGrid_SetColLabelAlignment(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColLabelSize[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColLabelSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetColLabelSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetColLabelSize[1] = {{ wxLua_wxGrid_SetColLabelSize, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_SetColLabelSize }};
 //     void    SetColLabelSize( int height );
 static int LUACALL wxLua_wxGrid_SetColLabelSize(lua_State *L)
 {
     // int height
-    int height = (int)wxlua_getnumbertype(L, 2);
+    int height = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetColLabelSize
@@ -14158,7 +13705,7 @@ static int LUACALL wxLua_wxGrid_SetColLabelSize(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColLabelValue[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColLabelValue[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxGrid_SetColLabelValue(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetColLabelValue[1] = {{ wxLua_wxGrid_SetColLabelValue, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetColLabelValue }};
 //     void    SetColLabelValue( int col, const wxString& value );
@@ -14167,7 +13714,7 @@ static int LUACALL wxLua_wxGrid_SetColLabelValue(lua_State *L)
     // const wxString value
     const wxString value = wxlua_getwxStringtype(L, 3);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetColLabelValue
@@ -14176,14 +13723,14 @@ static int LUACALL wxLua_wxGrid_SetColLabelValue(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColMinimalAcceptableWidth[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColMinimalAcceptableWidth[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetColMinimalAcceptableWidth(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetColMinimalAcceptableWidth[1] = {{ wxLua_wxGrid_SetColMinimalAcceptableWidth, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_SetColMinimalAcceptableWidth }};
 //     void    SetColMinimalAcceptableWidth( int width );
 static int LUACALL wxLua_wxGrid_SetColMinimalAcceptableWidth(lua_State *L)
 {
     // int width
-    int width = (int)wxlua_getnumbertype(L, 2);
+    int width = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetColMinimalAcceptableWidth
@@ -14192,16 +13739,16 @@ static int LUACALL wxLua_wxGrid_SetColMinimalAcceptableWidth(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColMinimalWidth[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColMinimalWidth[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetColMinimalWidth(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetColMinimalWidth[1] = {{ wxLua_wxGrid_SetColMinimalWidth, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetColMinimalWidth }};
 //     void    SetColMinimalWidth( int col, int width );
 static int LUACALL wxLua_wxGrid_SetColMinimalWidth(lua_State *L)
 {
     // int width
-    int width = (int)wxlua_getnumbertype(L, 3);
+    int width = (int)wxlua_getintegertype(L, 3);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetColMinimalWidth
@@ -14210,16 +13757,16 @@ static int LUACALL wxLua_wxGrid_SetColMinimalWidth(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColSize[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetColSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetColSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetColSize[1] = {{ wxLua_wxGrid_SetColSize, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetColSize }};
 //     void    SetColSize( int col, int width );
 static int LUACALL wxLua_wxGrid_SetColSize(lua_State *L)
 {
     // int width
-    int width = (int)wxlua_getnumbertype(L, 3);
+    int width = (int)wxlua_getintegertype(L, 3);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetColSize
@@ -14228,16 +13775,16 @@ static int LUACALL wxLua_wxGrid_SetColSize(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetDefaultCellAlignment[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetDefaultCellAlignment[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetDefaultCellAlignment(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetDefaultCellAlignment[1] = {{ wxLua_wxGrid_SetDefaultCellAlignment, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetDefaultCellAlignment }};
 //     void    SetDefaultCellAlignment( int horiz, int vert );
 static int LUACALL wxLua_wxGrid_SetDefaultCellAlignment(lua_State *L)
 {
     // int vert
-    int vert = (int)wxlua_getnumbertype(L, 3);
+    int vert = (int)wxlua_getintegertype(L, 3);
     // int horiz
-    int horiz = (int)wxlua_getnumbertype(L, 2);
+    int horiz = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetDefaultCellAlignment
@@ -14321,7 +13868,7 @@ static int LUACALL wxLua_wxGrid_SetDefaultCellTextColour(lua_State *L)
 
 #endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetDefaultColSize[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetDefaultColSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_SetDefaultColSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetDefaultColSize[1] = {{ wxLua_wxGrid_SetDefaultColSize, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxGrid_SetDefaultColSize }};
 //     void    SetDefaultColSize( int width, bool resizeExistingCols = false );
@@ -14332,7 +13879,7 @@ static int LUACALL wxLua_wxGrid_SetDefaultColSize(lua_State *L)
     // bool resizeExistingCols = false
     bool resizeExistingCols = (argCount >= 3 ? wxlua_getbooleantype(L, 3) : false);
     // int width
-    int width = (int)wxlua_getnumbertype(L, 2);
+    int width = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetDefaultColSize
@@ -14377,7 +13924,7 @@ static int LUACALL wxLua_wxGrid_SetDefaultRenderer(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetDefaultRowSize[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetDefaultRowSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_SetDefaultRowSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetDefaultRowSize[1] = {{ wxLua_wxGrid_SetDefaultRowSize, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxGrid_SetDefaultRowSize }};
 //     void    SetDefaultRowSize( int height, bool resizeExistingRows = false );
@@ -14388,7 +13935,7 @@ static int LUACALL wxLua_wxGrid_SetDefaultRowSize(lua_State *L)
     // bool resizeExistingRows = false
     bool resizeExistingRows = (argCount >= 3 ? wxlua_getbooleantype(L, 3) : false);
     // int height
-    int height = (int)wxlua_getnumbertype(L, 2);
+    int height = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetDefaultRowSize
@@ -14397,16 +13944,16 @@ static int LUACALL wxLua_wxGrid_SetDefaultRowSize(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetGridCursor[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetGridCursor[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetGridCursor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetGridCursor[1] = {{ wxLua_wxGrid_SetGridCursor, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetGridCursor }};
 //     void    SetGridCursor( int row, int col );
 static int LUACALL wxLua_wxGrid_SetGridCursor(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetGridCursor
@@ -14489,16 +14036,16 @@ static int LUACALL wxLua_wxGrid_SetLabelTextColour(lua_State *L)
 
 #endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetMargins[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetMargins[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetMargins(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetMargins[1] = {{ wxLua_wxGrid_SetMargins, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetMargins }};
 //     void SetMargins(int extraWidth, int extraHeight );
 static int LUACALL wxLua_wxGrid_SetMargins(lua_State *L)
 {
     // int extraHeight
-    int extraHeight = (int)wxlua_getnumbertype(L, 3);
+    int extraHeight = (int)wxlua_getintegertype(L, 3);
     // int extraWidth
-    int extraWidth = (int)wxlua_getnumbertype(L, 2);
+    int extraWidth = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetMargins
@@ -14507,7 +14054,7 @@ static int LUACALL wxLua_wxGrid_SetMargins(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetReadOnly[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetReadOnly[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxGrid_SetReadOnly(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetReadOnly[1] = {{ wxLua_wxGrid_SetReadOnly, WXLUAMETHOD_METHOD, 3, 4, s_wxluatypeArray_wxLua_wxGrid_SetReadOnly }};
 //     void    SetReadOnly(int row, int col, bool isReadOnly = true );
@@ -14518,9 +14065,9 @@ static int LUACALL wxLua_wxGrid_SetReadOnly(lua_State *L)
     // bool isReadOnly = true
     bool isReadOnly = (argCount >= 4 ? wxlua_getbooleantype(L, 4) : true);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 3);
+    int col = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetReadOnly
@@ -14529,7 +14076,7 @@ static int LUACALL wxLua_wxGrid_SetReadOnly(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowAttr[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_wxGridCellAttr, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowAttr[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_wxGridCellAttr, NULL };
 static int LUACALL wxLua_wxGrid_SetRowAttr(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetRowAttr[1] = {{ wxLua_wxGrid_SetRowAttr, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetRowAttr }};
 //     void    SetRowAttr(int row, %IncRef wxGridCellAttr *attr );
@@ -14538,7 +14085,7 @@ static int LUACALL wxLua_wxGrid_SetRowAttr(lua_State *L)
     // wxGridCellAttr attr
     wxGridCellAttr * attr = (wxGridCellAttr *)wxluaT_getuserdatatype(L, 3, wxluatype_wxGridCellAttr);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // This param will have DecRef() called on it so we IncRef() it to not have to worry about the Lua gc
     attr->IncRef();
     // get this
@@ -14549,16 +14096,16 @@ static int LUACALL wxLua_wxGrid_SetRowAttr(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowLabelAlignment[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowLabelAlignment[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetRowLabelAlignment(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetRowLabelAlignment[1] = {{ wxLua_wxGrid_SetRowLabelAlignment, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetRowLabelAlignment }};
 //     void    SetRowLabelAlignment( int horiz, int vert );
 static int LUACALL wxLua_wxGrid_SetRowLabelAlignment(lua_State *L)
 {
     // int vert
-    int vert = (int)wxlua_getnumbertype(L, 3);
+    int vert = (int)wxlua_getintegertype(L, 3);
     // int horiz
-    int horiz = (int)wxlua_getnumbertype(L, 2);
+    int horiz = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetRowLabelAlignment
@@ -14567,14 +14114,14 @@ static int LUACALL wxLua_wxGrid_SetRowLabelAlignment(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowLabelSize[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowLabelSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetRowLabelSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetRowLabelSize[1] = {{ wxLua_wxGrid_SetRowLabelSize, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_SetRowLabelSize }};
 //     void    SetRowLabelSize( int width );
 static int LUACALL wxLua_wxGrid_SetRowLabelSize(lua_State *L)
 {
     // int width
-    int width = (int)wxlua_getnumbertype(L, 2);
+    int width = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetRowLabelSize
@@ -14583,7 +14130,7 @@ static int LUACALL wxLua_wxGrid_SetRowLabelSize(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowLabelValue[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowLabelValue[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxGrid_SetRowLabelValue(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetRowLabelValue[1] = {{ wxLua_wxGrid_SetRowLabelValue, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetRowLabelValue }};
 //     void    SetRowLabelValue( int row, const wxString& value );
@@ -14592,7 +14139,7 @@ static int LUACALL wxLua_wxGrid_SetRowLabelValue(lua_State *L)
     // const wxString value
     const wxString value = wxlua_getwxStringtype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetRowLabelValue
@@ -14601,14 +14148,14 @@ static int LUACALL wxLua_wxGrid_SetRowLabelValue(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowMinimalAcceptableHeight[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowMinimalAcceptableHeight[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetRowMinimalAcceptableHeight(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetRowMinimalAcceptableHeight[1] = {{ wxLua_wxGrid_SetRowMinimalAcceptableHeight, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_SetRowMinimalAcceptableHeight }};
 //     void    SetRowMinimalAcceptableHeight( int width );
 static int LUACALL wxLua_wxGrid_SetRowMinimalAcceptableHeight(lua_State *L)
 {
     // int width
-    int width = (int)wxlua_getnumbertype(L, 2);
+    int width = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetRowMinimalAcceptableHeight
@@ -14617,16 +14164,16 @@ static int LUACALL wxLua_wxGrid_SetRowMinimalAcceptableHeight(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowMinimalHeight[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowMinimalHeight[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetRowMinimalHeight(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetRowMinimalHeight[1] = {{ wxLua_wxGrid_SetRowMinimalHeight, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetRowMinimalHeight }};
 //     void    SetRowMinimalHeight( int row, int width );
 static int LUACALL wxLua_wxGrid_SetRowMinimalHeight(lua_State *L)
 {
     // int width
-    int width = (int)wxlua_getnumbertype(L, 3);
+    int width = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetRowMinimalHeight
@@ -14635,16 +14182,16 @@ static int LUACALL wxLua_wxGrid_SetRowMinimalHeight(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowSize[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_SetRowSize[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_SetRowSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_SetRowSize[1] = {{ wxLua_wxGrid_SetRowSize, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxGrid_SetRowSize }};
 //     void    SetRowSize( int row, int height );
 static int LUACALL wxLua_wxGrid_SetRowSize(lua_State *L)
 {
     // int height
-    int height = (int)wxlua_getnumbertype(L, 3);
+    int height = (int)wxlua_getintegertype(L, 3);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call SetRowSize
@@ -14776,43 +14323,43 @@ static int LUACALL wxLua_wxGrid_StringToLines(lua_State *L)
 
 #endif // (wxLUA_USE_wxArrayString) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_XToCol[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_XToCol[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_XToCol(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_XToCol[1] = {{ wxLua_wxGrid_XToCol, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_XToCol }};
 //     int     XToCol( int x );
 static int LUACALL wxLua_wxGrid_XToCol(lua_State *L)
 {
     // int x
-    int x = (int)wxlua_getnumbertype(L, 2);
+    int x = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call XToCol
     int returns = (self->XToCol(x));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_XToEdgeOfCol[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_XToEdgeOfCol[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_XToEdgeOfCol(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_XToEdgeOfCol[1] = {{ wxLua_wxGrid_XToEdgeOfCol, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_XToEdgeOfCol }};
 //     int     XToEdgeOfCol( int x );
 static int LUACALL wxLua_wxGrid_XToEdgeOfCol(lua_State *L)
 {
     // int x
-    int x = (int)wxlua_getnumbertype(L, 2);
+    int x = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call XToEdgeOfCol
     int returns = (self->XToEdgeOfCol(x));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_XYToCell[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxGridCellCoords, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_XYToCell[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxGridCellCoords, NULL };
 static int LUACALL wxLua_wxGrid_XYToCell(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_XYToCell[1] = {{ wxLua_wxGrid_XYToCell, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxGrid_XYToCell }};
 //     void    XYToCell( int x, int y, wxGridCellCoords& coords );
@@ -14821,9 +14368,9 @@ static int LUACALL wxLua_wxGrid_XYToCell(lua_State *L)
     // wxGridCellCoords coords
     wxGridCellCoords * coords = (wxGridCellCoords *)wxluaT_getuserdatatype(L, 4, wxluatype_wxGridCellCoords);
     // int y
-    int y = (int)wxlua_getnumbertype(L, 3);
+    int y = (int)wxlua_getintegertype(L, 3);
     // int x
-    int x = (int)wxlua_getnumbertype(L, 2);
+    int x = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call XYToCell
@@ -14832,45 +14379,45 @@ static int LUACALL wxLua_wxGrid_XYToCell(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_YToEdgeOfRow[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_YToEdgeOfRow[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_YToEdgeOfRow(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_YToEdgeOfRow[1] = {{ wxLua_wxGrid_YToEdgeOfRow, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_YToEdgeOfRow }};
 //     int     YToEdgeOfRow( int y );
 static int LUACALL wxLua_wxGrid_YToEdgeOfRow(lua_State *L)
 {
     // int y
-    int y = (int)wxlua_getnumbertype(L, 2);
+    int y = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call YToEdgeOfRow
     int returns = (self->YToEdgeOfRow(y));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_YToRow[] = { &wxluatype_wxGrid, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_YToRow[] = { &wxluatype_wxGrid, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGrid_YToRow(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_YToRow[1] = {{ wxLua_wxGrid_YToRow, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_YToRow }};
 //     int     YToRow( int y );
 static int LUACALL wxLua_wxGrid_YToRow(lua_State *L)
 {
     // int y
-    int y = (int)wxlua_getnumbertype(L, 2);
+    int y = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGrid * self = (wxGrid *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGrid);
     // call YToRow
     int returns = (self->YToRow(y));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
 
 #if (wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_constructor[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGrid_constructor[] = { &wxluatype_wxWindow, &wxluatype_TNUMBER, &wxluatype_wxPoint, &wxluatype_wxSize, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxGrid_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_constructor[1] = {{ wxLua_wxGrid_constructor, WXLUAMETHOD_CONSTRUCTOR, 2, 6, s_wxluatypeArray_wxLua_wxGrid_constructor }};
 //     wxGrid( wxWindow* parent, wxWindowID id, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxWANTS_CHARS, const wxString &name = "wxGrid" );
@@ -14881,7 +14428,7 @@ static int LUACALL wxLua_wxGrid_constructor(lua_State *L)
     // const wxString name = "wxGrid"
     const wxString name = (argCount >= 6 ? wxlua_getwxStringtype(L, 6) : wxString(wxT("wxGrid")));
     // long style = wxWANTS_CHARS
-    long style = (argCount >= 5 ? (long)wxlua_getnumbertype(L, 5) : wxWANTS_CHARS);
+    long style = (argCount >= 5 ? (long)wxlua_getintegertype(L, 5) : wxWANTS_CHARS);
     // const wxSize size = wxDefaultSize
     const wxSize * size = (argCount >= 4 ? (const wxSize *)wxluaT_getuserdatatype(L, 4, wxluatype_wxSize) : &wxDefaultSize);
     // const wxPoint pos = wxDefaultPosition
@@ -14903,37 +14450,6 @@ static int LUACALL wxLua_wxGrid_constructor(lua_State *L)
 #endif // (wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)
 
 
-
-#if ((wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID))||((!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID))
-// function overload table
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_CanDragColSize_overload[] =
-{
-
-#if (wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-    { wxLua_wxGrid_CanDragColSize1, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_CanDragColSize1 },
-#endif // (wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-
-#if (!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-    { wxLua_wxGrid_CanDragColSize, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxGrid_CanDragColSize },
-#endif // (!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-};
-static int s_wxluafunc_wxLua_wxGrid_CanDragColSize_overload_count = sizeof(s_wxluafunc_wxLua_wxGrid_CanDragColSize_overload)/sizeof(wxLuaBindCFunc);
-
-// function overload table
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxGrid_CanDragRowSize_overload[] =
-{
-
-#if (wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-    { wxLua_wxGrid_CanDragRowSize1, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGrid_CanDragRowSize1 },
-#endif // (wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-
-#if (!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-    { wxLua_wxGrid_CanDragRowSize, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxGrid_CanDragRowSize },
-#endif // (!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-};
-static int s_wxluafunc_wxLua_wxGrid_CanDragRowSize_overload_count = sizeof(s_wxluafunc_wxLua_wxGrid_CanDragRowSize_overload)/sizeof(wxLuaBindCFunc);
-
-#endif // ((wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID))||((!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID))
 
 void wxLua_wxGrid_delete_function(void** p)
 {
@@ -14959,17 +14475,9 @@ wxLuaBindMethod wxGrid_methods[] = {
 #endif // (wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)
 
     { "CanDragCell", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGrid_CanDragCell, 1, NULL },
-
-#if ((wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID))||((!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID))
-    { "CanDragColSize", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGrid_CanDragColSize_overload, s_wxluafunc_wxLua_wxGrid_CanDragColSize_overload_count, 0 },
-#endif // ((wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID))||((!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID))
-
+    { "CanDragColSize", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGrid_CanDragColSize, 1, NULL },
     { "CanDragGridSize", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGrid_CanDragGridSize, 1, NULL },
-
-#if ((wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID))||((!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID))
-    { "CanDragRowSize", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGrid_CanDragRowSize_overload, s_wxluafunc_wxLua_wxGrid_CanDragRowSize_overload_count, 0 },
-#endif // ((wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID))||((!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID))
-
+    { "CanDragRowSize", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGrid_CanDragRowSize, 1, NULL },
     { "CanEnableCellControl", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGrid_CanEnableCellControl, 1, NULL },
 
 #if (wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxPointSizeRect)
@@ -15325,8 +14833,8 @@ static int LUACALL wxLua_wxGridEvent_GetCol(lua_State *L)
     wxGridEvent * self = (wxGridEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridEvent);
     // call GetCol
     int returns = (self->GetCol());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -15364,8 +14872,8 @@ static int LUACALL wxLua_wxGridEvent_GetRow(lua_State *L)
     wxGridEvent * self = (wxGridEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridEvent);
     // call GetRow
     int returns = (self->GetRow());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -15422,51 +14930,6 @@ static wxLuaArgType s_wxluatypeArray_wxLua_wxGridEvent_delete[] = { &wxluatype_w
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridEvent_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxGridEvent_delete }};
 
 
-#if (((!wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxObject)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridEvent_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxObject, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, &wxluatype_TBOOLEAN, &wxluatype_TBOOLEAN, &wxluatype_TBOOLEAN, &wxluatype_TBOOLEAN, NULL };
-static int LUACALL wxLua_wxGridEvent_constructor(lua_State *L);
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridEvent_constructor[1] = {{ wxLua_wxGridEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 3, 12, s_wxluatypeArray_wxLua_wxGridEvent_constructor }};
-//     !%wxchkver_2_9_0 wxGridEvent(int id, wxEventType type, wxObject* obj, int row = -1, int col = -1, int x = -1, int y = -1, bool sel = true, bool control = false, bool shift = false, bool alt = false, bool meta = false );
-static int LUACALL wxLua_wxGridEvent_constructor(lua_State *L)
-{
-    // get number of arguments
-    int argCount = lua_gettop(L);
-    // bool meta = false
-    bool meta = (argCount >= 12 ? wxlua_getbooleantype(L, 12) : false);
-    // bool alt = false
-    bool alt = (argCount >= 11 ? wxlua_getbooleantype(L, 11) : false);
-    // bool shift = false
-    bool shift = (argCount >= 10 ? wxlua_getbooleantype(L, 10) : false);
-    // bool control = false
-    bool control = (argCount >= 9 ? wxlua_getbooleantype(L, 9) : false);
-    // bool sel = true
-    bool sel = (argCount >= 8 ? wxlua_getbooleantype(L, 8) : true);
-    // int y = -1
-    int y = (argCount >= 7 ? (int)wxlua_getnumbertype(L, 7) : -1);
-    // int x = -1
-    int x = (argCount >= 6 ? (int)wxlua_getnumbertype(L, 6) : -1);
-    // int col = -1
-    int col = (argCount >= 5 ? (int)wxlua_getnumbertype(L, 5) : -1);
-    // int row = -1
-    int row = (argCount >= 4 ? (int)wxlua_getnumbertype(L, 4) : -1);
-    // wxObject obj
-    wxObject * obj = (wxObject *)wxluaT_getuserdatatype(L, 3, wxluatype_wxObject);
-    // wxEventType type
-    wxEventType type = (wxEventType)wxlua_getnumbertype(L, 2);
-    // int id
-    int id = (int)wxlua_getnumbertype(L, 1);
-    // call constructor
-    wxGridEvent* returns = new wxGridEvent(id, type, obj, row, col, x, y, sel, control, shift, alt, meta);
-    // add to tracked memory list
-    wxluaO_addgcobject(L, returns, wxluatype_wxGridEvent);
-    // push the constructed class pointer
-    wxluaT_pushuserdatatype(L, returns, wxluatype_wxGridEvent);
-
-    return 1;
-}
-
-#endif // (((!wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxObject)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-
 
 
 void wxLua_wxGridEvent_delete_function(void** p)
@@ -15490,10 +14953,6 @@ wxLuaBindMethod wxGridEvent_methods[] = {
     { "Selecting", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridEvent_Selecting, 1, NULL },
     { "ShiftDown", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridEvent_ShiftDown, 1, NULL },
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxGridEvent_delete, 1, NULL },
-
-#if (((!wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxObject)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-    { "wxGridEvent", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxGridEvent_constructor, 1, NULL },
-#endif // (((!wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxObject)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
     { 0, 0, 0, 0 },
 };
@@ -15576,8 +15035,8 @@ static int LUACALL wxLua_wxGridSizeEvent_GetRowOrCol(lua_State *L)
     wxGridSizeEvent * self = (wxGridSizeEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridSizeEvent);
     // call GetRowOrCol
     int returns = (self->GetRowOrCol());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -15618,47 +15077,6 @@ static wxLuaArgType s_wxluatypeArray_wxLua_wxGridSizeEvent_delete[] = { &wxluaty
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridSizeEvent_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxGridSizeEvent_delete }};
 
 
-#if (((!wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxObject)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridSizeEvent_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxObject, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TBOOLEAN, &wxluatype_TBOOLEAN, &wxluatype_TBOOLEAN, &wxluatype_TBOOLEAN, NULL };
-static int LUACALL wxLua_wxGridSizeEvent_constructor(lua_State *L);
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridSizeEvent_constructor[1] = {{ wxLua_wxGridSizeEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 3, 10, s_wxluatypeArray_wxLua_wxGridSizeEvent_constructor }};
-//     !%wxchkver_2_9_0 wxGridSizeEvent(int id, wxEventType type, wxObject* obj, int rowOrCol = -1, int x = -1, int y = -1, bool control = false, bool shift = false, bool alt = false, bool meta = false );
-static int LUACALL wxLua_wxGridSizeEvent_constructor(lua_State *L)
-{
-    // get number of arguments
-    int argCount = lua_gettop(L);
-    // bool meta = false
-    bool meta = (argCount >= 10 ? wxlua_getbooleantype(L, 10) : false);
-    // bool alt = false
-    bool alt = (argCount >= 9 ? wxlua_getbooleantype(L, 9) : false);
-    // bool shift = false
-    bool shift = (argCount >= 8 ? wxlua_getbooleantype(L, 8) : false);
-    // bool control = false
-    bool control = (argCount >= 7 ? wxlua_getbooleantype(L, 7) : false);
-    // int y = -1
-    int y = (argCount >= 6 ? (int)wxlua_getnumbertype(L, 6) : -1);
-    // int x = -1
-    int x = (argCount >= 5 ? (int)wxlua_getnumbertype(L, 5) : -1);
-    // int rowOrCol = -1
-    int rowOrCol = (argCount >= 4 ? (int)wxlua_getnumbertype(L, 4) : -1);
-    // wxObject obj
-    wxObject * obj = (wxObject *)wxluaT_getuserdatatype(L, 3, wxluatype_wxObject);
-    // wxEventType type
-    wxEventType type = (wxEventType)wxlua_getnumbertype(L, 2);
-    // int id
-    int id = (int)wxlua_getnumbertype(L, 1);
-    // call constructor
-    wxGridSizeEvent* returns = new wxGridSizeEvent(id, type, obj, rowOrCol, x, y, control, shift, alt, meta);
-    // add to tracked memory list
-    wxluaO_addgcobject(L, returns, wxluatype_wxGridSizeEvent);
-    // push the constructed class pointer
-    wxluaT_pushuserdatatype(L, returns, wxluatype_wxGridSizeEvent);
-
-    return 1;
-}
-
-#endif // (((!wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxObject)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-
 
 
 void wxLua_wxGridSizeEvent_delete_function(void** p)
@@ -15680,10 +15098,6 @@ wxLuaBindMethod wxGridSizeEvent_methods[] = {
     { "MetaDown", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridSizeEvent_MetaDown, 1, NULL },
     { "ShiftDown", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridSizeEvent_ShiftDown, 1, NULL },
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxGridSizeEvent_delete, 1, NULL },
-
-#if (((!wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxObject)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-    { "wxGridSizeEvent", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxGridSizeEvent_constructor, 1, NULL },
-#endif // (((!wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxObject)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
     { 0, 0, 0, 0 },
 };
@@ -15762,8 +15176,8 @@ static int LUACALL wxLua_wxGridRangeSelectEvent_GetBottomRow(lua_State *L)
     wxGridRangeSelectEvent * self = (wxGridRangeSelectEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridRangeSelectEvent);
     // call GetBottomRow
     int returns = (self->GetBottomRow());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -15778,8 +15192,8 @@ static int LUACALL wxLua_wxGridRangeSelectEvent_GetLeftCol(lua_State *L)
     wxGridRangeSelectEvent * self = (wxGridRangeSelectEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridRangeSelectEvent);
     // call GetLeftCol
     int returns = (self->GetLeftCol());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -15794,8 +15208,8 @@ static int LUACALL wxLua_wxGridRangeSelectEvent_GetRightCol(lua_State *L)
     wxGridRangeSelectEvent * self = (wxGridRangeSelectEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridRangeSelectEvent);
     // call GetRightCol
     int returns = (self->GetRightCol());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -15829,8 +15243,8 @@ static int LUACALL wxLua_wxGridRangeSelectEvent_GetTopRow(lua_State *L)
     wxGridRangeSelectEvent * self = (wxGridRangeSelectEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridRangeSelectEvent);
     // call GetTopRow
     int returns = (self->GetTopRow());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -15887,47 +15301,6 @@ static wxLuaArgType s_wxluatypeArray_wxLua_wxGridRangeSelectEvent_delete[] = { &
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridRangeSelectEvent_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxGridRangeSelectEvent_delete }};
 
 
-#if (((!wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxObject)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridRangeSelectEvent_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxObject, &wxluatype_wxGridCellCoords, &wxluatype_wxGridCellCoords, &wxluatype_TBOOLEAN, &wxluatype_TBOOLEAN, &wxluatype_TBOOLEAN, &wxluatype_TBOOLEAN, &wxluatype_TBOOLEAN, NULL };
-static int LUACALL wxLua_wxGridRangeSelectEvent_constructor(lua_State *L);
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridRangeSelectEvent_constructor[1] = {{ wxLua_wxGridRangeSelectEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 5, 10, s_wxluatypeArray_wxLua_wxGridRangeSelectEvent_constructor }};
-//     !%wxchkver_2_9_0 wxGridRangeSelectEvent(int id, wxEventType type, wxObject* obj, const wxGridCellCoords& topLeft, const wxGridCellCoords& bottomRight, bool sel = true, bool control = false, bool shift = false, bool alt = false, bool meta = false );
-static int LUACALL wxLua_wxGridRangeSelectEvent_constructor(lua_State *L)
-{
-    // get number of arguments
-    int argCount = lua_gettop(L);
-    // bool meta = false
-    bool meta = (argCount >= 10 ? wxlua_getbooleantype(L, 10) : false);
-    // bool alt = false
-    bool alt = (argCount >= 9 ? wxlua_getbooleantype(L, 9) : false);
-    // bool shift = false
-    bool shift = (argCount >= 8 ? wxlua_getbooleantype(L, 8) : false);
-    // bool control = false
-    bool control = (argCount >= 7 ? wxlua_getbooleantype(L, 7) : false);
-    // bool sel = true
-    bool sel = (argCount >= 6 ? wxlua_getbooleantype(L, 6) : true);
-    // const wxGridCellCoords bottomRight
-    const wxGridCellCoords * bottomRight = (const wxGridCellCoords *)wxluaT_getuserdatatype(L, 5, wxluatype_wxGridCellCoords);
-    // const wxGridCellCoords topLeft
-    const wxGridCellCoords * topLeft = (const wxGridCellCoords *)wxluaT_getuserdatatype(L, 4, wxluatype_wxGridCellCoords);
-    // wxObject obj
-    wxObject * obj = (wxObject *)wxluaT_getuserdatatype(L, 3, wxluatype_wxObject);
-    // wxEventType type
-    wxEventType type = (wxEventType)wxlua_getnumbertype(L, 2);
-    // int id
-    int id = (int)wxlua_getnumbertype(L, 1);
-    // call constructor
-    wxGridRangeSelectEvent* returns = new wxGridRangeSelectEvent(id, type, obj, *topLeft, *bottomRight, sel, control, shift, alt, meta);
-    // add to tracked memory list
-    wxluaO_addgcobject(L, returns, wxluatype_wxGridRangeSelectEvent);
-    // push the constructed class pointer
-    wxluaT_pushuserdatatype(L, returns, wxluatype_wxGridRangeSelectEvent);
-
-    return 1;
-}
-
-#endif // (((!wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxObject)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-
 
 
 void wxLua_wxGridRangeSelectEvent_delete_function(void** p)
@@ -15950,10 +15323,6 @@ wxLuaBindMethod wxGridRangeSelectEvent_methods[] = {
     { "Selecting", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridRangeSelectEvent_Selecting, 1, NULL },
     { "ShiftDown", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridRangeSelectEvent_ShiftDown, 1, NULL },
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxGridRangeSelectEvent_delete, 1, NULL },
-
-#if (((!wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxObject)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-    { "wxGridRangeSelectEvent", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxGridRangeSelectEvent_constructor, 1, NULL },
-#endif // (((!wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)) && (wxLUA_USE_wxObject)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
 
     { 0, 0, 0, 0 },
 };
@@ -15981,8 +15350,8 @@ static int LUACALL wxLua_wxGridEditorCreatedEvent_GetCol(lua_State *L)
     wxGridEditorCreatedEvent * self = (wxGridEditorCreatedEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridEditorCreatedEvent);
     // call GetCol
     int returns = (self->GetCol());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -16013,20 +15382,20 @@ static int LUACALL wxLua_wxGridEditorCreatedEvent_GetRow(lua_State *L)
     wxGridEditorCreatedEvent * self = (wxGridEditorCreatedEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridEditorCreatedEvent);
     // call GetRow
     int returns = (self->GetRow());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridEditorCreatedEvent_SetCol[] = { &wxluatype_wxGridEditorCreatedEvent, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridEditorCreatedEvent_SetCol[] = { &wxluatype_wxGridEditorCreatedEvent, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridEditorCreatedEvent_SetCol(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridEditorCreatedEvent_SetCol[1] = {{ wxLua_wxGridEditorCreatedEvent_SetCol, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGridEditorCreatedEvent_SetCol }};
 //     void SetCol(int col );
 static int LUACALL wxLua_wxGridEditorCreatedEvent_SetCol(lua_State *L)
 {
     // int col
-    int col = (int)wxlua_getnumbertype(L, 2);
+    int col = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridEditorCreatedEvent * self = (wxGridEditorCreatedEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridEditorCreatedEvent);
     // call SetCol
@@ -16051,14 +15420,14 @@ static int LUACALL wxLua_wxGridEditorCreatedEvent_SetControl(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridEditorCreatedEvent_SetRow[] = { &wxluatype_wxGridEditorCreatedEvent, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridEditorCreatedEvent_SetRow[] = { &wxluatype_wxGridEditorCreatedEvent, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxGridEditorCreatedEvent_SetRow(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridEditorCreatedEvent_SetRow[1] = {{ wxLua_wxGridEditorCreatedEvent_SetRow, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxGridEditorCreatedEvent_SetRow }};
 //     void SetRow(int row );
 static int LUACALL wxLua_wxGridEditorCreatedEvent_SetRow(lua_State *L)
 {
     // int row
-    int row = (int)wxlua_getnumbertype(L, 2);
+    int row = (int)wxlua_getintegertype(L, 2);
     // get this
     wxGridEditorCreatedEvent * self = (wxGridEditorCreatedEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxGridEditorCreatedEvent);
     // call SetRow
@@ -16070,9 +15439,7 @@ static int LUACALL wxLua_wxGridEditorCreatedEvent_SetRow(lua_State *L)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxGridEditorCreatedEvent_delete[] = { &wxluatype_wxGridEditorCreatedEvent, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridEditorCreatedEvent_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxGridEditorCreatedEvent_delete }};
 
-
-#if (wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxObject)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxGridEditorCreatedEvent_constructor[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxObject, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_wxControl, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxGridEditorCreatedEvent_constructor[] = { &wxluatype_TINTEGER, &wxluatype_TNUMBER, &wxluatype_wxObject, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxControl, NULL };
 static int LUACALL wxLua_wxGridEditorCreatedEvent_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxGridEditorCreatedEvent_constructor[1] = {{ wxLua_wxGridEditorCreatedEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 6, 6, s_wxluatypeArray_wxLua_wxGridEditorCreatedEvent_constructor }};
 //     wxGridEditorCreatedEvent(int id, wxEventType type, wxObject* obj, int row, int col, wxControl* ctrl );
@@ -16081,15 +15448,15 @@ static int LUACALL wxLua_wxGridEditorCreatedEvent_constructor(lua_State *L)
     // wxControl ctrl
     wxControl * ctrl = (wxControl *)wxluaT_getuserdatatype(L, 6, wxluatype_wxControl);
     // int col
-    int col = (int)wxlua_getnumbertype(L, 5);
+    int col = (int)wxlua_getintegertype(L, 5);
     // int row
-    int row = (int)wxlua_getnumbertype(L, 4);
+    int row = (int)wxlua_getintegertype(L, 4);
     // wxObject obj
     wxObject * obj = (wxObject *)wxluaT_getuserdatatype(L, 3, wxluatype_wxObject);
     // wxEventType type
     wxEventType type = (wxEventType)wxlua_getnumbertype(L, 2);
     // int id
-    int id = (int)wxlua_getnumbertype(L, 1);
+    int id = (int)wxlua_getintegertype(L, 1);
     // call constructor
     wxGridEditorCreatedEvent* returns = new wxGridEditorCreatedEvent(id, type, obj, row, col, ctrl);
     // add to tracked memory list
@@ -16100,7 +15467,6 @@ static int LUACALL wxLua_wxGridEditorCreatedEvent_constructor(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxObject)
 
 
 
@@ -16119,10 +15485,7 @@ wxLuaBindMethod wxGridEditorCreatedEvent_methods[] = {
     { "SetControl", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridEditorCreatedEvent_SetControl, 1, NULL },
     { "SetRow", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxGridEditorCreatedEvent_SetRow, 1, NULL },
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxGridEditorCreatedEvent_delete, 1, NULL },
-
-#if (wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxObject)
     { "wxGridEditorCreatedEvent", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxGridEditorCreatedEvent_constructor, 1, NULL },
-#endif // (wxLUA_USE_wxGrid && wxUSE_GRID) && (wxLUA_USE_wxObject)
 
     { 0, 0, 0, 0 },
 };
@@ -16161,9 +15524,9 @@ wxLuaBindEvent* wxLuaGetEventList_wxadv(size_t &count)
         { "wxEVT_CALENDAR_YEAR_CHANGED", WXLUA_GET_wxEventType_ptr(wxEVT_CALENDAR_YEAR_CHANGED), &wxluatype_wxCalendarEvent },
 #endif // wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL
 
-#if wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#if wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
         { "wxEVT_COMMAND_HYPERLINK", WXLUA_GET_wxEventType_ptr(wxEVT_COMMAND_HYPERLINK), &wxluatype_wxHyperlinkEvent },
-#endif // wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#endif // wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
 
 #if wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL
         { "wxEVT_DATE_CHANGED", WXLUA_GET_wxEventType_ptr(wxEVT_DATE_CHANGED), &wxluatype_wxDateEvent },
@@ -16171,18 +15534,8 @@ wxLuaBindEvent* wxLuaGetEventList_wxadv(size_t &count)
 
 #if wxLUA_USE_wxGrid && wxUSE_GRID
         { "wxEVT_GRID_CELL_BEGIN_DRAG", WXLUA_GET_wxEventType_ptr(wxEVT_GRID_CELL_BEGIN_DRAG), &wxluatype_wxGridEvent },
-#endif // wxLUA_USE_wxGrid && wxUSE_GRID
-
-#if (!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-        { "wxEVT_GRID_CELL_CHANGE", WXLUA_GET_wxEventType_ptr(wxEVT_GRID_CELL_CHANGE), &wxluatype_wxGridEvent },
-#endif // (!wxCHECK_VERSION(3,0,0) || (defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-
-#if (wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
         { "wxEVT_GRID_CELL_CHANGED", WXLUA_GET_wxEventType_ptr(wxEVT_GRID_CELL_CHANGED), &wxluatype_wxGridEvent },
         { "wxEVT_GRID_CELL_CHANGING", WXLUA_GET_wxEventType_ptr(wxEVT_GRID_CELL_CHANGING), &wxluatype_wxGridEvent },
-#endif // (wxCHECK_VERSION(3,0,0)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-
-#if wxLUA_USE_wxGrid && wxUSE_GRID
         { "wxEVT_GRID_CELL_LEFT_CLICK", WXLUA_GET_wxEventType_ptr(wxEVT_GRID_CELL_LEFT_CLICK), &wxluatype_wxGridEvent },
         { "wxEVT_GRID_CELL_LEFT_DCLICK", WXLUA_GET_wxEventType_ptr(wxEVT_GRID_CELL_LEFT_DCLICK), &wxluatype_wxGridEvent },
         { "wxEVT_GRID_CELL_RIGHT_CLICK", WXLUA_GET_wxEventType_ptr(wxEVT_GRID_CELL_RIGHT_CLICK), &wxluatype_wxGridEvent },
@@ -16258,14 +15611,14 @@ wxLuaBindNumber* wxLuaGetDefineList_wxadv(size_t &count)
         { "WXGRID_MIN_ROW_HEIGHT", WXGRID_MIN_ROW_HEIGHT },
 #endif // wxLUA_USE_wxGrid && wxUSE_GRID
 
-#if wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+#if wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
         { "wxAC_DEFAULT_STYLE", wxAC_DEFAULT_STYLE },
         { "wxAC_NO_AUTORESIZE", wxAC_NO_AUTORESIZE },
         { "wxANIMATION_TYPE_ANI", wxANIMATION_TYPE_ANI },
         { "wxANIMATION_TYPE_ANY", wxANIMATION_TYPE_ANY },
         { "wxANIMATION_TYPE_GIF", wxANIMATION_TYPE_GIF },
         { "wxANIMATION_TYPE_INVALID", wxANIMATION_TYPE_INVALID },
-#endif // wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+#endif // wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
 
 #if wxLUA_USE_wxCalendarCtrl && wxUSE_CALENDARCTRL
         { "wxCAL_BORDER_NONE", wxCAL_BORDER_NONE },
@@ -16293,21 +15646,16 @@ wxLuaBindNumber* wxLuaGetDefineList_wxadv(size_t &count)
         { "wxGRIDTABLE_NOTIFY_ROWS_APPENDED", wxGRIDTABLE_NOTIFY_ROWS_APPENDED },
         { "wxGRIDTABLE_NOTIFY_ROWS_DELETED", wxGRIDTABLE_NOTIFY_ROWS_DELETED },
         { "wxGRIDTABLE_NOTIFY_ROWS_INSERTED", wxGRIDTABLE_NOTIFY_ROWS_INSERTED },
-        { "wxGRIDTABLE_REQUEST_VIEW_GET_VALUES", wxGRIDTABLE_REQUEST_VIEW_GET_VALUES },
-        { "wxGRIDTABLE_REQUEST_VIEW_SEND_VALUES", wxGRIDTABLE_REQUEST_VIEW_SEND_VALUES },
+        { "wxGRID_AUTOSIZE", wxGRID_AUTOSIZE },
 #endif // wxLUA_USE_wxGrid && wxUSE_GRID
 
-#if (wxCHECK_VERSION(2,8,8)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-        { "wxGRID_AUTOSIZE", wxGRID_AUTOSIZE },
-#endif // (wxCHECK_VERSION(2,8,8)) && (wxLUA_USE_wxGrid && wxUSE_GRID)
-
-#if wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#if wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
         { "wxHL_ALIGN_CENTRE", wxHL_ALIGN_CENTRE },
         { "wxHL_ALIGN_LEFT", wxHL_ALIGN_LEFT },
         { "wxHL_ALIGN_RIGHT", wxHL_ALIGN_RIGHT },
         { "wxHL_CONTEXTMENU", wxHL_CONTEXTMENU },
         { "wxHL_DEFAULT_STYLE", wxHL_DEFAULT_STYLE },
-#endif // wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#endif // wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
 
 #if wxLUA_USE_wxJoystick && wxUSE_JOYSTICK
         { "wxJOYSTICK1", wxJOYSTICK1 },
@@ -16419,7 +15767,7 @@ wxLuaBindObject* wxLuaGetObjectList_wxadv(size_t &count)
 // wxLuaGetFunctionList_wxadv() is called to register global functions
 // ---------------------------------------------------------------------------
 
-#if wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
+#if wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
 static wxLuaArgType s_wxluatypeArray_wxLua_function_wxAboutBox[] = { &wxluatype_wxAboutDialogInfo, NULL };
 // void wxAboutBox(const wxAboutDialogInfo& info );
 static int LUACALL wxLua_function_wxAboutBox(lua_State *L)
@@ -16433,7 +15781,7 @@ static int LUACALL wxLua_function_wxAboutBox(lua_State *L)
 }
 static wxLuaBindCFunc s_wxluafunc_wxLua_function_wxAboutBox[1] = {{ wxLua_function_wxAboutBox, WXLUAMETHOD_CFUNCTION, 1, 1, s_wxluatypeArray_wxLua_function_wxAboutBox }};
 
-#endif // wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
+#endif // wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
 
 // ---------------------------------------------------------------------------
 // wxLuaGetFunctionList_wxadv() is called to register global functions
@@ -16443,9 +15791,9 @@ wxLuaBindMethod* wxLuaGetFunctionList_wxadv(size_t &count)
 {
     static wxLuaBindMethod functionList[] =
     {
-#if wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
+#if wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
         { "wxAboutBox", WXLUAMETHOD_CFUNCTION, s_wxluafunc_wxLua_function_wxAboutBox, 1, NULL },
-#endif // wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
+#endif // wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
 
 
         { 0, 0, 0, 0 }, 
@@ -16525,7 +15873,6 @@ static const char* wxluaclassname_wxSplashScreen = "wxSplashScreen";
 static const char* wxluaclassname_wxSplashScreenWindow = "wxSplashScreenWindow";
 static const char* wxluaclassname_wxTaskBarIcon = "wxTaskBarIcon";
 static const char* wxluaclassname_wxTaskBarIconEvent = "wxTaskBarIconEvent";
-static const char* wxluaclassname_wxWave = "wxWave";
 static const char* wxluaclassname_wxWindow = "wxWindow";
 static const char* wxluaclassname_wxWizard = "wxWizard";
 static const char* wxluaclassname_wxWizardEvent = "wxWizardEvent";
@@ -16628,8 +15975,6 @@ static const char* wxluabaseclassnames_wxTaskBarIcon[] = { wxluaclassname_wxEvtH
 static wxLuaBindClass* wxluabaseclassbinds_wxTaskBarIcon[] = { NULL };
 static const char* wxluabaseclassnames_wxTaskBarIconEvent[] = { wxluaclassname_wxEvent, NULL };
 static wxLuaBindClass* wxluabaseclassbinds_wxTaskBarIconEvent[] = { NULL };
-static const char* wxluabaseclassnames_wxWave[] = { wxluaclassname_wxObject, NULL };
-static wxLuaBindClass* wxluabaseclassbinds_wxWave[] = { NULL };
 static const char* wxluabaseclassnames_wxWizard[] = { wxluaclassname_wxDialog, NULL };
 static wxLuaBindClass* wxluabaseclassbinds_wxWizard[] = { NULL };
 static const char* wxluabaseclassnames_wxWizardEvent[] = { wxluaclassname_wxNotifyEvent, NULL };
@@ -16642,41 +15987,26 @@ static wxLuaBindClass* wxluabaseclassbinds_wxWizardPageSimple[] = { NULL };
 // Lua Tag Method Values and Tables for each Class
 // ---------------------------------------------------------------------------
 
-#if (defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)
-    extern wxLuaBindMethod wxWave_methods[];
-    extern int wxWave_methodCount;
-    extern void wxLua_wxWave_delete_function(void** p);
-#endif // (defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)
-
-#if (wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave)
+#if (wxLUA_USE_wxWave) && (wxUSE_SOUND)
     extern wxLuaBindMethod wxSound_methods[];
     extern int wxSound_methodCount;
     extern void wxLua_wxSound_delete_function(void** p);
-#endif // (wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave)
+#endif // (wxLUA_USE_wxWave) && (wxUSE_SOUND)
 
-#if wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+#if wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
+    extern wxLuaBindMethod wxAboutDialogInfo_methods[];
+    extern int wxAboutDialogInfo_methodCount;
+    extern void wxLua_wxAboutDialogInfo_delete_function(void** p);
+#endif // wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
+
+#if wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
     extern wxLuaBindMethod wxAnimation_methods[];
     extern int wxAnimation_methodCount;
     extern void wxLua_wxAnimation_delete_function(void** p);
     extern wxLuaBindMethod wxAnimationCtrl_methods[];
     extern int wxAnimationCtrl_methodCount;
     extern void wxLua_wxAnimationCtrl_delete_function(void** p);
-#endif // wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
-
-#if wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
-    extern wxLuaBindMethod wxAboutDialogInfo_methods[];
-    extern int wxAboutDialogInfo_methodCount;
-    extern void wxLua_wxAboutDialogInfo_delete_function(void** p);
-#endif // wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
-
-#if wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
-    extern wxLuaBindMethod wxHyperlinkCtrl_methods[];
-    extern int wxHyperlinkCtrl_methodCount;
-    extern void wxLua_wxHyperlinkCtrl_delete_function(void** p);
-    extern wxLuaBindMethod wxHyperlinkEvent_methods[];
-    extern int wxHyperlinkEvent_methodCount;
-    extern void wxLua_wxHyperlinkEvent_delete_function(void** p);
-#endif // wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#endif // wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
 
 #if wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX
     extern wxLuaBindMethod wxBitmapComboBox_methods[];
@@ -16796,6 +16126,15 @@ static wxLuaBindClass* wxluabaseclassbinds_wxWizardPageSimple[] = { NULL };
     extern void wxLua_wxLuaGridTableBase_delete_function(void** p);
 #endif // wxLUA_USE_wxGrid && wxUSE_GRID
 
+#if wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
+    extern wxLuaBindMethod wxHyperlinkCtrl_methods[];
+    extern int wxHyperlinkCtrl_methodCount;
+    extern void wxLua_wxHyperlinkCtrl_delete_function(void** p);
+    extern wxLuaBindMethod wxHyperlinkEvent_methods[];
+    extern int wxHyperlinkEvent_methodCount;
+    extern void wxLua_wxHyperlinkEvent_delete_function(void** p);
+#endif // wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
+
 #if wxLUA_USE_wxJoystick && wxUSE_JOYSTICK
     extern wxLuaBindMethod wxJoystick_methods[];
     extern int wxJoystick_methodCount;
@@ -16866,14 +16205,14 @@ wxLuaBindClass* wxLuaGetClassList_wxadv(size_t &count)
 {
     static wxLuaBindClass classList[] =
     {
-#if wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
+#if wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
         { wxluaclassname_wxAboutDialogInfo, wxAboutDialogInfo_methods, wxAboutDialogInfo_methodCount, NULL, &wxluatype_wxAboutDialogInfo, NULL, NULL, NULL, NULL, NULL, 0, &wxLua_wxAboutDialogInfo_delete_function, }, 
-#endif // wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
+#endif // wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
 
-#if wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+#if wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
         { wxluaclassname_wxAnimation, wxAnimation_methods, wxAnimation_methodCount, CLASSINFO(wxAnimation), &wxluatype_wxAnimation, wxluabaseclassnames_wxAnimation, wxluabaseclassbinds_wxAnimation, NULL, NULL, NULL, 0, &wxLua_wxAnimation_delete_function, }, 
         { wxluaclassname_wxAnimationCtrl, wxAnimationCtrl_methods, wxAnimationCtrl_methodCount, CLASSINFO(wxAnimationCtrl), &wxluatype_wxAnimationCtrl, wxluabaseclassnames_wxAnimationCtrl, wxluabaseclassbinds_wxAnimationCtrl, NULL, NULL, NULL, 0, &wxLua_wxAnimationCtrl_delete_function, }, 
-#endif // wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+#endif // wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
 
 #if wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX
         { wxluaclassname_wxBitmapComboBox, wxBitmapComboBox_methods, wxBitmapComboBox_methodCount, CLASSINFO(wxBitmapComboBox), &wxluatype_wxBitmapComboBox, wxluabaseclassnames_wxBitmapComboBox, wxluabaseclassbinds_wxBitmapComboBox, NULL, NULL, NULL, 0, &wxLua_wxBitmapComboBox_delete_function, }, 
@@ -16922,10 +16261,10 @@ wxLuaBindClass* wxLuaGetClassList_wxadv(size_t &count)
         { wxluaclassname_wxGridTableMessage, wxGridTableMessage_methods, wxGridTableMessage_methodCount, NULL, &wxluatype_wxGridTableMessage, NULL, NULL, NULL, NULL, NULL, 0, &wxLua_wxGridTableMessage_delete_function, }, 
 #endif // wxLUA_USE_wxGrid && wxUSE_GRID
 
-#if wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#if wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
         { wxluaclassname_wxHyperlinkCtrl, wxHyperlinkCtrl_methods, wxHyperlinkCtrl_methodCount, CLASSINFO(wxHyperlinkCtrl), &wxluatype_wxHyperlinkCtrl, wxluabaseclassnames_wxHyperlinkCtrl, wxluabaseclassbinds_wxHyperlinkCtrl, NULL, NULL, NULL, 0, &wxLua_wxHyperlinkCtrl_delete_function, }, 
         { wxluaclassname_wxHyperlinkEvent, wxHyperlinkEvent_methods, wxHyperlinkEvent_methodCount, CLASSINFO(wxHyperlinkEvent), &wxluatype_wxHyperlinkEvent, wxluabaseclassnames_wxHyperlinkEvent, wxluabaseclassbinds_wxHyperlinkEvent, NULL, NULL, NULL, 0, &wxLua_wxHyperlinkEvent_delete_function, }, 
-#endif // wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#endif // wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
 
 #if wxLUA_USE_wxJoystick && wxUSE_JOYSTICK
         { wxluaclassname_wxJoystick, wxJoystick_methods, wxJoystick_methodCount, CLASSINFO(wxJoystick), &wxluatype_wxJoystick, wxluabaseclassnames_wxJoystick, wxluabaseclassbinds_wxJoystick, NULL, NULL, NULL, 0, &wxLua_wxJoystick_delete_function, }, 
@@ -16947,9 +16286,9 @@ wxLuaBindClass* wxLuaGetClassList_wxadv(size_t &count)
         { wxluaclassname_wxSashWindow, wxSashWindow_methods, wxSashWindow_methodCount, CLASSINFO(wxSashWindow), &wxluatype_wxSashWindow, wxluabaseclassnames_wxSashWindow, wxluabaseclassbinds_wxSashWindow, NULL, NULL, NULL, 0, &wxLua_wxSashWindow_delete_function, }, 
 #endif // wxLUA_USE_wxSashWindow && wxUSE_SASH
 
-#if (wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave)
+#if (wxLUA_USE_wxWave) && (wxUSE_SOUND)
         { wxluaclassname_wxSound, wxSound_methods, wxSound_methodCount, CLASSINFO(wxSound), &wxluatype_wxSound, wxluabaseclassnames_wxSound, wxluabaseclassbinds_wxSound, NULL, NULL, NULL, 0, &wxLua_wxSound_delete_function, }, 
-#endif // (wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave)
+#endif // (wxLUA_USE_wxWave) && (wxUSE_SOUND)
 
 #if wxLUA_USE_wxSplashScreen
         { wxluaclassname_wxSplashScreen, wxSplashScreen_methods, wxSplashScreen_methodCount, CLASSINFO(wxSplashScreen), &wxluatype_wxSplashScreen, wxluabaseclassnames_wxSplashScreen, wxluabaseclassbinds_wxSplashScreen, NULL, NULL, NULL, 0, &wxLua_wxSplashScreen_delete_function, }, 
@@ -16960,10 +16299,6 @@ wxLuaBindClass* wxLuaGetClassList_wxadv(size_t &count)
         { wxluaclassname_wxTaskBarIcon, wxTaskBarIcon_methods, wxTaskBarIcon_methodCount, CLASSINFO(wxTaskBarIcon), &wxluatype_wxTaskBarIcon, wxluabaseclassnames_wxTaskBarIcon, wxluabaseclassbinds_wxTaskBarIcon, NULL, NULL, NULL, 0, &wxLua_wxTaskBarIcon_delete_function, }, 
         { wxluaclassname_wxTaskBarIconEvent, wxTaskBarIconEvent_methods, wxTaskBarIconEvent_methodCount, CLASSINFO(wxTaskBarIconEvent), &wxluatype_wxTaskBarIconEvent, wxluabaseclassnames_wxTaskBarIconEvent, wxluabaseclassbinds_wxTaskBarIconEvent, NULL, NULL, NULL, 0, &wxLua_wxTaskBarIconEvent_delete_function, }, 
 #endif // wxLUA_USE_wxTaskBarIcon && defined (wxHAS_TASK_BAR_ICON )
-
-#if (defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)
-        { wxluaclassname_wxWave, wxWave_methods, wxWave_methodCount, CLASSINFO(wxWave), &wxluatype_wxWave, wxluabaseclassnames_wxWave, wxluabaseclassbinds_wxWave, NULL, NULL, NULL, 0, &wxLua_wxWave_delete_function, }, 
-#endif // (defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)
 
 #if wxUSE_WIZARDDLG && wxLUA_USE_wxWizard
         { wxluaclassname_wxWizard, wxWizard_methods, wxWizard_methodCount, CLASSINFO(wxWizard), &wxluatype_wxWizard, wxluabaseclassnames_wxWizard, wxluabaseclassbinds_wxWizard, NULL, NULL, NULL, 0, &wxLua_wxWizard_delete_function, }, 

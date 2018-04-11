@@ -1,41 +1,38 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\dummy.cpp">
+    <ClCompile Include="..\..\..\..\modules\wxlua\debugger\dummy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxldserv.cpp">
+    <ClCompile Include="..\..\..\..\modules\wxlua\debugger\wxldserv.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxldtarg.cpp">
+    <ClCompile Include="..\..\..\..\modules\wxlua\debugger\wxldtarg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxlsock.cpp">
+    <ClCompile Include="..\..\..\..\modules\wxlua\debugger\wxlsock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxluadebugger_bind.cpp">
+    <ClCompile Include="..\..\..\..\modules\wxlua\debugger\wxluadebugger_bind.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxldserv.h">
+    <ClInclude Include="..\..\..\..\modules\wxlua\debugger\wxldserv.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxldtarg.h">
+    <ClInclude Include="..\..\..\..\modules\wxlua\debugger\wxldtarg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxlsock.h">
+    <ClInclude Include="..\..\..\..\modules\wxlua\debugger\wxlsock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxluadebugger_bind.h">
+    <ClInclude Include="..\..\..\..\modules\wxlua\debugger\wxluadebugger_bind.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxluadebuggerdefs.h">
+    <ClInclude Include="..\..\..\..\modules\wxlua\debugger\wxluadebuggerdefs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">

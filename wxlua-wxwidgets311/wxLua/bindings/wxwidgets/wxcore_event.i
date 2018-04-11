@@ -36,7 +36,7 @@ class %delete wxPropagateOnce
 // wxCommandEvent
 
 #include "wx/event.h"
-%wxchkver_2_4 #include "wx/tglbtn.h"  // for wxEVT_COMMAND_TOGGLEBUTTON_CLICKED
+#include "wx/tglbtn.h"  // for wxEVT_COMMAND_TOGGLEBUTTON_CLICKED
 
 class %delete wxCommandEvent : public wxEvent
 {
@@ -61,7 +61,6 @@ class %delete wxCommandEvent : public wxEvent
     %wxEventType wxEVT_COMMAND_TEXT_ENTER      // EVT_TEXT_ENTER(id, fn );
     %wxEventType wxEVT_COMMAND_TEXT_UPDATED    // EVT_TEXT(id, fn );
     %wxEventType wxEVT_COMMAND_TEXT_MAXLEN     // EVT_TEXT_MAXLEN(id, fn );
-    !%wxchkver_2_8_0 %wxEventType wxEVT_COMMAND_TEXT_URL        // EVT_TEXT_URL(id, fn );
 
     %wxEventType wxEVT_COMMAND_SPINCTRL_UPDATED        // EVT_SPINCTRL(id, fn );
     %wxEventType wxEVT_COMMAND_SLIDER_UPDATED          // EVT_SLIDER(winid, func );
@@ -74,7 +73,7 @@ class %delete wxCommandEvent : public wxEvent
     %wxEventType wxEVT_COMMAND_CHOICE_SELECTED         // EVT_CHOICE(winid, func );
     %wxEventType wxEVT_COMMAND_CHECKBOX_CLICKED        // EVT_CHECKBOX(winid, func );
     %wxEventType wxEVT_COMMAND_BUTTON_CLICKED          // EVT_BUTTON(winid, func );
-    %wxchkver_2_4 %wxEventType wxEVT_COMMAND_TOGGLEBUTTON_CLICKED // EVT_TOGGLEBUTTON(id, fn );
+    %wxEventType wxEVT_COMMAND_TOGGLEBUTTON_CLICKED // EVT_TOGGLEBUTTON(id, fn );
 
     wxCommandEvent(wxEventType commandEventType = wxEVT_NULL, int id = 0 );
 
@@ -361,7 +360,7 @@ class %delete wxKeyEvent : public wxEvent
     bool CmdDown() const;
     bool ControlDown() const;
     int GetKeyCode() const;
-    %wxchkver_2_8 int GetModifiers() const;
+    int GetModifiers() const;
     wxPoint GetPosition() const;
 
     // %override [long x, long y] wxKeyEvent::GetPositionXY( );
@@ -425,7 +424,6 @@ class %delete wxIdleEvent : public wxEvent
 
     wxIdleEvent( );
 
-    !%wxchkver_2_9_2 static bool CanSend(wxWindow* window );
     static wxIdleMode GetMode( );
     void RequestMore(bool needMore = true );
     bool MoreRequested() const;
@@ -560,8 +558,6 @@ class %delete wxMouseCaptureChangedEvent : public wxEvent
 // ---------------------------------------------------------------------------
 // wxMouseCaptureLostEvent
 
-#if %wxchkver_2_8
-
 #include "wx/event.h"
 
 class %delete wxMouseCaptureLostEvent : public wxEvent
@@ -571,8 +567,6 @@ class %delete wxMouseCaptureLostEvent : public wxEvent
     wxMouseCaptureLostEvent(wxWindowID winid = 0 );
 };
 
-#endif //%wxchkver_2_8
-
 // ---------------------------------------------------------------------------
 // wxMoveEvent
 
@@ -581,7 +575,7 @@ class %delete wxMouseCaptureLostEvent : public wxEvent
 class %delete wxMoveEvent : public wxEvent
 {
     %wxEventType wxEVT_MOVE                    // EVT_MOVE(func );
-    %wxchkver_2_6 %wxEventType wxEVT_MOVING    // EVT_MOVING(func );
+    %wxEventType wxEVT_MOVING    // EVT_MOVING(func );
 
     wxMoveEvent(const wxPoint& pt, int id = 0 );
 
@@ -628,10 +622,9 @@ class %delete wxProcessEvent : public wxEvent
 {
     %wxEventType wxEVT_END_PROCESS // EVT_END_PROCESS(id, func );
 
-    !%wxchkver_2_6 wxProcessEvent(int id = 0, int pid = 0 );
-    %wxchkver_2_6 wxProcessEvent(int nId = 0, int pid = 0, int exitcode = 0 );
+    wxProcessEvent(int nId = 0, int pid = 0, int exitcode = 0 );
     int GetPid() const;
-    %wxchkver_2_6 int GetExitCode( );
+    int GetExitCode( );
 };
 
 // ---------------------------------------------------------------------------
@@ -650,7 +643,7 @@ class %delete wxScrollEvent : public wxCommandEvent
     %wxEventType wxEVT_SCROLL_THUMBTRACK   // EVT_SCROLL_THUMBTRACK(func );
     %wxEventType wxEVT_SCROLL_THUMBRELEASE // EVT_SCROLL_THUMBRELEASE(func );
     %wxcompat_2_6 %wxEventType wxEVT_SCROLL_ENDSCROLL // EVT_SCROLL_ENDSCROLL(func) FIXME called wxEVT_SCROLL_CHANGED in 2.8
-    %wxchkver_2_8 %wxEventType wxEVT_SCROLL_CHANGED   // EVT_SCROLL_CHANGED(func );
+    %wxEventType wxEVT_SCROLL_CHANGED   // EVT_SCROLL_CHANGED(func );
 
     wxScrollEvent(wxEventType commandType = wxEVT_NULL, int id = 0, int pos = 0, int orientation = 0 );
 
@@ -687,8 +680,8 @@ class %delete wxScrollWinEvent : public wxEvent
 
 class %delete wxSizeEvent : public wxEvent
 {
-    %wxEventType wxEVT_SIZE                    // EVT_SIZE(func );
-    %wxchkver_2_6 %wxEventType wxEVT_SIZING    // EVT_SIZING(func );
+    %wxEventType wxEVT_SIZE      // EVT_SIZE(func );
+    %wxEventType wxEVT_SIZING    // EVT_SIZING(func );
 
     wxSizeEvent(const wxSize& sz, int id = 0 );
 
@@ -799,8 +792,6 @@ class %delete wxDisplayChangedEvent : public wxEvent
 // ---------------------------------------------------------------------------
 // wxPowerEvent
 
-#if %wxchkver_2_8
-
 #include "wx/power.h"
 
 enum wxPowerType
@@ -838,9 +829,6 @@ class %delete wxPowerEvent : public wxEvent
 };
 
 #endif // wxHAS_POWER_EVENTS
-
-#endif // %wxchkver_2_8
-
 
 // ---------------------------------------------------------------------------
 // wxSetCursorEvent
@@ -882,10 +870,10 @@ class %delete wxUpdateUIEvent : public wxCommandEvent
     void Enable(bool enable );
     bool GetChecked() const;
     bool GetEnabled() const;
-    %wxchkver_2_8 bool GetShown() const;
+    bool GetShown() const;
     bool GetSetChecked() const;
     bool GetSetEnabled() const;
-    %wxchkver_2_8 bool GetSetShown() const;
+    bool GetSetShown() const;
     bool GetSetText() const;
     wxString GetText() const;
     static wxUpdateUIMode GetMode( );
@@ -894,7 +882,7 @@ class %delete wxUpdateUIEvent : public wxCommandEvent
     static void SetMode(wxUpdateUIMode mode );
     void SetText(const wxString& text );
     static void SetUpdateInterval(long updateInterval );
-    %wxchkver_2_8 void Show(bool show );
+    void Show(bool show );
 };
 
 // ---------------------------------------------------------------------------
@@ -902,29 +890,26 @@ class %delete wxUpdateUIEvent : public wxCommandEvent
 
 #include "wx/event.h"
 
-#if %wxchkver_2_8
 enum wxHelpEvent::Origin
 {
     Origin_Unknown,    // unrecognized event source
     Origin_Keyboard,   // event generated from F1 key press
     Origin_HelpButton // event from [?] button on the title bar (Windows );
 };
-#endif //%wxchkver_2_8
 
 class %delete wxHelpEvent : public wxCommandEvent
 {
     %wxEventType wxEVT_HELP            // EVT_HELP(winid, func) EVT_HELP_RANGE(id1, id2, func );
     %wxEventType wxEVT_DETAILED_HELP   // EVT_DETAILED_HELP(winid, func) EVT_DETAILED_HELP_RANGE(id1, id2, func );
 
-    !%wxchkver_2_8 wxHelpEvent(wxEventType type = wxEVT_NULL, wxWindowID id = 0, const wxPoint& pt = wxDefaultPosition );
-    %wxchkver_2_8 wxHelpEvent(wxEventType type = wxEVT_NULL, wxWindowID id = 0, const wxPoint& pt = wxDefaultPosition, wxHelpEvent::Origin origin = wxHelpEvent::Origin_Unknown );
+    wxHelpEvent(wxEventType type = wxEVT_NULL, wxWindowID id = 0, const wxPoint& pt = wxDefaultPosition, wxHelpEvent::Origin origin = wxHelpEvent::Origin_Unknown );
 
     wxString GetLink( );
-    %wxchkver_2_8 wxHelpEvent::Origin GetOrigin() const;
+    wxHelpEvent::Origin GetOrigin() const;
     wxPoint  GetPosition( );
     wxString GetTarget( );
     void SetLink(const wxString& link );
-    %wxchkver_2_8 void SetOrigin(wxHelpEvent::Origin origin );
+    void SetOrigin(wxHelpEvent::Origin origin );
     void SetPosition(const wxPoint& pos );
     void SetTarget(const wxString& target );
 };

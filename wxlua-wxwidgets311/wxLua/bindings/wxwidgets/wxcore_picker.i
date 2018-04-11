@@ -7,7 +7,7 @@
 // wxWidgets:   Updated to 2.8.4
 // ===========================================================================
 
-#if %wxchkver_2_8 && wxLUA_USE_wxPicker
+#if wxLUA_USE_wxPicker
 
 // ---------------------------------------------------------------------------
 // wxPickerBase
@@ -248,6 +248,6 @@ class %delete wxFontPickerEvent : public wxCommandEvent
 
 #endif // wxLUA_USE_wxFontPickerCtrl && wxUSE_FONTPICKERCTRL
 
-#endif // %wxchkver_2_8 && wxLUA_USE_wxPicker
+#endif // wxLUA_USE_wxPicker
 
 

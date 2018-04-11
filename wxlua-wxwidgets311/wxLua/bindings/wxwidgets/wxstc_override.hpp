@@ -64,7 +64,7 @@ static int LUACALL wxLua_wxStyledTextCtrl_PrivateLexerCall(lua_State *L)
 %end
 
 %override wxLua_wxStyledTextCtrl_GetSelection
-// void GetSelection(int* startPos, int* endPos)
+// void virtual void GetSelection(long *from, long *to) const
 static int LUACALL wxLua_wxStyledTextCtrl_GetSelection(lua_State *L)
 {
     int endPos;

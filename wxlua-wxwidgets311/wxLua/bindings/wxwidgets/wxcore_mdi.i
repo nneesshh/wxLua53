@@ -199,13 +199,12 @@ class wxDocManager : public wxEvtHandler
     // view and returns it then.
     wxView *GetAnyUsableView() const;
 
-
     //wxDocVector GetDocumentsVector() const;
     //wxDocTemplateVector GetTemplatesVector() const;
 
-    wxList& GetDocuments();
-    wxList& GetTemplates();
-
+    wxObjectList& GetDocuments();
+    wxObjectList& GetTemplates();
+    
     // Return the default name for a new document (by default returns strings
     // in the form "unnamed <counter>" but can be overridden)
     wxString MakeNewDocumentName();
@@ -398,8 +397,8 @@ class wxDocument : public wxEvtHandler
 
     //wxViewVector GetViewsVector() const;
 
-    wxList& GetViews();
-    const wxList& GetViews() const;
+    wxObjectList& GetViews();
+    const wxObjectList& GetViews() const;
 
     wxView *GetFirstView() const;
 
@@ -472,7 +471,7 @@ class wxCommandProcessor : public wxObject
     virtual bool Redo( );
     virtual bool Undo( );
     virtual void ClearCommands( );
-    wxList& GetCommands() const;
+    wxObjectList& GetCommands() const;
     int GetMaxCommands() const;
     wxMenu *GetEditMenu() const;
     wxString GetRedoAccelerator() const;

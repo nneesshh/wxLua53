@@ -340,8 +340,7 @@ class %delete wxURI : public wxObject
     wxURI(const wxString& uri );
     wxURI(const wxURI& uri );
 
-    %wxchkver_2_9_2 bool Create(const wxString& uri );
-    !%wxchkver_2_9_2 wxString Create(const wxString& uri );
+    bool Create(const wxString& uri );
 
     bool HasScheme() const;
     bool HasUserInfo() const;

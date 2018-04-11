@@ -218,3 +218,13 @@ set_target_properties(wxLuaBindLib PROPERTIES
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)
 cmake_policy(POP)
+
+
+# ---------------------------------------------------------------------------
+# Add the compiler flags in the variable wxLua_CXX_DEFINITIONS to your target
+# or call the SETUP_wxLua() macro in any directory that has targets that #include
+# macros in modules/wxbind/include/wxbinddefs.h to setup wxLua's wxWidgets bindings.
+set(wxLua_CXX_DEFINITIONS "-DwxLUA_USEBINDING_WXWEBVIEW=0;-DwxLUA_USEBINDING_WXGL=1;-DwxLUA_USEBINDING_WXSTC=1;-DwxLUA_USEBINDING_WXXRC=1;-DwxLUA_USEBINDING_WXRICHTEXT=1;-DwxLUA_USEBINDING_WXPROPGRID=0;-DwxLUA_USEBINDING_WXHTML=1;-DwxLUA_USEBINDING_WXMEDIA=1;-DwxLUA_USEBINDING_WXAUI=1;-DwxLUA_USEBINDING_WXADV=1;-DwxLUA_USEBINDING_WXCORE=1;-DwxLUA_USEBINDING_WXXML=1;-DwxLUA_USEBINDING_WXNET=1;-DwxLUA_USEBINDING_WXBASE=1;-DLUA_COMPAT_ALL")
+macro(SETUP_wxLua)
+    add_definitions(${wxLua_CXX_DEFINITIONS})
+endmacro(SETUP_wxLua)

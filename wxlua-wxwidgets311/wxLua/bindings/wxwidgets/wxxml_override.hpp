@@ -10,13 +10,13 @@
 // ----------------------------------------------------------------------------
 
 %override wxLua_wxXmlNode_constructor2
-//     wxXmlNode(wxXmlNode *parent, wxXmlNodeType type, const wxString& name, const wxString& content, wxXmlProperty *props, wxXmlNode *next)
+//     wxXmlNode(wxXmlNode *parent, wxXmlNodeType type, const wxString& name, const wxString& content = wxEmptyString, wxXmlAttribute *attrs = NULL, wxXmlNode *next = NULL, int lineNo = -1);
 static int LUACALL wxLua_wxXmlNode_constructor2(lua_State *L)
 {
     // wxXmlNode next
     wxXmlNode * next = (wxXmlNode *)wxluaT_getuserdatatype(L, 6, wxluatype_wxXmlNode);
-    // wxXmlProperty props
-    wxXmlProperty * props = (wxXmlProperty *)wxluaT_getuserdatatype(L, 5, wxluatype_wxXmlProperty);
+    // wxXmlAttribute attrs
+	wxXmlAttribute * attrs = (wxXmlAttribute *)wxluaT_getuserdatatype(L, 5, wxluatype_wxXmlAttribute);
     // const wxString content
     const wxString content = wxlua_getwxStringtype(L, 4);
     // const wxString name
@@ -26,7 +26,7 @@ static int LUACALL wxLua_wxXmlNode_constructor2(lua_State *L)
     // wxXmlNode parent
     wxXmlNode * parent = (wxXmlNode *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlNode);
     // call constructor
-    wxXmlNode *returns = new wxXmlNode(parent, type, name, content, props, next);
+    wxXmlNode *returns = new wxXmlNode(parent, type, name, content, attrs, next);
     // add to tracked memory list
     if (parent == NULL)
         wxluaO_addgcobject(L, returns, wxluatype_wxXmlNode);
@@ -58,18 +58,18 @@ static int LUACALL wxLua_wxXmlNode_RemoveChild(lua_State *L)
 }
 %end
 
-%override wxLua_wxXmlNode_GetPropValPtr
-// %rename GetPropValPtr bool GetPropVal(const wxString& propName, wxString *value) const;
-static int LUACALL wxLua_wxXmlNode_GetPropValPtr(lua_State *L)
+%override wxLua_wxXmlNode_GetAttributePtr
+// %rename GetAttributePtr bool GetAttribute(const wxString& attrName, wxString *value) const;
+static int LUACALL wxLua_wxXmlNode_GetAttributePtr(lua_State *L)
 {
     // wxString *value
     wxString value;
-    // const wxString& propName
-    wxString propName = wxlua_getwxStringtype(L, 2);
+    // const wxString& attrName
+    wxString attrName = wxlua_getwxStringtype(L, 2);
     // get this
     wxXmlNode *self = (wxXmlNode *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlNode);
-    // call GetPropVal
-    bool returns = self->GetPropVal(propName, &value);
+    // call GetAttribute
+    bool returns = self->GetAttribute(attrName, &value);
     // push the result number
     lua_pushboolean(L, returns);
     // push the result string

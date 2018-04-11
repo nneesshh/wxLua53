@@ -79,7 +79,7 @@ class %delete wxProcess : public wxEvtHandler
 {
     wxProcess(wxEvtHandler *parent = NULL, int nId = wxID_ANY);
     wxProcess(int flags);
-    %wxchkver_3_1_1 & %win bool Activate() const;
+    %win bool Activate() const;
     wxUSE_STREAMS void CloseOutput();
     void Detach();
     static bool Exists(int pid);
@@ -104,8 +104,7 @@ class %delete wxProcess : public wxEvtHandler
 // ---------------------------------------------------------------------------
 // Process control functions
 
-!%wxchkver_2_6 long wxExecute(const wxString& command, bool sync = false, wxProcess *callback = NULL);
-%wxchkver_2_6 long wxExecute(const wxString& command, int flags = wxEXEC_ASYNC, wxProcess *process = NULL);
+long wxExecute(const wxString& command, int flags = wxEXEC_ASYNC, wxProcess *process = NULL);
 // %override [long, Lua table of output strings] wxExecuteStdout(const wxString& command, int flags = 0);
 %rename wxExecuteStdout long wxExecute(const wxString& command, wxArrayString& output, int flags = 0);
 // %override [long, Lua table of output strings, Lua table of error strings] wxExecuteStdoutStderr(const wxString& command, int flags = 0);
@@ -184,68 +183,54 @@ wxWindow* wxFindWindowByLabel(const wxString& label, wxWindow *parent=NULL);
 wxWindow* wxFindWindowByName(const wxString& name, wxWindow *parent=NULL);
 wxWindow* wxFindWindowAtPoint(const wxPoint& pt);
 wxWindow* wxFindWindowAtPointer(wxPoint& pt);
-%wxchkver_2_8_4 wxWindow* wxGetActiveWindow();
+wxWindow* wxGetActiveWindow();
 wxPoint wxGetMousePosition();
 
 class wxKeyboardState
 {
-    %wxchkver_3_1_1 wxKeyboardState(bool controlDown = false, bool shiftDown = false, bool altDown = false, bool metaDown = false);
-    %wxchkver_3_1_1 int GetModifiers() const;
-    %wxchkver_3_1_1 bool HasAnyModifiers() const;
-    %wxchkver_3_1_1 bool HasModifiers() const;
-    %wxchkver_3_1_1 bool ControlDown() const;
-    %wxchkver_3_1_1 bool RawControlDown() const;
-    %wxchkver_3_1_1 bool ShiftDown() const;
-    %wxchkver_3_1_1 bool MetaDown() const;
-    %wxchkver_3_1_1 bool AltDown() const;
-    %wxchkver_3_1_1 bool CmdDown() const;
-    %wxchkver_3_1_1 void SetControlDown(bool down);
-    %wxchkver_3_1_1 void SetRawControlDown(bool down);
-    %wxchkver_3_1_1 void SetShiftDown(bool down);
-    %wxchkver_3_1_1 void SetAltDown(bool down);
-    %wxchkver_3_1_1 void SetMetaDown(bool down);
+    wxKeyboardState(bool controlDown = false, bool shiftDown = false, bool altDown = false, bool metaDown = false);
+    int GetModifiers() const;
+    bool HasAnyModifiers() const;
+    bool HasModifiers() const;
+    bool ControlDown() const;
+    bool RawControlDown() const;
+    bool ShiftDown() const;
+    bool MetaDown() const;
+    bool AltDown() const;
+    bool CmdDown() const;
+    void SetControlDown(bool down);
+    void SetRawControlDown(bool down);
+    void SetShiftDown(bool down);
+    void SetAltDown(bool down);
+    void SetMetaDown(bool down);
 };
 
-#if %wxchkver_2_8
 class %delete wxMouseState : public wxKeyboardState
 {
     wxMouseState();
     wxCoord     GetX();
     wxCoord     GetY();
     // void GetPosition(int *x, int *y) const; // skip as this requires override
-    %wxchkver_3_1_1 bool LeftIsDown() const;
-    %wxchkver_3_1_1 bool MiddleIsDown() const;
-    %wxchkver_3_1_1 bool RightIsDown() const;
-    %wxchkver_3_1_1 %rename LeftDown bool LeftIsDown() const; // for compatibility with previous wxlua versions
-    %wxchkver_3_1_1 %rename MiddleDown bool MiddleIsDown() const; // for compatibility with previous wxlua versions
-    %wxchkver_3_1_1 %rename RightDown bool RightIsDown() const; // for compatibility with previous wxlua versions
-    %wxchkver_3_1_1 bool Aux1IsDown() const;
-    %wxchkver_3_1_1 bool Aux2IsDown() const;
+    bool LeftIsDown() const;
+    bool MiddleIsDown() const;
+    bool RightIsDown() const;
+    %rename LeftDown bool LeftIsDown() const; // for compatibility with previous wxlua versions
+    %rename MiddleDown bool MiddleIsDown() const; // for compatibility with previous wxlua versions
+    %rename RightDown bool RightIsDown() const; // for compatibility with previous wxlua versions
+    bool Aux1IsDown() const;
+    bool Aux2IsDown() const;
     void        SetX(wxCoord x);
     void        SetY(wxCoord y);
-    %wxchkver_3_1_1 void SetPosition(wxPoint pos);
+    void SetPosition(wxPoint pos);
     void        SetLeftDown(bool down);
     void        SetMiddleDown(bool down);
     void        SetRightDown(bool down);
-    %wxchkver_3_1_1 void SetAux1Down(bool down);
-    %wxchkver_3_1_1 void SetAux2Down(bool down);
-    %wxchkver_3_1_1 void SetState(const wxMouseState& state);
-    !%wxchkver_3_1_1 bool        AltDown();
-    !%wxchkver_3_1_1 bool        CmdDown();
-    !%wxchkver_3_1_1 bool        ControlDown();
-    !%wxchkver_3_1_1 bool        LeftDown();
-    !%wxchkver_3_1_1 bool        MetaDown();
-    !%wxchkver_3_1_1 bool        MiddleDown();
-    !%wxchkver_3_1_1 bool        RightDown();
-    !%wxchkver_3_1_1 bool        ShiftDown();
-    !%wxchkver_3_1_1 void        SetAltDown(bool down);
-    !%wxchkver_3_1_1 void        SetControlDown(bool down);
-    !%wxchkver_3_1_1 void        SetMetaDown(bool down);
-    !%wxchkver_3_1_1 void        SetShiftDown(bool down);
+    void        SetAux1Down(bool down);
+    void        SetAux2Down(bool down);
+    void        SetState(const wxMouseState& state);
 };
 
 wxMouseState wxGetMouseState();
-#endif
 
 // bool wxGetResource(const wxString& section, const wxString& entry, const wxString& *value, const wxString& file = "");
 // bool wxWriteResource(const wxString& section, const wxString& entry, const wxString& value, const wxString& file = "");
@@ -295,19 +280,19 @@ void wxPostEvent(wxEvtHandler *dest, wxEvent& event);
 #define wxID_HELP
 #define wxID_PRINT
 #define wxID_PRINT_SETUP
-%wxchkver_2_8 #define wxID_PAGE_SETUP
+#define wxID_PAGE_SETUP
 #define wxID_PREVIEW
 #define wxID_ABOUT
 #define wxID_HELP_CONTENTS
-%wxchkver_2_8 #define wxID_HELP_INDEX
-%wxchkver_2_8 #define wxID_HELP_SEARCH
+#define wxID_HELP_INDEX
+#define wxID_HELP_SEARCH
 #define wxID_HELP_COMMANDS
 #define wxID_HELP_PROCEDURES
 #define wxID_HELP_CONTEXT
 #define wxID_CLOSE_ALL
 #define wxID_PREFERENCES
 
-%wxchkver_2_8 #define wxID_EDIT
+#define wxID_EDIT
 #define wxID_CUT
 #define wxID_COPY
 #define wxID_PASTE
@@ -329,7 +314,7 @@ void wxPostEvent(wxEvtHandler *dest, wxEvent& event);
 #define wxID_VIEW_SORTSIZE
 #define wxID_VIEW_SORTTYPE
 
-%wxchkver_2_8 #define wxID_FILE
+#define wxID_FILE
 #define wxID_FILE1
 #define wxID_FILE2
 #define wxID_FILE3
@@ -402,11 +387,6 @@ void wxPostEvent(wxEvtHandler *dest, wxEvent& event);
 // Generic defines and enums
 
 #define wxBACKINGSTORE
-#define wxCENTER
-#define wxCENTER_FRAME
-#define wxCENTER_ON_SCREEN
-#define wxCENTRE
-#define wxCENTRE_ON_SCREEN
 #define wxCOLOURED
 //#define wxED_BUTTONS_BOTTOM  // for wxExtDialog? not used?
 //#define wxED_BUTTONS_RIGHT
@@ -429,11 +409,32 @@ void wxPostEvent(wxEvtHandler *dest, wxEvent& event);
 #define wxSIZE_USE_EXISTING
 //#define wxUSER_COLOURS deprecated use wxNO_3D %wxcompat_2_6
 
+/*  ---------------------------------------------------------------------------- */
+/*  Geometric flags */
+/*  ---------------------------------------------------------------------------- */
+
+enum wxGeometryCentre
+{
+    wxCENTRE,
+    wxCENTER
+};
+
+/*  centering into frame rather than screen (obsolete) */
+#define wxCENTER_FRAME
+/*  centre on screen rather than parent */
+#define wxCENTRE_ON_SCREEN
+#define wxCENTER_ON_SCREEN
+
 enum wxOrientation
 {
+    /* don't change the values of these elements, they are used elsewhere */
     wxHORIZONTAL,
     wxVERTICAL,
-    wxBOTH
+
+    wxBOTH,
+
+    /*  a mask to extract orientation from the combination of flags */
+    wxORIENTATION_MASK
 };
 
 enum wxDirection
@@ -442,17 +443,30 @@ enum wxDirection
     wxRIGHT,
     wxUP,
     wxDOWN,
+
     wxTOP,
     wxBOTTOM,
+
     wxNORTH,
     wxSOUTH,
     wxWEST,
     wxEAST,
-    wxALL
+
+    wxALL,
+
+    /*  a mask to extract direction from the combination of flags */
+    wxDIRECTION_MASK
 };
 
 enum wxAlignment
 {
+    /*
+        0 is a valid wxAlignment value (both wxALIGN_LEFT and wxALIGN_TOP
+        use it) so define a symbolic name for an invalid alignment value
+        which can be assumed to be different from anything else
+     */
+    wxALIGN_INVALID,
+
     wxALIGN_NOT,
     wxALIGN_CENTER_HORIZONTAL,
     wxALIGN_CENTRE_HORIZONTAL,
@@ -462,9 +476,22 @@ enum wxAlignment
     wxALIGN_BOTTOM,
     wxALIGN_CENTER_VERTICAL,
     wxALIGN_CENTRE_VERTICAL,
+
     wxALIGN_CENTER,
     wxALIGN_CENTRE,
+
+    /*  a mask to extract alignment from the combination of flags */
     wxALIGN_MASK
+};
+
+/* misc. flags for wxSizer items */
+enum wxSizerFlagBits
+{
+    wxFIXED_MINSIZE,
+    wxRESERVE_SPACE_EVEN_IF_HIDDEN,
+
+    /*  a mask to extract wxSizerFlagBits from combination of flags */
+    wxSIZER_FLAG_BITS_MASK
 };
 
 enum wxStretch
@@ -476,31 +503,83 @@ enum wxStretch
     wxSHAPED,
     wxTILE,
 
-    wxSTRETCH_MASK // a mask to extract stretch from the combination of flags
+    /*  a mask to extract stretch from the combination of flags */
+    wxSTRETCH_MASK // sans wxTILE
 };
 
 enum wxBorder
 {
+    /*  this is different from wxBORDER_NONE as by default the controls do have */
+    /*  border */
     wxBORDER_DEFAULT,
+
     wxBORDER_NONE,
     wxBORDER_STATIC,
     wxBORDER_SIMPLE,
     wxBORDER_RAISED,
     wxBORDER_SUNKEN,
-    wxBORDER_DOUBLE,
+    //wxBORDER_DOUBLE = 0x10000000, /* deprecated */
+    wxBORDER_THEME,
+
+    /*  a mask to extract border style from the combination of flags */
     wxBORDER_MASK
 };
 
+/* This makes it easier to specify a 'normal' border for a control */
+#define wxDEFAULT_CONTROL_BORDER
+
+/*
+ * Background styles. See wxWindow::SetBackgroundStyle
+ */
 enum wxBackgroundStyle
 {
-    %wxchkver_3_1 wxBG_STYLE_ERASE,
+    /*
+        background is erased in the EVT_ERASE_BACKGROUND handler or using
+        the system default background if no such handler is defined (this
+        is the default style)
+     */
+    wxBG_STYLE_ERASE,
+
+    /*
+        background is erased by the system, no EVT_ERASE_BACKGROUND event
+        is generated at all
+     */
     wxBG_STYLE_SYSTEM,
-    %wxchkver_3_1 wxBG_STYLE_PAINT,
+
+    /*
+        background is erased in EVT_PAINT handler and not erased at all
+        before it, this should be used if the paint handler paints over
+        the entire window to avoid flicker
+     */
+    wxBG_STYLE_PAINT,
+
+    /*
+        Indicates that the window background is not erased, letting the parent
+        window show through.
+     */
+    wxBG_STYLE_TRANSPARENT,
+
+    /* this style is deprecated and doesn't do anything, don't use */
     wxBG_STYLE_COLOUR,
-    %wxchkver_3_1 wxBG_STYLE_TRANSPARENT,
-    !%wxchkver_3_1 wxBG_STYLE_CUSTOM
+
+    /*
+        this style is deprecated and is synonymous with
+        wxBG_STYLE_PAINT, use the new name
+     */
+    wxBG_STYLE_CUSTOM
 };
 
+/*
+ * Key types used by (old style) lists and hashes.
+ */
+enum wxKeyType
+{
+    wxKEY_NONE,
+    wxKEY_INTEGER,
+    wxKEY_STRING
+};
+
+/* This enum contains bit mask constants used in wxKeyEvent */
 enum wxKeyModifier
 {
     wxMOD_NONE,
@@ -510,37 +589,36 @@ enum wxKeyModifier
     wxMOD_SHIFT,
     wxMOD_META,
     wxMOD_WIN,
-    %wxchkver_3_0 wxMOD_RAW_CONTROL,
+    wxMOD_RAW_CONTROL,
     wxMOD_CMD,
     wxMOD_ALL
 };
 
-#if %wxchkver_3_1_1
+/*  hit test results */
 enum wxHitTest
 {
     wxHT_NOWHERE,
 
     /*  scrollbar */
-    wxHT_SCROLLBAR_FIRST = wxHT_NOWHERE,
-    wxHT_SCROLLBAR_ARROW_LINE_1,    /**< left or upper arrow to scroll by line */
-    wxHT_SCROLLBAR_ARROW_LINE_2,    /**< right or down */
-    wxHT_SCROLLBAR_ARROW_PAGE_1,    /**< left or upper arrow to scroll by page */
-    wxHT_SCROLLBAR_ARROW_PAGE_2,    /**< right or down */
-    wxHT_SCROLLBAR_THUMB,           /**< on the thumb */
-    wxHT_SCROLLBAR_BAR_1,           /**< bar to the left/above the thumb */
-    wxHT_SCROLLBAR_BAR_2,           /**< bar to the right/below the thumb */
+    wxHT_SCROLLBAR_FIRST,
+    wxHT_SCROLLBAR_ARROW_LINE_1,    /*  left or upper arrow to scroll by line */
+    wxHT_SCROLLBAR_ARROW_LINE_2,    /*  right or down */
+    wxHT_SCROLLBAR_ARROW_PAGE_1,    /*  left or upper arrow to scroll by page */
+    wxHT_SCROLLBAR_ARROW_PAGE_2,    /*  right or down */
+    wxHT_SCROLLBAR_THUMB,           /*  on the thumb */
+    wxHT_SCROLLBAR_BAR_1,           /*  bar to the left/above the thumb */
+    wxHT_SCROLLBAR_BAR_2,           /*  bar to the right/below the thumb */
     wxHT_SCROLLBAR_LAST,
 
     /*  window */
-    wxHT_WINDOW_OUTSIDE,            /**< not in this window at all */
-    wxHT_WINDOW_INSIDE,             /**< in the client area */
-    wxHT_WINDOW_VERT_SCROLLBAR,     /**< on the vertical scrollbar */
-    wxHT_WINDOW_HORZ_SCROLLBAR,     /**< on the horizontal scrollbar */
-    wxHT_WINDOW_CORNER,             /**< on the corner between 2 scrollbars */
+    wxHT_WINDOW_OUTSIDE,            /*  not in this window at all */
+    wxHT_WINDOW_INSIDE,             /*  in the client area */
+    wxHT_WINDOW_VERT_SCROLLBAR,     /*  on the vertical scrollbar */
+    wxHT_WINDOW_HORZ_SCROLLBAR,     /*  on the horizontal scrollbar */
+    wxHT_WINDOW_CORNER,             /*  on the corner between 2 scrollbars */
 
     wxHT_MAX
 };
-#endif // %wxchkver_3_1_1
 
 // ---------------------------------------------------------------------------
 // wxBusyCursor

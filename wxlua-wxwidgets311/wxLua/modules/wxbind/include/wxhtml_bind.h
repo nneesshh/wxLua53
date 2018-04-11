@@ -43,12 +43,6 @@ extern WXDLLIMPEXP_BINDWXHTML wxLuaBinding* wxLuaBinding_wxhtml_init();
 // Includes
 // ---------------------------------------------------------------------------
 
-#if (wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxHTML && wxUSE_HTML)
-    #include "wx/html/htmlcell.h"
-    #include "wx/html/htmlwin.h"
-    #include "wx/htmllbox.h"
-#endif // (wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxHTML && wxUSE_HTML)
-
 #if (wxLUA_USE_wxHTML && wxUSE_HTML) && (wxLUA_USE_wxHtmlHelpController && wxUSE_WXHTML_HELP)
     #include "wx/html/helpctrl.h"
     #include "wx/html/helpdata.h"
@@ -61,21 +55,15 @@ extern WXDLLIMPEXP_BINDWXHTML wxLuaBinding* wxLuaBinding_wxhtml_init();
 #if wxLUA_USE_wxHTML && wxUSE_HTML
     #include "wx/html/htmlcell.h"
     #include "wx/html/htmltag.h"
+    #include "wx/html/htmlwin.h"
     #include "wx/html/htmprint.h"
+    #include "wx/htmllbox.h"
     #include "wx/wxhtml.h"
 #endif // wxLUA_USE_wxHTML && wxUSE_HTML
 
 // ---------------------------------------------------------------------------
 // Lua Tag Method Values and Tables for each Class
 // ---------------------------------------------------------------------------
-
-#if (wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxHTML && wxUSE_HTML)
-    extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlCellEvent;
-    extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlColourCell;
-    extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlFontCell;
-    extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlWindowInterface;
-    extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxSimpleHtmlListBox;
-#endif // (wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxHTML && wxUSE_HTML)
 
 #if (wxLUA_USE_wxHTML && wxUSE_HTML) && (wxLUA_USE_wxHtmlHelpController && wxUSE_WXHTML_HELP)
     extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlHelpController;
@@ -89,9 +77,12 @@ extern WXDLLIMPEXP_BINDWXHTML wxLuaBinding* wxLuaBinding_wxhtml_init();
 
 #if wxLUA_USE_wxHTML && wxUSE_HTML
     extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlCell;
+    extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlCellEvent;
+    extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlColourCell;
     extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlContainerCell;
     extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlDCRenderer;
     extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlEasyPrinting;
+    extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlFontCell;
     extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlLinkInfo;
     extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlParser;
     extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlPrintout;
@@ -99,6 +90,8 @@ extern WXDLLIMPEXP_BINDWXHTML wxLuaBinding* wxLuaBinding_wxhtml_init();
     extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlWidgetCell;
     extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlWinParser;
     extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlWindow;
+    extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxHtmlWindowInterface;
+    extern WXDLLIMPEXP_DATA_BINDWXHTML(int) wxluatype_wxSimpleHtmlListBox;
 #endif // wxLUA_USE_wxHTML && wxUSE_HTML
 
 

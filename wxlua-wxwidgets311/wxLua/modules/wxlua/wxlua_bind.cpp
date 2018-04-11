@@ -72,8 +72,8 @@ static int LUACALL wxLua_wxLuaObject_GetAllocationFlag(lua_State *L)
     wxLuaObject * self = (wxLuaObject *)wxluaT_getuserdatatype(L, 1, wxluatype_wxLuaObject);
     // call GetAllocationFlag
     int returns = (self->GetAllocationFlag());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -186,8 +186,8 @@ static int LUACALL wxLua_wxLuaEvent_GetLineNum(lua_State *L)
     wxLuaEvent * self = (wxLuaEvent *)wxluaT_getuserdatatype(L, 1, wxluatype_wxLuaEvent);
     // call GetLineNum
     int returns = (self->GetLineNum());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -1323,18 +1323,18 @@ static int LUACALL wxLua_function_istrackedobject(lua_State *L)
 
 static wxLuaBindCFunc s_wxluafunc_wxLua_function_istrackedobject[1] = {{ wxLua_function_istrackedobject, WXLUAMETHOD_CFUNCTION, 1, 1, s_wxluatypeArray_wxLua_function_istrackedobject }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_function_iswxluatype[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_function_iswxluatype[] = { &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 // %rename iswxluatype int wxlua_iswxluatype(int luatype, int wxluaarg_tag );
 static int LUACALL wxLua_function_iswxluatype(lua_State *L)
 {
     // int wxluaarg_tag
-    int wxluaarg_tag = (int)wxlua_getnumbertype(L, 2);
+    int wxluaarg_tag = (int)wxlua_getintegertype(L, 2);
     // int luatype
-    int luatype = (int)wxlua_getnumbertype(L, 1);
+    int luatype = (int)wxlua_getintegertype(L, 1);
     // call wxlua_iswxluatype
     int returns = (wxlua_iswxluatype(luatype, wxluaarg_tag));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -1363,7 +1363,7 @@ static int LUACALL wxLua_function_type(lua_State *L)
 
 static wxLuaBindCFunc s_wxluafunc_wxLua_function_type[1] = {{ wxLua_function_type, WXLUAMETHOD_CFUNCTION, 1, 1, s_wxluatypeArray_wxLua_function_type }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_function_typename[] = { &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_function_typename[] = { &wxluatype_TINTEGER, NULL };
 // %override wxLua_function_typename
 // %function wxString typename(int wxluaarg_tag)
 static int LUACALL wxLua_function_typename(lua_State *L)
@@ -1405,16 +1405,16 @@ static int LUACALL wxLua_function_ungcobject(lua_State *L)
 
 static wxLuaBindCFunc s_wxluafunc_wxLua_function_ungcobject[1] = {{ wxLua_function_ungcobject, WXLUAMETHOD_CFUNCTION, 1, 1, s_wxluatypeArray_wxLua_function_ungcobject }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_function_wxLUA_CHECK_VERSION[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_function_wxLUA_CHECK_VERSION[] = { &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 // bool wxLUA_CHECK_VERSION(int major, int minor, int release); // actually a define
 static int LUACALL wxLua_function_wxLUA_CHECK_VERSION(lua_State *L)
 {
     // int release
-    int release = (int)wxlua_getnumbertype(L, 3);
+    int release = (int)wxlua_getintegertype(L, 3);
     // int minor
-    int minor = (int)wxlua_getnumbertype(L, 2);
+    int minor = (int)wxlua_getintegertype(L, 2);
     // int major
-    int major = (int)wxlua_getnumbertype(L, 1);
+    int major = (int)wxlua_getintegertype(L, 1);
     // call wxLUA_CHECK_VERSION
     bool returns = (wxLUA_CHECK_VERSION(major, minor, release));
     // push the result flag
@@ -1424,18 +1424,18 @@ static int LUACALL wxLua_function_wxLUA_CHECK_VERSION(lua_State *L)
 }
 static wxLuaBindCFunc s_wxluafunc_wxLua_function_wxLUA_CHECK_VERSION[1] = {{ wxLua_function_wxLUA_CHECK_VERSION, WXLUAMETHOD_CFUNCTION, 3, 3, s_wxluatypeArray_wxLua_function_wxLUA_CHECK_VERSION }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_function_wxLUA_CHECK_VERSION_FULL[] = { &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_function_wxLUA_CHECK_VERSION_FULL[] = { &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 // bool wxLUA_CHECK_VERSION_FULL(int major, int minor, int release, int subrel); // actually a define
 static int LUACALL wxLua_function_wxLUA_CHECK_VERSION_FULL(lua_State *L)
 {
     // int subrel
-    int subrel = (int)wxlua_getnumbertype(L, 4);
+    int subrel = (int)wxlua_getintegertype(L, 4);
     // int release
-    int release = (int)wxlua_getnumbertype(L, 3);
+    int release = (int)wxlua_getintegertype(L, 3);
     // int minor
-    int minor = (int)wxlua_getnumbertype(L, 2);
+    int minor = (int)wxlua_getintegertype(L, 2);
     // int major
-    int major = (int)wxlua_getnumbertype(L, 1);
+    int major = (int)wxlua_getintegertype(L, 1);
     // call wxLUA_CHECK_VERSION_FULL
     bool returns = (wxLUA_CHECK_VERSION_FULL(major, minor, release, subrel));
     // push the result flag

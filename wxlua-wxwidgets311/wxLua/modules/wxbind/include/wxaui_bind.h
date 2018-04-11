@@ -43,15 +43,15 @@ extern WXDLLIMPEXP_BINDWXAUI wxLuaBinding* wxLuaBinding_wxaui_init();
 // Includes
 // ---------------------------------------------------------------------------
 
-#if wxLUA_USE_wxAUI && wxCHECK_VERSION(2,8,0) && wxUSE_AUI
+#if wxLUA_USE_wxAUI && wxUSE_AUI
     #include "wx/aui/aui.h"
-#endif // wxLUA_USE_wxAUI && wxCHECK_VERSION(2,8,0) && wxUSE_AUI
+#endif // wxLUA_USE_wxAUI && wxUSE_AUI
 
 // ---------------------------------------------------------------------------
 // Lua Tag Method Values and Tables for each Class
 // ---------------------------------------------------------------------------
 
-#if wxLUA_USE_wxAUI && wxCHECK_VERSION(2,8,0) && wxUSE_AUI
+#if wxLUA_USE_wxAUI && wxUSE_AUI
     extern WXDLLIMPEXP_DATA_BINDWXAUI(int) wxluatype_wxAuiDefaultDockArt;
     extern WXDLLIMPEXP_DATA_BINDWXAUI(int) wxluatype_wxAuiDefaultTabArt;
     extern WXDLLIMPEXP_DATA_BINDWXAUI(int) wxluatype_wxAuiDefaultToolBarArt;
@@ -80,7 +80,7 @@ extern WXDLLIMPEXP_BINDWXAUI wxLuaBinding* wxLuaBinding_wxaui_init();
     extern WXDLLIMPEXP_DATA_BINDWXAUI(int) wxluatype_wxAuiToolBarEvent;
     extern WXDLLIMPEXP_DATA_BINDWXAUI(int) wxluatype_wxAuiToolBarItem;
     extern WXDLLIMPEXP_DATA_BINDWXAUI(int) wxluatype_wxAuiToolBarItemArray;
-#endif // wxLUA_USE_wxAUI && wxCHECK_VERSION(2,8,0) && wxUSE_AUI
+#endif // wxLUA_USE_wxAUI && wxUSE_AUI
 
 
 

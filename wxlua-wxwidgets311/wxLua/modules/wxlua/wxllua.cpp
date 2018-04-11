@@ -1469,47 +1469,53 @@ long LUACALL wxlua_getenumtype(lua_State *L, int stack_idx)
 
     return long_value;
 }
-long LUACALL wxlua_getintegertype(lua_State *L, int stack_idx)
+LUA_INTEGER LUACALL wxlua_getintegertype(lua_State *L, int stack_idx)
 {
     int l_type = lua_type(L, stack_idx);
 
     if (!wxlua_iswxluatype(l_type, WXLUA_TINTEGER))
         wxlua_argerror(L, stack_idx, wxT("an 'integer'"));
 
+#if LUA_VERSION_NUM >= 503
+	LUA_INTEGER value = 0;
+#else
     double value = 0;
+#endif
     // we also allow bool = 1/0 which Lua evaluates to nil in lua_tonumber
     if (l_type == LUA_TBOOLEAN)
         value = lua_toboolean(L, stack_idx) ? 1 : 0;
     else
+#if LUA_VERSION_NUM >= 503
+        value = lua_tointeger(L, stack_idx);
+#else
         value = lua_tonumber(L, stack_idx);
+#endif
 
-    long long_value = (long)value;
-
-    if (value != long_value)
-        wxlua_argerror(L, stack_idx, wxT("an 'integer'"));
-
-    return long_value;
+    return value;
 }
-unsigned long LUACALL wxlua_getuintegertype(lua_State *L, int stack_idx)
+unsigned LUA_INTEGER LUACALL wxlua_getuintegertype(lua_State *L, int stack_idx)
 {
     int l_type = lua_type(L, stack_idx);
 
     if (!wxlua_iswxluatype(l_type, WXLUA_TINTEGER))
         wxlua_argerror(L, stack_idx, wxT("an 'unsigned integer'"));
 
+#if LUA_VERSION_NUM >= 503
+	LUA_INTEGER value = 0;
+#else
     double value = 0;
+#endif
     // we also allow bool = 1/0 which Lua evaluates to nil in lua_tonumber
     if (l_type == LUA_TBOOLEAN)
         value = lua_toboolean(L, stack_idx) ? 1 : 0;
     else
+#if LUA_VERSION_NUM >= 503
+        value = lua_tointeger(L, stack_idx);
+#else
         value = lua_tonumber(L, stack_idx);
+#endif
 
-    unsigned long ulong_value = (unsigned long)value;
-
-    if ((value != ulong_value) || (value < 0))
-        wxlua_argerror(L, stack_idx, wxT("an 'unsigned integer'"));
-
-    return ulong_value;
+    return value;
 }
 double LUACALL wxlua_getnumbertype(lua_State *L, int stack_idx)
 {

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -7,14 +7,6 @@
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="MinSizeRel|Win32">
-      <Configuration>MinSizeRel</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="RelWithDebInfo|Win32">
-      <Configuration>RelWithDebInfo</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
@@ -37,53 +29,37 @@
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\..\..\wxlua.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\..\..\wxlua.props" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\bin\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../../bin/$(Configuration)/</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">wxLuaModule.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">wx</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\bin\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../../bin/$(Configuration)/</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">wxLuaModule.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">wx</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\bin\MinSizeRel\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">wxLuaModule.dir\MinSizeRel\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">wx</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\bin\RelWithDebInfo\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">wxLuaModule.dir\RelWithDebInfo\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">wx</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../../../wxWidgets-3.1.1/lib/vc_lib/mswud;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -97,15 +73,15 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;CMAKE_INTDIR="Debug";WXMAKINGDLL_LUAMODULE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;wxLUA_USEBINDING_WXWEBVIEW=1;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=1;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;CMAKE_INTDIR="Debug";WXMAKINGDLL_LUAMODULE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;CMAKE_INTDIR=\"Debug\";WXMAKINGDLL_LUAMODULE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../../../wxWidgets-3.1.1/lib/vc_lib/mswud;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\modules\wxbind\setup;..\..\..;..\..\..\modules;..\..\..\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -113,15 +89,16 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\..\bin-shared\Debug\lua52.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxbase31ud_xml.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxbase31ud_net.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxbase31ud.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxpngd.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxtiffd.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxjpegd.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxzlibd.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxregexud.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxexpatd.lib;opengl32.lib;glu32.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>vc_lib/wxbase31ud_xml.lib;vc_lib/wxbase31ud_net.lib;vc_lib/wxbase31ud.lib;vc_lib/wxpngd.lib;vc_lib/wxtiffd.lib;vc_lib/wxjpegd.lib;vc_lib/wxzlibd.lib;vc_lib/wxregexud.lib;vc_lib/wxexpatd.lib;vc_lib/wxscintillad.lib;vc_lib/wxmsw31ud_adv.lib;vc_lib/wxmsw31ud_aui.lib;vc_lib/wxmsw31ud_core.lib;vc_lib/wxmsw31ud_gl.lib;vc_lib/wxmsw31ud_html.lib;vc_lib/wxmsw31ud_media.lib;vc_lib/wxmsw31ud_propgrid.lib;vc_lib/wxmsw31ud_qa.lib;vc_lib/wxmsw31ud_ribbon.lib;vc_lib/wxmsw31ud_richtext.lib;vc_lib/wxmsw31ud_stc.lib;vc_lib/wxmsw31ud_webview.lib;vc_lib/wxmsw31ud_xrc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/zbs/wxlua-wxwidgets311/wxLua/build/lib/Debug/wx.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/zbs/wxlua-wxwidgets311/wxLua/build/bin/Debug/wx.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>../../../build/bin/$(Configuration)/wx.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Version></Version>
+      <Version>
+      </Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -129,7 +106,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../../../wxWidgets-3.1.1/lib/vc_lib/mswu;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
@@ -143,14 +120,15 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;CMAKE_INTDIR="Release";WXMAKINGDLL_LUAMODULE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;CMAKE_INTDIR=\"Release\";WXMAKINGDLL_LUAMODULE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../../../wxWidgets-3.1.1/lib/vc_lib/mswu;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\modules\wxbind\setup;..\..\..;..\..\..\modules;..\..\..\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -158,241 +136,41 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\..\bin-shared\Release\lua52.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxbase31u_xml.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxbase31u_net.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxbase31u.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxpng.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxtiff.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxjpeg.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxzlib.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxregexu.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxexpat.lib;opengl32.lib;glu32.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>vc_lib/wxbase31u_xml.lib;vc_lib/wxbase31u_net.lib;vc_lib/wxbase31u.lib;vc_lib/wxpng.lib;vc_lib/wxtiff.lib;vc_lib/wxjpeg.lib;vc_lib/wxzlib.lib;vc_lib/wxregexu.lib;vc_lib/wxexpat.lib;vc_lib/wxscintilla.lib;vc_lib/wxmsw31u_adv.lib;vc_lib/wxmsw31u_aui.lib;vc_lib/wxmsw31u_core.lib;vc_lib/wxmsw31u_gl.lib;vc_lib/wxmsw31u_html.lib;vc_lib/wxmsw31u_media.lib;vc_lib/wxmsw31u_propgrid.lib;vc_lib/wxmsw31u_qa.lib;vc_lib/wxmsw31u_ribbon.lib;vc_lib/wxmsw31u_richtext.lib;vc_lib/wxmsw31u_stc.lib;vc_lib/wxmsw31u_webview.lib;vc_lib/wxmsw31u_xrc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/zbs/wxlua-wxwidgets311/wxLua/build/lib/Release/wx.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/zbs/wxlua-wxwidgets311/wxLua/build/bin/Release/wx.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>../../../build/bin/$(Configuration)/wx.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Version></Version>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
-      <CompileAs>CompileAsCpp</CompileAs>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <Optimization>MinSpace</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;CMAKE_INTDIR="MinSizeRel";WXMAKINGDLL_LUAMODULE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;CMAKE_INTDIR=\"MinSizeRel\";WXMAKINGDLL_LUAMODULE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
-    <Link>
-      <AdditionalDependencies>..\..\bin-shared\MinSizeRel\lua52.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxbase31u_xml.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxbase31u_net.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxbase31u.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxpng.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxtiff.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxjpeg.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxzlib.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxregexu.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxexpat.lib;opengl32.lib;glu32.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/zbs/wxlua-wxwidgets311/wxLua/build/lib/MinSizeRel/wx.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/zbs/wxlua-wxwidgets311/wxLua/build/bin/MinSizeRel/wx.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
-      <Version></Version>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
-    <ClCompile>
-      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
-      <CompileAs>CompileAsCpp</CompileAs>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <Optimization>MaxSpeed</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;CMAKE_INTDIR="RelWithDebInfo";WXMAKINGDLL_LUAMODULE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;CMAKE_INTDIR=\"RelWithDebInfo\";WXMAKINGDLL_LUAMODULE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\setup;D:\zbs\wxlua-wxwidgets311\wxLua;D:\zbs\wxlua-wxwidgets311\wxLua\modules;D:\zbs\wxlua-wxwidgets311\wxLua\modules\lua-5.2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
-    <Link>
-      <AdditionalDependencies>..\..\bin-shared\RelWithDebInfo\lua52.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxbase31u_xml.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxbase31u_net.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxbase31u.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxpng.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxtiff.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxjpeg.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxzlib.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxregexu.lib;D:\zbs\wxWidgets-3.1.1\lib\vc_lib\wxexpat.lib;opengl32.lib;glu32.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/zbs/wxlua-wxwidgets311/wxLua/build/lib/RelWithDebInfo/wx.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/zbs/wxlua-wxwidgets311/wxLua/build/bin/RelWithDebInfo/wx.pdb</ProgramDataBaseFile>
-      <SubSystem>Console</SubSystem>
-      <Version></Version>
+      <Version>
+      </Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/zbs/wxlua-wxwidgets311/wxLua/modules/luamodule/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HD:/zbs/wxlua-wxwidgets311/wxLua -BD:/zbs/wxlua-wxwidgets311/wxLua/build --check-stamp-file D:/zbs/wxlua-wxwidgets311/wxLua/build/modules/luamodule/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/zbs/wxlua-wxwidgets311/wxLua/modules/luamodule/CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\luamodule\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/zbs/wxlua-wxwidgets311/wxLua/modules/luamodule/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HD:/zbs/wxlua-wxwidgets311/wxLua -BD:/zbs/wxlua-wxwidgets311/wxLua/build --check-stamp-file D:/zbs/wxlua-wxwidgets311/wxLua/build/modules/luamodule/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/zbs/wxlua-wxwidgets311/wxLua/modules/luamodule/CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\luamodule\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/zbs/wxlua-wxwidgets311/wxLua/modules/luamodule/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HD:/zbs/wxlua-wxwidgets311/wxLua -BD:/zbs/wxlua-wxwidgets311/wxLua/build --check-stamp-file D:/zbs/wxlua-wxwidgets311/wxLua/build/modules/luamodule/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/zbs/wxlua-wxwidgets311/wxLua/modules/luamodule/CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\luamodule\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/zbs/wxlua-wxwidgets311/wxLua/modules/luamodule/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HD:/zbs/wxlua-wxwidgets311/wxLua -BD:/zbs/wxlua-wxwidgets311/wxLua/build --check-stamp-file D:/zbs/wxlua-wxwidgets311/wxLua/build/modules/luamodule/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/zbs/wxlua-wxwidgets311/wxLua/modules/luamodule/CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt;D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\luamodule\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\luamoduledefs.h" />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\luamodule.cpp"  />
-    <ResourceCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\luamodule\luamodule.rc"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxgl_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxstc_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxxrc_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxrichtext_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxhtml_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxmedia_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxaui_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxadv_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_appframe.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_clipdrag.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_controls.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_core.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_defsutils.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_dialogs.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_event.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_gdi.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_geometry.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_help.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_image.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_mdi.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_menutool.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_picker.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_print.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_sizer.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxcore_windows.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxxml_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxnet_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxbase_base.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxbase_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxbase_config.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxbase_data.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxbase_datetime.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxbind\src\wxbase_file.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\dummy.cpp" >
+    <ClInclude Include="..\..\..\modules\luamodule\luamoduledefs.h" />
+    <ClCompile Include="..\..\..\modules\luamodule\luamodule.cpp" />
+    <ResourceCompile Include="..\..\..\modules\luamodule\luamodule.rc" />
+    <ClCompile Include="..\..\..\modules\wxlua\debugger\dummy.cpp">
       <ObjectFileName>$(IntDir)/__/wxlua/debugger/dummy.cpp.obj</ObjectFileName>
     </ClCompile>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxldserv.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxldtarg.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxlsock.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debugger\wxluadebugger_bind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debug\dummy.cpp" >
+    <ClCompile Include="..\..\..\modules\wxlua\debug\dummy.cpp">
       <ObjectFileName>$(IntDir)/__/wxlua/debug/dummy.cpp.obj</ObjectFileName>
     </ClCompile>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debug\wxldebug.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\debug\wxlstack.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\dummy.cpp" >
+    <ClCompile Include="..\..\..\modules\wxlua\dummy.cpp">
       <ObjectFileName>$(IntDir)/__/wxlua/dummy.cpp.obj</ObjectFileName>
     </ClCompile>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\lbitlib.c" >
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
-    </ClCompile>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlbind.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlcallb.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlconsole.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxllua.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlobject.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlstate.cpp"  />
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\modules\wxlua\wxlua_bind.cpp"  />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\ZERO_CHECK.vcxproj">
-      <Project>{0E161B2A-EDE2-3F2B-9810-15BD76572D39}</Project>
-      <Name>ZERO_CHECK</Name>
+    <ProjectReference Include="..\wxbind\wxLuaBindLib.vcxproj">
+      <Project>{ab14d2da-2762-3c04-a3da-0efee3375ea6}</Project>
     </ProjectReference>
-    <ProjectReference Include="D:\zbs\wxlua-wxwidgets311\wxLua\build\modules\lua-5.2\LuaLibShared.vcxproj">
-      <Project>{9BE733E8-E38F-3217-9EC6-0B4187D5F61A}</Project>
-      <Name>LuaLibShared</Name>
+    <ProjectReference Include="..\wxlua\wxLuaLib.vcxproj">
+      <Project>{557f754a-c06a-3213-9c6a-2550c3cbdb9e}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

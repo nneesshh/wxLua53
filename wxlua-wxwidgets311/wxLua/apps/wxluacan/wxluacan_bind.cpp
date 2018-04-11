@@ -508,7 +508,7 @@ int wxlCan_methodCount = sizeof(wxlCan_methods)/sizeof(wxLuaBindMethod) - 1;
 // Lua MetaTable Tag for Class 'wxlLuaCanCmd'
 int wxluatype_wxlLuaCanCmd = WXLUA_TUNKNOWN;
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxlLuaCanCmd_MoveObject[] = { &wxluatype_wxlLuaCanCmd, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxlLuaCanCmd_MoveObject[] = { &wxluatype_wxlLuaCanCmd, &wxluatype_TINTEGER, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
 static int LUACALL wxLua_wxlLuaCanCmd_MoveObject(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxlLuaCanCmd_MoveObject[1] = {{ wxLua_wxlLuaCanCmd_MoveObject, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxlLuaCanCmd_MoveObject }};
 //     void MoveObject( int index, double x, double y );
@@ -519,7 +519,7 @@ static int LUACALL wxLua_wxlLuaCanCmd_MoveObject(lua_State *L)
     // double x
     double x = (double)wxlua_getnumbertype(L, 3);
     // int index
-    int index = (int)wxlua_getnumbertype(L, 2);
+    int index = (int)wxlua_getintegertype(L, 2);
     // get this
     wxlLuaCanCmd * self = (wxlLuaCanCmd *)wxluaT_getuserdatatype(L, 1, wxluatype_wxlLuaCanCmd);
     // call MoveObject
@@ -528,7 +528,7 @@ static int LUACALL wxLua_wxlLuaCanCmd_MoveObject(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxlLuaCanCmd_constructor[] = { &wxluatype_wxlCan, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxlLuaCanCmd_constructor[] = { &wxluatype_wxlCan, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxlLuaCanCmd_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxlLuaCanCmd_constructor[1] = {{ wxLua_wxlLuaCanCmd_constructor, WXLUAMETHOD_CONSTRUCTOR, 1, 2, s_wxluatypeArray_wxLua_wxlLuaCanCmd_constructor }};
 //     wxlLuaCanCmd( wxlCan* canvas, int maxCommands = -1 );
@@ -537,7 +537,7 @@ static int LUACALL wxLua_wxlLuaCanCmd_constructor(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int maxCommands = -1
-    int maxCommands = (argCount >= 2 ? (int)wxlua_getnumbertype(L, 2) : -1);
+    int maxCommands = (argCount >= 2 ? (int)wxlua_getintegertype(L, 2) : -1);
     // wxlCan canvas
     wxlCan * canvas = (wxlCan *)wxluaT_getuserdatatype(L, 1, wxluatype_wxlCan);
     // call constructor

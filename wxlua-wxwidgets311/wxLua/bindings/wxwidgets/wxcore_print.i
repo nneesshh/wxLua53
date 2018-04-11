@@ -269,7 +269,6 @@ enum wxPrintMode
     wxPRINT_MODE_PRINTER
 };
 
-#if %wxchkver_2_6
 enum wxPrintBin
 {
     wxPRINTBIN_DEFAULT,
@@ -290,7 +289,6 @@ enum wxPrintBin
 
     wxPRINTBIN_USER
 };
-#endif
 
 class %delete wxPrintData : public wxObject
 {
@@ -307,21 +305,21 @@ class %delete wxPrintData : public wxObject
     wxString GetPrinterName() const;
     bool GetColour() const;
     wxDuplexMode GetDuplex() const;
-    %wxchkver_2_8 int GetMedia() const;
+    int GetMedia() const;
     wxPaperSize GetPaperId() const;
     wxSize GetPaperSize() const;
     wxPrintQuality GetQuality() const;
     wxPrintBin GetBin() const;
     wxPrintMode GetPrintMode() const;
-    %wxchkver_2_8 bool IsOrientationReversed() const;
+    bool IsOrientationReversed() const;
     void SetNoCopies(int v );
     void SetCollate(bool flag );
     void SetOrientation(int orient );
     void SetPrinterName(const wxString& name );
     void SetColour(bool colour );
     void SetDuplex(wxDuplexMode duplex );
-    %wxchkver_2_8 void SetOrientationReversed(bool reversed );
-    %wxchkver_2_8 void SetMedia(int media );
+    void SetOrientationReversed(bool reversed );
+    void SetMedia(int media );
     void SetPaperId(wxPaperSize sizeId );
     void SetPaperSize(const wxSize& sz );
     void SetQuality(wxPrintQuality quality );
@@ -331,26 +329,6 @@ class %delete wxPrintData : public wxObject
     void SetFilename( const wxString &filename );
 
     void operator=(const wxPrintData& data );
-
-    // these are all WXWIN_COMPATIBILITY_2_4 and for postscript printing only
-    //!%wxchkver_2_8 wxString GetPrinterCommand( );
-    //!%wxchkver_2_8 wxString GetPrinterOptions( );
-    //!%wxchkver_2_8 wxString GetPreviewCommand( );
-    //!%wxchkver_2_8 const wxString& GetFontMetricPath( );
-    //!%wxchkver_2_8 double GetPrinterScaleX( );
-    //!%wxchkver_2_8 double GetPrinterScaleY( );
-    //!%wxchkver_2_8 long GetPrinterTranslateX( );
-    //!%wxchkver_2_8 long GetPrinterTranslateY( );
-    //!%wxchkver_2_8 void SetPrinterCommand(const wxString& command );
-    //!%wxchkver_2_8 void SetPrinterOptions(const wxString& options );
-    //!%wxchkver_2_8 void SetPreviewCommand(const wxString& command );
-    //!%wxchkver_2_8 void SetFontMetricPath(const wxString& path );
-    //!%wxchkver_2_8 void SetPrinterScaleX(double x );
-    //!%wxchkver_2_8 void SetPrinterScaleY(double y );
-    //!%wxchkver_2_8 void SetPrinterScaling(double x, double y );
-    //!%wxchkver_2_8 void SetPrinterTranslateX(long x );
-    //!%wxchkver_2_8 void SetPrinterTranslateY(long y );
-    //!%wxchkver_2_8 void SetPrinterTranslation(long x, long y );
 };
 
 // ---------------------------------------------------------------------------
@@ -565,9 +543,7 @@ class %delete wxPostScriptDC : public wxDC
 {
     wxPostScriptDC(const wxPrintData& printData );
 
-    !%wxchkver_2_9_2 static void SetResolution(int ppi );
-    !%wxchkver_2_9_2 static int GetResolution( );
-    %wxchkver_2_9_2 int GetResolution( );
+    int GetResolution( );
 };
 
 #endif //wxUSE_POSTSCRIPT

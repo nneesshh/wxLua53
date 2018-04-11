@@ -33,8 +33,8 @@ enum wxMediaCtrlPlayerControls
 #define_wxstring wxMEDIABACKEND_MCI          //wxT("wxMCIMediaBackend" );
 #define_wxstring wxMEDIABACKEND_QUICKTIME    //wxT("wxQTMediaBackend" );
 #define_wxstring wxMEDIABACKEND_GSTREAMER    //wxT("wxGStreamerMediaBackend" );
-%wxchkver_2_8 #define_wxstring wxMEDIABACKEND_REALPLAYER   //wxT("wxRealPlayerMediaBackend" );
-%wxchkver_2_8 #define_wxstring wxMEDIABACKEND_WMP10        //wxT("wxWMP10MediaBackend" );
+#define_wxstring wxMEDIABACKEND_REALPLAYER   //wxT("wxRealPlayerMediaBackend" );
+#define_wxstring wxMEDIABACKEND_WMP10        //wxT("wxWMP10MediaBackend" );
 
 class wxMediaCtrl : public wxControl
 {
@@ -65,23 +65,14 @@ class wxMediaCtrl : public wxControl
 // ---------------------------------------------------------------------------
 //  wxMediaEvent
 
-#if !%wxchkver_2_9_2
-    #define wxMEDIA_FINISHED_ID
-    #define wxMEDIA_STOP_ID
-    #define wxMEDIA_LOADED_ID
-    %wxchkver_2_6_4 #define wxMEDIA_STATECHANGED_ID
-    %wxchkver_2_6_4 #define wxMEDIA_PLAY_ID
-    %wxchkver_2_6_4 #define wxMEDIA_PAUSE_ID
-#endif
-
 class %delete wxMediaEvent : public wxNotifyEvent
 {
     %wxEventType wxEVT_MEDIA_FINISHED  // EVT_MEDIA_FINISHED(winid, fn );
     %wxEventType wxEVT_MEDIA_STOP      // EVT_MEDIA_STOP(winid, fn );
     %wxEventType wxEVT_MEDIA_LOADED    // EVT_MEDIA_LOADED(winid, fn );
-    %wxchkver_2_6_4 %wxEventType wxEVT_MEDIA_STATECHANGED  // EVT_MEDIA_STATECHANGED(winid, fn );
-    %wxchkver_2_6_4 %wxEventType wxEVT_MEDIA_PLAY          // EVT_MEDIA_PLAY(winid, fn );
-    %wxchkver_2_6_4 %wxEventType wxEVT_MEDIA_PAUSE         // EVT_MEDIA_PAUSE(winid, fn );
+    %wxEventType wxEVT_MEDIA_STATECHANGED  // EVT_MEDIA_STATECHANGED(winid, fn );
+    %wxEventType wxEVT_MEDIA_PLAY          // EVT_MEDIA_PLAY(winid, fn );
+    %wxEventType wxEVT_MEDIA_PAUSE         // EVT_MEDIA_PAUSE(winid, fn );
 
     wxMediaEvent(wxEventType commandType = wxEVT_NULL, int winid = 0 );
 };

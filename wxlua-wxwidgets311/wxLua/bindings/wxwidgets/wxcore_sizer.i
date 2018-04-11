@@ -312,7 +312,7 @@ public:
 
     bool Hide(wxSizer *sizer, bool recursive = false);
     bool Hide(wxWindow *window, bool recursive = false);
-    bool Hide(size_t index)£»
+    bool Hide(size_t index);
 
     bool IsShown(wxWindow *window) const;
     bool IsShown(wxSizer *sizer) const;
@@ -326,26 +326,12 @@ public:
     // This is the ShowItems() counterpart and returns true if any of the sizer
     // items are shown.
     virtual bool AreAnyItemsShown() const;
-}
-
-
-
-#if %wxchkver_2_8
-
-
-
-
-
-
-
-
+};
 
 // ---------------------------------------------------------------------------
 // wxSizerItemList
 
-//#if wxLUA_USE_wxSizerItemList && !wxUSE_STL
-
-class wxSizerItemList : public wxList
+class wxSizerItemList : public wxObjectList
 {
     //wxSizerItemList() - no constructor, just get this from wxSizer::GetChildren( );
 
@@ -354,8 +340,6 @@ class wxSizerItemList : public wxList
 
     // Use the wxList methods, see also wxNode
 };
-
-//#endif //wxLUA_USE_wxSizerItemList && !wxUSE_STL
 
 // ---------------------------------------------------------------------------
 // wxBoxSizer
@@ -516,8 +500,6 @@ class wxGBSizerItem : public wxSizerItem
 // ---------------------------------------------------------------------------
 // wxWrapSizer
 
-#if %wxchkver_2_9
-
 #include "wx/wrapsizer.h"
 
 enum
@@ -534,24 +516,6 @@ class wxWrapSizer : public wxBoxSizer
     // This will probably not be needed to be called by user code.
     bool InformFirstDirection(int direction, int size, int availableOtherDir);
 };
-
-#endif
-
-// ---------------------------------------------------------------------------
-// wxNotebookSizer - deprecated
-
-#if wxUSE_NOTEBOOK && (!%wxchkver_2_6 );
-
-class wxNotebookSizer : public wxSizer
-{
-    wxNotebookSizer(wxNotebook* notebook );
-    wxNotebook* GetNotebook( );
-};
-
-#endif //wxUSE_NOTEBOOK && (!%wxchkver_2_6 );
-
-// ---------------------------------------------------------------------------
-// wxBookCtrlSizer - also depricated since 2.6
 
 // ---------------------------------------------------------------------------
 // wxStaticBoxSizer
@@ -593,66 +557,32 @@ class wxStdDialogButtonSizer : public wxBoxSizer
 
 #endif //wxUSE_BUTTON
 
-#endif //wxLUA_USE_wxSizer
-
-// ---------------------------------------------------------------------------
-// wxLayoutConstraints - deprecated since 2.2, not updated to 2.6
-
-#if wxLUA_USE_wxLayoutConstraints && (!%wxchkver_2_6 );
-
-#include "wx/layout.h"
-
-enum wxRelationship
-{
-    wxUnconstrained,
-    wxAsIs,
-    wxPercentOf,
-    wxAbove,
-    wxBelow,
-    wxLeftOf,
-    wxRightOf,
-    wxSameAs,
-    wxAbsolute
-};
-
-enum wxEdge
-{
-    wxLeft,
-    wxTop,
-    wxRight,
-    wxBottom,
-    wxWidth,
-    wxHeight,
-    wxCentre,
-    wxCenter,
-    wxCentreX,
-    wxCentreY
-};
+// ----------------------------------------------------------------------------
+// wxLayoutConstraints: the complete set of constraints for a window
+// ----------------------------------------------------------------------------
 
 class wxLayoutConstraints : public wxObject
 {
-    wxLayoutConstraints( );
+    // Edge constraints
+    //wxIndividualLayoutConstraint left;
+    //wxIndividualLayoutConstraint top;
+    //wxIndividualLayoutConstraint right;
+    //wxIndividualLayoutConstraint bottom;
+    
+    // Size constraints
+    //wxIndividualLayoutConstraint width;
+    //wxIndividualLayoutConstraint height;
+    
+    // Centre constraints
+    //wxIndividualLayoutConstraint centreX;
+    //wxIndividualLayoutConstraint centreY;
+
+    wxLayoutConstraints();
+
+    // note that default copy ctor and assignment operators are ok
+
+    //bool SatisfyConstraints(wxWindowBase *win, int *noChanges);
+    bool AreSatisfied() const;
 };
 
-// ---------------------------------------------------------------------------
-// wxIndividualLayoutConstraint
-
-#include "wx/layout.h"
-
-class wxIndividualLayoutConstraint : public wxObject
-{
-    wxIndividualLayoutConstraint( );
-    void Above(wxWindow *otherWin, int margin = 0 );
-    void Absolute(int value );
-    void AsIs( );
-    void Below(wxWindow *otherWin, int margin = 0 );
-    void Unconstrained( );
-    void LeftOf(wxWindow *otherWin, int margin = 0 );
-    void PercentOf(wxWindow *otherWin, wxEdge edge, int per );
-    void RightOf(wxWindow *otherWin, int margin = 0 );
-    void SameAs(wxWindow *otherWin, wxEdge edge, int margin = 0 );
-    void Set(wxRelationship rel, wxWindow *otherWin, wxEdge otherEdge, int value = 0, int margin = 0 );
-};
-
-#endif //wxLUA_USE_wxLayoutConstraints && (!%wxchkver_2_6 );
-
+#endif //wxLUA_USE_wxSizer

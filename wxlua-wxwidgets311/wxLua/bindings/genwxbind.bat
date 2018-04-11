@@ -6,6 +6,7 @@ SET LUA=lua.exe
 
 REM Find a suitable lua.exe to run
 IF EXIST ..\bin\lua.exe SET LUA=..\bin\lua.exe
+IF EXIST ..\bin\Release\lua.exe SET LUA=..\bin\Release\lua.exe
 
 IF EXIST ..\bin\gccud_lib\lua.exe SET LUA=..\bin\gccud_lib\lua.exe
 IF EXIST ..\bin\gccud_dll\lua.exe SET LUA=..\bin\gccud_dll\lua.exe
@@ -63,21 +64,18 @@ echo Generating wxWidgets wxxrc Binding
 echo Generating wxWidgets wxrichtext Binding
 %LUA% -e"rulesFilename=\"wxwidgets/wxrichtext_rules.lua\"" genwxbind.lua
 
-
 echo Generating wxWidgets wxlua Binding
 %LUA% -e"rulesFilename=\"wxlua/wxlua_rules.lua\"" genwxbind.lua
 
 echo Generating wxWidgets wxluadebugger Binding
 %LUA% -e"rulesFilename=\"wxlua_debugger/wxluadebugger_rules.lua\"" genwxbind.lua
 
-
 echo Generating wxWidgets wxdatatypes Binding
 %LUA% -e"rulesFilename=\"wxwidgets/wxdatatypes_rules.lua\"" genwxbind.lua
 
-
 echo Generating wxLuaCan app Binding
-cd ..\apps\wxluacan\src
-..\..\%LUA% -e"rulesFilename=\"wxluacan_rules.lua\"" ../../../bindings/genwxbind.lua
-cd ..\..\..\bindings
+cd ..\apps\wxluacan
+..\..\bindings\%LUA% -e"rulesFilename=\"./wxluacan_rules.lua\"" ../../bindings/genwxbind.lua
+cd ..\..\bindings
 
 echo Done.

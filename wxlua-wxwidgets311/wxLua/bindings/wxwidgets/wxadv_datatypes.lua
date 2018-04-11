@@ -184,7 +184,7 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   wxAboutDialogInfo = {
-    Condition = "wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog",
+    Condition = "wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG",
     IsNumber = false,
     Name = "wxAboutDialogInfo",
     ValueType = "class",
@@ -221,7 +221,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxGDIObject",
     },
-    Condition = "wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL",
+    Condition = "wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL",
     IsNumber = false,
     Name = "wxAnimation",
     ValueType = "class",
@@ -230,13 +230,13 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxControl",
     },
-    Condition = "wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL",
+    Condition = "wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL",
     IsNumber = false,
     Name = "wxAnimationCtrl",
     ValueType = "class",
   },
   wxAnimationType = {
-    Condition = "wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL",
+    Condition = "wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL",
     IsNumber = true,
     Name = "wxAnimationType",
     ValueType = "enum",
@@ -313,7 +313,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxDC",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxDC)",
+    Condition = "wxLUA_USE_wxDC",
     IsNumber = false,
     Name = "wxAutoBufferedPaintDC",
     ValueType = "class",
@@ -333,7 +333,6 @@ wxadv_dataTypeTable =
     ValueType = "enum",
   },
   wxBatteryState = {
-    Condition = "wxCHECK_VERSION(2,8,0)",
     IsNumber = true,
     Name = "wxBatteryState",
     ValueType = "enum",
@@ -424,7 +423,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxSizer",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxBoxSizer",
     ValueType = "class",
@@ -445,7 +444,7 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   wxBrushStyle = {
-    Condition = "(wxCHECK_VERSION(3,1,1)) && (wxLUA_USE_wxColourPenBrush)",
+    Condition = "wxLUA_USE_wxColourPenBrush",
     IsNumber = true,
     Name = "wxBrushStyle",
     ValueType = "enum",
@@ -676,7 +675,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxCommandEvent",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxClipboard && wxUSE_CLIPBOARD)",
+    Condition = "wxLUA_USE_wxClipboard && wxUSE_CLIPBOARD",
     IsNumber = false,
     Name = "wxClipboardTextEvent",
     ValueType = "class",
@@ -693,7 +692,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxControl",
     },
-    Condition = "wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxCollapsiblePane && wxUSE_COLLPANE",
+    Condition = "wxLUA_USE_wxCollapsiblePane && wxUSE_COLLPANE",
     IsNumber = false,
     Name = "wxCollapsiblePane",
     ValueType = "class",
@@ -702,7 +701,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxCommandEvent",
     },
-    Condition = "wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxCollapsiblePane && wxUSE_COLLPANE",
+    Condition = "wxLUA_USE_wxCollapsiblePane && wxUSE_COLLPANE",
     IsNumber = false,
     Name = "wxCollapsiblePaneEvent",
     ValueType = "class",
@@ -744,7 +743,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxPickerBase",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxPicker) && (wxLUA_USE_wxColourPickerCtrl && wxUSE_COLOURPICKERCTRL)",
+    Condition = "(wxLUA_USE_wxColourPickerCtrl && wxUSE_COLOURPICKERCTRL) && (wxLUA_USE_wxPicker)",
     IsNumber = false,
     Name = "wxColourPickerCtrl",
     ValueType = "class",
@@ -753,7 +752,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxCommandEvent",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxPicker) && (wxLUA_USE_wxColourPickerCtrl && wxUSE_COLOURPICKERCTRL)",
+    Condition = "(wxLUA_USE_wxColourPickerCtrl && wxUSE_COLOURPICKERCTRL) && (wxLUA_USE_wxPicker)",
     IsNumber = false,
     Name = "wxColourPickerEvent",
     ValueType = "class",
@@ -977,7 +976,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxControl",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxPicker) && (wxLUA_USE_wxDatePickerCtrl && wxUSE_DATEPICKCTRL)",
+    Condition = "(wxLUA_USE_wxDatePickerCtrl && wxUSE_DATEPICKCTRL) && (wxLUA_USE_wxPicker)",
     IsNumber = false,
     Name = "wxDatePickerCtrl",
     ValueType = "class",
@@ -1102,13 +1101,13 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxFileDirPickerCtrlBase",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxPicker) && (wxLUA_USE_wxDirPickerCtrl && (wxUSE_FILEPICKERCTRL || wxUSE_DIRPICKERCTRL ))",
+    Condition = "(wxLUA_USE_wxDirPickerCtrl && (wxUSE_FILEPICKERCTRL || wxUSE_DIRPICKERCTRL )) && (wxLUA_USE_wxPicker)",
     IsNumber = false,
     Name = "wxDirPickerCtrl",
     ValueType = "class",
   },
   wxDirTraverseResult = {
-    Condition = "(wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxDir)",
+    Condition = "wxLUA_USE_wxDir",
     IsNumber = true,
     Name = "wxDirTraverseResult",
     ValueType = "enum",
@@ -1259,12 +1258,6 @@ wxadv_dataTypeTable =
     Name = "wxEOL",
     ValueType = "enum",
   },
-  wxEdge = {
-    Condition = "(wxLUA_USE_wxLayoutConstraints && (!wxCHECK_VERSION(2,6,0))) && (wxLUA_USE_wxSizer)",
-    IsNumber = true,
-    Name = "wxEdge",
-    ValueType = "enum",
-  },
   wxEndianness = {
     IsNumber = true,
     Name = "wxEndianness",
@@ -1287,7 +1280,6 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   wxEventCategory = {
-    Condition = "wxCHECK_VERSION(3,1,1)",
     IsNumber = true,
     Name = "wxEventCategory",
     ValueType = "enum",
@@ -1334,13 +1326,13 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   wxFSWPathType = {
-    Condition = "wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)",
+    Condition = "wxUSE_FSWATCHER",
     IsNumber = true,
     Name = "wxFSWPathType",
     ValueType = "enum",
   },
   wxFSWWarningType = {
-    Condition = "wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)",
+    Condition = "wxUSE_FSWATCHER",
     IsNumber = true,
     Name = "wxFSWWarningType",
     ValueType = "enum",
@@ -1394,7 +1386,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxPickerBase",
     },
-    Condition = "((wxLUA_USE_wxDirPickerCtrl || wxLUA_USE_wxFilePickerCtrl ) && (wxUSE_FILEPICKERCTRL || wxUSE_DIRPICKERCTRL )) && (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxPicker)",
+    Condition = "((wxLUA_USE_wxDirPickerCtrl || wxLUA_USE_wxFilePickerCtrl ) && (wxUSE_FILEPICKERCTRL || wxUSE_DIRPICKERCTRL )) && (wxLUA_USE_wxPicker)",
     IsNumber = false,
     Name = "wxFileDirPickerCtrlBase",
     ValueType = "class",
@@ -1403,7 +1395,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxCommandEvent",
     },
-    Condition = "((wxLUA_USE_wxDirPickerCtrl || wxLUA_USE_wxFilePickerCtrl ) && (wxUSE_FILEPICKERCTRL || wxUSE_DIRPICKERCTRL )) && (wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxPicker)",
+    Condition = "((wxLUA_USE_wxDirPickerCtrl || wxLUA_USE_wxFilePickerCtrl ) && (wxUSE_FILEPICKERCTRL || wxUSE_DIRPICKERCTRL )) && (wxLUA_USE_wxPicker)",
     IsNumber = false,
     Name = "wxFileDirPickerEvent",
     ValueType = "class",
@@ -1436,7 +1428,6 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   wxFileKind = {
-    Condition = "wxLUA_USE_wxFile && wxUSE_FILE",
     IsNumber = true,
     Name = "wxFileKind",
     ValueType = "enum",
@@ -1465,7 +1456,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxFileDirPickerCtrlBase",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxPicker) && (wxLUA_USE_wxDirPickerCtrl && (wxUSE_FILEPICKERCTRL || wxUSE_DIRPICKERCTRL ))",
+    Condition = "(wxLUA_USE_wxDirPickerCtrl && (wxUSE_FILEPICKERCTRL || wxUSE_DIRPICKERCTRL )) && (wxLUA_USE_wxPicker)",
     IsNumber = false,
     Name = "wxFilePickerCtrl",
     ValueType = "class",
@@ -1492,7 +1483,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxEvtHandler",
     },
-    Condition = "wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)",
+    Condition = "wxUSE_FSWATCHER",
     IsNumber = false,
     Name = "wxFileSystemWatcher",
     ValueType = "class",
@@ -1501,7 +1492,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxEvent",
     },
-    Condition = "wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)",
+    Condition = "wxUSE_FSWATCHER",
     IsNumber = false,
     Name = "wxFileSystemWatcherEvent",
     ValueType = "class",
@@ -1573,13 +1564,13 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxGridSizer",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxFlexGridSizer",
     ValueType = "class",
   },
   wxFlexSizerGrowMode = {
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = true,
     Name = "wxFlexSizerGrowMode",
     ValueType = "enum",
@@ -1675,7 +1666,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxPickerBase",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxPicker) && (wxLUA_USE_wxFontPickerCtrl && wxUSE_FONTPICKERCTRL)",
+    Condition = "(wxLUA_USE_wxFontPickerCtrl && wxUSE_FONTPICKERCTRL) && (wxLUA_USE_wxPicker)",
     IsNumber = false,
     Name = "wxFontPickerCtrl",
     ValueType = "class",
@@ -1684,7 +1675,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxCommandEvent",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxPicker) && (wxLUA_USE_wxFontPickerCtrl && wxUSE_FONTPICKERCTRL)",
+    Condition = "(wxLUA_USE_wxFontPickerCtrl && wxUSE_FONTPICKERCTRL) && (wxLUA_USE_wxPicker)",
     IsNumber = false,
     Name = "wxFontPickerEvent",
     ValueType = "class",
@@ -1696,7 +1687,7 @@ wxadv_dataTypeTable =
     ValueType = "enum",
   },
   wxFontSymbolicSize = {
-    Condition = "(wxCHECK_VERSION(3,1,1)) && (wxLUA_USE_wxFont)",
+    Condition = "wxLUA_USE_wxFont",
     IsNumber = true,
     Name = "wxFontSymbolicSize",
     ValueType = "enum",
@@ -1717,7 +1708,7 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   wxGBPosition = {
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxGBPosition",
     ValueType = "class",
@@ -1726,13 +1717,13 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxSizerItem",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxGBSizerItem",
     ValueType = "class",
   },
   wxGBSpan = {
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxGBSpan",
     ValueType = "class",
@@ -1781,6 +1772,11 @@ wxadv_dataTypeTable =
     Name = "wxGenericValidator",
     ValueType = "class",
   },
+  wxGeometryCentre = {
+    IsNumber = true,
+    Name = "wxGeometryCentre",
+    ValueType = "enum",
+  },
   wxGrid = {
     BaseClasses = {
       [1] = "wxScrolledWindow",
@@ -1800,7 +1796,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxFlexGridSizer",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxGridBagSizer",
     ValueType = "class",
@@ -2034,7 +2030,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxSizer",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxGridSizer",
     ValueType = "class",
@@ -2117,7 +2113,6 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   ["wxHelpEvent::Origin"] = {
-    Condition = "wxCHECK_VERSION(2,8,0)",
     IsNumber = true,
     Name = "wxHelpEvent::Origin",
     ValueType = "enum",
@@ -2135,7 +2130,6 @@ wxadv_dataTypeTable =
     ValueType = "enum",
   },
   wxHitTest = {
-    Condition = "wxCHECK_VERSION(3,1,1)",
     IsNumber = true,
     Name = "wxHitTest",
     ValueType = "enum",
@@ -2144,7 +2138,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxControl",
     },
-    Condition = "wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl",
+    Condition = "wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL",
     IsNumber = false,
     Name = "wxHyperlinkCtrl",
     ValueType = "class",
@@ -2153,7 +2147,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxCommandEvent",
     },
-    Condition = "wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl",
+    Condition = "wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL",
     IsNumber = false,
     Name = "wxHyperlinkEvent",
     ValueType = "class",
@@ -2274,20 +2268,11 @@ wxadv_dataTypeTable =
     Name = "wxImageResizeQuality",
     ValueType = "enum",
   },
-  wxIndividualLayoutConstraint = {
-    BaseClasses = {
-      [1] = "wxObject",
-    },
-    Condition = "(wxLUA_USE_wxLayoutConstraints && (!wxCHECK_VERSION(2,6,0))) && (wxLUA_USE_wxSizer)",
-    IsNumber = false,
-    Name = "wxIndividualLayoutConstraint",
-    ValueType = "class",
-  },
   wxInfoBar = {
     BaseClasses = {
       [1] = "wxControl",
     },
-    Condition = "wxUSE_INFOBAR && wxCHECK_VERSION(2,9,1)",
+    Condition = "wxUSE_INFOBAR",
     IsNumber = false,
     Name = "wxInfoBar",
     ValueType = "class",
@@ -2405,7 +2390,6 @@ wxadv_dataTypeTable =
     ValueType = "enum",
   },
   wxKeyType = {
-    Condition = "wxLUA_USE_wxList && !wxUSE_STL",
     IsNumber = true,
     Name = "wxKeyType",
     ValueType = "enum",
@@ -2458,13 +2442,13 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxObject",
     },
-    Condition = "(wxLUA_USE_wxLayoutConstraints && (!wxCHECK_VERSION(2,6,0))) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxLayoutConstraints",
     ValueType = "class",
   },
   wxLayoutDirection = {
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxUSE_INTL)",
+    Condition = "wxUSE_INTL",
     IsNumber = true,
     Name = "wxLayoutDirection",
     ValueType = "enum",
@@ -2474,12 +2458,6 @@ wxadv_dataTypeTable =
     IsNumber = true,
     Name = "wxLayoutOrientation",
     ValueType = "enum",
-  },
-  wxList = {
-    Condition = "wxLUA_USE_wxList && !wxUSE_STL",
-    IsNumber = false,
-    Name = "wxList",
-    ValueType = "class",
   },
   wxListBox = {
     BaseClasses = {
@@ -2881,7 +2859,7 @@ wxadv_dataTypeTable =
   },
   wxMenuItemList = {
     BaseClasses = {
-      [1] = "wxList",
+      [1] = "wxObjectList",
     },
     Condition = "wxLUA_USE_wxMenu && wxUSE_MENUS",
     IsNumber = false,
@@ -2950,7 +2928,6 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxEvent",
     },
-    Condition = "wxCHECK_VERSION(2,8,0)",
     IsNumber = false,
     Name = "wxMouseCaptureLostEvent",
     ValueType = "class",
@@ -2967,7 +2944,6 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxKeyboardState",
     },
-    Condition = "wxCHECK_VERSION(2,8,0)",
     IsNumber = false,
     Name = "wxMouseState",
     ValueType = "class",
@@ -3008,12 +2984,6 @@ wxadv_dataTypeTable =
     Name = "wxNavigationKeyEvent::dummy",
     ValueType = "enum",
   },
-  wxNode = {
-    Condition = "wxLUA_USE_wxList && !wxUSE_STL",
-    IsNumber = false,
-    Name = "wxNode",
-    ValueType = "class",
-  },
   wxNonOwnedWindow = {
     BaseClasses = {
       [1] = "wxWindow",
@@ -3046,15 +3016,6 @@ wxadv_dataTypeTable =
     Name = "wxNotebookPage",
     ValueType = "class",
   },
-  wxNotebookSizer = {
-    BaseClasses = {
-      [1] = "wxSizer",
-    },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer) && (wxUSE_NOTEBOOK && (!wxCHECK_VERSION(2,6,0)))",
-    IsNumber = false,
-    Name = "wxNotebookSizer",
-    ValueType = "class",
-  },
   wxNotifyEvent = {
     BaseClasses = {
       [1] = "wxCommandEvent",
@@ -3064,13 +3025,26 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   wxObject = {
-    Condition = "wxLUA_USE_wxObject",
     IsNumber = false,
     Name = "wxObject",
     ValueType = "class",
   },
+  wxObjectList = {
+    IsNumber = false,
+    Name = "wxObjectList",
+    ValueType = "class",
+  },
+  ["wxObjectList::const_iterator"] = {
+    IsNumber = false,
+    Name = "wxObjectList::const_iterator",
+    ValueType = "class",
+  },
+  ["wxObjectList::iterator"] = {
+    IsNumber = false,
+    Name = "wxObjectList::iterator",
+    ValueType = "class",
+  },
   wxObjectRefData = {
-    Condition = "wxLUA_USE_wxObject",
     IsNumber = false,
     Name = "wxObjectRefData",
     ValueType = "class",
@@ -3259,7 +3233,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxControl",
     },
-    Condition = "wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxPicker",
+    Condition = "wxLUA_USE_wxPicker",
     IsNumber = false,
     Name = "wxPickerBase",
     ValueType = "class",
@@ -3326,6 +3300,11 @@ wxadv_dataTypeTable =
     Name = "wxPortId",
     ValueType = "enum",
   },
+  wxPosixPermissions = {
+    IsNumber = true,
+    Name = "wxPosixPermissions",
+    ValueType = "enum",
+  },
   wxPostScriptDC = {
     BaseClasses = {
       [1] = "wxDC",
@@ -3339,13 +3318,12 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxEvent",
     },
-    Condition = "(defined(wxHAS_POWER_EVENTS)) && (wxCHECK_VERSION(2,8,0))",
+    Condition = "defined(wxHAS_POWER_EVENTS)",
     IsNumber = false,
     Name = "wxPowerEvent",
     ValueType = "class",
   },
   wxPowerType = {
-    Condition = "wxCHECK_VERSION(2,8,0)",
     IsNumber = true,
     Name = "wxPowerType",
     ValueType = "enum",
@@ -3378,7 +3356,7 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   wxPrintBin = {
-    Condition = "(wxCHECK_VERSION(2,6,0)) && (wxLUA_USE_wxPrint && wxUSE_PRINTING_ARCHITECTURE)",
+    Condition = "wxLUA_USE_wxPrint && wxUSE_PRINTING_ARCHITECTURE",
     IsNumber = true,
     Name = "wxPrintBin",
     ValueType = "enum",
@@ -3604,12 +3582,6 @@ wxadv_dataTypeTable =
     Name = "wxRegionOp",
     ValueType = "enum",
   },
-  wxRelationship = {
-    Condition = "(wxLUA_USE_wxLayoutConstraints && (!wxCHECK_VERSION(2,6,0))) && (wxLUA_USE_wxSizer)",
-    IsNumber = true,
-    Name = "wxRelationship",
-    ValueType = "enum",
-  },
   wxRendererNative = {
     Condition = "wxLUA_USE_wxRenderer",
     IsNumber = false,
@@ -3711,7 +3683,6 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   wxSeekMode = {
-    Condition = "wxLUA_USE_wxFile && wxUSE_FILE",
     IsNumber = true,
     Name = "wxSeekMode",
     ValueType = "enum",
@@ -3725,7 +3696,6 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   wxShowEffect = {
-    Condition = "wxCHECK_VERSION(3,1,1)",
     IsNumber = true,
     Name = "wxShowEffect",
     ValueType = "enum",
@@ -3780,7 +3750,7 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   wxSizeConvention = {
-    Condition = "(wxCHECK_VERSION(3,1,1)) && (wxLUA_USE_wxFileName)",
+    Condition = "wxLUA_USE_wxFileName",
     IsNumber = true,
     Name = "wxSizeConvention",
     ValueType = "enum",
@@ -3796,14 +3766,20 @@ wxadv_dataTypeTable =
   wxSizer = {
     BaseClasses = {
       [1] = "wxObject",
+      [2] = "wxClientDataContainer",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxSizer",
     ValueType = "class",
   },
+  wxSizerFlagBits = {
+    IsNumber = true,
+    Name = "wxSizerFlagBits",
+    ValueType = "enum",
+  },
   wxSizerFlags = {
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxSizerFlags",
     ValueType = "class",
@@ -3812,18 +3788,24 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxObject",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxSizerItem",
     ValueType = "class",
   },
   wxSizerItemList = {
     BaseClasses = {
-      [1] = "wxList",
+      [1] = "wxObjectList",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxSizerItemList",
+    ValueType = "class",
+  },
+  wxSizerSpacer = {
+    Condition = "wxLUA_USE_wxSizer",
+    IsNumber = false,
+    Name = "wxSizerSpacer",
     ValueType = "class",
   },
   wxSlider = {
@@ -3848,7 +3830,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxObject",
     },
-    Condition = "(wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave)",
+    Condition = "(wxLUA_USE_wxWave) && (wxUSE_SOUND)",
     IsNumber = false,
     Name = "wxSound",
     ValueType = "class",
@@ -3923,19 +3905,19 @@ wxadv_dataTypeTable =
     ValueType = "class",
   },
   wxStandardPaths = {
-    Condition = "wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxStandardPaths",
+    Condition = "wxLUA_USE_wxStandardPaths",
     IsNumber = false,
     Name = "wxStandardPaths",
     ValueType = "class",
   },
   ["wxStandardPaths::Dir"] = {
-    Condition = "(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxStandardPaths) && (wxCHECK_VERSION(3,1,1))",
+    Condition = "wxLUA_USE_wxStandardPaths",
     IsNumber = true,
     Name = "wxStandardPaths::Dir",
     ValueType = "enum",
   },
   ["wxStandardPaths::ResourceCat"] = {
-    Condition = "wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxStandardPaths",
+    Condition = "wxLUA_USE_wxStandardPaths",
     IsNumber = true,
     Name = "wxStandardPaths::ResourceCat",
     ValueType = "enum",
@@ -3962,7 +3944,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxBoxSizer",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer) && (wxUSE_STATBOX)",
+    Condition = "(wxLUA_USE_wxSizer) && (wxUSE_STATBOX)",
     IsNumber = false,
     Name = "wxStaticBoxSizer",
     ValueType = "class",
@@ -4004,7 +3986,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxBoxSizer",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxSizer) && (wxUSE_BUTTON)",
+    Condition = "(wxLUA_USE_wxSizer) && (wxUSE_BUTTON)",
     IsNumber = false,
     Name = "wxStdDialogButtonSizer",
     ValueType = "class",
@@ -4016,13 +3998,13 @@ wxadv_dataTypeTable =
     ValueType = "enum",
   },
   wxStockGDI = {
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxColourPenBrush)",
+    Condition = "wxLUA_USE_wxColourPenBrush",
     IsNumber = false,
     Name = "wxStockGDI",
     ValueType = "class",
   },
   ["wxStockGDI::Item"] = {
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxColourPenBrush)",
+    Condition = "wxLUA_USE_wxColourPenBrush",
     IsNumber = true,
     Name = "wxStockGDI::Item",
     ValueType = "enum",
@@ -4056,13 +4038,11 @@ wxadv_dataTypeTable =
     ValueType = "special",
   },
   ["wxString::const_iterator"] = {
-    Condition = "wxCHECK_VERSION(2,9,0)",
     IsNumber = false,
     Name = "wxString::const_iterator",
     ValueType = "class",
   },
   ["wxString::iterator"] = {
-    Condition = "wxCHECK_VERSION(2,9,0)",
     IsNumber = false,
     Name = "wxString::iterator",
     ValueType = "class",
@@ -4163,7 +4143,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxControl",
     },
-    Condition = "wxCHECK_VERSION(2,4,0) && defined(__WXMSW__) && wxLUA_USE_wxTabCtrl && wxUSE_TAB_DIALOG",
+    Condition = "defined(__WXMSW__) && wxLUA_USE_wxTabCtrl && wxUSE_TAB_DIALOG",
     IsNumber = false,
     Name = "wxTabCtrl",
     ValueType = "class",
@@ -4172,7 +4152,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxCommandEvent",
     },
-    Condition = "wxCHECK_VERSION(2,4,0) && defined(__WXMSW__) && wxLUA_USE_wxTabCtrl && wxUSE_TAB_DIALOG",
+    Condition = "defined(__WXMSW__) && wxLUA_USE_wxTabCtrl && wxUSE_TAB_DIALOG",
     IsNumber = false,
     Name = "wxTabEvent",
     ValueType = "class",
@@ -4398,15 +4378,6 @@ wxadv_dataTypeTable =
     Name = "wxToolBarBase",
     ValueType = "class",
   },
-  wxToolBarSimple = {
-    BaseClasses = {
-      [1] = "wxToolBarBase",
-    },
-    Condition = "(!wxCHECK_VERSION(2,6,0)) && (wxLUA_USE_wxToolbar)",
-    IsNumber = false,
-    Name = "wxToolBarSimple",
-    ValueType = "class",
-  },
   wxToolBarToolBase = {
     BaseClasses = {
       [1] = "wxObject",
@@ -4435,7 +4406,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxBookCtrlBase",
     },
-    Condition = "wxCHECK_VERSION(2,8,0) && wxUSE_TOOLBOOK && wxLUA_USE_wxToolbook",
+    Condition = "wxLUA_USE_wxToolbook && wxUSE_TOOLBOOK",
     IsNumber = false,
     Name = "wxToolbook",
     ValueType = "class",
@@ -4444,7 +4415,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxBookCtrlBaseEvent",
     },
-    Condition = "wxCHECK_VERSION(2,8,0) && wxUSE_TOOLBOOK && wxLUA_USE_wxToolbook",
+    Condition = "wxLUA_USE_wxToolbook && wxUSE_TOOLBOOK",
     IsNumber = false,
     Name = "wxToolbookEvent",
     ValueType = "class",
@@ -4511,7 +4482,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxBookCtrlBase",
     },
-    Condition = "wxCHECK_VERSION(2,8,0) && wxUSE_TREEBOOK && wxLUA_USE_wxTreebook",
+    Condition = "wxLUA_USE_wxTreebook && wxUSE_TREEBOOK",
     IsNumber = false,
     Name = "wxTreebook",
     ValueType = "class",
@@ -4520,7 +4491,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxBookCtrlBaseEvent",
     },
-    Condition = "wxCHECK_VERSION(2,8,0) && wxUSE_TREEBOOK && wxLUA_USE_wxTreebook",
+    Condition = "wxLUA_USE_wxTreebook && wxUSE_TREEBOOK",
     IsNumber = false,
     Name = "wxTreebookEvent",
     ValueType = "class",
@@ -4535,7 +4506,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxTextDataObject",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxDataObject && wxUSE_DATAOBJ)",
+    Condition = "wxLUA_USE_wxDataObject && wxUSE_DATAOBJ",
     IsNumber = false,
     Name = "wxURLDataObject",
     ValueType = "class",
@@ -4612,15 +4583,6 @@ wxadv_dataTypeTable =
     Name = "wxVisualAttributes",
     ValueType = "class",
   },
-  wxWave = {
-    BaseClasses = {
-      [1] = "wxObject",
-    },
-    Condition = "(defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)",
-    IsNumber = false,
-    Name = "wxWave",
-    ValueType = "class",
-  },
   wxWinHelpController = {
     BaseClasses = {
       [1] = "wxHelpControllerBase",
@@ -4675,7 +4637,7 @@ wxadv_dataTypeTable =
   },
   wxWindowList = {
     BaseClasses = {
-      [1] = "wxList",
+      [1] = "wxObjectList",
     },
     Condition = "wxLUA_USE_wxWindowList && !wxUSE_STL",
     IsNumber = false,
@@ -4737,7 +4699,7 @@ wxadv_dataTypeTable =
     BaseClasses = {
       [1] = "wxBoxSizer",
     },
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxCHECK_VERSION(2,9,0)) && (wxLUA_USE_wxSizer)",
+    Condition = "wxLUA_USE_wxSizer",
     IsNumber = false,
     Name = "wxWrapSizer",
     ValueType = "class",
@@ -4799,27 +4761,10 @@ wxadv_preprocConditionTable =
   ["%win"] = "defined(__WXMSW__)",
   ["%wince"] = "defined(__WXWINCE__)",
   ["%wxHAS_NATIVE_RENDERER"] = "defined(wxHAS_NATIVE_RENDERER)",
-  ["%wxchkver_2_4"] = "wxCHECK_VERSION(2,4,0)",
   ["%wxchkver_2_6"] = "wxCHECK_VERSION(2,6,0)",
   ["%wxchkver_2_8"] = "wxCHECK_VERSION(2,8,0)",
-  ["%wxchkver_2_8_0"] = "wxCHECK_VERSION(2,8,0)",
-  ["%wxchkver_2_8_1"] = "wxCHECK_VERSION(2,8,1)",
-  ["%wxchkver_2_8_4"] = "wxCHECK_VERSION(2,8,4)",
-  ["%wxchkver_2_8_5"] = "wxCHECK_VERSION(2,8,5)",
-  ["%wxchkver_2_8_8"] = "wxCHECK_VERSION(2,8,8)",
-  ["%wxchkver_2_9"] = "wxCHECK_VERSION(2,9,0)",
-  ["%wxchkver_2_9_0"] = "wxCHECK_VERSION(2,9,0)",
-  ["%wxchkver_2_9_1"] = "wxCHECK_VERSION(2,9,1)",
-  ["%wxchkver_2_9_2"] = "wxCHECK_VERSION(2,9,2)",
-  ["%wxchkver_2_9_3"] = "wxCHECK_VERSION(2,9,3)",
-  ["%wxchkver_2_9_4"] = "wxCHECK_VERSION(2,9,4)",
-  ["%wxchkver_2_9_5"] = "wxCHECK_VERSION(2,9,5)",
-  ["%wxchkver_3_0"] = "wxCHECK_VERSION(3,0,0)",
   ["%wxchkver_3_1"] = "wxCHECK_VERSION(3,1,0)",
-  ["%wxchkver_3_1_0"] = "wxCHECK_VERSION(3,1,0)",
-  ["%wxchkver_3_1_1"] = "wxCHECK_VERSION(3,1,1)",
   ["%wxcompat_2_6"] = "(defined(WXWIN_COMPATIBILITY_2_6) && WXWIN_COMPATIBILITY_2_6)",
-  ["%wxcompat_2_8"] = "(defined(WXWIN_COMPATIBILITY_2_8) && WXWIN_COMPATIBILITY_2_8)",
   ["%x11"] = "defined(__WXX11__)",
   WXWIN_COMPATIBILITY_2 = "(defined(WXWIN_COMPATIBILITY_2) && WXWIN_COMPATIBILITY_2)",
   WXWIN_COMPATIBILITY_2_2 = "(defined(WXWIN_COMPATIBILITY_2_2) && WXWIN_COMPATIBILITY_2_2)",

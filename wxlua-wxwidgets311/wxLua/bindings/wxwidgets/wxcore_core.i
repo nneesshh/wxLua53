@@ -252,12 +252,12 @@ class %delete wxTextValidator : public wxValidator
     // C++ Func: wxTextValidator(long style = wxFILTER_NONE, wxString *valPtr = NULL );
     wxTextValidator(long style = wxFILTER_NONE, wxLuaObject* stringObj = NULL );
 
-    %wxchkver_2_6 wxArrayString& GetExcludes( );
-    %wxchkver_2_6 wxArrayString& GetIncludes( );
+    wxArrayString& GetExcludes( );
+    wxArrayString& GetIncludes( );
     long GetStyle() const;
     void SetStyle(long style );
-    %wxchkver_2_6 void SetIncludes(const wxArrayString& includes );
-    %wxchkver_2_6 void SetExcludes(const wxArrayString& excludes );
+    void SetIncludes(const wxArrayString& includes );
+    void SetExcludes(const wxArrayString& excludes );
 };
 
 #endif //wxLUA_USE_wxTextValidator
@@ -315,10 +315,8 @@ class %delete wxMemoryFSHandler : public wxFileSystemHandler
     static void AddFile(const wxString& filename, const wxString& textdata);
     //static void AddFile(const wxString& filename, const void *binarydata, size_t size );
 
-#if %wxchkver_2_8_5
     static void AddFileWithMimeType(const wxString& filename, const wxString& textdata, const wxString& mimetype);
     //static void AddFileWithMimeType(const wxString& filename, const void *binarydata, size_t size, const wxString& mimetype );
-#endif // %wxchkver_2_8_5
 
 #if wxUSE_IMAGE
     static void AddFile(const wxString& filename, const wxImage& image, wxBitmapType type);

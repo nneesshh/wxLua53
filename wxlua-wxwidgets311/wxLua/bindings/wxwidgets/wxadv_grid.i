@@ -34,7 +34,7 @@
 #define_wxstring wxGRID_VALUE_CHOICEINT
 #define_wxstring wxGRID_VALUE_DATETIME
 
-%wxchkver_2_8_8 #define wxGRID_AUTOSIZE
+#define wxGRID_AUTOSIZE
 
 // ---------------------------------------------------------------------------
 // wxGridCellWorker
@@ -138,16 +138,14 @@ class %delete wxGridCellEditor : public wxGridCellWorker
 
     //virtual void Create(wxWindow* parent, wxWindowID id, wxEvtHandler* evtHandler );
     virtual void BeginEdit(int row, int col, wxGrid* grid );
-    !%wxchkver_2_9_2 virtual bool EndEdit(int row, int col, wxGrid* grid );
-    %wxchkver_2_9_2 virtual bool EndEdit(int row, int col, const wxGrid *grid, const wxString& oldval, wxString *newval );
+    virtual bool EndEdit(int row, int col, const wxGrid *grid, const wxString& oldval, wxString *newval);
     virtual void Reset( );
     //virtual wxGridCellEditor *Clone() const;
     virtual void SetSize(const wxRect& rect );
     virtual void Show(bool show, wxGridCellAttr *attr = NULL );
     
-    !%wxchkver_2_9_5 virtual void PaintBackground(const wxRect& rectCell, wxGridCellAttr *attr );
-    //%wxchkver_2_9_5  virtual void PaintBackground(const wxRect& rectCell, const wxGridCellAttr &attr ); // it very briefly had this signature
-    %wxchkver_2_9_5  virtual void PaintBackground(wxDC& dc, const wxRect& rectCell, const wxGridCellAttr &attr );
+    //virtual void PaintBackground(const wxRect& rectCell, const wxGridCellAttr &attr ); // it very briefly had this signature
+    virtual void PaintBackground(wxDC& dc, const wxRect& rectCell, const wxGridCellAttr &attr);
 
     virtual bool IsAcceptedKey(wxKeyEvent& event );
     virtual void StartingKey(wxKeyEvent& event );
@@ -453,8 +451,6 @@ class %delete wxGridStringTable : public wxGridTableBase
 
 enum wxGridTableRequest
 {
-    wxGRIDTABLE_REQUEST_VIEW_GET_VALUES,
-    wxGRIDTABLE_REQUEST_VIEW_SEND_VALUES,
     wxGRIDTABLE_NOTIFY_ROWS_INSERTED,
     wxGRIDTABLE_NOTIFY_ROWS_APPENDED,
     wxGRIDTABLE_NOTIFY_ROWS_DELETED,
@@ -667,14 +663,8 @@ class wxGrid : public wxScrolledWindow
     void    EnableDragRowSize( bool enable = true );
     void    DisableDragRowSize( );
 
-    #if !%wxchkver_3_0 || %wxcompat_2_8 
-        bool CanDragColSize( );
-        bool CanDragRowSize( );
-    #endif
-    #if %wxchkver_3_0 
-        bool CanDragColSize( int col );
-        bool CanDragRowSize( int row );
-    #endif
+    bool    CanDragColSize( int col );
+    bool    CanDragRowSize( int row );
 
     void    EnableDragColSize( bool enable = true );
     void    DisableDragColSize( );
@@ -868,16 +858,9 @@ class %delete wxGridEvent : public wxNotifyEvent
     %wxEventType wxEVT_GRID_EDITOR_HIDDEN      // EVT_GRID_EDITOR_HIDDEN(fn );
     %wxEventType wxEVT_GRID_CELL_BEGIN_DRAG    // EVT_GRID_CELL_BEGIN_DRAG(fn );
 
-    #if !%wxchkver_3_0 || %wxcompat_2_8
-        %wxEventType wxEVT_GRID_CELL_CHANGE    // EVT_GRID_CELL_CHANGE(fn );
-    #endif
-    #if %wxchkver_3_0 
-        %wxEventType wxEVT_GRID_CELL_CHANGING  // EVT_GRID_CELL_CHANGE(fn );
-        %wxEventType wxEVT_GRID_CELL_CHANGED   // EVT_GRID_CELL_CHANGE(fn );
-    #endif
-
-    !%wxchkver_2_9_0 wxGridEvent(int id, wxEventType type, wxObject* obj, int row = -1, int col = -1, int x = -1, int y = -1, bool sel = true, bool control = false, bool shift = false, bool alt = false, bool meta = false );
-
+    %wxEventType wxEVT_GRID_CELL_CHANGING      // EVT_GRID_CELL_CHANGE(fn );
+    %wxEventType wxEVT_GRID_CELL_CHANGED       // EVT_GRID_CELL_CHANGE(fn );
+    
     virtual int GetRow( );
     virtual int GetCol( );
     wxPoint     GetPosition( );
@@ -896,8 +879,6 @@ class %delete wxGridSizeEvent : public wxNotifyEvent
     %wxEventType wxEVT_GRID_ROW_SIZE           // EVT_GRID_CMD_ROW_SIZE(id, fn );
     %wxEventType wxEVT_GRID_COL_SIZE           // EVT_GRID_CMD_COL_SIZE(id, fn );
 
-    !%wxchkver_2_9_0 wxGridSizeEvent(int id, wxEventType type, wxObject* obj, int rowOrCol = -1, int x = -1, int y = -1, bool control = false, bool shift = false, bool alt = false, bool meta = false );
-
     int         GetRowOrCol( );
     wxPoint     GetPosition( );
     bool        ShiftDown( );
@@ -912,8 +893,6 @@ class %delete wxGridSizeEvent : public wxNotifyEvent
 class %delete wxGridRangeSelectEvent : public wxNotifyEvent
 {
     %wxEventType wxEVT_GRID_RANGE_SELECT       // EVT_GRID_CMD_RANGE_SELECT(id, fn );
-
-    !%wxchkver_2_9_0 wxGridRangeSelectEvent(int id, wxEventType type, wxObject* obj, const wxGridCellCoords& topLeft, const wxGridCellCoords& bottomRight, bool sel = true, bool control = false, bool shift = false, bool alt = false, bool meta = false );
 
     wxGridCellCoords GetTopLeftCoords( );
     wxGridCellCoords GetBottomRightCoords( );

@@ -14,12 +14,9 @@ wxString wxNow( );
 long wxGetLocalTime( );
 long wxGetUTCTime( );
 wxLongLong wxGetLocalTimeMillis( );
-%wxcompat_2_6 void wxStartTimer();                           // deprecated in 2.8 use wxStopWatch
-%wxcompat_2_6 long wxGetElapsedTime(bool resetTimer = true); // deprecated in 2.8 use wxStopWatch
 void wxSleep(int secs );
-%wxchkver_2_6 void wxMilliSleep(unsigned long milliseconds );
-%wxchkver_2_6 void wxMicroSleep(unsigned long microseconds );
-!%wxchkver_2_6 void wxUsleep(unsigned long milliseconds );
+void wxMilliSleep(unsigned long milliseconds );
+void wxMicroSleep(unsigned long microseconds );
 
 // ---------------------------------------------------------------------------
 // wxDateTime
@@ -56,7 +53,7 @@ enum wxDateTime::TZ
     GMT10,
     GMT11,
     GMT12,
-    %wxchkver_2_8 GMT13,
+    GMT13,
     WET,
     WEST,
     CET,
@@ -82,8 +79,8 @@ enum wxDateTime::TZ
     A_CST,
     A_EST,
     A_ESST,
-    %wxchkver_2_8 NZST,
-    %wxchkver_2_8 NZDT,
+    NZST,
+    NZDT,
     UTC
 };
 
@@ -236,10 +233,7 @@ class %delete wxDateTime
     bool SetToLastWeekDay(wxDateTime::WeekDay weekday, wxDateTime::Month month = wxDateTime::Inv_Month, int year = wxDateTime::Inv_Year );
     wxDateTime GetLastWeekDay(wxDateTime::WeekDay weekday, wxDateTime::Month month = wxDateTime::Inv_Month, int year = wxDateTime::Inv_Year );
 
-    !%wxchkver_2_6 bool SetToTheWeek(wxDateTime::wxDateTime_t numWeek, wxDateTime::WeekDay weekday = wxDateTime::Mon );
-    !%wxchkver_2_6 wxDateTime GetWeek(wxDateTime::wxDateTime_t numWeek, wxDateTime::WeekDay weekday = wxDateTime::Mon) const;
-
-    %wxchkver_2_6 static wxDateTime SetToWeekOfYear(int year, wxDateTime::wxDateTime_t numWeek, wxDateTime::WeekDay weekday = wxDateTime::Mon );
+    static wxDateTime SetToWeekOfYear(int year, wxDateTime::wxDateTime_t numWeek, wxDateTime::WeekDay weekday = wxDateTime::Mon );
     wxDateTime& SetToLastMonthDay(wxDateTime::Month month = wxDateTime::Inv_Month, int year = wxDateTime::Inv_Year );
     wxDateTime GetLastMonthDay(wxDateTime::Month month = wxDateTime::Inv_Month, int year = wxDateTime::Inv_Year) const;
     wxDateTime& SetToYearDay(wxDateTime::wxDateTime_t yday );
@@ -312,31 +306,31 @@ class %delete wxDateTime
 
     // %override [bool, lua String remainder on error] ParseRfc822Date(const wxString& date );
     // C++ Func: bool ParseRfc822Date(const wxString& date, wxString::const_iterator *end );
-    %wxchkver_2_9 bool ParseRfc822Date(const wxString& date );
+    bool ParseRfc822Date(const wxString& date );
+    
     // %override [bool, lua String remainder on error] ParseFormat(const wxString& date, wxString format, const wxDateTime& dateDef );
     // C++ Func: bool ParseFormat(const wxString& date, wxString format, const wxDateTime& dateDef, wxString::const_iterator *end );
-    %wxchkver_2_9 bool ParseFormat(const wxString& date, wxString format, const wxDateTime& dateDef );
+    bool ParseFormat(const wxString& date, wxString format, const wxDateTime& dateDef );
+    
     // %override [bool, lua String remainder on error] ParseFormat(const wxString& date, wxString format );
     // C++ Func: bool ParseFormat(const wxString& date, wxString format, wxString::const_iterator *end );
-    %wxchkver_2_9 bool ParseFormat(const wxString& date, wxString format );
+    bool ParseFormat(const wxString& date, wxString format );
+    
     // %override [bool, lua String remainder on error] ParseFormat(const wxString& date );
     // C++ Func: bool ParseFormat(const wxString& date, wxString::const_iterator *end );
-    %wxchkver_2_9 bool ParseFormat(const wxString& date );
+    bool ParseFormat(const wxString& date );
+    
     // %override [bool, lua String remainder on error] ParseDateTime(const wxString& date );
     // C++ Func: bool ParseDateTime(const wxString& date, wxString::const_iterator *end );
-    %wxchkver_2_9 bool ParseDateTime(const wxString& datetime );
+    bool ParseDateTime(const wxString& datetime );
+    
     // %override [bool, lua String remainder on error] ParseDate(const wxString& date );
     // C++ Func: bool ParseDate(const wxString& date, wxString::const_iterator *end );
-    %wxchkver_2_9 bool ParseDate(const wxString& date );
+    bool ParseDate(const wxString& date );
+    
     // %override [bool, lua String remainder on error] ParseTime(const wxString& date );
     // C++ Func: bool ParseTime(const wxString& date, wxString::const_iterator *end );
-    %wxchkver_2_9 bool ParseTime(const wxString& time );
-
-    !%wxchkver_2_9 wxString ParseRfc822Date(wxString date );
-    !%wxchkver_2_9 wxString ParseFormat(wxString date, wxString format = "%c", const wxDateTime& dateDef = wxDefaultDateTime );
-    !%wxchkver_2_9 wxString ParseDateTime(wxString datetime );
-    !%wxchkver_2_9 wxString ParseDate(wxString date );
-    !%wxchkver_2_9 wxString ParseTime(wxString time );
+    bool ParseTime(const wxString& time );
 
     wxString FormatDate() const;
     wxString FormatTime() const;
@@ -887,18 +881,16 @@ enum wxLocaleInfo
 
 enum wxLocaleInitFlags
 {
-    wxLOCALE_LOAD_DEFAULT,       // load wxwin.mo?
-    wxLOCALE_CONV_ENCODING      // convert encoding on the fly?
+    wxLOCALE_DONT_LOAD_DEFAULT,     // don't load wxwin.mo
+    wxLOCALE_LOAD_DEFAULT,          // load wxwin.mo?
 };
 
-#if %wxchkver_2_8
 enum wxLayoutDirection
 {
     wxLayout_Default,
     wxLayout_LeftToRight,
     wxLayout_RightToLeft
 };
-#endif %wxchkver_2_8
 
 struct %delete wxLanguageInfo
 {
@@ -907,28 +899,27 @@ struct %delete wxLanguageInfo
     int Language;                   // wxLanguage id
     wxString CanonicalName;         // Canonical name, e.g. fr_FR
     wxString Description;           // human-readable name of the language
-    %wxchkver_2_8 wxLayoutDirection LayoutDirection;
+    wxLayoutDirection LayoutDirection;
 };
-
 
 class %delete wxLocale
 {
     // call Init() if you use this ctor
-    wxLocale( );
+    wxLocale();
 
     // the ctor has a side effect of changing current locale
     // name (for messages),  dir prefix (for msg files), locale (for setlocale), preload wxstd.mo?, convert Win<->Unix if necessary?
-    wxLocale(const wxString& szName, const wxString& szShort = "", const wxString& szLocale = "", bool bLoadDefault = true, bool bConvertEncoding = false );
+    wxLocale(const wxString& name, const wxString& shortName = "", const wxString& locale = "", bool bLoadDefault = true);
 
     // wxLanguage id or custom language
-    wxLocale(int language, int flags = wxLOCALE_LOAD_DEFAULT | wxLOCALE_CONV_ENCODING );
+    wxLocale(int language, int flags = wxLOCALE_LOAD_DEFAULT);
 
-    // the same as a function (returns true on success );
-    //bool Init(const wxChar *szName, const wxChar *szShort = (const wxChar *) NULL, const wxChar *szLocale = (const wxChar *) NULL, bool bLoadDefault = true, bool bConvertEncoding = false );
-    bool Init(const wxString &szName, const wxString &szShort = "", const wxString &szLocale = "", bool bLoadDefault = true, bool bConvertEncoding = false );
+    // the same as a function (returns true on success)
+    //bool Init(const wxString& name, const wxString& shortName = wxEmptyString, const wxString& locale = wxEmptyString, bool bLoadDefault = true);
+    bool Init(const wxString& name, const wxString& shortName = "", const wxString& locale = "", bool bLoadDefault = true);
 
-    // same as second ctor (returns true on success );
-    bool Init(int language = wxLANGUAGE_DEFAULT, int flags = wxLOCALE_LOAD_DEFAULT | wxLOCALE_CONV_ENCODING);
+    // same as second ctor (returns true on success)
+    bool Init(int language = wxLANGUAGE_DEFAULT, int flags = wxLOCALE_LOAD_DEFAULT);
 
     // Try to get user's (or OS's) preferred language setting.
     // Return wxLANGUAGE_UNKNOWN if language-guessing algorithm failed
@@ -944,18 +935,28 @@ class %delete wxLocale
 
     // get the values of the given locale-dependent datum: the current locale
     // is used, the US default value is returned if everything else fails
-    static wxString GetInfo(wxLocaleInfo index, wxLocaleCategory cat);
+    static wxString GetInfo(wxLocaleInfo index, wxLocaleCategory cat = wxLOCALE_CAT_DEFAULT);
+    
+    // Same as GetInfo() but uses current locale at the OS level to retrieve
+    // the information. Normally it should be the same as the one used by
+    // GetInfo() but there are two exceptions: the most important one is that
+    // if no locale had been set, GetInfo() would fall back to "C" locale,
+    // while this one uses the default OS locale. Another, more rare, one is
+    // that some locales might not supported by the OS.
+    //
+    // Currently this is the same as GetInfo() under non-MSW platforms.
+    static wxString GetOSInfo(wxLocaleInfo index, wxLocaleCategory cat = wxLOCALE_CAT_DEFAULT);
 
     // return true if the locale was set successfully
     bool IsOk() const;
 
     // returns locale name
-    wxString GetLocale() const;
+    const wxString GetLocale() const;
 
     // return current locale wxLanguage value
     int GetLanguage() const;
 
-    // return locale name to be passed to setlocale( );
+    // return locale name to be passed to setlocale()
     wxString GetSysName() const;
 
     // return 'canonical' name, i.e. in the form of xx[_YY], where xx is
@@ -977,14 +978,15 @@ class %delete wxLocale
     // The loaded catalog will be used for message lookup by GetString().
     //
     // Returns 'true' if it was successfully loaded
-    bool AddCatalog(const wxString& szDomain);
-    bool AddCatalog(const wxString& szDomain, wxLanguage msgIdLanguage, const wxString& msgIdCharset);
+    bool AddCatalog(const wxString& domain);
+    bool AddCatalog(const wxString& domain, wxLanguage msgIdLanguage);
+    bool AddCatalog(const wxString& domain, wxLanguage msgIdLanguage, const wxString& msgIdCharset);
 
     // check if the given locale is provided by OS and C run time
-    %wxchkver_2_8 static bool IsAvailable(int lang);
+    static bool IsAvailable(int lang);
 
     // check if the given catalog is loaded
-    bool IsLoaded(const wxString& szDomain) const;
+    bool IsLoaded(const wxString& domain) const;
 
     // Retrieve the language info struct for the given language
     //
@@ -995,9 +997,13 @@ class %delete wxLocale
     // is not in database
     static wxString GetLanguageName(int lang);
 
+    // Returns ISO code ("canonical name") of language or empty string if the
+    // language is not in database
+    static wxString GetLanguageCanonicalName(int lang);
+
     // Find the language for the given locale string which may be either a
     // canonical ISO 2 letter language code ("xx"), a language code followed by
-    // the country code ("xx_XX") or a Windows full language name ("Xxxxx..." );
+    // the country code ("xx_XX") or a Windows full language name ("Xxxxx...")
     //
     // Returns NULL if no info found, pointer must *not* be deleted by caller
     static const wxLanguageInfo *FindLanguageInfo(const wxString& locale);
@@ -1009,36 +1015,32 @@ class %delete wxLocale
 
     // retrieve the translation for a string in all loaded domains unless
     // the szDomain parameter is specified (and then only this domain is
-    // searched );
+    // searched)
     // n - additional parameter for PluralFormsParser
     //
     // return original string if translation is not available
     // (in this case an error message is generated the first time
-    //  a string is not found; use wxLogNull to suppress it );
+    //  a string is not found; use wxLogNull to suppress it)
     //
     // domains are searched in the last to first order, i.e. catalogs
     // added later override those added before.
-    %wxchkver_2_9  virtual wxString GetString(const wxString& szOrigString, const wxString& szDomain = "") const;
-    !%wxchkver_2_9 virtual wxString GetString(const wxString& szOrigString, const wxChar* szDomain = NULL) const;
+    const wxString& GetString(const wxString& origString, const wxString& domain = wxEmptyString) const;
+    
     // plural form version of the same:
-    %wxchkver_2_9  virtual wxString GetString(const wxString& szOrigString, const wxString& szOrigString2, size_t n, const wxString& szDomain = "") const;
-    !%wxchkver_2_9 virtual wxString GetString(const wxString& szOrigString, const wxString& szOrigString2, size_t n, const wxChar* szDomain = NULL) const;
+    const wxString& GetString(const wxString& origString, const wxString& origString2, unsigned int n, const wxString& domain = wxEmptyString) const;
 
     // Returns the current short name for the locale
     const wxString& GetName() const;
 
     // return the contents of .po file header
-    wxString GetHeaderValue( const wxString& szHeader, const wxString& szDomain = "" ) const;
+    wxString GetHeaderValue(const wxString& header, const wxString& domain = wxEmptyString) const;
 };
 
 wxLocale* wxGetLocale( );
 
-%wxchkver_2_9  wxString wxGetTranslation(const wxString& sz, const wxString& domain = "" );
-!%wxchkver_2_9 && %wxchkver_2_8  wxString wxGetTranslation(const wxString& sz, const wxChar* domain=NULL );
-!%wxchkver_2_8 wxString wxGetTranslation(const wxString& sz );
+wxString wxGetTranslation(const wxString& sz, const wxString& domain = "" );
 
-%wxchkver_2_9  %rename wxGetTranslationPlural wxString wxGetTranslation(const wxString& sz1, const wxString& sz2, size_t n, const wxString& domain = "" );
-!%wxchkver_2_9 && %wxchkver_2_8  %rename wxGetTranslationPlural wxString wxGetTranslation(const wxString& sz1, const wxString& sz2, size_t n, const wxChar* domain=NULL );
-!%wxchkver_2_8 %rename wxGetTranslationPlural wxString wxGetTranslation(const wxString& sz1, const wxString& sz2, size_t n );
+%rename wxGetTranslationPlural wxString wxGetTranslation(const wxString& sz1, const wxString& sz2, size_t n, const wxString& domain = "" );
+
 
 #endif //wxUSE_INTL

@@ -55,84 +55,86 @@ bool wxCHECK_VERSION_FULL(int major, int minor, int release, int subrel); // act
 
 // ---------------------------------------------------------------------------
 
+/*  symbolic constant used by all Find()-like functions returning positive */
+/*  integer on success as failure indicator */
+#define wxNOT_FOUND //      (-1)
+
+/* the default value for some length parameters meaning that the string is */
+/* NUL-terminated */
+#define wxNO_LEN // ((size_t)-1)
+
+#include "wx/utils.h"
+
+// Get OS description as a user-readable string
+wxString wxGetOsDescription();
+
+// %override [int version, int major, int minor, int micro] wxGetOsVersion();
+// wxOperatingSystemId wxGetOsVersion(int *verMaj = NULL, int *verMin = NULL, int *verMicro = NULL);
+// Get OS version
+int wxGetOsVersion();
+
+// Check is OS version is at least the specified major and minor version
+bool wxCheckOsVersion(int majorVsn, int minorVsn = 0, int microVsn = 0);
+
+// Get free memory in bytes, or -1 if cannot determine amount (e.g. on UNIX)
+wxLongLong wxGetFreeMemory();
+
 #if wxUSE_ON_FATAL_EXCEPTION
     bool wxHandleFatalExceptions(bool doIt = true);
 #endif // wxUSE_ON_FATAL_EXCEPTION
 
-// ---------------------------------------------------------------------------
-// Network, user, and OS functions
-
-#if !%wxchkver_2_8
-enum
-{
-    wxUNKNOWN_PLATFORM,
-    wxCURSES,
-    wxXVIEW_X,
-    wxMOTIF_X,
-    wxCOSE_X,
-    wxNEXTSTEP,
-    wxMAC,
-    wxMAC_DARWIN,
-    wxBEOS,
-    wxGTK,
-    wxGTK_WIN32,
-    wxGTK_OS2,
-    wxGTK_BEOS,
-    wxGEOS,
-    wxOS2_PM,
-    wxWINDOWS,
-    wxMICROWINDOWS,
-    wxPENWINDOWS,
-    wxWINDOWS_NT,
-    wxWIN32S,
-    wxWIN95,
-    wxWIN386,
-    wxWINDOWS_CE,
-    wxWINDOWS_POCKETPC,
-    wxWINDOWS_SMARTPHONE,
-    wxMGL_UNIX,
-    wxMGL_X,
-    wxMGL_WIN32,
-    wxMGL_OS2,
-    wxMGL_DOS,
-    wxWINDOWS_OS2,
-    wxUNIX,
-    wxX11,
-    wxPALMOS,
-    wxDOS
-};
-#endif // !%wxchkver_2_8
-
-// ---------------------------------------------------------------------------
-
-#define wxNOT_FOUND        //      (-1)
-
-// ---------------------------------------------------------------------------
-
-wxString wxGetEmailAddress();
-wxLongLong wxGetFreeMemory();
-wxString wxGetFullHostName();
-wxString wxGetHomeDir();
-wxString wxGetHostName();
-wxString wxGetOsDescription();
-// %override [int version, int major, int minor] wxGetOsVersion();
-// int wxGetOsVersion(int *major = NULL, int *minor = NULL);
-int wxGetOsVersion();
-
-wxString wxGetUserHome(const wxString& user = "");
-wxString wxGetUserId();
-wxString wxGetUserName();
-
-// ---------------------------------------------------------------------------
-// Environmental access functions
+// ----------------------------------------------------------------------------
+// Environment variables
+// ----------------------------------------------------------------------------
 
 // %override [bool lua_string] wxGetEnv(const wxString& var);
 // Returns success and the string environment variable.
 // C++ Func: bool wxGetEnv(const wxString& var, wxString *value);
 bool wxGetEnv(const wxString& var);
+
+// set the env var name to the given value, return true on success
 bool wxSetEnv(const wxString& var, const wxString& value);
+
+// remove the env var from environment
 bool wxUnsetEnv(const wxString& var);
 
+// Retrieve the complete environment by filling specified map.
+// Returns true on success or false if an error occurred.
+//bool wxGetEnvMap(wxEnvVariableHashMap *map);
+
+// ----------------------------------------------------------------------------
+// Network and username functions.
+// ----------------------------------------------------------------------------
+
+// NB: "char *" functions are deprecated, use wxString ones!
+
+// Get eMail address
+//bool wxGetEmailAddress(wxChar *buf, int maxSize);
+wxString wxGetEmailAddress();
+
+// Get hostname.
+//bool wxGetHostName(wxChar *buf, int maxSize);
+wxString wxGetHostName();
+
+// Get FQDN
+wxString wxGetFullHostName();
+//bool wxGetFullHostName(wxChar *buf, int maxSize);
+
+// Get user ID e.g. jacs (this is known as login name under Unix)
+//bool wxGetUserId(wxChar *buf, int maxSize);
+wxString wxGetUserId();
+
+// Get user name e.g. Julian Smart
+//bool wxGetUserName(wxChar *buf, int maxSize);
+wxString wxGetUserName();
+
+// Get current Home dir and copy to dest (returns pstr->c_str())
+wxString wxGetHomeDir();
+//const wxChar* wxGetHomeDir(wxString *pstr);
+
+// Get the user's (by default use the current user name) home dir,
+// return empty string on error
+wxString wxGetUserHome(const wxString& user = wxEmptyString);
 
 // ---------------------------------------------------------------------------
 // wxSystemOptions
@@ -198,14 +200,14 @@ enum wxPortId
     wxPORT_MSW,          // wxMSW, native toolkit is Windows API
     wxPORT_MOTIF,        // wxMotif, using [Open]Motif or Lesstif
     wxPORT_GTK,          // wxGTK, using GTK+ 1.x, 2.x, GPE or Maemo
-    !%wxchkver_2_9 wxPORT_MGL,          // wxMGL, using wxUniversal
+
     wxPORT_X11,          // wxX11, using wxUniversal
     wxPORT_PM,           // wxOS2, using OS/2 Presentation Manager
     wxPORT_OS2,          // wxOS2, using OS/2 Presentation Manager
     wxPORT_MAC,          // wxMac, using Carbon or Classic Mac API
     wxPORT_COCOA,        // wxCocoa, using Cocoa NextStep/Mac API
     wxPORT_WINCE,        // wxWinCE, toolkit is WinCE SDK API
-    !%wxchkver_2_9 wxPORT_PALMOS,       // wxPalmOS, toolkit is PalmOS API
+
     wxPORT_DFB           // wxDFB, using wxUniversal
 };
 
@@ -393,13 +395,73 @@ class %delete wxLog
 {
     //wxLog() - No constructor, a base class, use one of the derived classes.
 
+    // log messages selection
+    // ----------------------
+
+    // these functions allow to completely disable all log messages or disable
+    // log messages at level less important than specified for the current
+    // thread
+
+    // is logging enabled at all now?
     static bool IsEnabled();
-    static bool EnableLogging(bool doIt = true);
+    
+    // change the flag state, return the previous one
+    static bool EnableLogging(bool enable = true);
+    
+    // return the current global log level
+    static wxLogLevel GetLogLevel();
+
+    // set global log level: messages with level > logLevel will not be logged
+    static void SetLogLevel(wxLogLevel logLevel);
+
+    // set the log level for the given component
+    //static void SetComponentLevel(const wxString& component, wxLogLevel level);
+
+    // return the effective log level for this component, falling back to
+    // parent component and to the default global log level if necessary
+    //
+    // NB: component argument is passed by value and not const reference in an
+    //     attempt to encourage compiler to avoid an extra copy: as we modify
+    //     the component internally, we'd create one anyhow and like this it
+    //     can be avoided if the string is a temporary anyhow
+    //static wxLogLevel GetComponentLevel(wxString component);
+
+    // is logging of messages from this component enabled at this level?
+    //
+    // usually always called with wxLOG_COMPONENT as second argument
+    static bool IsLevelEnabled(wxLogLevel level, wxString component);
+
+    // enable/disable messages at wxLOG_Verbose level (only relevant if the
+    // current log level is greater or equal to it)
+    //
+    // notice that verbose mode can be activated by the standard command-line
+    // '--verbose' option
+    static void SetVerbose(bool bVerbose = true);
+
+    // check if verbose messages are enabled
+    static bool GetVerbose();
+    
+    // message buffering
+    // -----------------
+
+    // flush shows all messages if they're not logged immediately (FILE
+    // and iostream logs don't need it, but wxLogGui does to avoid showing
+    // 17 modal dialogs one after another)
     virtual void Flush();
+
+    // flush the active target if any and also output any pending messages from
+    // background threads
     static void FlushActive();
+
+    // only one sink is active at each moment get current log target, will call
+    // wxAppTraits::CreateLogTarget() to create one if none exists
+    //
     // Don't delete the active target until you set a new one or set it to wx.NULL
     // Note, a new wxLog is created unless DontCreateOnDemand() is called.
     static wxLog *GetActiveTarget();
+
+    // change log target, logger may be NULL
+    // 
     // When you create a new wxLog and call "oldLog = SetActiveTarget(MyLog)"
     // the returned oldLog will be garbage collected or you can delete() the
     // oldLog unless you want to reuse it by calling "myLog = SetActiveTarget(oldLog)"
@@ -407,29 +469,81 @@ class %delete wxLog
     // Basicly, wxWidgets 'owns' the log you pass to SetActiveTarget() and
     // wxLua 'owns' the returned log.
     static %gc wxLog *SetActiveTarget(%ungc wxLog *pLogger);
+
+//#if wxUSE_THREADS
+    // change log target for the current thread only, shouldn't be called from
+    // the main thread as it doesn't use thread-specific log target
+//    static wxLog *SetThreadActiveTarget(wxLog *logger);
+//#endif // wxUSE_THREADS
+
+    // suspend the message flushing of the main target until the next call
+    // to Resume() - this is mainly for internal use (to prevent wxYield()
+    // from flashing the messages)
     static void Suspend();
+
+    // must be called for each Suspend()!
     static void Resume();
-    static void SetVerbose(bool bVerbose = true);
-    static void SetLogLevel(wxLogLevel logLevel);
+
+    // should GetActiveTarget() try to create a new log object if the
+    // current is NULL?
     static void DontCreateOnDemand();
-    %wxchkver_2_8 static void SetRepetitionCounting(bool bRepetCounting = true);
-    %wxchkver_2_8 static bool GetRepetitionCounting();
-    static void SetTraceMask(wxTraceMask ulMask);
+
+    // Make GetActiveTarget() create a new log object again.
+    static void DoCreateOnDemand();
+
+    // log the count of repeating messages instead of logging the messages
+    // multiple times
+    static void SetRepetitionCounting(bool bRepetCounting = true);
+
+    // gets duplicate counting status
+    static bool GetRepetitionCounting();
+
+    // add string trace mask
     static void AddTraceMask(const wxString& str);
+
+    // add string trace mask
     static void RemoveTraceMask(const wxString& str);
+
+    // remove all string trace masks
     static void ClearTraceMasks();
+
+    // get string trace masks: note that this is MT-unsafe if other threads can
+    // call AddTraceMask() concurrently
     static wxArrayString GetTraceMasks(); // not const wxArrayString since we copy it anyway
+
+    // is this trace mask in the list?
+    static bool IsAllowedTraceMask(const wxString& mask);
+    
+    // log formatting
+    // -----------------
+
+    // Change wxLogFormatter object used by wxLog to format the log messages.
+    //
+    // wxLog takes ownership of the pointer passed in but the caller is
+    // responsible for deleting the returned pointer.
+    //wxLogFormatter* SetFormatter(wxLogFormatter* formatter);
+
+
+    // All the time stamp related functions below only work when the default
+    // wxLogFormatter is being used. Defining a custom formatter overrides them
+    // as it could use its own time stamp format or format messages without
+    // using time stamp at all.
 
     // %override static void wxLog::SetTimestamp(const wxString& ts);
     // Allows an input of "nil" or no value to disable time stamping.
-    // C++ Func: static void wxLog::SetTimestamp(const wxChar* ts);
+    // C++ Func: static void SetTimestamp(const wxString& ts)
+    //
+    // sets the time stamp string format: this is used as strftime() format
+    // string for the log targets which add time stamps to the messages; set
+    // it to empty string to disable time stamping completely.
     static void SetTimestamp(const wxString& ts);
+    
+    // disable time stamping of log messages
+    static void DisableTimestamp()
 
-    static bool GetVerbose();
-    static wxTraceMask GetTraceMask();
-    static bool IsAllowedTraceMask(const wxString& mask);
-    static wxLogLevel GetLogLevel();
-    static wxString GetTimestamp();
+    // get the current timestamp format string (maybe empty)
+    static const wxString& GetTimestamp();
+
 };
 
 // ---------------------------------------------------------------------------
@@ -748,42 +862,42 @@ class %delete wxRegEx
 
 class %delete wxEventLoopBase
 {
-    %wxchkver_3_1_1 static wxEventLoopBase *GetActive();
-    %wxchkver_3_1_1 static void SetActive(wxEventLoopBase* loop);
-    %wxchkver_3_1_1 bool IsMain() const;
-    %wxchkver_3_1_1 int Run();
-    %wxchkver_3_1_1 bool IsRunning() const;
-    %wxchkver_3_1_1 bool IsOk() const;
-    %wxchkver_3_1_1 void Exit(int rc = 0);
-    %wxchkver_3_1_1 void ScheduleExit(int rc = 0);
-    %wxchkver_3_1_1 bool Pending() const;
-    %wxchkver_3_1_1 bool Dispatch();
-    %wxchkver_3_1_1 int DispatchTimeout(unsigned long timeout);
-    %wxchkver_3_1_1 void WakeUp();
-    %wxchkver_3_1_1 void WakeUpIdle();
-    %wxchkver_3_1_1 bool ProcessIdle();
-    %wxchkver_3_1_1 bool IsYielding() const;
-    %wxchkver_3_1_1 bool Yield(bool onlyIfNeeded = false);
-    %wxchkver_3_1_1 bool YieldFor(long eventsToProcess);
-    %wxchkver_3_1_1 bool IsEventAllowedInsideYield(wxEventCategory cat) const;
+    static wxEventLoopBase *GetActive();
+    static void SetActive(wxEventLoopBase* loop);
+    bool IsMain() const;
+    int Run();
+    bool IsRunning() const;
+    bool IsOk() const;
+    void Exit(int rc = 0);
+    void ScheduleExit(int rc = 0);
+    bool Pending() const;
+    bool Dispatch();
+    int DispatchTimeout(unsigned long timeout);
+    void WakeUp();
+    void WakeUpIdle();
+    bool ProcessIdle();
+    bool IsYielding() const;
+    bool Yield(bool onlyIfNeeded = false);
+    bool YieldFor(long eventsToProcess);
+    bool IsEventAllowedInsideYield(wxEventCategory cat) const;
 };
 
 class wxEventFilter
 {
     // wxEventFilter(); // no constructor as it's an abstract class
-    %wxchkver_3_1_1 int FilterEvent(wxEvent& event);
+    int FilterEvent(wxEvent& event);
 };
 
 class %delete wxEvtHandler : public wxObject
 {
     wxEvtHandler();
-    %wxchkver_2_9 virtual void QueueEvent(%ungc wxEvent *event);
-    %wxchkver_3_1_1 void AddPendingEvent(const wxEvent& event);
+    virtual void QueueEvent(%ungc wxEvent *event);
+    void AddPendingEvent(const wxEvent& event);
     virtual bool ProcessEvent(wxEvent& event);
-    %wxchkver_3_1_1 bool ProcessEventLocally(wxEvent& event);
-    %wxchkver_3_1_1 bool SafelyProcessEvent(wxEvent& event);
-    %wxchkver_3_1_1 void ProcessPendingEvents();
-    %wxchkver_3_1_1 void DeletePendingEvents();
+    bool ProcessEventLocally(wxEvent& event);
+    bool SafelyProcessEvent(wxEvent& event);
+    void ProcessPendingEvents();
+    void DeletePendingEvents();
     // void Connect(int id, int lastId, wxEventType eventType, wxObjectEventFunction function, wxObject* userData = NULL, wxEvtHandler* eventSink = NULL);
     // void Connect(int id, wxEventType eventType, wxObjectEventFunction function, wxObject* userData = NULL, wxEvtHandler* eventSink = NULL);
     // void Connect(wxEventType eventType, wxObjectEventFunction function, wxObject* userData = NULL, wxEvtHandler* eventSink = NULL);
@@ -798,11 +912,12 @@ class %delete wxEvtHandler : public wxObject
     void SetEvtHandlerEnabled(bool enabled);
     void SetNextHandler(wxEvtHandler* handler);
     void SetPreviousHandler(wxEvtHandler* handler);
-    %wxchkver_3_1_1 void Unlink();
-    %wxchkver_3_1_1 bool IsUnlinked() const;
-    %wxchkver_3_1_1 static void AddFilter(wxEventFilter* filter);
-    %wxchkver_3_1_1 static void RemoveFilter(wxEventFilter* filter);
-    !%wxchkver_3_1_1 void AddPendingEvent(wxEvent& event);
+
+    void Unlink();
+    bool IsUnlinked() const;
+    static void AddFilter(wxEventFilter* filter);
+    static void RemoveFilter(wxEventFilter* filter);
+
     // bool SearchEventTable(wxEventTable& table, wxEvent& event); // no wxEventTable
     bool Disconnect(int id, int lastId, wxEventType eventType); // %override parameters
     void Connect(int id, int lastId, wxEventType eventType, LuaFunction func); // %add parameters
@@ -818,7 +933,6 @@ enum Propagation_state
     wxEVENT_PROPAGATE_MAX  // propagate it until it is processed
 };
 
-#if %wxchkver_3_1_1
 enum wxEventCategory
 {
     /**
@@ -860,7 +974,6 @@ enum wxEventCategory
         wxEVT_CATEGORY_UI|wxEVT_CATEGORY_USER_INPUT|wxEVT_CATEGORY_SOCKET| \
         wxEVT_CATEGORY_TIMER|wxEVT_CATEGORY_THREAD
 };
-#endif
 
 class %delete wxEvent : public wxObject
 {
@@ -868,9 +981,9 @@ class %delete wxEvent : public wxObject
     // wxEvent* Clone() const; // no constructor as it's an abstract class
     wxObject* GetEventObject();
     wxEventType GetEventType();
-    %wxchkver_3_1_1 wxEventCategory GetEventCategory() const;
+    wxEventCategory GetEventCategory() const;
     int GetId();
-    %wxchkver_3_1_1 wxObject *GetEventUserData() const;
+    wxObject *GetEventUserData() const;
     bool GetSkipped();
     long GetTimestamp();
     bool IsCommandEvent() const;

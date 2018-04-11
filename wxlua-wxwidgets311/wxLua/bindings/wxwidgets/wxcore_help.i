@@ -58,7 +58,7 @@ class %delete wxHelpProvider
     static %gc wxHelpProvider *Set(%ungc wxHelpProvider *helpProvider );
     static wxHelpProvider *Get( );
     virtual wxString GetHelp(const wxWindow *window); // pure virtual
-    %wxchkver_2_8 virtual bool ShowHelpAtPoint(wxWindow *window, const wxPoint& pt, wxHelpEvent::Origin origin );
+    virtual bool ShowHelpAtPoint(wxWindow *window, const wxPoint& pt, wxHelpEvent::Origin origin );
     virtual bool ShowHelp(wxWindow *window );
     virtual void AddHelp(wxWindow *window, const wxString& text );
     //virtual void AddHelp(wxWindowID id, const wxString& text );
@@ -124,12 +124,12 @@ class %delete wxHelpControllerBase : public wxObject
     // C++ Func: virtual wxFrame* GetFrameParameters(wxSize* size = NULL, wxPoint* pos = NULL, bool *newFrameEachTime = NULL );
     virtual wxFrame* GetFrameParameters( );
 
-    %wxchkver_2_8 virtual wxWindow* GetParentWindow() const;
+    virtual wxWindow* GetParentWindow() const;
     virtual bool KeywordSearch(const wxString& keyWord, wxHelpSearchMode mode = wxHELP_SEARCH_ALL );
     virtual bool LoadFile(const wxString& file = "" );
     //virtual bool OnQuit( );
     virtual void SetFrameParameters(const wxString& title, const wxSize& size, const wxPoint& pos = wxDefaultPosition, bool newFrameEachTime = false );
-    %wxchkver_2_8 virtual void SetParentWindow(wxWindow* win );
+    virtual void SetParentWindow(wxWindow* win );
     virtual void SetViewer(const wxString& viewer, long flags );
     virtual bool Quit( );
 };
@@ -140,7 +140,7 @@ class %delete wxHelpControllerBase : public wxObject
 class %delete wxHelpController : public wxHelpControllerBase
 {
     wxHelpController( );
-    //%wxchkver_2_8 wxHelpController(wxWindow* parentWindow = NULL) wxHTMLHelpController takes different params
+    //wxHelpController(wxWindow* parentWindow = NULL) wxHTMLHelpController takes different params
 };
 
 // ---------------------------------------------------------------------------

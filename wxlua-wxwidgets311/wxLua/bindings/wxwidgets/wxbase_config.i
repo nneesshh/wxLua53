@@ -24,7 +24,7 @@ enum
     wxCONFIG_USE_GLOBAL_FILE,
     wxCONFIG_USE_RELATIVE_PATH,
     wxCONFIG_USE_NO_ESCAPE_CHARACTERS,
-    %wxchkver_2_8_1 wxCONFIG_USE_SUBDIR
+    wxCONFIG_USE_SUBDIR
 };
 
 enum wxConfigBase::EntryType
@@ -162,7 +162,7 @@ class %delete wxConfigPathChanger
     wxConfigPathChanger(const wxConfigBase *pContainer, const wxString& strEntry );
 
     wxString Name() const;
-    %wxchkver_2_8 void UpdateIfDeleted( );
+    void UpdateIfDeleted( );
 };
 
 #endif //wxLUA_USE_wxConfig && wxUSE_CONFIG

@@ -289,65 +289,30 @@ static int LUACALL wxLua_wxXmlNode_DeleteAttribute(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlNode_GetAttribute2[] = { &wxluatype_wxXmlNode, &wxluatype_TSTRING, &wxluatype_TSTRING, NULL };
-static int LUACALL wxLua_wxXmlNode_GetAttribute2(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlNode_GetAttribute2[1] = {{ wxLua_wxXmlNode_GetAttribute2, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxXmlNode_GetAttribute2 }};
-//     wxString GetAttribute(const wxString& attrName, const wxString& defaultVal = wxEmptyString) const;
-static int LUACALL wxLua_wxXmlNode_GetAttribute2(lua_State *L)
-{
-    // get number of arguments
-    int argCount = lua_gettop(L);
-    // const wxString defaultVal = wxEmptyString
-    const wxString defaultVal = (argCount >= 3 ? wxlua_getwxStringtype(L, 3) : wxString(wxEmptyString));
-    // const wxString attrName
-    const wxString attrName = wxlua_getwxStringtype(L, 2);
-    // get this
-    wxXmlNode * self = (wxXmlNode *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlNode);
-    // call GetAttribute
-    wxString returns = (self->GetAttribute(attrName, defaultVal));
-    // push the result string
-    wxlua_pushwxString(L, returns);
-
-    return 1;
-}
-
-static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlNode_GetAttribute1[] = { &wxluatype_wxXmlNode, &wxluatype_TSTRING, NULL };
-static int LUACALL wxLua_wxXmlNode_GetAttribute1(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlNode_GetAttribute1[1] = {{ wxLua_wxXmlNode_GetAttribute1, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxXmlNode_GetAttribute1 }};
-//     %override_name wxLua_wxXmlNode_GetAttributePtr bool GetAttribute(const wxString& attrName) const;
-static int LUACALL wxLua_wxXmlNode_GetAttribute1(lua_State *L)
-{
-    // const wxString attrName
-    const wxString attrName = wxlua_getwxStringtype(L, 2);
-    // get this
-    wxXmlNode * self = (wxXmlNode *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlNode);
-    // call GetAttribute
-    bool returns = (self->GetAttribute(attrName));
-    // push the result flag
-    lua_pushboolean(L, returns);
-
-    return 1;
-}
-
-static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlNode_GetAttribute[] = { &wxluatype_wxXmlNode, &wxluatype_TSTRING, &wxluatype_TLIGHTUSERDATA, NULL };
+#define wxLua_wxXmlNode_GetAttribute wxLua_wxXmlNode_GetAttributePtr
+static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlNode_GetAttribute[] = { &wxluatype_wxXmlNode, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxXmlNode_GetAttribute(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlNode_GetAttribute[1] = {{ wxLua_wxXmlNode_GetAttribute, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxXmlNode_GetAttribute }};
-//     bool GetAttribute(const wxString& attrName, wxString *value) const;
-static int LUACALL wxLua_wxXmlNode_GetAttribute(lua_State *L)
+static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlNode_GetAttribute[1] = {{ wxLua_wxXmlNode_GetAttribute, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxXmlNode_GetAttribute }};
+// %override wxLua_wxXmlNode_GetAttributePtr
+// %rename GetAttributePtr bool GetAttribute(const wxString& attrName, wxString *value) const;
+static int LUACALL wxLua_wxXmlNode_GetAttributePtr(lua_State *L)
 {
-    // wxString value
-    wxString * value = (wxString *)wxlua_touserdata(L, 3);
-    // const wxString attrName
-    const wxString attrName = wxlua_getwxStringtype(L, 2);
+    // wxString *value
+    wxString value;
+    // const wxString& attrName
+    wxString attrName = wxlua_getwxStringtype(L, 2);
     // get this
-    wxXmlNode * self = (wxXmlNode *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlNode);
+    wxXmlNode *self = (wxXmlNode *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlNode);
     // call GetAttribute
-    bool returns = (self->GetAttribute(attrName, value));
-    // push the result flag
+    bool returns = self->GetAttribute(attrName, &value);
+    // push the result number
     lua_pushboolean(L, returns);
-
-    return 1;
+    // push the result string
+    wxlua_pushwxString(L, value);
+    // return the number of parameters
+    return 2;
 }
+
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlNode_GetAttributes[] = { &wxluatype_wxXmlNode, NULL };
 static int LUACALL wxLua_wxXmlNode_GetAttributes(lua_State *L);
@@ -411,8 +376,8 @@ static int LUACALL wxLua_wxXmlNode_GetDepth(lua_State *L)
     wxXmlNode * self = (wxXmlNode *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlNode);
     // call GetDepth
     int returns = (self->GetDepth(grandparent));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -427,8 +392,8 @@ static int LUACALL wxLua_wxXmlNode_GetLineNumber(lua_State *L)
     wxXmlNode * self = (wxXmlNode *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlNode);
     // call GetLineNumber
     int returns = (self->GetLineNumber());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -762,17 +727,17 @@ static int LUACALL wxLua_wxXmlNode_SetType(lua_State *L)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlNode_delete[] = { &wxluatype_wxXmlNode, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlNode_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxXmlNode_delete }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlNode_constructor2[] = { &wxluatype_TINTEGER, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlNode_constructor2[] = { &wxluatype_TINTEGER, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxXmlNode_constructor2(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlNode_constructor2[1] = {{ wxLua_wxXmlNode_constructor2, WXLUAMETHOD_CONSTRUCTOR, 2, 4, s_wxluatypeArray_wxLua_wxXmlNode_constructor2 }};
 // %override wxLua_wxXmlNode_constructor2
-//     wxXmlNode(wxXmlNode *parent, wxXmlNodeType type, const wxString& name, const wxString& content, wxXmlProperty *props, wxXmlNode *next)
+//     wxXmlNode(wxXmlNode *parent, wxXmlNodeType type, const wxString& name, const wxString& content = wxEmptyString, wxXmlAttribute *attrs = NULL, wxXmlNode *next = NULL, int lineNo = -1);
 static int LUACALL wxLua_wxXmlNode_constructor2(lua_State *L)
 {
     // wxXmlNode next
     wxXmlNode * next = (wxXmlNode *)wxluaT_getuserdatatype(L, 6, wxluatype_wxXmlNode);
-    // wxXmlProperty props
-    wxXmlProperty * props = (wxXmlProperty *)wxluaT_getuserdatatype(L, 5, wxluatype_wxXmlProperty);
+    // wxXmlAttribute attrs
+	wxXmlAttribute * attrs = (wxXmlAttribute *)wxluaT_getuserdatatype(L, 5, wxluatype_wxXmlAttribute);
     // const wxString content
     const wxString content = wxlua_getwxStringtype(L, 4);
     // const wxString name
@@ -782,7 +747,7 @@ static int LUACALL wxLua_wxXmlNode_constructor2(lua_State *L)
     // wxXmlNode parent
     wxXmlNode * parent = (wxXmlNode *)wxluaT_getuserdatatype(L, 1, wxluatype_wxXmlNode);
     // call constructor
-    wxXmlNode *returns = new wxXmlNode(parent, type, name, content, props, next);
+    wxXmlNode *returns = new wxXmlNode(parent, type, name, content, attrs, next);
     // add to tracked memory list
     if (parent == NULL)
         wxluaO_addgcobject(L, returns, wxluatype_wxXmlNode);
@@ -793,7 +758,7 @@ static int LUACALL wxLua_wxXmlNode_constructor2(lua_State *L)
 }
 
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlNode_constructor1[] = { &wxluatype_wxXmlNode, &wxluatype_TINTEGER, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_wxXmlAttribute, &wxluatype_wxXmlNode, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlNode_constructor1[] = { &wxluatype_wxXmlNode, &wxluatype_TINTEGER, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_wxXmlAttribute, &wxluatype_wxXmlNode, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxXmlNode_constructor1(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlNode_constructor1[1] = {{ wxLua_wxXmlNode_constructor1, WXLUAMETHOD_CONSTRUCTOR, 3, 7, s_wxluatypeArray_wxLua_wxXmlNode_constructor1 }};
 //     wxXmlNode(wxXmlNode *parent, wxXmlNodeType type, const wxString& name, const wxString& content = wxEmptyString, wxXmlAttribute *attrs = NULL, wxXmlNode *next = NULL, int lineNo = -1);
@@ -802,7 +767,7 @@ static int LUACALL wxLua_wxXmlNode_constructor1(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int lineNo = -1
-    int lineNo = (argCount >= 7 ? (int)wxlua_getnumbertype(L, 7) : -1);
+    int lineNo = (argCount >= 7 ? (int)wxlua_getintegertype(L, 7) : -1);
     // wxXmlNode next = NULL
     wxXmlNode * next = (argCount >= 6 ? (wxXmlNode *)wxluaT_getuserdatatype(L, 6, wxluatype_wxXmlNode) : NULL);
     // wxXmlAttribute attrs = NULL
@@ -853,15 +818,6 @@ static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlNode_AddAttribute_overload[] =
 static int s_wxluafunc_wxLua_wxXmlNode_AddAttribute_overload_count = sizeof(s_wxluafunc_wxLua_wxXmlNode_AddAttribute_overload)/sizeof(wxLuaBindCFunc);
 
 // function overload table
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlNode_GetAttribute_overload[] =
-{
-    { wxLua_wxXmlNode_GetAttribute2, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxXmlNode_GetAttribute2 },
-    { wxLua_wxXmlNode_GetAttribute1, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxXmlNode_GetAttribute1 },
-    { wxLua_wxXmlNode_GetAttribute, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxXmlNode_GetAttribute },
-};
-static int s_wxluafunc_wxLua_wxXmlNode_GetAttribute_overload_count = sizeof(s_wxluafunc_wxLua_wxXmlNode_GetAttribute_overload)/sizeof(wxLuaBindCFunc);
-
-// function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlNode_constructor_overload[] =
 {
     { wxLua_wxXmlNode_constructor2, WXLUAMETHOD_CONSTRUCTOR, 2, 4, s_wxluatypeArray_wxLua_wxXmlNode_constructor2 },
@@ -886,11 +842,7 @@ wxLuaBindMethod wxXmlNode_methods[] = {
 
     { "AddChild", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlNode_AddChild, 1, NULL },
     { "DeleteAttribute", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlNode_DeleteAttribute, 1, NULL },
-
-#if (wxLUA_USE_wxXML && wxUSE_XML)
-    { "GetAttribute", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlNode_GetAttribute_overload, s_wxluafunc_wxLua_wxXmlNode_GetAttribute_overload_count, 0 },
-#endif // (wxLUA_USE_wxXML && wxUSE_XML)
-
+    { "GetAttribute", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlNode_GetAttribute, 1, NULL },
     { "GetAttributes", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlNode_GetAttributes, 1, NULL },
     { "GetChildren", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlNode_GetChildren, 1, NULL },
     { "GetContent", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlNode_GetContent, 1, NULL },
@@ -1284,7 +1236,7 @@ static int LUACALL wxLua_wxXmlDocument_IsOk(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlDocument_Load[] = { &wxluatype_wxXmlDocument, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlDocument_Load[] = { &wxluatype_wxXmlDocument, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxXmlDocument_Load(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlDocument_Load[1] = {{ wxLua_wxXmlDocument_Load, WXLUAMETHOD_METHOD, 2, 4, s_wxluatypeArray_wxLua_wxXmlDocument_Load }};
 //     virtual bool Load(const wxString& filename, const wxString& encoding = "UTF-8", int flags = wxXMLDOC_NONE);
@@ -1293,7 +1245,7 @@ static int LUACALL wxLua_wxXmlDocument_Load(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int flags = wxXMLDOC_NONE
-    int flags = (argCount >= 4 ? (int)wxlua_getnumbertype(L, 4) : wxXMLDOC_NONE);
+    int flags = (argCount >= 4 ? (int)wxlua_getintegertype(L, 4) : wxXMLDOC_NONE);
     // const wxString encoding = "UTF-8"
     const wxString encoding = (argCount >= 3 ? wxlua_getwxStringtype(L, 3) : wxString(wxT("UTF-8")));
     // const wxString filename
@@ -1308,7 +1260,7 @@ static int LUACALL wxLua_wxXmlDocument_Load(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlDocument_Save[] = { &wxluatype_wxXmlDocument, &wxluatype_TSTRING, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlDocument_Save[] = { &wxluatype_wxXmlDocument, &wxluatype_TSTRING, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxXmlDocument_Save(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlDocument_Save[1] = {{ wxLua_wxXmlDocument_Save, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxXmlDocument_Save }};
 //     virtual bool Save(const wxString& filename, int indentstep = 2) const;
@@ -1317,7 +1269,7 @@ static int LUACALL wxLua_wxXmlDocument_Save(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int indentstep = 2
-    int indentstep = (argCount >= 3 ? (int)wxlua_getnumbertype(L, 3) : 2);
+    int indentstep = (argCount >= 3 ? (int)wxlua_getintegertype(L, 3) : 2);
     // const wxString filename
     const wxString filename = wxlua_getwxStringtype(L, 2);
     // get this

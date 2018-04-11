@@ -137,7 +137,7 @@ class wxDialog : public wxTopLevelWindow
 
     //void Centre(int direction = wxBOTH) - see wxWindow
     wxUSE_BUTTON wxSizer* CreateButtonSizer(long flags );
-    %wxchkver_2_8&&wxUSE_BUTTON wxSizer *CreateSeparatedButtonSizer(long flags );
+    wxUSE_BUTTON wxSizer *CreateSeparatedButtonSizer(long flags );
     wxUSE_BUTTON wxStdDialogButtonSizer* CreateStdDialogButtonSizer(long flags );
     wxUSE_STATTEXT wxSizer *CreateTextSizer( const wxString &message );
     // virtual bool DoOK() - pocketpc only
@@ -204,15 +204,13 @@ class %delete wxColourData : public wxObject
 #include "wx/filedlg.h"
 
 #define_wxstring wxFileSelectorPromptStr wxT("Select a file" );
-%wxchkver_2_9_0 #define_string wxFileSelectorDefaultWildcardStr
-!%wxchkver_2_9_0 #define_wxstring wxFileSelectorDefaultWildcardStr
+#define_string wxFileSelectorDefaultWildcardStr
 
 class wxFileDialog : public wxDialog
 {
     // wxFileDialog() no default constructor in MSW
-    %not_overload !%wxchkver_2_8 wxFileDialog(wxWindow* parent, const wxString& message = "Choose a file", const wxString& defaultDir = "", const wxString& defaultFile = "", const wxString& wildcard = "*.*", long style = 0, const wxPoint& pos = wxDefaultPosition );
-    %not_overload %wxchkver_2_8 wxFileDialog(wxWindow *parent, const wxString& message = wxFileSelectorPromptStr, const wxString& defaultDir = "", const wxString& defaultFile = "", const wxString& wildCard = wxFileSelectorDefaultWildcardStr, long style = wxFD_DEFAULT_STYLE, const wxPoint& pos = wxDefaultPosition, const wxSize& sz = wxDefaultSize, const wxString& name = "wxFileDialog" );
-    //%wxchkver_2_8 bool Create(wxWindow *parent, const wxString& message = wxFileSelectorPromptStr, const wxString& defaultDir = "", const wxString& defaultFile = "", const wxString& wildCard = wxFileSelectorDefaultWildcardStr, long style = wxFD_DEFAULT_STYLE, const wxPoint& pos = wxDefaultPosition, const wxSize& sz = wxDefaultSize, const wxString& name = "wxFileDialog" );
+    wxFileDialog(wxWindow *parent, const wxString& message = wxFileSelectorPromptStr, const wxString& defaultDir = "", const wxString& defaultFile = "", const wxString& wildCard = wxFileSelectorDefaultWildcardStr, long style = wxFD_DEFAULT_STYLE, const wxPoint& pos = wxDefaultPosition, const wxSize& sz = wxDefaultSize, const wxString& name = "wxFileDialog" );
+    //bool Create(wxWindow *parent, const wxString& message = wxFileSelectorPromptStr, const wxString& defaultDir = "", const wxString& defaultFile = "", const wxString& wildCard = wxFileSelectorDefaultWildcardStr, long style = wxFD_DEFAULT_STYLE, const wxPoint& pos = wxDefaultPosition, const wxSize& sz = wxDefaultSize, const wxString& name = "wxFileDialog" );
 
     wxString GetDirectory() const;
     wxString GetFilename() const;
@@ -229,14 +227,12 @@ class wxFileDialog : public wxDialog
     // C++ Func: void GetPaths(wxArrayString& paths) const;
     void GetPaths() const;
 
-    !%wxchkver_2_8 long GetStyle() const;
     wxString GetWildcard() const;
     void SetDirectory(const wxString& directory );
     void SetFilename(const wxString& setfilename );
     void SetFilterIndex(int filterIndex );
     void SetMessage(const wxString& message );
     void SetPath(const wxString& path );
-    !%wxchkver_2_8 void SetStyle(long style );
     void SetWildcard(const wxString& wildCard );
     // int ShowModal() - in wxDialog
 };
@@ -251,9 +247,8 @@ class wxFileDialog : public wxDialog
 #include "wx/dirdlg.h"
 
 #define wxDD_DEFAULT_STYLE
-!%wxchkver_2_8 #define wxDD_NEW_DIR_BUTTON
-%wxchkver_2_8 #define wxDD_CHANGE_DIR
-%wxchkver_2_8 #define wxDD_DIR_MUST_EXIST
+#define wxDD_CHANGE_DIR
+#define wxDD_DIR_MUST_EXIST
 
 class wxDirDialog : public wxDialog
 {
@@ -261,10 +256,10 @@ class wxDirDialog : public wxDialog
 
     wxString GetPath() const;
     wxString GetMessage() const;
-    !%wxchkver_2_8 long GetStyle() const;
+
     void SetMessage(const wxString& message );
     void SetPath(const wxString& path );
-    !%wxchkver_2_8 void SetStyle(long style );
+
     // int ShowModal() - in wxDialog
 };
 
@@ -281,29 +276,29 @@ class wxMessageDialog : public wxDialog
 
     // int ShowModal() - in wxDialog
     
-    %wxchkver_2_9_0 void SetExtendedMessage(const wxString& extendedMessage);
-    %wxchkver_2_9_3 bool SetHelpLabel(const wxString& help);
-    %wxchkver_2_9_3 bool SetHelpLabel(int help);
-    %wxchkver_2_9_0 void SetMessage(const wxString& message);
-    %wxchkver_2_9_0 bool SetOKCancelLabels(const wxString& ok, const wxString& cancel);
-    %wxchkver_2_9_0 bool SetOKCancelLabels(int ok, int cancel);
-    %wxchkver_2_9_0 bool SetOKLabel(const wxString& ok);
-    %wxchkver_2_9_0 bool SetOKLabel(int ok);
-    %wxchkver_2_9_0 bool SetYesNoCancelLabels(const wxString& yes, const wxString& no, const wxString& cancel);
-    %wxchkver_2_9_0 bool SetYesNoCancelLabels(int yes, int no, int cancel);
-    %wxchkver_2_9_0 bool SetYesNoLabels(const wxString& yes, const wxString& no);
-    %wxchkver_2_9_0 bool SetYesNoLabels(int yes, int no);
-    %wxchkver_2_9_3 wxString GetCaption() const;
-    %wxchkver_2_9_0 wxString GetMessage() const;
-    %wxchkver_2_9_0 wxString GetExtendedMessage() const;
-    %wxchkver_2_9_0 long GetMessageDialogStyle() const;
-    %wxchkver_2_9_0 bool HasCustomLabels() const;
-    %wxchkver_2_9_0 wxString GetYesLabel() const;
-    %wxchkver_2_9_0 wxString GetOKLabel() const;
-    %wxchkver_2_9_0 wxString GetNoLabel() const;
-    %wxchkver_2_9_0 wxString GetCancelLabel() const;
-    %wxchkver_2_9_3 wxString GetHelpLabel() const;
-    %wxchkver_2_9_3 long GetEffectiveIcon() const;
+    void SetExtendedMessage(const wxString& extendedMessage);
+    bool SetHelpLabel(const wxString& help);
+    bool SetHelpLabel(int help);
+    void SetMessage(const wxString& message);
+    bool SetOKCancelLabels(const wxString& ok, const wxString& cancel);
+    bool SetOKCancelLabels(int ok, int cancel);
+    bool SetOKLabel(const wxString& ok);
+    bool SetOKLabel(int ok);
+    bool SetYesNoCancelLabels(const wxString& yes, const wxString& no, const wxString& cancel);
+    bool SetYesNoCancelLabels(int yes, int no, int cancel);
+    bool SetYesNoLabels(const wxString& yes, const wxString& no);
+    bool SetYesNoLabels(int yes, int no);
+    wxString GetCaption() const;
+    wxString GetMessage() const;
+    wxString GetExtendedMessage() const;
+    long GetMessageDialogStyle() const;
+    bool HasCustomLabels() const;
+    wxString GetYesLabel() const;
+    wxString GetOKLabel() const;
+    wxString GetNoLabel() const;
+    wxString GetCancelLabel() const;
+    wxString GetHelpLabel() const;
+    long GetEffectiveIcon() const;
 };
 
 #endif //wxLUA_USE_wxMessageDialog && wxUSE_MSGDLG
@@ -366,8 +361,7 @@ class wxTextEntryDialog : public wxDialog
 // ---------------------------------------------------------------------------
 // wxPasswordEntryDialog - see also wxGetPasswordFromUser
 
-%wxchkver_2_9_0 #define_string wxGetPasswordFromUserPromptStr
-!%wxchkver_2_9_0 #define_wxstring wxGetPasswordFromUserPromptStr
+#define_string wxGetPasswordFromUserPromptStr
 #define wxTextEntryDialogStyle
 
 class wxPasswordEntryDialog : public wxTextEntryDialog

@@ -76,13 +76,10 @@ extern WXDLLIMPEXP_BINDWXBASE wxLuaBinding* wxLuaBinding_wxbase_init();
 #include "wx/iconloc.h"
 #include "wx/intl.h"
 #include "wx/mimetype.h"
+#include "wx/object.h"
 #include "wx/timer.h"
 #include "wx/tokenzr.h"
 #include "wx/utils.h"
-
-#if wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxStandardPaths
-    #include "wx/stdpaths.h"
-#endif // wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxStandardPaths
 
 #if wxLUA_USE_wxArrayInt
     #include "wx/dynarray.h"
@@ -91,10 +88,6 @@ extern WXDLLIMPEXP_BINDWXBASE wxLuaBinding* wxLuaBinding_wxbase_init();
 #if wxLUA_USE_wxArrayString
     #include "wx/arrstr.h"
 #endif // wxLUA_USE_wxArrayString
-
-#if wxLUA_USE_wxClassInfo
-    #include "wx/object.h"
-#endif // wxLUA_USE_wxClassInfo
 
 #if wxLUA_USE_wxConfig && wxUSE_CONFIG
     #include "wx/confbase.h"
@@ -131,21 +124,17 @@ extern WXDLLIMPEXP_BINDWXBASE wxLuaBinding* wxLuaBinding_wxbase_init();
     #include "wx/filename.h"
 #endif // wxLUA_USE_wxFileName
 
-#if wxLUA_USE_wxList && !wxUSE_STL
-    #include "wx/list.h"
-#endif // wxLUA_USE_wxList && !wxUSE_STL
-
 #if wxLUA_USE_wxLog && wxUSE_LOG
     #include "wx/log.h"
 #endif // wxLUA_USE_wxLog && wxUSE_LOG
 
-#if wxLUA_USE_wxObject
-    #include "wx/object.h"
-#endif // wxLUA_USE_wxObject
-
 #if wxLUA_USE_wxRegEx && wxUSE_REGEX
     #include "wx/regex.h"
 #endif // wxLUA_USE_wxRegEx && wxUSE_REGEX
+
+#if wxLUA_USE_wxStandardPaths
+    #include "wx/stdpaths.h"
+#endif // wxLUA_USE_wxStandardPaths
 
 #if wxLUA_USE_wxStopWatch && wxUSE_STOPWATCH
     #include "wx/stopwatch.h"
@@ -159,9 +148,9 @@ extern WXDLLIMPEXP_BINDWXBASE wxLuaBinding* wxLuaBinding_wxbase_init();
     #include "wx/datetime.h"
 #endif // wxLUA_USE_wxTimeSpan && wxUSE_DATETIME
 
-#if wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)
+#if wxUSE_FSWATCHER
     #include "wx/fswatcher.h"
-#endif // wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)
+#endif // wxUSE_FSWATCHER
 
 #if wxUSE_LONGLONG
     #include "wx/longlong.h"
@@ -210,20 +199,18 @@ extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxFileType_MessageParameters;
 extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxFileTypeInfo;
 extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxIconLocation;
 extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxMimeTypesManager;
+extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxObject;
+extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxObjectList;
+extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxObjectList_const_iterator;
+extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxObjectList_iterator;
+extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxObjectRefData;
 extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxPathList;
 extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxPlatformInfo;
 extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxString;
+extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxString_const_iterator;
+extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxString_iterator;
 extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxStringClientData;
 extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxStringTokenizer;
-
-#if wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxStandardPaths
-    extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxStandardPaths;
-#endif // wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxStandardPaths
-
-#if wxCHECK_VERSION(2,9,0)
-    extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxString_const_iterator;
-    extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxString_iterator;
-#endif // wxCHECK_VERSION(2,9,0)
 
 #if wxLUA_USE_wxArrayInt
     extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxArrayInt;
@@ -282,11 +269,6 @@ extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxStringTokenizer;
     extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxFileName;
 #endif // wxLUA_USE_wxFileName
 
-#if wxLUA_USE_wxList && !wxUSE_STL
-    extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxList;
-    extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxNode;
-#endif // wxLUA_USE_wxList && !wxUSE_STL
-
 #if wxLUA_USE_wxLog && wxUSE_LOG
     extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxLog;
     extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxLogBuffer;
@@ -295,14 +277,13 @@ extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxStringTokenizer;
     extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxLogPassThrough;
 #endif // wxLUA_USE_wxLog && wxUSE_LOG
 
-#if wxLUA_USE_wxObject
-    extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxObject;
-    extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxObjectRefData;
-#endif // wxLUA_USE_wxObject
-
 #if wxLUA_USE_wxRegEx && wxUSE_REGEX
     extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxRegEx;
 #endif // wxLUA_USE_wxRegEx && wxUSE_REGEX
+
+#if wxLUA_USE_wxStandardPaths
+    extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxStandardPaths;
+#endif // wxLUA_USE_wxStandardPaths
 
 #if wxLUA_USE_wxStopWatch && wxUSE_STOPWATCH
     extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxStopWatch;
@@ -316,10 +297,10 @@ extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxStringTokenizer;
     extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxTimeSpan;
 #endif // wxLUA_USE_wxTimeSpan && wxUSE_DATETIME
 
-#if wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)
+#if wxUSE_FSWATCHER
     extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxFileSystemWatcher;
     extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxFileSystemWatcherEvent;
-#endif // wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)
+#endif // wxUSE_FSWATCHER
 
 #if wxUSE_INTL
     extern WXDLLIMPEXP_DATA_BINDWXBASE(int) wxluatype_wxLanguageInfo;

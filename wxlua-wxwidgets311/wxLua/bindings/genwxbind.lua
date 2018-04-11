@@ -35,6 +35,7 @@ preprocOperatorTable  = {} -- Preprocessor operators, e.g. table["&"] == "&&"
 typedefTable        = {} -- all typedefs read from the interface files
 dataTypeTable       = {} -- all datatypes; int, double, class names, see AllocDataType
 dataTypeAttribTable = {} -- attributes for data types; unsigned, const
+dataTypeSIntTable   = {} -- datatypes that are signed numbers
 dataTypeUIntTable   = {} -- datatypes that are unsigned numbers
 dataTypeBoolTable   = {} -- datatypes that are boolean
 functionAttribTable = {} -- attributes for functions; static, virtual
@@ -298,6 +299,17 @@ function InitDataTypes()
     dataTypeAttribTable["%ungc"]   = true -- this object won't be gc by Lua
 
     dataTypeAttribTable["%IncRef"] = true -- special to wxGridCellWorker/wxRefCounter classes and IncRef() will be called on it
+    
+    -- datatypes that are signed integers to be treated differently
+    dataTypeSIntTable["char"]    = true
+    dataTypeSIntTable["short"]   = true
+    dataTypeSIntTable["int"]     = true
+    dataTypeSIntTable["long"]    = true
+
+    dataTypeSIntTable["wxInt8"]  = true
+    dataTypeSIntTable["wxInt16"] = true
+    dataTypeSIntTable["wxInt32"] = true
+    dataTypeSIntTable["wxInt64"] = true
 
     -- datatypes that are unsigned integers to be treated differently
     dataTypeUIntTable["size_t"]         = true
@@ -531,6 +543,20 @@ function IsDataTypeNumeric(datatype)
         return dtype.IsNumber
     else
         print("ERROR: Missing data type '"..tostring(datatype).."' in IsDataTypeNumeric.")
+    end
+
+    return false
+end
+
+-- ---------------------------------------------------------------------------
+-- Is this data type a signed integer
+-- ---------------------------------------------------------------------------
+function IsDataTypeSInt(datatype)
+    local dtype = GetDataTypedefBase(string.gsub(datatype, "const ", ""))
+    if dtype then
+        return dataTypeSIntTable[dtype.Name] or false
+    else
+        print("ERROR: Missing data type '"..tostring(datatype).."' in IsDataTypeSInt.")
     end
 
     return false
@@ -3252,6 +3278,12 @@ function GenerateLuaLanguageBinding(interface)
                     CommentBindingTable(codeList, "    // push the result flag\n")
                     table.insert(codeList, "    lua_pushboolean(L, "..self_name..member.Name..");\n")
 
+                elseif IsDataTypeSInt(member.DataType) then  -- Number
+                    CommentBindingTable(codeList, "    // push the result integer\n")
+                    table.insert(codeList, "    lua_pushinteger(L, "..self_name..member.Name..");\n")
+                elseif IsDataTypeUInt(member.DataType) then  -- Number
+                    CommentBindingTable(codeList, "    // push the result unsigned integer\n")
+                    table.insert(codeList, "    lua_pushinteger(L, "..self_name..member.Name..");\n")
                 else
                     CommentBindingTable(codeList, "    // push the result number\n")
                     table.insert(codeList, "    lua_pushnumber(L, "..self_name..member.Name..");\n")
@@ -3341,6 +3373,10 @@ function GenerateLuaLanguageBinding(interface)
                     overload_argList = overload_argList.."&wxluatype_TINTEGER, "
                     CommentBindingTable(codeList, "    // get the enum value\n")
                     table.insert(codeList, "    "..memberType.." val = ("..memberType..")wxlua_getenumtype(L, "..stack_idx..");\n")
+                elseif IsDataTypeSInt(memberType) then
+                    overload_argList = overload_argList.."&wxluatype_TINTEGER, "
+                    CommentBindingTable(codeList, "    // get the integer value\n")
+                    table.insert(codeList, "    "..memberType.." val = ("..memberType..")wxlua_getintegertype(L, "..stack_idx..");\n")                    
                 elseif IsDataTypeUInt(memberType) then
                     overload_argList = overload_argList.."&wxluatype_TINTEGER, "
                     CommentBindingTable(codeList, "    // get the unsigned integer value\n")
@@ -3867,6 +3903,9 @@ function GenerateLuaLanguageBinding(interface)
                         elseif IsDataTypeEnum(argTypeWithAttrib) then
                             overload_argList = overload_argList.."&wxluatype_TINTEGER, "
                             argItem = "("..argTypeWithAttrib..")wxlua_getenumtype(L, "..argNum..")"
+                        elseif IsDataTypeSInt(argTypeWithAttrib) then
+                            overload_argList = overload_argList.."&wxluatype_TINTEGER, "
+                            argItem = "("..argTypeWithAttrib..")wxlua_getintegertype(L, "..argNum..")"
                         elseif IsDataTypeUInt(argTypeWithAttrib) then
                             overload_argList = overload_argList.."&wxluatype_TINTEGER, "
                             argItem = "("..argTypeWithAttrib..")wxlua_getuintegertype(L, "..argNum..")"
@@ -4278,7 +4317,13 @@ function GenerateLuaLanguageBinding(interface)
                         elseif returnPtr == "*" then
                             CommentBindingTable(codeList, "    // push the result pointer\n")
                             table.insert(codeList, "    lua_pushlightuserdata(L, (void *)returns);\n")
-                        else -- Number
+                        elseif IsDataTypeSInt(member.DataType) then  -- Number
+                            CommentBindingTable(codeList, "    // push the result integer\n")
+                            table.insert(codeList, "    lua_pushinteger(L, returns);\n")
+                        elseif IsDataTypeUInt(member.DataType) then  -- Number
+                            CommentBindingTable(codeList, "    // push the result unsigned integer\n")
+                            table.insert(codeList, "    lua_pushinteger(L, returns);\n")
+                        else  -- Number
                             CommentBindingTable(codeList, "    // push the result number\n")
                             table.insert(codeList, "    lua_pushnumber(L, returns);\n")
                         end

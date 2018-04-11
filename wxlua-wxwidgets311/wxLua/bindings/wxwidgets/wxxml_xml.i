@@ -94,13 +94,11 @@ class %delete wxXmlNode
 
     wxXmlAttribute *GetAttributes() const;
     
-    bool GetAttribute(const wxString& attrName, wxString *value) const;
-    
     // %override [bool string] wxXmlNode::GetAttributePtr(const wxString& attrName) const;
     // C++ Func: bool GetAttribute(const wxString& attrName, wxString *value) const;
     %override_name wxLua_wxXmlNode_GetAttributePtr bool GetAttribute(const wxString& attrName) const;
     
-    wxString GetAttribute(const wxString& attrName, const wxString& defaultVal = wxEmptyString) const;
+    //wxString GetAttribute(const wxString& attrName, const wxString& defaultVal = wxEmptyString) const;
     bool HasAttribute(const wxString& attrName) const;
 
     int GetLineNumber() const;

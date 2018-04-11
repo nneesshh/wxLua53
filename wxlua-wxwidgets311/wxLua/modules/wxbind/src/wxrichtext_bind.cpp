@@ -54,14 +54,14 @@ wxLuaBindNumber* wxLuaGetDefineList_wxrichtext(size_t &count)
 {
     static wxLuaBindNumber numberList[] =
     {
-#if wxLUA_USE_wxRichText && wxCHECK_VERSION(2,8,0) && wxUSE_RICHTEXT
+#if wxLUA_USE_wxRichText && wxUSE_RICHTEXT
         { "wxRICHTEXT_TYPE_ANY", wxRICHTEXT_TYPE_ANY },
         { "wxRICHTEXT_TYPE_HTML", wxRICHTEXT_TYPE_HTML },
         { "wxRICHTEXT_TYPE_PDF", wxRICHTEXT_TYPE_PDF },
         { "wxRICHTEXT_TYPE_RTF", wxRICHTEXT_TYPE_RTF },
         { "wxRICHTEXT_TYPE_TEXT", wxRICHTEXT_TYPE_TEXT },
         { "wxRICHTEXT_TYPE_XML", wxRICHTEXT_TYPE_XML },
-#endif // wxLUA_USE_wxRichText && wxCHECK_VERSION(2,8,0) && wxUSE_RICHTEXT
+#endif // wxLUA_USE_wxRichText && wxUSE_RICHTEXT
 
 
         { 0, 0 },

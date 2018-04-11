@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9BE733E8-E38F-3217-9EC6-0B4187D5F61A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>LuaLibShared</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../../bin-shared/$(Configuration)/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">LuaLibShared.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">lua53</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../../bin-shared/$(Configuration)/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">LuaLibShared.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">lua53</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\modules\wxbind\setup;..\..\..;..\..\..\modules;..\..\..\modules\lua-5.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;wxLUA_USEBINDING_WXWEBVIEW=1;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=1;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\modules\wxbind\setup;..\..\..;..\..\..\modules;..\..\..\modules\lua-5.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\modules\wxbind\setup;..\..\..;..\..\..\modules;..\..\..\modules\lua-5.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>../../../bin-shared/$(Configuration)/lua53.lib</ImportLibrary>
+      <ProgramDataBaseFile>../../../build/bin-shared/$(Configuration)/lua53.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\modules\wxbind\setup;..\..\..;..\..\..\modules;..\..\..\modules\lua-5.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;wxLUA_USEBINDING_WXWEBVIEW=0;wxLUA_USEBINDING_WXGL=1;wxLUA_USEBINDING_WXSTC=1;wxLUA_USEBINDING_WXXRC=1;wxLUA_USEBINDING_WXRICHTEXT=1;wxLUA_USEBINDING_WXPROPGRID=0;wxLUA_USEBINDING_WXHTML=1;wxLUA_USEBINDING_WXMEDIA=1;wxLUA_USEBINDING_WXAUI=1;wxLUA_USEBINDING_WXADV=1;wxLUA_USEBINDING_WXCORE=1;wxLUA_USEBINDING_WXXML=1;wxLUA_USEBINDING_WXNET=1;wxLUA_USEBINDING_WXBASE=1;LUA_COMPAT_ALL;LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\modules\wxbind\setup;..\..\..;..\..\..\modules;..\..\..\modules\lua-5.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\modules\wxbind\setup;..\..\..;..\..\..\modules;..\..\..\modules\lua-5.3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>../../../bin-shared/$(Configuration)/lua53.lib</ImportLibrary>
+      <ProgramDataBaseFile>../../../build/bin-shared/$(Configuration)/lua53.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lapi.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lauxlib.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lbaselib.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lbitlib.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lcode.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lcorolib.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lctype.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\ldblib.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\ldebug.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\ldo.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\ldump.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lfunc.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lgc.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\linit.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\liolib.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\llex.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lmathlib.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lmem.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\loadlib.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lobject.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lopcodes.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\loslib.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lparser.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lstate.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lstring.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lstrlib.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\ltable.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\ltablib.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\ltm.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lundump.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lutf8lib.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lvm.c" />
+    <ClCompile Include="..\..\..\modules\lua-5.3\src\lzio.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lapi.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lauxlib.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lcode.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lctype.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\ldebug.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\ldo.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lfunc.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lgc.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\llex.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\llimits.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lmem.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lobject.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lopcodes.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lparser.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lprefix.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lstate.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lstring.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\ltable.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\ltm.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lua.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lua.hpp" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\luaconf.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lualib.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lundump.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lvm.h" />
+    <ClInclude Include="..\..\..\modules\lua-5.3\src\lzio.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

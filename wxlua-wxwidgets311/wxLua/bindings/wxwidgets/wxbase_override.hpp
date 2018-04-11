@@ -35,19 +35,22 @@ static int LUACALL wxLua_wxLog_SetTimestamp(lua_State *L)
 %end
 
 %override wxLua_function_wxGetOsVersion
-// %function int wxGetOsVersion(int *major = NULL, int *minor = NULL)
+// %function wxOperatingSystemId wxGetOsVersion(int *verMaj = NULL, int *verMin = NULL, int *verMicro = NULL);
 static int LUACALL wxLua_function_wxGetOsVersion(lua_State *L)
 {
-    // int *minor = NULL
-    int minor= 0;
-    // int *major = NULL
+	  // int *verMaj = NULL
     int major = 0;
+    // int *verMin = NULL
+    int minor= 0;
+    // int *verMicro = NULL
+    int micro = 0;
     // call wxGetOsVersion
-    int returns = wxGetOsVersion(&major, &minor);
+    wxOperatingSystemId returns = wxGetOsVersion(&major, &minor,&micro);
     // push the result numbers
     lua_pushnumber(L, returns);
     lua_pushnumber(L, major);
     lua_pushnumber(L, minor);
+    lua_pushnumber(L, micro);
     // return the number of parameters
     return 3;
 }
@@ -57,8 +60,8 @@ static int LUACALL wxLua_function_wxGetOsVersion(lua_State *L)
 // %function bool wxGetEnv(const wxString& var, wxString *value)
 static int LUACALL wxLua_function_wxGetEnv(lua_State *L)
 {
+	  wxString value;
     wxString var = wxlua_getwxStringtype(L, 1);
-    wxString value;
     // call wxGetEnv
     bool returns = wxGetEnv(var, &value);
     // push the result number
@@ -967,7 +970,7 @@ static int LUACALL wxLua_wxFileName_GetTimes(lua_State *L)
 %end
 
 %override wxLua_wxFileName_SplitPath
-// static void SplitPath(const wxString& fullpath, wxString* volume, wxString* path, wxString* name, wxString* ext, wxPathFormat format = wxPATH_NATIVE)
+// static void SplitPath(const wxString& fullpath, wxString *path, wxString *name, wxString *ext, wxPathFormat format = wxPATH_NATIVE)
 static int LUACALL wxLua_wxFileName_SplitPath(lua_State *L)
 {
     // get number of arguments
@@ -1129,7 +1132,7 @@ static int LUACALL wxLua_wxFile_Read(lua_State *L)
 %end
 
 %override wxLua_wxFile_Write
-// unsigned int Write(const void * buffer, unsigned int nbytes)
+// size_t Write(const void *pBuf, size_t nCount);
 static int LUACALL wxLua_wxFile_Write(lua_State *L)
 {
     // get number of arguments

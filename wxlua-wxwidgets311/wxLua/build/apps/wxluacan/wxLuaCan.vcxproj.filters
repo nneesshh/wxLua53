@@ -1,41 +1,38 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\cancom.cpp">
+    <ClCompile Include="..\..\..\apps\wxluacan\cancom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\canlua.cpp">
+    <ClCompile Include="..\..\..\apps\wxluacan\canlua.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\cansim.cpp">
+    <ClCompile Include="..\..\..\apps\wxluacan\cansim.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\wxluacan_bind.cpp">
+    <ClCompile Include="..\..\..\apps\wxluacan\wxluacan_bind.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\cancom.h">
+    <ClInclude Include="..\..\..\apps\wxluacan\cancom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\canlua.h">
+    <ClInclude Include="..\..\..\apps\wxluacan\canlua.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\cansim.h">
+    <ClInclude Include="..\..\..\apps\wxluacan\cansim.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\wxluacan_bind.h">
+    <ClInclude Include="..\..\..\apps\wxluacan\wxluacan_bind.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\CMakeLists.txt" />
+    <None Include="..\..\..\art\wxlualogo.icns" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\zbs\wxlua-wxwidgets311\wxLua\art\wxlualogo.icns" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="D:\zbs\wxlua-wxwidgets311\wxLua\apps\wxluacan\cansim.rc">
+    <ResourceCompile Include="..\..\..\apps\wxluacan\cansim.rc">
       <Filter>Source Files</Filter>
     </ResourceCompile>
   </ItemGroup>

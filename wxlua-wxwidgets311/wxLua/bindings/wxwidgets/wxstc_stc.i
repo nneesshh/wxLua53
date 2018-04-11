@@ -36,9 +36,9 @@
 #define wxSTC_WS_INVISIBLE
 #define wxSTC_WS_VISIBLEALWAYS
 #define wxSTC_WS_VISIBLEAFTERINDENT
-%wxchkver_3_1_1 #define wxSTC_WS_VISIBLEONLYININDENT
-%wxchkver_3_1_1 #define wxSTC_TD_LONGARROW
-%wxchkver_3_1_1 #define wxSTC_TD_STRIKEOUT
+#define wxSTC_WS_VISIBLEONLYININDENT
+#define wxSTC_TD_LONGARROW
+#define wxSTC_TD_STRIKEOUT
 #define wxSTC_EOL_CRLF
 #define wxSTC_EOL_CR
 #define wxSTC_EOL_LF
@@ -46,8 +46,8 @@
 /// The SC_CP_UTF8 value can be used to enter Unicode mode.
 /// This is the same value as CP_UTF8 in Windows
 #define wxSTC_CP_UTF8
-%wxchkver_3_1_0 #define wxSTC_IME_WINDOWED
-%wxchkver_3_1_0 #define wxSTC_IME_INLINE
+#define wxSTC_IME_WINDOWED
+#define wxSTC_IME_INLINE
 #define wxSTC_MARKER_MAX
 #define wxSTC_MARK_CIRCLE
 #define wxSTC_MARK_ROUNDRECT
@@ -80,11 +80,11 @@
 #define wxSTC_MARK_ARROWS
 #define wxSTC_MARK_PIXMAP
 #define wxSTC_MARK_FULLRECT
-%wxchkver_2_9_2 #define wxSTC_MARK_LEFTRECT
-%wxchkver_2_9_2 #define wxSTC_MARK_AVAILABLE
-%wxchkver_2_9_2 #define wxSTC_MARK_UNDERLINE
-%wxchkver_2_9_5 #define wxSTC_MARK_RGBAIMAGE
-%wxchkver_3_1_0 #define wxSTC_MARK_BOOKMARK
+#define wxSTC_MARK_LEFTRECT
+#define wxSTC_MARK_AVAILABLE
+#define wxSTC_MARK_UNDERLINE
+#define wxSTC_MARK_RGBAIMAGE
+#define wxSTC_MARK_BOOKMARK
 #define wxSTC_MARK_CHARACTER
 
 /// Markers used for outlining column.
@@ -96,14 +96,14 @@
 #define wxSTC_MARKNUM_FOLDER
 #define wxSTC_MARKNUM_FOLDEROPEN
 #define wxSTC_MASK_FOLDERS
-%wxchkver_3_1_0 #define wxSTC_MAX_MARGIN
+#define wxSTC_MAX_MARGIN
 #define wxSTC_MARGIN_SYMBOL
 #define wxSTC_MARGIN_NUMBER
-%wxchkver_2_8_12 #define wxSTC_MARGIN_BACK
-%wxchkver_2_8_12 #define wxSTC_MARGIN_FORE
-%wxchkver_2_9_2  #define wxSTC_MARGIN_TEXT
-%wxchkver_2_9_2  #define wxSTC_MARGIN_RTEXT
-%wxchkver_3_1_1 #define wxSTC_MARGIN_COLOUR
+#define wxSTC_MARGIN_BACK
+#define wxSTC_MARGIN_FORE
+#define wxSTC_MARGIN_TEXT
+#define wxSTC_MARGIN_RTEXT
+#define wxSTC_MARGIN_COLOUR
 
 /// Styles in range 32..38 are predefined for parts of the UI and are not used as normal styles.
 /// Style 39 is for future use.
@@ -113,8 +113,8 @@
 #define wxSTC_STYLE_BRACEBAD
 #define wxSTC_STYLE_CONTROLCHAR
 #define wxSTC_STYLE_INDENTGUIDE
-%wxchkver_2_8_12 #define wxSTC_STYLE_CALLTIP
-%wxchkver_3_1_1 #define wxSTC_STYLE_FOLDDISPLAYTEXT
+#define wxSTC_STYLE_CALLTIP
+#define wxSTC_STYLE_FOLDDISPLAYTEXT
 #define wxSTC_STYLE_LASTPREDEFINED
 #define wxSTC_STYLE_MAX
 
@@ -131,7 +131,7 @@
 #define wxSTC_CHARSET_MAC
 #define wxSTC_CHARSET_OEM
 #define wxSTC_CHARSET_RUSSIAN
-%wxchkver_3_1_1 #define wxSTC_CHARSET_OEM866
+#define wxSTC_CHARSET_OEM866
 #define wxSTC_CHARSET_CYRILLIC
 #define wxSTC_CHARSET_SHIFTJIS
 #define wxSTC_CHARSET_SYMBOL
@@ -145,11 +145,11 @@
 #define wxSTC_CASE_MIXED
 #define wxSTC_CASE_UPPER
 #define wxSTC_CASE_LOWER
-%wxchkver_3_1_1 #define wxSTC_CASE_CAMEL
-%wxchkver_2_9_5 #define wxSTC_FONT_SIZE_MULTIPLIER
-%wxchkver_2_9_5 #define wxSTC_WEIGHT_NORMAL
-%wxchkver_2_9_5 #define wxSTC_WEIGHT_SEMIBOLD
-%wxchkver_2_9_5 #define wxSTC_WEIGHT_BOLD
+#define wxSTC_CASE_CAMEL
+#define wxSTC_FONT_SIZE_MULTIPLIER
+#define wxSTC_WEIGHT_NORMAL
+#define wxSTC_WEIGHT_SEMIBOLD
+#define wxSTC_WEIGHT_BOLD
 
 /// Indicator style enumeration and some constants
 #define wxSTC_INDIC_PLAIN
@@ -159,30 +159,30 @@
 #define wxSTC_INDIC_STRIKE
 #define wxSTC_INDIC_HIDDEN
 #define wxSTC_INDIC_BOX
-%wxchkver_2_8_12 #define wxSTC_INDIC_ROUNDBOX
-%wxchkver_2_9_5 #define wxSTC_INDIC_STRAIGHTBOX
-%wxchkver_2_9_5 #define wxSTC_INDIC_DASH
-%wxchkver_2_9_5 #define wxSTC_INDIC_DOTS
-%wxchkver_2_9_5 #define wxSTC_INDIC_SQUIGGLELOW
-%wxchkver_2_9_5 #define wxSTC_INDIC_DOTBOX
-%wxchkver_3_1_0 #define wxSTC_INDIC_SQUIGGLEPIXMAP
-%wxchkver_3_1_0 #define wxSTC_INDIC_COMPOSITIONTHICK
-%wxchkver_3_1_0 #define wxSTC_INDIC_COMPOSITIONTHIN
-%wxchkver_3_1_0 #define wxSTC_INDIC_FULLBOX
-%wxchkver_3_1_0 #define wxSTC_INDIC_TEXTFORE
-%wxchkver_3_1_1 #define wxSTC_INDIC_POINT
-%wxchkver_3_1_1 #define wxSTC_INDIC_POINTCHARACTER
-%wxchkver_3_1_0 #define wxSTC_INDIC_IME
-%wxchkver_3_1_0 #define wxSTC_INDIC_IME_MAX
-%wxchkver_2_9_5 #define wxSTC_INDIC_MAX
-%wxchkver_2_9_5 #define wxSTC_INDIC_CONTAINER
-%wxchkver_3_1_0 #define wxSTC_INDICVALUEBIT
-%wxchkver_3_1_0 #define wxSTC_INDICVALUEMASK
-%wxchkver_3_1_0 #define wxSTC_INDICFLAG_VALUEFORE
-%wxchkver_2_9_5 #define wxSTC_IV_NONE
-%wxchkver_2_9_5 #define wxSTC_IV_REAL
-%wxchkver_2_9_5 #define wxSTC_IV_LOOKFORWARD
-%wxchkver_2_9_5 #define wxSTC_IV_LOOKBOTH
+#define wxSTC_INDIC_ROUNDBOX
+#define wxSTC_INDIC_STRAIGHTBOX
+#define wxSTC_INDIC_DASH
+#define wxSTC_INDIC_DOTS
+#define wxSTC_INDIC_SQUIGGLELOW
+#define wxSTC_INDIC_DOTBOX
+#define wxSTC_INDIC_SQUIGGLEPIXMAP
+#define wxSTC_INDIC_COMPOSITIONTHICK
+#define wxSTC_INDIC_COMPOSITIONTHIN
+#define wxSTC_INDIC_FULLBOX
+#define wxSTC_INDIC_TEXTFORE
+#define wxSTC_INDIC_POINT
+#define wxSTC_INDIC_POINTCHARACTER
+#define wxSTC_INDIC_IME
+#define wxSTC_INDIC_IME_MAX
+#define wxSTC_INDIC_MAX
+#define wxSTC_INDIC_CONTAINER
+#define wxSTC_INDICVALUEBIT
+#define wxSTC_INDICVALUEMASK
+#define wxSTC_INDICFLAG_VALUEFORE
+#define wxSTC_IV_NONE
+#define wxSTC_IV_REAL
+#define wxSTC_IV_LOOKFORWARD
+#define wxSTC_IV_LOOKBOTH
 
 /// PrintColourMode - use same colours as screen.
 #define wxSTC_PRINT_NORMAL
@@ -203,77 +203,77 @@
 #define wxSTC_FIND_WORDSTART
 #define wxSTC_FIND_REGEXP
 #define wxSTC_FIND_POSIX
-%wxchkver_3_1_0 #define wxSTC_FIND_CXX11REGEX
+#define wxSTC_FIND_CXX11REGEX
 #define wxSTC_FOLDLEVELBASE
 #define wxSTC_FOLDLEVELWHITEFLAG
 #define wxSTC_FOLDLEVELHEADERFLAG
 #define wxSTC_FOLDLEVELNUMBERMASK
-%wxchkver_3_1_1 #define wxSTC_FOLDDISPLAYTEXT_HIDDEN
-%wxchkver_3_1_1 #define wxSTC_FOLDDISPLAYTEXT_STANDARD
-%wxchkver_3_1_1 #define wxSTC_FOLDDISPLAYTEXT_BOXED
-%wxchkver_3_1_0 #define wxSTC_FOLDACTION_CONTRACT
-%wxchkver_3_1_0 #define wxSTC_FOLDACTION_EXPAND
-%wxchkver_3_1_0 #define wxSTC_FOLDACTION_TOGGLE
-%wxchkver_3_1_0 #define wxSTC_AUTOMATICFOLD_SHOW
-%wxchkver_3_1_0 #define wxSTC_AUTOMATICFOLD_CLICK
-%wxchkver_3_1_0 #define wxSTC_AUTOMATICFOLD_CHANGE
+#define wxSTC_FOLDDISPLAYTEXT_HIDDEN
+#define wxSTC_FOLDDISPLAYTEXT_STANDARD
+#define wxSTC_FOLDDISPLAYTEXT_BOXED
+#define wxSTC_FOLDACTION_CONTRACT
+#define wxSTC_FOLDACTION_EXPAND
+#define wxSTC_FOLDACTION_TOGGLE
+#define wxSTC_AUTOMATICFOLD_SHOW
+#define wxSTC_AUTOMATICFOLD_CLICK
+#define wxSTC_AUTOMATICFOLD_CHANGE
 #define wxSTC_FOLDFLAG_LINEBEFORE_EXPANDED
 #define wxSTC_FOLDFLAG_LINEBEFORE_CONTRACTED
 #define wxSTC_FOLDFLAG_LINEAFTER_EXPANDED
 #define wxSTC_FOLDFLAG_LINEAFTER_CONTRACTED
 #define wxSTC_FOLDFLAG_LEVELNUMBERS
-%wxchkver_3_1_0 #define wxSTC_FOLDFLAG_LINESTATE
+#define wxSTC_FOLDFLAG_LINESTATE
 #define wxSTC_TIME_FOREVER
-%wxchkver_3_1_1 #define wxSTC_IDLESTYLING_NONE
-%wxchkver_3_1_1 #define wxSTC_IDLESTYLING_TOVISIBLE
-%wxchkver_3_1_1 #define wxSTC_IDLESTYLING_AFTERVISIBLE
-%wxchkver_3_1_1 #define wxSTC_IDLESTYLING_ALL
+#define wxSTC_IDLESTYLING_NONE
+#define wxSTC_IDLESTYLING_TOVISIBLE
+#define wxSTC_IDLESTYLING_AFTERVISIBLE
+#define wxSTC_IDLESTYLING_ALL
 #define wxSTC_WRAP_NONE
 #define wxSTC_WRAP_WORD
 #define wxSTC_WRAP_CHAR
-%wxchkver_3_1_0 #define wxSTC_WRAP_WHITESPACE
+#define wxSTC_WRAP_WHITESPACE
 #define wxSTC_WRAPVISUALFLAG_NONE
 #define wxSTC_WRAPVISUALFLAG_END
 #define wxSTC_WRAPVISUALFLAG_START
-%wxchkver_2_9_5 #define wxSTC_WRAPVISUALFLAG_MARGIN
+#define wxSTC_WRAPVISUALFLAG_MARGIN
 #define wxSTC_WRAPVISUALFLAGLOC_DEFAULT
 #define wxSTC_WRAPVISUALFLAGLOC_END_BY_TEXT
 #define wxSTC_WRAPVISUALFLAGLOC_START_BY_TEXT
-%wxchkver_2_9_5 #define wxSTC_WRAPINDENT_FIXED
-%wxchkver_2_9_5 #define wxSTC_WRAPINDENT_SAME
-%wxchkver_2_9_5 #define wxSTC_WRAPINDENT_INDENT
+#define wxSTC_WRAPINDENT_FIXED
+#define wxSTC_WRAPINDENT_SAME
+#define wxSTC_WRAPINDENT_INDENT
 #define wxSTC_CACHE_NONE
 #define wxSTC_CACHE_CARET
 #define wxSTC_CACHE_PAGE
 #define wxSTC_CACHE_DOCUMENT
-%wxchkver_3_1_0 #define wxSTC_PHASES_ONE
-%wxchkver_3_1_0 #define wxSTC_PHASES_TWO
-%wxchkver_3_1_0 #define wxSTC_PHASES_MULTIPLE
+#define wxSTC_PHASES_ONE
+#define wxSTC_PHASES_TWO
+#define wxSTC_PHASES_MULTIPLE
 
 /// Control font anti-aliasing.
-%wxchkver_2_9_5 #define wxSTC_EFF_QUALITY_MASK
-%wxchkver_2_9_5 #define wxSTC_EFF_QUALITY_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_EFF_QUALITY_NON_ANTIALIASED
-%wxchkver_2_9_5 #define wxSTC_EFF_QUALITY_ANTIALIASED
-%wxchkver_2_9_5 #define wxSTC_EFF_QUALITY_LCD_OPTIMIZED
-%wxchkver_2_9_5 #define wxSTC_MULTIPASTE_ONCE
-%wxchkver_2_9_5 #define wxSTC_MULTIPASTE_EACH
+#define wxSTC_EFF_QUALITY_MASK
+#define wxSTC_EFF_QUALITY_DEFAULT
+#define wxSTC_EFF_QUALITY_NON_ANTIALIASED
+#define wxSTC_EFF_QUALITY_ANTIALIASED
+#define wxSTC_EFF_QUALITY_LCD_OPTIMIZED
+#define wxSTC_MULTIPASTE_ONCE
+#define wxSTC_MULTIPASTE_EACH
 #define wxSTC_EDGE_NONE
 #define wxSTC_EDGE_LINE
 #define wxSTC_EDGE_BACKGROUND
-%wxchkver_3_1_1 #define wxSTC_EDGE_MULTILINE
-%wxchkver_3_1_1 #define wxSTC_POPUP_NEVER
-%wxchkver_3_1_1 #define wxSTC_POPUP_ALL
-%wxchkver_3_1_1 #define wxSTC_POPUP_TEXT
-%wxchkver_2_9_5 #define wxSTC_STATUS_OK
-%wxchkver_2_9_5 #define wxSTC_STATUS_FAILURE
-%wxchkver_2_9_5 #define wxSTC_STATUS_BADALLOC
-%wxchkver_3_1_0 #define wxSTC_STATUS_WARN_START
-%wxchkver_3_1_0 #define wxSTC_STATUS_WARN_REGEX
+#define wxSTC_EDGE_MULTILINE
+#define wxSTC_POPUP_NEVER
+#define wxSTC_POPUP_ALL
+#define wxSTC_POPUP_TEXT
+#define wxSTC_STATUS_OK
+#define wxSTC_STATUS_FAILURE
+#define wxSTC_STATUS_BADALLOC
+#define wxSTC_STATUS_WARN_START
+#define wxSTC_STATUS_WARN_REGEX
 #define wxSTC_CURSORNORMAL
-%wxchkver_2_9_5 #define wxSTC_CURSORARROW
+#define wxSTC_CURSORARROW
 #define wxSTC_CURSORWAIT
-%wxchkver_2_9_5 #define wxSTC_CURSORREVERSEARROW
+#define wxSTC_CURSORREVERSEARROW
 
 /// Constants for use with SetVisiblePolicy, similar to SetCaretPolicy.
 #define wxSTC_VISIBLE_SLOP
@@ -307,48 +307,48 @@
 #define wxSTC_SEL_STREAM
 #define wxSTC_SEL_RECTANGLE
 #define wxSTC_SEL_LINES
-%wxchkver_2_9_5 #define wxSTC_SEL_THIN
-%wxchkver_2_9_5 #define wxSTC_CASEINSENSITIVEBEHAVIOUR_RESPECTCASE
-%wxchkver_2_9_5 #define wxSTC_CASEINSENSITIVEBEHAVIOUR_IGNORECASE
-%wxchkver_3_1_0 #define wxSTC_MULTIAUTOC_ONCE
-%wxchkver_3_1_0 #define wxSTC_MULTIAUTOC_EACH
-%wxchkver_3_1_0 #define wxSTC_ORDER_PRESORTED
-%wxchkver_3_1_0 #define wxSTC_ORDER_PERFORMSORT
-%wxchkver_3_1_0 #define wxSTC_ORDER_CUSTOM
-%wxchkver_2_9_5 #define wxSTC_CARETSTICKY_OFF
-%wxchkver_2_9_5 #define wxSTC_CARETSTICKY_ON
-%wxchkver_2_9_5 #define wxSTC_CARETSTICKY_WHITESPACE
-%wxchkver_2_8_12 #define wxSTC_ALPHA_TRANSPARENT
-%wxchkver_2_8_12 #define wxSTC_ALPHA_OPAQUE
-%wxchkver_2_8_12 #define wxSTC_ALPHA_NOALPHA
-%wxchkver_2_9_5 #define wxSTC_CARETSTYLE_INVISIBLE
-%wxchkver_2_9_5 #define wxSTC_CARETSTYLE_LINE
-%wxchkver_2_9_5 #define wxSTC_CARETSTYLE_BLOCK
-%wxchkver_2_9_5 #define wxSTC_MARGINOPTION_NONE
-%wxchkver_2_9_5 #define wxSTC_MARGINOPTION_SUBLINESELECT
-%wxchkver_2_9_5 #define wxSTC_ANNOTATION_HIDDEN
-%wxchkver_2_9_5 #define wxSTC_ANNOTATION_STANDARD
-%wxchkver_2_9_5 #define wxSTC_ANNOTATION_BOXED
-%wxchkver_3_1_0 #define wxSTC_ANNOTATION_INDENTED
-%wxchkver_2_9_5 #define wxSTC_UNDO_MAY_COALESCE
-%wxchkver_3_1_1 #define wxSTC_VS_NONE
-%wxchkver_3_1_1 #define wxSTC_VS_RECTANGULARSELECTION
-%wxchkver_3_1_1 #define wxSTC_VS_USERACCESSIBLE
-%wxchkver_3_1_1 #define wxSTC_VS_NOWRAPLINESTART
-%wxchkver_2_9_5 #define wxSTC_TECHNOLOGY_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_TECHNOLOGY_DIRECTWRITE
+#define wxSTC_SEL_THIN
+#define wxSTC_CASEINSENSITIVEBEHAVIOUR_RESPECTCASE
+#define wxSTC_CASEINSENSITIVEBEHAVIOUR_IGNORECASE
+#define wxSTC_MULTIAUTOC_ONCE
+#define wxSTC_MULTIAUTOC_EACH
+#define wxSTC_ORDER_PRESORTED
+#define wxSTC_ORDER_PERFORMSORT
+#define wxSTC_ORDER_CUSTOM
+#define wxSTC_CARETSTICKY_OFF
+#define wxSTC_CARETSTICKY_ON
+#define wxSTC_CARETSTICKY_WHITESPACE
+#define wxSTC_ALPHA_TRANSPARENT
+#define wxSTC_ALPHA_OPAQUE
+#define wxSTC_ALPHA_NOALPHA
+#define wxSTC_CARETSTYLE_INVISIBLE
+#define wxSTC_CARETSTYLE_LINE
+#define wxSTC_CARETSTYLE_BLOCK
+#define wxSTC_MARGINOPTION_NONE
+#define wxSTC_MARGINOPTION_SUBLINESELECT
+#define wxSTC_ANNOTATION_HIDDEN
+#define wxSTC_ANNOTATION_STANDARD
+#define wxSTC_ANNOTATION_BOXED
+#define wxSTC_ANNOTATION_INDENTED
+#define wxSTC_UNDO_MAY_COALESCE
+#define wxSTC_VS_NONE
+#define wxSTC_VS_RECTANGULARSELECTION
+#define wxSTC_VS_USERACCESSIBLE
+#define wxSTC_VS_NOWRAPLINESTART
+#define wxSTC_TECHNOLOGY_DEFAULT
+#define wxSTC_TECHNOLOGY_DIRECTWRITE
 
 /// Line end types which may be used in addition to LF, CR, and CRLF
 /// SC_LINE_END_TYPE_UNICODE includes U+2028 Line Separator,
 /// U+2029 Paragraph Separator, and U+0085 Next Line
-%wxchkver_3_1_0 #define wxSTC_LINE_END_TYPE_DEFAULT
-%wxchkver_3_1_0 #define wxSTC_LINE_END_TYPE_UNICODE
+#define wxSTC_LINE_END_TYPE_DEFAULT
+#define wxSTC_LINE_END_TYPE_UNICODE
 
 /// Maximum value of keywordSet parameter of SetKeyWords.
 #define wxSTC_KEYWORDSET_MAX
-%wxchkver_2_9_5 #define wxSTC_TYPE_BOOLEAN
-%wxchkver_2_9_5 #define wxSTC_TYPE_INTEGER
-%wxchkver_2_9_5 #define wxSTC_TYPE_STRING
+#define wxSTC_TYPE_BOOLEAN
+#define wxSTC_TYPE_INTEGER
+#define wxSTC_TYPE_STRING
 
 /// Notifications
 /// Type of modification and the action which caused the modification.
@@ -367,20 +367,20 @@
 #define wxSTC_MOD_BEFOREINSERT
 #define wxSTC_MOD_BEFOREDELETE
 #define wxSTC_MULTILINEUNDOREDO
-%wxchkver_2_9_5 #define wxSTC_STARTACTION
-%wxchkver_2_9_5 #define wxSTC_MOD_CHANGEINDICATOR
-%wxchkver_2_9_5 #define wxSTC_MOD_CHANGELINESTATE
-%wxchkver_2_9_5 #define wxSTC_MOD_CHANGEMARGIN
-%wxchkver_2_9_5 #define wxSTC_MOD_CHANGEANNOTATION
-%wxchkver_2_9_5 #define wxSTC_MOD_CONTAINER
-%wxchkver_2_9_5 #define wxSTC_MOD_LEXERSTATE
-%wxchkver_3_1_0 #define wxSTC_MOD_INSERTCHECK
-%wxchkver_3_1_0 #define wxSTC_MOD_CHANGETABSTOPS
+#define wxSTC_STARTACTION
+#define wxSTC_MOD_CHANGEINDICATOR
+#define wxSTC_MOD_CHANGELINESTATE
+#define wxSTC_MOD_CHANGEMARGIN
+#define wxSTC_MOD_CHANGEANNOTATION
+#define wxSTC_MOD_CONTAINER
+#define wxSTC_MOD_LEXERSTATE
+#define wxSTC_MOD_INSERTCHECK
+#define wxSTC_MOD_CHANGETABSTOPS
 #define wxSTC_MODEVENTMASKALL
-%wxchkver_2_9_5 #define wxSTC_UPDATE_CONTENT
-%wxchkver_2_9_5 #define wxSTC_UPDATE_SELECTION
-%wxchkver_2_9_5 #define wxSTC_UPDATE_V_SCROLL
-%wxchkver_2_9_5 #define wxSTC_UPDATE_H_SCROLL
+#define wxSTC_UPDATE_CONTENT
+#define wxSTC_UPDATE_SELECTION
+#define wxSTC_UPDATE_V_SCROLL
+#define wxSTC_UPDATE_H_SCROLL
 
 /// Symbolic key codes and modifier flags.
 /// ASCII and other printable characters below 256.
@@ -402,20 +402,20 @@
 #define wxSTC_KEY_ADD
 #define wxSTC_KEY_SUBTRACT
 #define wxSTC_KEY_DIVIDE
-%wxchkver_2_9_5 #define wxSTC_KEY_WIN
-%wxchkver_2_9_5 #define wxSTC_KEY_RWIN
-%wxchkver_2_9_5 #define wxSTC_KEY_MENU
-%wxchkver_3_1_1 #define wxSTC_KEYMOD_NORM
-%wxchkver_3_1_1 #define wxSTC_KEYMOD_SHIFT
-%wxchkver_3_1_1 #define wxSTC_KEYMOD_CTRL
-%wxchkver_3_1_1 #define wxSTC_KEYMOD_ALT
-%wxchkver_3_1_1 #define wxSTC_KEYMOD_SUPER
-%wxchkver_3_1_1 #define wxSTC_KEYMOD_META
-%wxchkver_3_1_1 #define wxSTC_AC_FILLUP
-%wxchkver_3_1_1 #define wxSTC_AC_DOUBLECLICK
-%wxchkver_3_1_1 #define wxSTC_AC_TAB
-%wxchkver_3_1_1 #define wxSTC_AC_NEWLINE
-%wxchkver_3_1_1 #define wxSTC_AC_COMMAND
+#define wxSTC_KEY_WIN
+#define wxSTC_KEY_RWIN
+#define wxSTC_KEY_MENU
+#define wxSTC_KEYMOD_NORM
+#define wxSTC_KEYMOD_SHIFT
+#define wxSTC_KEYMOD_CTRL
+#define wxSTC_KEYMOD_ALT
+#define wxSTC_KEYMOD_SUPER
+#define wxSTC_KEYMOD_META
+#define wxSTC_AC_FILLUP
+#define wxSTC_AC_DOUBLECLICK
+#define wxSTC_AC_TAB
+#define wxSTC_AC_NEWLINE
+#define wxSTC_AC_COMMAND
 
 /// For SciLexer.h
 #define wxSTC_LEX_CONTAINER
@@ -492,52 +492,52 @@
 #define wxSTC_LEX_FLAGSHIP
 #define wxSTC_LEX_CSOUND
 #define wxSTC_LEX_FREEBASIC
-%wxchkver_2_8_12 #define wxSTC_LEX_INNOSETUP
-%wxchkver_2_9_5 #define wxSTC_LEX_OPAL
-%wxchkver_2_9_5 #define wxSTC_LEX_SPICE
-%wxchkver_2_9_5 #define wxSTC_LEX_D
-%wxchkver_2_9_5 #define wxSTC_LEX_CMAKE
-%wxchkver_2_9_5 #define wxSTC_LEX_GAP
-%wxchkver_2_9_5 #define wxSTC_LEX_PLM
-%wxchkver_2_9_5 #define wxSTC_LEX_PROGRESS
-%wxchkver_2_9_5 #define wxSTC_LEX_ABAQUS
-%wxchkver_2_9_5 #define wxSTC_LEX_ASYMPTOTE
-%wxchkver_2_9_5 #define wxSTC_LEX_R
-%wxchkver_2_9_5 #define wxSTC_LEX_MAGIK
-%wxchkver_2_9_5 #define wxSTC_LEX_POWERSHELL
-%wxchkver_2_9_5 #define wxSTC_LEX_MYSQL
-%wxchkver_2_9_5 #define wxSTC_LEX_PO
-%wxchkver_2_9_5 #define wxSTC_LEX_TAL
-%wxchkver_2_9_5 #define wxSTC_LEX_COBOL
-%wxchkver_2_9_5 #define wxSTC_LEX_TACL
-%wxchkver_2_9_5 #define wxSTC_LEX_SORCUS
-%wxchkver_2_9_5 #define wxSTC_LEX_POWERPRO
-%wxchkver_2_9_5 #define wxSTC_LEX_NIMROD
-%wxchkver_2_9_5 #define wxSTC_LEX_SML
-%wxchkver_2_9_5 #define wxSTC_LEX_MARKDOWN
-%wxchkver_2_9_5 #define wxSTC_LEX_TXT2TAGS
-%wxchkver_2_9_5 #define wxSTC_LEX_A68K
-%wxchkver_2_9_5 #define wxSTC_LEX_MODULA
-%wxchkver_2_9_5 #define wxSTC_LEX_COFFEESCRIPT
-%wxchkver_2_9_5 #define wxSTC_LEX_TCMD
-%wxchkver_2_9_5 #define wxSTC_LEX_AVS
-%wxchkver_2_9_5 #define wxSTC_LEX_ECL
-%wxchkver_2_9_5 #define wxSTC_LEX_OSCRIPT
-%wxchkver_2_9_5 #define wxSTC_LEX_VISUALPROLOG
-%wxchkver_3_1_0 #define wxSTC_LEX_LITERATEHASKELL
-%wxchkver_3_1_0 #define wxSTC_LEX_STTXT
-%wxchkver_3_1_0 #define wxSTC_LEX_KVIRC
-%wxchkver_3_1_0 #define wxSTC_LEX_RUST
-%wxchkver_3_1_0 #define wxSTC_LEX_DMAP
-%wxchkver_3_1_0 #define wxSTC_LEX_AS
-%wxchkver_3_1_0 #define wxSTC_LEX_DMIS
-%wxchkver_3_1_0 #define wxSTC_LEX_REGISTRY
-%wxchkver_3_1_0 #define wxSTC_LEX_BIBTEX
-%wxchkver_3_1_0 #define wxSTC_LEX_SREC
-%wxchkver_3_1_0 #define wxSTC_LEX_IHEX
-%wxchkver_3_1_0 #define wxSTC_LEX_TEHEX
-%wxchkver_3_1_1 #define wxSTC_LEX_JSON
-%wxchkver_3_1_1 #define wxSTC_LEX_EDIFACT
+#define wxSTC_LEX_INNOSETUP
+#define wxSTC_LEX_OPAL
+#define wxSTC_LEX_SPICE
+#define wxSTC_LEX_D
+#define wxSTC_LEX_CMAKE
+#define wxSTC_LEX_GAP
+#define wxSTC_LEX_PLM
+#define wxSTC_LEX_PROGRESS
+#define wxSTC_LEX_ABAQUS
+#define wxSTC_LEX_ASYMPTOTE
+#define wxSTC_LEX_R
+#define wxSTC_LEX_MAGIK
+#define wxSTC_LEX_POWERSHELL
+#define wxSTC_LEX_MYSQL
+#define wxSTC_LEX_PO
+#define wxSTC_LEX_TAL
+#define wxSTC_LEX_COBOL
+#define wxSTC_LEX_TACL
+#define wxSTC_LEX_SORCUS
+#define wxSTC_LEX_POWERPRO
+#define wxSTC_LEX_NIMROD
+#define wxSTC_LEX_SML
+#define wxSTC_LEX_MARKDOWN
+#define wxSTC_LEX_TXT2TAGS
+#define wxSTC_LEX_A68K
+#define wxSTC_LEX_MODULA
+#define wxSTC_LEX_COFFEESCRIPT
+#define wxSTC_LEX_TCMD
+#define wxSTC_LEX_AVS
+#define wxSTC_LEX_ECL
+#define wxSTC_LEX_OSCRIPT
+#define wxSTC_LEX_VISUALPROLOG
+#define wxSTC_LEX_LITERATEHASKELL
+#define wxSTC_LEX_STTXT
+#define wxSTC_LEX_KVIRC
+#define wxSTC_LEX_RUST
+#define wxSTC_LEX_DMAP
+#define wxSTC_LEX_AS
+#define wxSTC_LEX_DMIS
+#define wxSTC_LEX_REGISTRY
+#define wxSTC_LEX_BIBTEX
+#define wxSTC_LEX_SREC
+#define wxSTC_LEX_IHEX
+#define wxSTC_LEX_TEHEX
+#define wxSTC_LEX_JSON
+#define wxSTC_LEX_EDIFACT
 
 /// When a lexer specifies its language as SCLEX_AUTOMATIC it receives a
 /// value assigned in sequence from SCLEX_AUTOMATIC+1.
@@ -582,63 +582,63 @@
 #define wxSTC_C_COMMENTDOCKEYWORD
 #define wxSTC_C_COMMENTDOCKEYWORDERROR
 #define wxSTC_C_GLOBALCLASS
-%wxchkver_2_9_5 #define wxSTC_C_STRINGRAW
-%wxchkver_2_9_5 #define wxSTC_C_TRIPLEVERBATIM
-%wxchkver_2_9_5 #define wxSTC_C_HASHQUOTEDSTRING
-%wxchkver_2_9_5 #define wxSTC_C_PREPROCESSORCOMMENT
-%wxchkver_3_1_0 #define wxSTC_C_PREPROCESSORCOMMENTDOC
-%wxchkver_3_1_0 #define wxSTC_C_USERLITERAL
-%wxchkver_3_1_0 #define wxSTC_C_TASKMARKER
-%wxchkver_3_1_0 #define wxSTC_C_ESCAPESEQUENCE
+#define wxSTC_C_STRINGRAW
+#define wxSTC_C_TRIPLEVERBATIM
+#define wxSTC_C_HASHQUOTEDSTRING
+#define wxSTC_C_PREPROCESSORCOMMENT
+#define wxSTC_C_PREPROCESSORCOMMENTDOC
+#define wxSTC_C_USERLITERAL
+#define wxSTC_C_TASKMARKER
+#define wxSTC_C_ESCAPESEQUENCE
 
 /// Lexical states for SCLEX_D
-%wxchkver_2_9_5 #define wxSTC_D_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_D_COMMENT
-%wxchkver_2_9_5 #define wxSTC_D_COMMENTLINE
-%wxchkver_2_9_5 #define wxSTC_D_COMMENTDOC
-%wxchkver_2_9_5 #define wxSTC_D_COMMENTNESTED
-%wxchkver_2_9_5 #define wxSTC_D_NUMBER
-%wxchkver_2_9_5 #define wxSTC_D_WORD
-%wxchkver_2_9_5 #define wxSTC_D_WORD2
-%wxchkver_2_9_5 #define wxSTC_D_WORD3
-%wxchkver_2_9_5 #define wxSTC_D_TYPEDEF
-%wxchkver_2_9_5 #define wxSTC_D_STRING
-%wxchkver_2_9_5 #define wxSTC_D_STRINGEOL
-%wxchkver_2_9_5 #define wxSTC_D_CHARACTER
-%wxchkver_2_9_5 #define wxSTC_D_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_D_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_D_COMMENTLINEDOC
-%wxchkver_2_9_5 #define wxSTC_D_COMMENTDOCKEYWORD
-%wxchkver_2_9_5 #define wxSTC_D_COMMENTDOCKEYWORDERROR
-%wxchkver_2_9_5 #define wxSTC_D_STRINGB
-%wxchkver_2_9_5 #define wxSTC_D_STRINGR
-%wxchkver_2_9_5 #define wxSTC_D_WORD5
-%wxchkver_2_9_5 #define wxSTC_D_WORD6
-%wxchkver_2_9_5 #define wxSTC_D_WORD7
+#define wxSTC_D_DEFAULT
+#define wxSTC_D_COMMENT
+#define wxSTC_D_COMMENTLINE
+#define wxSTC_D_COMMENTDOC
+#define wxSTC_D_COMMENTNESTED
+#define wxSTC_D_NUMBER
+#define wxSTC_D_WORD
+#define wxSTC_D_WORD2
+#define wxSTC_D_WORD3
+#define wxSTC_D_TYPEDEF
+#define wxSTC_D_STRING
+#define wxSTC_D_STRINGEOL
+#define wxSTC_D_CHARACTER
+#define wxSTC_D_OPERATOR
+#define wxSTC_D_IDENTIFIER
+#define wxSTC_D_COMMENTLINEDOC
+#define wxSTC_D_COMMENTDOCKEYWORD
+#define wxSTC_D_COMMENTDOCKEYWORDERROR
+#define wxSTC_D_STRINGB
+#define wxSTC_D_STRINGR
+#define wxSTC_D_WORD5
+#define wxSTC_D_WORD6
+#define wxSTC_D_WORD7
 
 /// Lexical states for SCLEX_TCL
-%wxchkver_2_8_12 #define wxSTC_TCL_DEFAULT
-%wxchkver_2_8_12 #define wxSTC_TCL_COMMENT
-%wxchkver_2_8_12 #define wxSTC_TCL_COMMENTLINE
-%wxchkver_2_8_12 #define wxSTC_TCL_NUMBER
-%wxchkver_2_8_12 #define wxSTC_TCL_WORD_IN_QUOTE
-%wxchkver_2_8_12 #define wxSTC_TCL_IN_QUOTE
-%wxchkver_2_8_12 #define wxSTC_TCL_OPERATOR
-%wxchkver_2_8_12 #define wxSTC_TCL_IDENTIFIER
-%wxchkver_2_8_12 #define wxSTC_TCL_SUBSTITUTION
-%wxchkver_2_8_12 #define wxSTC_TCL_SUB_BRACE
-%wxchkver_2_8_12 #define wxSTC_TCL_MODIFIER
-%wxchkver_2_8_12 #define wxSTC_TCL_EXPAND
-%wxchkver_2_8_12 #define wxSTC_TCL_WORD
-%wxchkver_2_8_12 #define wxSTC_TCL_WORD2
-%wxchkver_2_8_12 #define wxSTC_TCL_WORD3
-%wxchkver_2_8_12 #define wxSTC_TCL_WORD4
-%wxchkver_2_8_12 #define wxSTC_TCL_WORD5
-%wxchkver_2_8_12 #define wxSTC_TCL_WORD6
-%wxchkver_2_8_12 #define wxSTC_TCL_WORD7
-%wxchkver_2_8_12 #define wxSTC_TCL_WORD8
-%wxchkver_2_8_12 #define wxSTC_TCL_COMMENT_BOX
-%wxchkver_2_8_12 #define wxSTC_TCL_BLOCK_COMMENT
+#define wxSTC_TCL_DEFAULT
+#define wxSTC_TCL_COMMENT
+#define wxSTC_TCL_COMMENTLINE
+#define wxSTC_TCL_NUMBER
+#define wxSTC_TCL_WORD_IN_QUOTE
+#define wxSTC_TCL_IN_QUOTE
+#define wxSTC_TCL_OPERATOR
+#define wxSTC_TCL_IDENTIFIER
+#define wxSTC_TCL_SUBSTITUTION
+#define wxSTC_TCL_SUB_BRACE
+#define wxSTC_TCL_MODIFIER
+#define wxSTC_TCL_EXPAND
+#define wxSTC_TCL_WORD
+#define wxSTC_TCL_WORD2
+#define wxSTC_TCL_WORD3
+#define wxSTC_TCL_WORD4
+#define wxSTC_TCL_WORD5
+#define wxSTC_TCL_WORD6
+#define wxSTC_TCL_WORD7
+#define wxSTC_TCL_WORD8
+#define wxSTC_TCL_COMMENT_BOX
+#define wxSTC_TCL_BLOCK_COMMENT
 
 /// Lexical states for SCLEX_HTML, SCLEX_XML
 #define wxSTC_H_DEFAULT
@@ -810,19 +810,19 @@
 #define wxSTC_PL_STRING_QR
 #define wxSTC_PL_STRING_QW
 #define wxSTC_PL_POD_VERB
-%wxchkver_2_9_5 #define wxSTC_PL_SUB_PROTOTYPE
-%wxchkver_2_9_5 #define wxSTC_PL_FORMAT_IDENT
-%wxchkver_2_9_5 #define wxSTC_PL_FORMAT
-%wxchkver_2_9_5 #define wxSTC_PL_STRING_VAR
-%wxchkver_2_9_5 #define wxSTC_PL_XLAT
-%wxchkver_2_9_5 #define wxSTC_PL_REGEX_VAR
-%wxchkver_2_9_5 #define wxSTC_PL_REGSUBST_VAR
-%wxchkver_2_9_5 #define wxSTC_PL_BACKTICKS_VAR
-%wxchkver_2_9_5 #define wxSTC_PL_HERE_QQ_VAR
-%wxchkver_2_9_5 #define wxSTC_PL_HERE_QX_VAR
-%wxchkver_2_9_5 #define wxSTC_PL_STRING_QQ_VAR
-%wxchkver_2_9_5 #define wxSTC_PL_STRING_QX_VAR
-%wxchkver_2_9_5 #define wxSTC_PL_STRING_QR_VAR
+#define wxSTC_PL_SUB_PROTOTYPE
+#define wxSTC_PL_FORMAT_IDENT
+#define wxSTC_PL_FORMAT
+#define wxSTC_PL_STRING_VAR
+#define wxSTC_PL_XLAT
+#define wxSTC_PL_REGEX_VAR
+#define wxSTC_PL_REGSUBST_VAR
+#define wxSTC_PL_BACKTICKS_VAR
+#define wxSTC_PL_HERE_QQ_VAR
+#define wxSTC_PL_HERE_QX_VAR
+#define wxSTC_PL_STRING_QQ_VAR
+#define wxSTC_PL_STRING_QX_VAR
+#define wxSTC_PL_STRING_QR_VAR
 
 /// Lexical states for SCLEX_RUBY
 #define wxSTC_RB_DEFAULT
@@ -880,10 +880,10 @@
 #define wxSTC_B_ERROR
 #define wxSTC_B_HEXNUMBER
 #define wxSTC_B_BINNUMBER
-%wxchkver_3_1_0 #define wxSTC_B_COMMENTBLOCK
-%wxchkver_3_1_0 #define wxSTC_B_DOCLINE
-%wxchkver_3_1_0 #define wxSTC_B_DOCBLOCK
-%wxchkver_3_1_0 #define wxSTC_B_DOCKEYWORD
+#define wxSTC_B_COMMENTBLOCK
+#define wxSTC_B_DOCLINE
+#define wxSTC_B_DOCBLOCK
+#define wxSTC_B_DOCKEYWORD
 
 /// Lexical states for SCLEX_PROPERTIES
 #define wxSTC_PROPS_DEFAULT
@@ -891,7 +891,7 @@
 #define wxSTC_PROPS_SECTION
 #define wxSTC_PROPS_ASSIGNMENT
 #define wxSTC_PROPS_DEFVAL
-%wxchkver_2_8_12 #define wxSTC_PROPS_KEY
+#define wxSTC_PROPS_KEY
 
 /// Lexical states for SCLEX_LATEX
 #define wxSTC_L_DEFAULT
@@ -899,14 +899,14 @@
 #define wxSTC_L_TAG
 #define wxSTC_L_MATH
 #define wxSTC_L_COMMENT
-%wxchkver_2_9_5 #define wxSTC_L_TAG2
-%wxchkver_2_9_5 #define wxSTC_L_MATH2
-%wxchkver_2_9_5 #define wxSTC_L_COMMENT2
-%wxchkver_2_9_5 #define wxSTC_L_VERBATIM
-%wxchkver_2_9_5 #define wxSTC_L_SHORTCMD
-%wxchkver_2_9_5 #define wxSTC_L_SPECIAL
-%wxchkver_2_9_5 #define wxSTC_L_CMDOPT
-%wxchkver_2_9_5 #define wxSTC_L_ERROR
+#define wxSTC_L_TAG2
+#define wxSTC_L_MATH2
+#define wxSTC_L_COMMENT2
+#define wxSTC_L_VERBATIM
+#define wxSTC_L_SHORTCMD
+#define wxSTC_L_SPECIAL
+#define wxSTC_L_CMDOPT
+#define wxSTC_L_ERROR
 
 /// Lexical states for SCLEX_LUA
 #define wxSTC_LUA_DEFAULT
@@ -929,7 +929,7 @@
 #define wxSTC_LUA_WORD6
 #define wxSTC_LUA_WORD7
 #define wxSTC_LUA_WORD8
-%wxchkver_2_9_5 #define wxSTC_LUA_LABEL
+#define wxSTC_LUA_LABEL
 
 /// Lexical states for SCLEX_ERRORLIST
 #define wxSTC_ERR_DEFAULT
@@ -953,26 +953,26 @@
 #define wxSTC_ERR_ABSF
 #define wxSTC_ERR_TIDY
 #define wxSTC_ERR_JAVA_STACK
-%wxchkver_2_9_5 #define wxSTC_ERR_VALUE
-%wxchkver_3_1_0 #define wxSTC_ERR_GCC_INCLUDED_FROM
-%wxchkver_3_1_1 #define wxSTC_ERR_ESCSEQ
-%wxchkver_3_1_1 #define wxSTC_ERR_ESCSEQ_UNKNOWN
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_BLACK
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_RED
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_GREEN
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_BROWN
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_BLUE
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_MAGENTA
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_CYAN
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_GRAY
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_DARK_GRAY
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_BRIGHT_RED
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_BRIGHT_GREEN
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_YELLOW
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_BRIGHT_BLUE
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_BRIGHT_MAGENTA
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_BRIGHT_CYAN
-%wxchkver_3_1_1 #define wxSTC_ERR_ES_WHITE
+#define wxSTC_ERR_VALUE
+#define wxSTC_ERR_GCC_INCLUDED_FROM
+#define wxSTC_ERR_ESCSEQ
+#define wxSTC_ERR_ESCSEQ_UNKNOWN
+#define wxSTC_ERR_ES_BLACK
+#define wxSTC_ERR_ES_RED
+#define wxSTC_ERR_ES_GREEN
+#define wxSTC_ERR_ES_BROWN
+#define wxSTC_ERR_ES_BLUE
+#define wxSTC_ERR_ES_MAGENTA
+#define wxSTC_ERR_ES_CYAN
+#define wxSTC_ERR_ES_GRAY
+#define wxSTC_ERR_ES_DARK_GRAY
+#define wxSTC_ERR_ES_BRIGHT_RED
+#define wxSTC_ERR_ES_BRIGHT_GREEN
+#define wxSTC_ERR_ES_YELLOW
+#define wxSTC_ERR_ES_BRIGHT_BLUE
+#define wxSTC_ERR_ES_BRIGHT_MAGENTA
+#define wxSTC_ERR_ES_BRIGHT_CYAN
+#define wxSTC_ERR_ES_WHITE
 
 /// Lexical states for SCLEX_BATCH
 #define wxSTC_BAT_DEFAULT
@@ -985,17 +985,17 @@
 #define wxSTC_BAT_OPERATOR
 
 /// Lexical states for SCLEX_TCMD
-%wxchkver_2_9_5 #define wxSTC_TCMD_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_TCMD_COMMENT
-%wxchkver_2_9_5 #define wxSTC_TCMD_WORD
-%wxchkver_2_9_5 #define wxSTC_TCMD_LABEL
-%wxchkver_2_9_5 #define wxSTC_TCMD_HIDE
-%wxchkver_2_9_5 #define wxSTC_TCMD_COMMAND
-%wxchkver_2_9_5 #define wxSTC_TCMD_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_TCMD_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_TCMD_ENVIRONMENT
-%wxchkver_2_9_5 #define wxSTC_TCMD_EXPANSION
-%wxchkver_2_9_5 #define wxSTC_TCMD_CLABEL
+#define wxSTC_TCMD_DEFAULT
+#define wxSTC_TCMD_COMMENT
+#define wxSTC_TCMD_WORD
+#define wxSTC_TCMD_LABEL
+#define wxSTC_TCMD_HIDE
+#define wxSTC_TCMD_COMMAND
+#define wxSTC_TCMD_IDENTIFIER
+#define wxSTC_TCMD_OPERATOR
+#define wxSTC_TCMD_ENVIRONMENT
+#define wxSTC_TCMD_EXPANSION
+#define wxSTC_TCMD_CLABEL
 
 /// Lexical states for SCLEX_MAKEFILE
 #define wxSTC_MAKE_DEFAULT
@@ -1014,7 +1014,7 @@
 #define wxSTC_DIFF_POSITION
 #define wxSTC_DIFF_DELETED
 #define wxSTC_DIFF_ADDED
-%wxchkver_2_9_5 #define wxSTC_DIFF_CHANGED
+#define wxSTC_DIFF_CHANGED
 
 /// Lexical states for SCLEX_CONF (Apache Configuration Files Lexer)
 #define wxSTC_CONF_DEFAULT
@@ -1071,20 +1071,20 @@
 #define wxSTC_BAAN_IDENTIFIER
 #define wxSTC_BAAN_STRINGEOL
 #define wxSTC_BAAN_WORD2
-%wxchkver_3_1_1 #define wxSTC_BAAN_WORD3
-%wxchkver_3_1_1 #define wxSTC_BAAN_WORD4
-%wxchkver_3_1_1 #define wxSTC_BAAN_WORD5
-%wxchkver_3_1_1 #define wxSTC_BAAN_WORD6
-%wxchkver_3_1_1 #define wxSTC_BAAN_WORD7
-%wxchkver_3_1_1 #define wxSTC_BAAN_WORD8
-%wxchkver_3_1_1 #define wxSTC_BAAN_WORD9
-%wxchkver_3_1_1 #define wxSTC_BAAN_TABLEDEF
-%wxchkver_3_1_1 #define wxSTC_BAAN_TABLESQL
-%wxchkver_3_1_1 #define wxSTC_BAAN_FUNCTION
-%wxchkver_3_1_1 #define wxSTC_BAAN_DOMDEF
-%wxchkver_3_1_1 #define wxSTC_BAAN_FUNCDEF
-%wxchkver_3_1_1 #define wxSTC_BAAN_OBJECTDEF
-%wxchkver_3_1_1 #define wxSTC_BAAN_DEFINEDEF
+#define wxSTC_BAAN_WORD3
+#define wxSTC_BAAN_WORD4
+#define wxSTC_BAAN_WORD5
+#define wxSTC_BAAN_WORD6
+#define wxSTC_BAAN_WORD7
+#define wxSTC_BAAN_WORD8
+#define wxSTC_BAAN_WORD9
+#define wxSTC_BAAN_TABLEDEF
+#define wxSTC_BAAN_TABLESQL
+#define wxSTC_BAAN_FUNCTION
+#define wxSTC_BAAN_DOMDEF
+#define wxSTC_BAAN_FUNCDEF
+#define wxSTC_BAAN_OBJECTDEF
+#define wxSTC_BAAN_DEFINEDEF
 
 /// Lexical states for SCLEX_LISP
 #define wxSTC_LISP_DEFAULT
@@ -1185,7 +1185,7 @@
 #define wxSTC_ASM_CHARACTER
 #define wxSTC_ASM_STRINGEOL
 #define wxSTC_ASM_EXTINSTRUCTION
-%wxchkver_2_9_5 #define wxSTC_ASM_COMMENTDIRECTIVE
+#define wxSTC_ASM_COMMENTDIRECTIVE
 
 /// Lexical states for SCLEX_FORTRAN
 #define wxSTC_F_DEFAULT
@@ -1222,13 +1222,13 @@
 #define wxSTC_CSS_SINGLESTRING
 #define wxSTC_CSS_IDENTIFIER2
 #define wxSTC_CSS_ATTRIBUTE
-%wxchkver_2_9_5 #define wxSTC_CSS_IDENTIFIER3
-%wxchkver_2_9_5 #define wxSTC_CSS_PSEUDOELEMENT
-%wxchkver_2_9_5 #define wxSTC_CSS_EXTENDED_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_CSS_EXTENDED_PSEUDOCLASS
-%wxchkver_2_9_5 #define wxSTC_CSS_EXTENDED_PSEUDOELEMENT
-%wxchkver_2_9_5 #define wxSTC_CSS_MEDIA
-%wxchkver_2_9_5 #define wxSTC_CSS_VARIABLE
+#define wxSTC_CSS_IDENTIFIER3
+#define wxSTC_CSS_PSEUDOELEMENT
+#define wxSTC_CSS_EXTENDED_IDENTIFIER
+#define wxSTC_CSS_EXTENDED_PSEUDOCLASS
+#define wxSTC_CSS_EXTENDED_PSEUDOELEMENT
+#define wxSTC_CSS_MEDIA
+#define wxSTC_CSS_VARIABLE
 
 /// Lexical states for SCLEX_POV
 #define wxSTC_POV_DEFAULT
@@ -1373,7 +1373,7 @@
 #define wxSTC_YAML_DOCUMENT
 #define wxSTC_YAML_TEXT
 #define wxSTC_YAML_ERROR
-%wxchkver_2_9_5 #define wxSTC_YAML_OPERATOR
+#define wxSTC_YAML_OPERATOR
 
 /// Lexical states for SCLEX_TEX
 #define wxSTC_TEX_DEFAULT
@@ -1403,19 +1403,19 @@
 #define wxSTC_ERLANG_CHARACTER
 #define wxSTC_ERLANG_MACRO
 #define wxSTC_ERLANG_RECORD
-%wxchkver_2_9_5 #define wxSTC_ERLANG_PREPROC
-%wxchkver_2_9_5 #define wxSTC_ERLANG_NODE_NAME
-%wxchkver_2_9_5 #define wxSTC_ERLANG_COMMENT_FUNCTION
-%wxchkver_2_9_5 #define wxSTC_ERLANG_COMMENT_MODULE
-%wxchkver_2_9_5 #define wxSTC_ERLANG_COMMENT_DOC
-%wxchkver_2_9_5 #define wxSTC_ERLANG_COMMENT_DOC_MACRO
-%wxchkver_2_9_5 #define wxSTC_ERLANG_ATOM_QUOTED
-%wxchkver_2_9_5 #define wxSTC_ERLANG_MACRO_QUOTED
-%wxchkver_2_9_5 #define wxSTC_ERLANG_RECORD_QUOTED
-%wxchkver_2_9_5 #define wxSTC_ERLANG_NODE_NAME_QUOTED
-%wxchkver_2_9_5 #define wxSTC_ERLANG_BIFS
-%wxchkver_2_9_5 #define wxSTC_ERLANG_MODULES
-%wxchkver_2_9_5 #define wxSTC_ERLANG_MODULES_ATT
+#define wxSTC_ERLANG_PREPROC
+#define wxSTC_ERLANG_NODE_NAME
+#define wxSTC_ERLANG_COMMENT_FUNCTION
+#define wxSTC_ERLANG_COMMENT_MODULE
+#define wxSTC_ERLANG_COMMENT_DOC
+#define wxSTC_ERLANG_COMMENT_DOC_MACRO
+#define wxSTC_ERLANG_ATOM_QUOTED
+#define wxSTC_ERLANG_MACRO_QUOTED
+#define wxSTC_ERLANG_RECORD_QUOTED
+#define wxSTC_ERLANG_NODE_NAME_QUOTED
+#define wxSTC_ERLANG_BIFS
+#define wxSTC_ERLANG_MODULES
+#define wxSTC_ERLANG_MODULES_ATT
 #define wxSTC_ERLANG_UNKNOWN
 
 /// Lexical states for SCLEX_OCTAVE are identical to MatLab
@@ -1453,11 +1453,11 @@
 #define wxSTC_V_IDENTIFIER
 #define wxSTC_V_STRINGEOL
 #define wxSTC_V_USER
-%wxchkver_3_1_0 #define wxSTC_V_COMMENT_WORD
-%wxchkver_3_1_0 #define wxSTC_V_INPUT
-%wxchkver_3_1_0 #define wxSTC_V_OUTPUT
-%wxchkver_3_1_0 #define wxSTC_V_INOUT
-%wxchkver_3_1_0 #define wxSTC_V_PORT_CONNECT
+#define wxSTC_V_COMMENT_WORD
+#define wxSTC_V_INPUT
+#define wxSTC_V_OUTPUT
+#define wxSTC_V_INOUT
+#define wxSTC_V_PORT_CONNECT
 
 /// Lexical states for SCLEX_KIX
 #define wxSTC_KIX_DEFAULT
@@ -1470,7 +1470,7 @@
 #define wxSTC_KIX_KEYWORD
 #define wxSTC_KIX_FUNCTIONS
 #define wxSTC_KIX_OPERATOR
-%wxchkver_3_1_0 #define wxSTC_KIX_COMMENTSTREAM
+#define wxSTC_KIX_COMMENTSTREAM
 #define wxSTC_KIX_IDENTIFIER
 
 /// Lexical states for SCLEX_GUI4CLI
@@ -1519,7 +1519,7 @@
 #define wxSTC_AU3_SPECIAL
 #define wxSTC_AU3_EXPAND
 #define wxSTC_AU3_COMOBJ
-%wxchkver_2_8_12 #define wxSTC_AU3_UDF
+#define wxSTC_AU3_UDF
 
 /// Lexical states for SCLEX_APDL
 #define wxSTC_APDL_DEFAULT
@@ -1581,7 +1581,7 @@
 #define wxSTC_VHDL_STDPACKAGE
 #define wxSTC_VHDL_STDTYPE
 #define wxSTC_VHDL_USERWORD
-%wxchkver_3_1_0 #define wxSTC_VHDL_BLOCK_COMMENT
+#define wxSTC_VHDL_BLOCK_COMMENT
 
 /// Lexical states for SCLEX_CAML
 #define wxSTC_CAML_DEFAULT
@@ -1594,7 +1594,7 @@
 #define wxSTC_CAML_OPERATOR
 #define wxSTC_CAML_NUMBER
 #define wxSTC_CAML_CHAR
-%wxchkver_2_9_5 #define wxSTC_CAML_WHITE
+#define wxSTC_CAML_WHITE
 #define wxSTC_CAML_STRING
 #define wxSTC_CAML_COMMENT
 #define wxSTC_CAML_COMMENT1
@@ -1619,12 +1619,12 @@
 #define wxSTC_HA_COMMENTBLOCK
 #define wxSTC_HA_COMMENTBLOCK2
 #define wxSTC_HA_COMMENTBLOCK3
-%wxchkver_3_1_0 #define wxSTC_HA_PRAGMA
-%wxchkver_3_1_0 #define wxSTC_HA_PREPROCESSOR
-%wxchkver_3_1_0 #define wxSTC_HA_STRINGEOL
-%wxchkver_3_1_0 #define wxSTC_HA_RESERVED_OPERATOR
-%wxchkver_3_1_0 #define wxSTC_HA_LITERATE_COMMENT
-%wxchkver_3_1_0 #define wxSTC_HA_LITERATE_CODEDELIM
+#define wxSTC_HA_PRAGMA
+#define wxSTC_HA_PREPROCESSOR
+#define wxSTC_HA_STRINGEOL
+#define wxSTC_HA_RESERVED_OPERATOR
+#define wxSTC_HA_LITERATE_COMMENT
+#define wxSTC_HA_LITERATE_CODEDELIM
 
 /// Lexical states of SCLEX_TADS3
 #define wxSTC_T3_DEFAULT
@@ -1647,7 +1647,7 @@
 #define wxSTC_T3_USER1
 #define wxSTC_T3_USER2
 #define wxSTC_T3_USER3
-%wxchkver_2_9_5 #define wxSTC_T3_BRACE
+#define wxSTC_T3_BRACE
 
 /// Lexical states for SCLEX_REBOL
 #define wxSTC_REBOL_DEFAULT
@@ -1703,7 +1703,7 @@
 #define wxSTC_SQL_USER3
 #define wxSTC_SQL_USER4
 #define wxSTC_SQL_QUOTEDIDENTIFIER
-%wxchkver_3_1_0 #define wxSTC_SQL_QOPERATOR
+#define wxSTC_SQL_QOPERATOR
 
 /// Lexical states for SCLEX_SMALLTALK
 #define wxSTC_ST_DEFAULT
@@ -1744,19 +1744,19 @@
 #define wxSTC_FS_DATE
 #define wxSTC_FS_STRINGEOL
 #define wxSTC_FS_CONSTANT
-%wxchkver_2_9_5 #define wxSTC_FS_WORDOPERATOR
-%wxchkver_2_9_5 #define wxSTC_FS_DISABLEDCODE
-%wxchkver_2_9_5 #define wxSTC_FS_DEFAULT_C
-%wxchkver_2_9_5 #define wxSTC_FS_COMMENTDOC_C
-%wxchkver_2_9_5 #define wxSTC_FS_COMMENTLINEDOC_C
-%wxchkver_2_9_5 #define wxSTC_FS_KEYWORD_C
-%wxchkver_2_9_5 #define wxSTC_FS_KEYWORD2_C
-%wxchkver_2_9_5 #define wxSTC_FS_NUMBER_C
-%wxchkver_2_9_5 #define wxSTC_FS_STRING_C
-%wxchkver_2_9_5 #define wxSTC_FS_PREPROCESSOR_C
-%wxchkver_2_9_5 #define wxSTC_FS_OPERATOR_C
-%wxchkver_2_9_5 #define wxSTC_FS_IDENTIFIER_C
-%wxchkver_2_9_5 #define wxSTC_FS_STRINGEOL_C
+#define wxSTC_FS_WORDOPERATOR
+#define wxSTC_FS_DISABLEDCODE
+#define wxSTC_FS_DEFAULT_C
+#define wxSTC_FS_COMMENTDOC_C
+#define wxSTC_FS_COMMENTLINEDOC_C
+#define wxSTC_FS_KEYWORD_C
+#define wxSTC_FS_KEYWORD2_C
+#define wxSTC_FS_NUMBER_C
+#define wxSTC_FS_STRING_C
+#define wxSTC_FS_PREPROCESSOR_C
+#define wxSTC_FS_OPERATOR_C
+#define wxSTC_FS_IDENTIFIER_C
+#define wxSTC_FS_STRINGEOL_C
 
 /// Lexical states for SCLEX_CSOUND
 #define wxSTC_CSOUND_DEFAULT
@@ -1777,724 +1777,660 @@
 #define wxSTC_CSOUND_STRINGEOL
 
 /// Lexical states for SCLEX_INNOSETUP
-%wxchkver_2_8_12 #define wxSTC_INNO_DEFAULT
-%wxchkver_2_8_12 #define wxSTC_INNO_COMMENT
-%wxchkver_2_8_12 #define wxSTC_INNO_KEYWORD
-%wxchkver_2_8_12 #define wxSTC_INNO_PARAMETER
-%wxchkver_2_8_12 #define wxSTC_INNO_SECTION
-%wxchkver_2_8_12 #define wxSTC_INNO_PREPROC
-%wxchkver_2_8_12 && %wxchkver_2_9_5 #define wxSTC_INNO_INLINE_EXPANSION
-%wxchkver_2_8_12 #define wxSTC_INNO_COMMENT_PASCAL
-%wxchkver_2_8_12 #define wxSTC_INNO_KEYWORD_PASCAL
-%wxchkver_2_8_12 #define wxSTC_INNO_KEYWORD_USER
-%wxchkver_2_8_12 #define wxSTC_INNO_STRING_DOUBLE
-%wxchkver_2_8_12 #define wxSTC_INNO_STRING_SINGLE
-%wxchkver_2_8_12 #define wxSTC_INNO_IDENTIFIER
+#define wxSTC_INNO_DEFAULT
+#define wxSTC_INNO_COMMENT
+#define wxSTC_INNO_KEYWORD
+#define wxSTC_INNO_PARAMETER
+#define wxSTC_INNO_SECTION
+#define wxSTC_INNO_PREPROC
+#define wxSTC_INNO_INLINE_EXPANSION
+#define wxSTC_INNO_COMMENT_PASCAL
+#define wxSTC_INNO_KEYWORD_PASCAL
+#define wxSTC_INNO_KEYWORD_USER
+#define wxSTC_INNO_STRING_DOUBLE
+#define wxSTC_INNO_STRING_SINGLE
+#define wxSTC_INNO_IDENTIFIER
 
 /// Lexical states for SCLEX_OPAL
-%wxchkver_2_8_12 #define wxSTC_OPAL_SPACE
-%wxchkver_2_8_12 #define wxSTC_OPAL_COMMENT_BLOCK
-%wxchkver_2_8_12 #define wxSTC_OPAL_COMMENT_LINE
-%wxchkver_2_8_12 #define wxSTC_OPAL_INTEGER
-%wxchkver_2_8_12 #define wxSTC_OPAL_KEYWORD
-%wxchkver_2_8_12 #define wxSTC_OPAL_SORT
-%wxchkver_2_8_12 #define wxSTC_OPAL_STRING
-%wxchkver_2_8_12 #define wxSTC_OPAL_PAR
-%wxchkver_2_8_12 #define wxSTC_OPAL_BOOL_CONST
-%wxchkver_2_8_12 #define wxSTC_OPAL_DEFAULT
+#define wxSTC_OPAL_SPACE
+#define wxSTC_OPAL_COMMENT_BLOCK
+#define wxSTC_OPAL_COMMENT_LINE
+#define wxSTC_OPAL_INTEGER
+#define wxSTC_OPAL_KEYWORD
+#define wxSTC_OPAL_SORT
+#define wxSTC_OPAL_STRING
+#define wxSTC_OPAL_PAR
+#define wxSTC_OPAL_BOOL_CONST
+#define wxSTC_OPAL_DEFAULT
 
 /// Lexical states for SCLEX_SPICE
-%wxchkver_2_8_12 #define wxSTC_SPICE_DEFAULT
-%wxchkver_2_8_12 #define wxSTC_SPICE_IDENTIFIER
-%wxchkver_2_8_12 #define wxSTC_SPICE_KEYWORD
-%wxchkver_2_8_12 #define wxSTC_SPICE_KEYWORD2
-%wxchkver_2_8_12 #define wxSTC_SPICE_KEYWORD3
-%wxchkver_2_8_12 #define wxSTC_SPICE_NUMBER
-%wxchkver_2_8_12 #define wxSTC_SPICE_DELIMITER
-%wxchkver_2_8_12 #define wxSTC_SPICE_VALUE
-%wxchkver_2_8_12 #define wxSTC_SPICE_COMMENTLINE
+#define wxSTC_SPICE_DEFAULT
+#define wxSTC_SPICE_IDENTIFIER
+#define wxSTC_SPICE_KEYWORD
+#define wxSTC_SPICE_KEYWORD2
+#define wxSTC_SPICE_KEYWORD3
+#define wxSTC_SPICE_NUMBER
+#define wxSTC_SPICE_DELIMITER
+#define wxSTC_SPICE_VALUE
+#define wxSTC_SPICE_COMMENTLINE
 
 /// Lexical states for SCLEX_CMAKE
-%wxchkver_2_9_5 #define wxSTC_CMAKE_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_CMAKE_COMMENT
-%wxchkver_2_9_5 #define wxSTC_CMAKE_STRINGDQ
-%wxchkver_2_9_5 #define wxSTC_CMAKE_STRINGLQ
-%wxchkver_2_9_5 #define wxSTC_CMAKE_STRINGRQ
-%wxchkver_2_9_5 #define wxSTC_CMAKE_COMMANDS
-%wxchkver_2_9_5 #define wxSTC_CMAKE_PARAMETERS
-%wxchkver_2_9_5 #define wxSTC_CMAKE_VARIABLE
-%wxchkver_2_9_5 #define wxSTC_CMAKE_USERDEFINED
-%wxchkver_2_9_5 #define wxSTC_CMAKE_WHILEDEF
-%wxchkver_2_9_5 #define wxSTC_CMAKE_FOREACHDEF
-%wxchkver_2_9_5 #define wxSTC_CMAKE_IFDEFINEDEF
-%wxchkver_2_9_5 #define wxSTC_CMAKE_MACRODEF
-%wxchkver_2_9_5 #define wxSTC_CMAKE_STRINGVAR
-%wxchkver_2_9_5 #define wxSTC_CMAKE_NUMBER
+#define wxSTC_CMAKE_DEFAULT
+#define wxSTC_CMAKE_COMMENT
+#define wxSTC_CMAKE_STRINGDQ
+#define wxSTC_CMAKE_STRINGLQ
+#define wxSTC_CMAKE_STRINGRQ
+#define wxSTC_CMAKE_COMMANDS
+#define wxSTC_CMAKE_PARAMETERS
+#define wxSTC_CMAKE_VARIABLE
+#define wxSTC_CMAKE_USERDEFINED
+#define wxSTC_CMAKE_WHILEDEF
+#define wxSTC_CMAKE_FOREACHDEF
+#define wxSTC_CMAKE_IFDEFINEDEF
+#define wxSTC_CMAKE_MACRODEF
+#define wxSTC_CMAKE_STRINGVAR
+#define wxSTC_CMAKE_NUMBER
 
 /// Lexical states for SCLEX_GAP
-%wxchkver_2_9_5 #define wxSTC_GAP_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_GAP_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_GAP_KEYWORD
-%wxchkver_2_9_5 #define wxSTC_GAP_KEYWORD2
-%wxchkver_2_9_5 #define wxSTC_GAP_KEYWORD3
-%wxchkver_2_9_5 #define wxSTC_GAP_KEYWORD4
-%wxchkver_2_9_5 #define wxSTC_GAP_STRING
-%wxchkver_2_9_5 #define wxSTC_GAP_CHAR
-%wxchkver_2_9_5 #define wxSTC_GAP_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_GAP_COMMENT
-%wxchkver_2_9_5 #define wxSTC_GAP_NUMBER
-%wxchkver_2_9_5 #define wxSTC_GAP_STRINGEOL
+#define wxSTC_GAP_DEFAULT
+#define wxSTC_GAP_IDENTIFIER
+#define wxSTC_GAP_KEYWORD
+#define wxSTC_GAP_KEYWORD2
+#define wxSTC_GAP_KEYWORD3
+#define wxSTC_GAP_KEYWORD4
+#define wxSTC_GAP_STRING
+#define wxSTC_GAP_CHAR
+#define wxSTC_GAP_OPERATOR
+#define wxSTC_GAP_COMMENT
+#define wxSTC_GAP_NUMBER
+#define wxSTC_GAP_STRINGEOL
 
 /// Lexical state for SCLEX_PLM
-%wxchkver_2_9_5 #define wxSTC_PLM_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_PLM_COMMENT
-%wxchkver_2_9_5 #define wxSTC_PLM_STRING
-%wxchkver_2_9_5 #define wxSTC_PLM_NUMBER
-%wxchkver_2_9_5 #define wxSTC_PLM_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_PLM_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_PLM_CONTROL
-%wxchkver_2_9_5 #define wxSTC_PLM_KEYWORD
+#define wxSTC_PLM_DEFAULT
+#define wxSTC_PLM_COMMENT
+#define wxSTC_PLM_STRING
+#define wxSTC_PLM_NUMBER
+#define wxSTC_PLM_IDENTIFIER
+#define wxSTC_PLM_OPERATOR
+#define wxSTC_PLM_CONTROL
+#define wxSTC_PLM_KEYWORD
 
 /// Lexical state for SCLEX_PROGRESS
-%wxchkver_3_1_1 #define wxSTC_ABL_DEFAULT
-%wxchkver_3_1_1 #define wxSTC_ABL_NUMBER
-%wxchkver_3_1_1 #define wxSTC_ABL_WORD
-%wxchkver_3_1_1 #define wxSTC_ABL_STRING
-%wxchkver_3_1_1 #define wxSTC_ABL_CHARACTER
-%wxchkver_3_1_1 #define wxSTC_ABL_PREPROCESSOR
-%wxchkver_3_1_1 #define wxSTC_ABL_OPERATOR
-%wxchkver_3_1_1 #define wxSTC_ABL_IDENTIFIER
-%wxchkver_3_1_1 #define wxSTC_ABL_BLOCK
-%wxchkver_3_1_1 #define wxSTC_ABL_END
-%wxchkver_3_1_1 #define wxSTC_ABL_COMMENT
-%wxchkver_3_1_1 #define wxSTC_ABL_TASKMARKER
-%wxchkver_3_1_1 #define wxSTC_ABL_LINECOMMENT
+#define wxSTC_ABL_DEFAULT
+#define wxSTC_ABL_NUMBER
+#define wxSTC_ABL_WORD
+#define wxSTC_ABL_STRING
+#define wxSTC_ABL_CHARACTER
+#define wxSTC_ABL_PREPROCESSOR
+#define wxSTC_ABL_OPERATOR
+#define wxSTC_ABL_IDENTIFIER
+#define wxSTC_ABL_BLOCK
+#define wxSTC_ABL_END
+#define wxSTC_ABL_COMMENT
+#define wxSTC_ABL_TASKMARKER
+#define wxSTC_ABL_LINECOMMENT
 
 /// Lexical states for SCLEX_ABAQUS
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_COMMENT
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_COMMENTBLOCK
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_NUMBER
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_STRING
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_WORD
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_PROCESSOR
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_COMMAND
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_SLASHCOMMAND
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_STARCOMMAND
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_ARGUMENT
-%wxchkver_2_9_5 #define wxSTC_ABAQUS_FUNCTION
+#define wxSTC_ABAQUS_DEFAULT
+#define wxSTC_ABAQUS_COMMENT
+#define wxSTC_ABAQUS_COMMENTBLOCK
+#define wxSTC_ABAQUS_NUMBER
+#define wxSTC_ABAQUS_STRING
+#define wxSTC_ABAQUS_OPERATOR
+#define wxSTC_ABAQUS_WORD
+#define wxSTC_ABAQUS_PROCESSOR
+#define wxSTC_ABAQUS_COMMAND
+#define wxSTC_ABAQUS_SLASHCOMMAND
+#define wxSTC_ABAQUS_STARCOMMAND
+#define wxSTC_ABAQUS_ARGUMENT
+#define wxSTC_ABAQUS_FUNCTION
 
 /// Lexical states for SCLEX_ASYMPTOTE
-%wxchkver_2_9_5 #define wxSTC_ASY_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_ASY_COMMENT
-%wxchkver_2_9_5 #define wxSTC_ASY_COMMENTLINE
-%wxchkver_2_9_5 #define wxSTC_ASY_NUMBER
-%wxchkver_2_9_5 #define wxSTC_ASY_WORD
-%wxchkver_2_9_5 #define wxSTC_ASY_STRING
-%wxchkver_2_9_5 #define wxSTC_ASY_CHARACTER
-%wxchkver_2_9_5 #define wxSTC_ASY_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_ASY_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_ASY_STRINGEOL
-%wxchkver_2_9_5 #define wxSTC_ASY_COMMENTLINEDOC
-%wxchkver_2_9_5 #define wxSTC_ASY_WORD2
+#define wxSTC_ASY_DEFAULT
+#define wxSTC_ASY_COMMENT
+#define wxSTC_ASY_COMMENTLINE
+#define wxSTC_ASY_NUMBER
+#define wxSTC_ASY_WORD
+#define wxSTC_ASY_STRING
+#define wxSTC_ASY_CHARACTER
+#define wxSTC_ASY_OPERATOR
+#define wxSTC_ASY_IDENTIFIER
+#define wxSTC_ASY_STRINGEOL
+#define wxSTC_ASY_COMMENTLINEDOC
+#define wxSTC_ASY_WORD2
 
 /// Lexical states for SCLEX_R
-%wxchkver_2_9_5 #define wxSTC_R_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_R_COMMENT
-%wxchkver_2_9_5 #define wxSTC_R_KWORD
-%wxchkver_2_9_5 #define wxSTC_R_BASEKWORD
-%wxchkver_2_9_5 #define wxSTC_R_OTHERKWORD
-%wxchkver_2_9_5 #define wxSTC_R_NUMBER
-%wxchkver_2_9_5 #define wxSTC_R_STRING
-%wxchkver_2_9_5 #define wxSTC_R_STRING2
-%wxchkver_2_9_5 #define wxSTC_R_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_R_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_R_INFIX
-%wxchkver_2_9_5 #define wxSTC_R_INFIXEOL
+#define wxSTC_R_DEFAULT
+#define wxSTC_R_COMMENT
+#define wxSTC_R_KWORD
+#define wxSTC_R_BASEKWORD
+#define wxSTC_R_OTHERKWORD
+#define wxSTC_R_NUMBER
+#define wxSTC_R_STRING
+#define wxSTC_R_STRING2
+#define wxSTC_R_OPERATOR
+#define wxSTC_R_IDENTIFIER
+#define wxSTC_R_INFIX
+#define wxSTC_R_INFIXEOL
 
 /// Lexical state for SCLEX_MAGIK
-%wxchkver_2_9_5 #define wxSTC_MAGIK_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_MAGIK_COMMENT
-%wxchkver_2_9_5 #define wxSTC_MAGIK_HYPER_COMMENT
-%wxchkver_2_9_5 #define wxSTC_MAGIK_STRING
-%wxchkver_2_9_5 #define wxSTC_MAGIK_CHARACTER
-%wxchkver_2_9_5 #define wxSTC_MAGIK_NUMBER
-%wxchkver_2_9_5 #define wxSTC_MAGIK_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_MAGIK_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_MAGIK_FLOW
-%wxchkver_2_9_5 #define wxSTC_MAGIK_CONTAINER
-%wxchkver_2_9_5 #define wxSTC_MAGIK_BRACKET_BLOCK
-%wxchkver_2_9_5 #define wxSTC_MAGIK_BRACE_BLOCK
-%wxchkver_2_9_5 #define wxSTC_MAGIK_SQBRACKET_BLOCK
-%wxchkver_2_9_5 #define wxSTC_MAGIK_UNKNOWN_KEYWORD
-%wxchkver_2_9_5 #define wxSTC_MAGIK_KEYWORD
-%wxchkver_2_9_5 #define wxSTC_MAGIK_PRAGMA
-%wxchkver_2_9_5 #define wxSTC_MAGIK_SYMBOL
+#define wxSTC_MAGIK_DEFAULT
+#define wxSTC_MAGIK_COMMENT
+#define wxSTC_MAGIK_HYPER_COMMENT
+#define wxSTC_MAGIK_STRING
+#define wxSTC_MAGIK_CHARACTER
+#define wxSTC_MAGIK_NUMBER
+#define wxSTC_MAGIK_IDENTIFIER
+#define wxSTC_MAGIK_OPERATOR
+#define wxSTC_MAGIK_FLOW
+#define wxSTC_MAGIK_CONTAINER
+#define wxSTC_MAGIK_BRACKET_BLOCK
+#define wxSTC_MAGIK_BRACE_BLOCK
+#define wxSTC_MAGIK_SQBRACKET_BLOCK
+#define wxSTC_MAGIK_UNKNOWN_KEYWORD
+#define wxSTC_MAGIK_KEYWORD
+#define wxSTC_MAGIK_PRAGMA
+#define wxSTC_MAGIK_SYMBOL
 
 /// Lexical state for SCLEX_POWERSHELL
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_COMMENT
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_STRING
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_CHARACTER
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_NUMBER
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_VARIABLE
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_KEYWORD
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_CMDLET
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_ALIAS
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_FUNCTION
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_USER1
-%wxchkver_2_9_5 #define wxSTC_POWERSHELL_COMMENTSTREAM
-%wxchkver_3_1_0 #define wxSTC_POWERSHELL_HERE_STRING
-%wxchkver_3_1_0 #define wxSTC_POWERSHELL_HERE_CHARACTER
-%wxchkver_3_1_0 #define wxSTC_POWERSHELL_COMMENTDOCKEYWORD
+#define wxSTC_POWERSHELL_DEFAULT
+#define wxSTC_POWERSHELL_COMMENT
+#define wxSTC_POWERSHELL_STRING
+#define wxSTC_POWERSHELL_CHARACTER
+#define wxSTC_POWERSHELL_NUMBER
+#define wxSTC_POWERSHELL_VARIABLE
+#define wxSTC_POWERSHELL_OPERATOR
+#define wxSTC_POWERSHELL_IDENTIFIER
+#define wxSTC_POWERSHELL_KEYWORD
+#define wxSTC_POWERSHELL_CMDLET
+#define wxSTC_POWERSHELL_ALIAS
+#define wxSTC_POWERSHELL_FUNCTION
+#define wxSTC_POWERSHELL_USER1
+#define wxSTC_POWERSHELL_COMMENTSTREAM
+#define wxSTC_POWERSHELL_HERE_STRING
+#define wxSTC_POWERSHELL_HERE_CHARACTER
+#define wxSTC_POWERSHELL_COMMENTDOCKEYWORD
 
 /// Lexical state for SCLEX_MYSQL
-%wxchkver_2_9_5 #define wxSTC_MYSQL_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_MYSQL_COMMENT
-%wxchkver_2_9_5 #define wxSTC_MYSQL_COMMENTLINE
-%wxchkver_2_9_5 #define wxSTC_MYSQL_VARIABLE
-%wxchkver_2_9_5 #define wxSTC_MYSQL_SYSTEMVARIABLE
-%wxchkver_2_9_5 #define wxSTC_MYSQL_KNOWNSYSTEMVARIABLE
-%wxchkver_2_9_5 #define wxSTC_MYSQL_NUMBER
-%wxchkver_2_9_5 #define wxSTC_MYSQL_MAJORKEYWORD
-%wxchkver_2_9_5 #define wxSTC_MYSQL_KEYWORD
-%wxchkver_2_9_5 #define wxSTC_MYSQL_DATABASEOBJECT
-%wxchkver_2_9_5 #define wxSTC_MYSQL_PROCEDUREKEYWORD
-%wxchkver_2_9_5 #define wxSTC_MYSQL_STRING
-%wxchkver_2_9_5 #define wxSTC_MYSQL_SQSTRING
-%wxchkver_2_9_5 #define wxSTC_MYSQL_DQSTRING
-%wxchkver_2_9_5 #define wxSTC_MYSQL_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_MYSQL_FUNCTION
-%wxchkver_2_9_5 #define wxSTC_MYSQL_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_MYSQL_QUOTEDIDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_MYSQL_USER1
-%wxchkver_2_9_5 #define wxSTC_MYSQL_USER2
-%wxchkver_2_9_5 #define wxSTC_MYSQL_USER3
-%wxchkver_2_9_5 #define wxSTC_MYSQL_HIDDENCOMMAND
-%wxchkver_3_1_0 #define wxSTC_MYSQL_PLACEHOLDER
+#define wxSTC_MYSQL_DEFAULT
+#define wxSTC_MYSQL_COMMENT
+#define wxSTC_MYSQL_COMMENTLINE
+#define wxSTC_MYSQL_VARIABLE
+#define wxSTC_MYSQL_SYSTEMVARIABLE
+#define wxSTC_MYSQL_KNOWNSYSTEMVARIABLE
+#define wxSTC_MYSQL_NUMBER
+#define wxSTC_MYSQL_MAJORKEYWORD
+#define wxSTC_MYSQL_KEYWORD
+#define wxSTC_MYSQL_DATABASEOBJECT
+#define wxSTC_MYSQL_PROCEDUREKEYWORD
+#define wxSTC_MYSQL_STRING
+#define wxSTC_MYSQL_SQSTRING
+#define wxSTC_MYSQL_DQSTRING
+#define wxSTC_MYSQL_OPERATOR
+#define wxSTC_MYSQL_FUNCTION
+#define wxSTC_MYSQL_IDENTIFIER
+#define wxSTC_MYSQL_QUOTEDIDENTIFIER
+#define wxSTC_MYSQL_USER1
+#define wxSTC_MYSQL_USER2
+#define wxSTC_MYSQL_USER3
+#define wxSTC_MYSQL_HIDDENCOMMAND
+#define wxSTC_MYSQL_PLACEHOLDER
 
 /// Lexical state for SCLEX_PO
-%wxchkver_2_9_5 #define wxSTC_PO_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_PO_COMMENT
-%wxchkver_2_9_5 #define wxSTC_PO_MSGID
-%wxchkver_2_9_5 #define wxSTC_PO_MSGID_TEXT
-%wxchkver_2_9_5 #define wxSTC_PO_MSGSTR
-%wxchkver_2_9_5 #define wxSTC_PO_MSGSTR_TEXT
-%wxchkver_2_9_5 #define wxSTC_PO_MSGCTXT
-%wxchkver_2_9_5 #define wxSTC_PO_MSGCTXT_TEXT
-%wxchkver_2_9_5 #define wxSTC_PO_FUZZY
-%wxchkver_3_1_0 #define wxSTC_PO_PROGRAMMER_COMMENT
-%wxchkver_3_1_0 #define wxSTC_PO_REFERENCE
-%wxchkver_3_1_0 #define wxSTC_PO_FLAGS
-%wxchkver_3_1_0 #define wxSTC_PO_MSGID_TEXT_EOL
-%wxchkver_3_1_0 #define wxSTC_PO_MSGSTR_TEXT_EOL
-%wxchkver_3_1_0 #define wxSTC_PO_MSGCTXT_TEXT_EOL
-%wxchkver_3_1_0 #define wxSTC_PO_ERROR
+#define wxSTC_PO_DEFAULT
+#define wxSTC_PO_COMMENT
+#define wxSTC_PO_MSGID
+#define wxSTC_PO_MSGID_TEXT
+#define wxSTC_PO_MSGSTR
+#define wxSTC_PO_MSGSTR_TEXT
+#define wxSTC_PO_MSGCTXT
+#define wxSTC_PO_MSGCTXT_TEXT
+#define wxSTC_PO_FUZZY
+#define wxSTC_PO_PROGRAMMER_COMMENT
+#define wxSTC_PO_REFERENCE
+#define wxSTC_PO_FLAGS
+#define wxSTC_PO_MSGID_TEXT_EOL
+#define wxSTC_PO_MSGSTR_TEXT_EOL
+#define wxSTC_PO_MSGCTXT_TEXT_EOL
+#define wxSTC_PO_ERROR
 
 /// Lexical states for SCLEX_PASCAL
-%wxchkver_2_9_5 #define wxSTC_PAS_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_PAS_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_PAS_COMMENT
-%wxchkver_2_9_5 #define wxSTC_PAS_COMMENT2
-%wxchkver_2_9_5 #define wxSTC_PAS_COMMENTLINE
-%wxchkver_2_9_5 #define wxSTC_PAS_PREPROCESSOR
-%wxchkver_2_9_5 #define wxSTC_PAS_PREPROCESSOR2
-%wxchkver_2_9_5 #define wxSTC_PAS_NUMBER
-%wxchkver_2_9_5 #define wxSTC_PAS_HEXNUMBER
-%wxchkver_2_9_5 #define wxSTC_PAS_WORD
-%wxchkver_2_9_5 #define wxSTC_PAS_STRING
-%wxchkver_2_9_5 #define wxSTC_PAS_STRINGEOL
-%wxchkver_2_9_5 #define wxSTC_PAS_CHARACTER
-%wxchkver_2_9_5 #define wxSTC_PAS_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_PAS_ASM
+#define wxSTC_PAS_DEFAULT
+#define wxSTC_PAS_IDENTIFIER
+#define wxSTC_PAS_COMMENT
+#define wxSTC_PAS_COMMENT2
+#define wxSTC_PAS_COMMENTLINE
+#define wxSTC_PAS_PREPROCESSOR
+#define wxSTC_PAS_PREPROCESSOR2
+#define wxSTC_PAS_NUMBER
+#define wxSTC_PAS_HEXNUMBER
+#define wxSTC_PAS_WORD
+#define wxSTC_PAS_STRING
+#define wxSTC_PAS_STRINGEOL
+#define wxSTC_PAS_CHARACTER
+#define wxSTC_PAS_OPERATOR
+#define wxSTC_PAS_ASM
 
 /// Lexical state for SCLEX_SORCUS
-%wxchkver_2_9_5 #define wxSTC_SORCUS_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_SORCUS_COMMAND
-%wxchkver_2_9_5 #define wxSTC_SORCUS_PARAMETER
-%wxchkver_2_9_5 #define wxSTC_SORCUS_COMMENTLINE
-%wxchkver_2_9_5 #define wxSTC_SORCUS_STRING
-%wxchkver_2_9_5 #define wxSTC_SORCUS_STRINGEOL
-%wxchkver_2_9_5 #define wxSTC_SORCUS_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_SORCUS_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_SORCUS_NUMBER
-%wxchkver_2_9_5 #define wxSTC_SORCUS_CONSTANT
+#define wxSTC_SORCUS_DEFAULT
+#define wxSTC_SORCUS_COMMAND
+#define wxSTC_SORCUS_PARAMETER
+#define wxSTC_SORCUS_COMMENTLINE
+#define wxSTC_SORCUS_STRING
+#define wxSTC_SORCUS_STRINGEOL
+#define wxSTC_SORCUS_IDENTIFIER
+#define wxSTC_SORCUS_OPERATOR
+#define wxSTC_SORCUS_NUMBER
+#define wxSTC_SORCUS_CONSTANT
 
 /// Lexical state for SCLEX_POWERPRO
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_COMMENTBLOCK
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_COMMENTLINE
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_NUMBER
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_WORD
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_WORD2
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_WORD3
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_WORD4
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_DOUBLEQUOTEDSTRING
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_SINGLEQUOTEDSTRING
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_LINECONTINUE
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_STRINGEOL
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_VERBATIM
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_ALTQUOTE
-%wxchkver_2_9_5 #define wxSTC_POWERPRO_FUNCTION
+#define wxSTC_POWERPRO_DEFAULT
+#define wxSTC_POWERPRO_COMMENTBLOCK
+#define wxSTC_POWERPRO_COMMENTLINE
+#define wxSTC_POWERPRO_NUMBER
+#define wxSTC_POWERPRO_WORD
+#define wxSTC_POWERPRO_WORD2
+#define wxSTC_POWERPRO_WORD3
+#define wxSTC_POWERPRO_WORD4
+#define wxSTC_POWERPRO_DOUBLEQUOTEDSTRING
+#define wxSTC_POWERPRO_SINGLEQUOTEDSTRING
+#define wxSTC_POWERPRO_LINECONTINUE
+#define wxSTC_POWERPRO_OPERATOR
+#define wxSTC_POWERPRO_IDENTIFIER
+#define wxSTC_POWERPRO_STRINGEOL
+#define wxSTC_POWERPRO_VERBATIM
+#define wxSTC_POWERPRO_ALTQUOTE
+#define wxSTC_POWERPRO_FUNCTION
 
 /// Lexical states for SCLEX_SML
-%wxchkver_2_9_5 #define wxSTC_SML_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_SML_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_SML_TAGNAME
-%wxchkver_2_9_5 #define wxSTC_SML_KEYWORD
-%wxchkver_2_9_5 #define wxSTC_SML_KEYWORD2
-%wxchkver_2_9_5 #define wxSTC_SML_KEYWORD3
-%wxchkver_2_9_5 #define wxSTC_SML_LINENUM
-%wxchkver_2_9_5 #define wxSTC_SML_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_SML_NUMBER
-%wxchkver_2_9_5 #define wxSTC_SML_CHAR
-%wxchkver_2_9_5 #define wxSTC_SML_STRING
-%wxchkver_2_9_5 #define wxSTC_SML_COMMENT
-%wxchkver_2_9_5 #define wxSTC_SML_COMMENT1
-%wxchkver_2_9_5 #define wxSTC_SML_COMMENT2
-%wxchkver_2_9_5 #define wxSTC_SML_COMMENT3
+#define wxSTC_SML_DEFAULT
+#define wxSTC_SML_IDENTIFIER
+#define wxSTC_SML_TAGNAME
+#define wxSTC_SML_KEYWORD
+#define wxSTC_SML_KEYWORD2
+#define wxSTC_SML_KEYWORD3
+#define wxSTC_SML_LINENUM
+#define wxSTC_SML_OPERATOR
+#define wxSTC_SML_NUMBER
+#define wxSTC_SML_CHAR
+#define wxSTC_SML_STRING
+#define wxSTC_SML_COMMENT
+#define wxSTC_SML_COMMENT1
+#define wxSTC_SML_COMMENT2
+#define wxSTC_SML_COMMENT3
 
 /// Lexical state for SCLEX_MARKDOWN
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_LINE_BEGIN
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_STRONG1
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_STRONG2
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_EM1
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_EM2
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_HEADER1
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_HEADER2
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_HEADER3
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_HEADER4
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_HEADER5
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_HEADER6
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_PRECHAR
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_ULIST_ITEM
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_OLIST_ITEM
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_BLOCKQUOTE
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_STRIKEOUT
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_HRULE
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_LINK
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_CODE
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_CODE2
-%wxchkver_2_9_5 #define wxSTC_MARKDOWN_CODEBK
+#define wxSTC_MARKDOWN_DEFAULT
+#define wxSTC_MARKDOWN_LINE_BEGIN
+#define wxSTC_MARKDOWN_STRONG1
+#define wxSTC_MARKDOWN_STRONG2
+#define wxSTC_MARKDOWN_EM1
+#define wxSTC_MARKDOWN_EM2
+#define wxSTC_MARKDOWN_HEADER1
+#define wxSTC_MARKDOWN_HEADER2
+#define wxSTC_MARKDOWN_HEADER3
+#define wxSTC_MARKDOWN_HEADER4
+#define wxSTC_MARKDOWN_HEADER5
+#define wxSTC_MARKDOWN_HEADER6
+#define wxSTC_MARKDOWN_PRECHAR
+#define wxSTC_MARKDOWN_ULIST_ITEM
+#define wxSTC_MARKDOWN_OLIST_ITEM
+#define wxSTC_MARKDOWN_BLOCKQUOTE
+#define wxSTC_MARKDOWN_STRIKEOUT
+#define wxSTC_MARKDOWN_HRULE
+#define wxSTC_MARKDOWN_LINK
+#define wxSTC_MARKDOWN_CODE
+#define wxSTC_MARKDOWN_CODE2
+#define wxSTC_MARKDOWN_CODEBK
 
 /// Lexical state for SCLEX_TXT2TAGS
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_LINE_BEGIN
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_STRONG1
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_STRONG2
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_EM1
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_EM2
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_HEADER1
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_HEADER2
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_HEADER3
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_HEADER4
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_HEADER5
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_HEADER6
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_PRECHAR
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_ULIST_ITEM
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_OLIST_ITEM
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_BLOCKQUOTE
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_STRIKEOUT
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_HRULE
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_LINK
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_CODE
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_CODE2
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_CODEBK
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_COMMENT
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_OPTION
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_PREPROC
-%wxchkver_2_9_5 #define wxSTC_TXT2TAGS_POSTPROC
+#define wxSTC_TXT2TAGS_DEFAULT
+#define wxSTC_TXT2TAGS_LINE_BEGIN
+#define wxSTC_TXT2TAGS_STRONG1
+#define wxSTC_TXT2TAGS_STRONG2
+#define wxSTC_TXT2TAGS_EM1
+#define wxSTC_TXT2TAGS_EM2
+#define wxSTC_TXT2TAGS_HEADER1
+#define wxSTC_TXT2TAGS_HEADER2
+#define wxSTC_TXT2TAGS_HEADER3
+#define wxSTC_TXT2TAGS_HEADER4
+#define wxSTC_TXT2TAGS_HEADER5
+#define wxSTC_TXT2TAGS_HEADER6
+#define wxSTC_TXT2TAGS_PRECHAR
+#define wxSTC_TXT2TAGS_ULIST_ITEM
+#define wxSTC_TXT2TAGS_OLIST_ITEM
+#define wxSTC_TXT2TAGS_BLOCKQUOTE
+#define wxSTC_TXT2TAGS_STRIKEOUT
+#define wxSTC_TXT2TAGS_HRULE
+#define wxSTC_TXT2TAGS_LINK
+#define wxSTC_TXT2TAGS_CODE
+#define wxSTC_TXT2TAGS_CODE2
+#define wxSTC_TXT2TAGS_CODEBK
+#define wxSTC_TXT2TAGS_COMMENT
+#define wxSTC_TXT2TAGS_OPTION
+#define wxSTC_TXT2TAGS_PREPROC
+#define wxSTC_TXT2TAGS_POSTPROC
 
 /// Lexical states for SCLEX_A68K
-%wxchkver_2_9_5 #define wxSTC_A68K_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_A68K_COMMENT
-%wxchkver_2_9_5 #define wxSTC_A68K_NUMBER_DEC
-%wxchkver_2_9_5 #define wxSTC_A68K_NUMBER_BIN
-%wxchkver_2_9_5 #define wxSTC_A68K_NUMBER_HEX
-%wxchkver_2_9_5 #define wxSTC_A68K_STRING1
-%wxchkver_2_9_5 #define wxSTC_A68K_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_A68K_CPUINSTRUCTION
-%wxchkver_2_9_5 #define wxSTC_A68K_EXTINSTRUCTION
-%wxchkver_2_9_5 #define wxSTC_A68K_REGISTER
-%wxchkver_2_9_5 #define wxSTC_A68K_DIRECTIVE
-%wxchkver_2_9_5 #define wxSTC_A68K_MACRO_ARG
-%wxchkver_2_9_5 #define wxSTC_A68K_LABEL
-%wxchkver_2_9_5 #define wxSTC_A68K_STRING2
-%wxchkver_2_9_5 #define wxSTC_A68K_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_A68K_MACRO_DECLARATION
-%wxchkver_2_9_5 #define wxSTC_A68K_COMMENT_WORD
-%wxchkver_2_9_5 #define wxSTC_A68K_COMMENT_SPECIAL
-%wxchkver_2_9_5 #define wxSTC_A68K_COMMENT_DOXYGEN
+#define wxSTC_A68K_DEFAULT
+#define wxSTC_A68K_COMMENT
+#define wxSTC_A68K_NUMBER_DEC
+#define wxSTC_A68K_NUMBER_BIN
+#define wxSTC_A68K_NUMBER_HEX
+#define wxSTC_A68K_STRING1
+#define wxSTC_A68K_OPERATOR
+#define wxSTC_A68K_CPUINSTRUCTION
+#define wxSTC_A68K_EXTINSTRUCTION
+#define wxSTC_A68K_REGISTER
+#define wxSTC_A68K_DIRECTIVE
+#define wxSTC_A68K_MACRO_ARG
+#define wxSTC_A68K_LABEL
+#define wxSTC_A68K_STRING2
+#define wxSTC_A68K_IDENTIFIER
+#define wxSTC_A68K_MACRO_DECLARATION
+#define wxSTC_A68K_COMMENT_WORD
+#define wxSTC_A68K_COMMENT_SPECIAL
+#define wxSTC_A68K_COMMENT_DOXYGEN
 
 /// Lexical states for SCLEX_MODULA
-%wxchkver_2_9_5 #define wxSTC_MODULA_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_MODULA_COMMENT
-%wxchkver_2_9_5 #define wxSTC_MODULA_DOXYCOMM
-%wxchkver_2_9_5 #define wxSTC_MODULA_DOXYKEY
-%wxchkver_2_9_5 #define wxSTC_MODULA_KEYWORD
-%wxchkver_2_9_5 #define wxSTC_MODULA_RESERVED
-%wxchkver_2_9_5 #define wxSTC_MODULA_NUMBER
-%wxchkver_2_9_5 #define wxSTC_MODULA_BASENUM
-%wxchkver_2_9_5 #define wxSTC_MODULA_FLOAT
-%wxchkver_2_9_5 #define wxSTC_MODULA_STRING
-%wxchkver_2_9_5 #define wxSTC_MODULA_STRSPEC
-%wxchkver_2_9_5 #define wxSTC_MODULA_CHAR
-%wxchkver_2_9_5 #define wxSTC_MODULA_CHARSPEC
-%wxchkver_2_9_5 #define wxSTC_MODULA_PROC
-%wxchkver_2_9_5 #define wxSTC_MODULA_PRAGMA
-%wxchkver_2_9_5 #define wxSTC_MODULA_PRGKEY
-%wxchkver_2_9_5 #define wxSTC_MODULA_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_MODULA_BADSTR
+#define wxSTC_MODULA_DEFAULT
+#define wxSTC_MODULA_COMMENT
+#define wxSTC_MODULA_DOXYCOMM
+#define wxSTC_MODULA_DOXYKEY
+#define wxSTC_MODULA_KEYWORD
+#define wxSTC_MODULA_RESERVED
+#define wxSTC_MODULA_NUMBER
+#define wxSTC_MODULA_BASENUM
+#define wxSTC_MODULA_FLOAT
+#define wxSTC_MODULA_STRING
+#define wxSTC_MODULA_STRSPEC
+#define wxSTC_MODULA_CHAR
+#define wxSTC_MODULA_CHARSPEC
+#define wxSTC_MODULA_PROC
+#define wxSTC_MODULA_PRAGMA
+#define wxSTC_MODULA_PRGKEY
+#define wxSTC_MODULA_OPERATOR
+#define wxSTC_MODULA_BADSTR
 
 /// Lexical states for SCLEX_COFFEESCRIPT
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_COMMENT
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_COMMENTLINE
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_COMMENTDOC
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_NUMBER
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_WORD
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_STRING
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_CHARACTER
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_UUID
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_PREPROCESSOR
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_STRINGEOL
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_VERBATIM
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_REGEX
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_COMMENTLINEDOC
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_WORD2
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_COMMENTDOCKEYWORD
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_COMMENTDOCKEYWORDERROR
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_GLOBALCLASS
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_STRINGRAW
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_TRIPLEVERBATIM
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_COMMENTBLOCK
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_VERBOSE_REGEX
-%wxchkver_2_9_5 #define wxSTC_COFFEESCRIPT_VERBOSE_REGEX_COMMENT
-%wxchkver_3_1_1 #define wxSTC_COFFEESCRIPT_INSTANCEPROPERTY
+#define wxSTC_COFFEESCRIPT_DEFAULT
+#define wxSTC_COFFEESCRIPT_COMMENT
+#define wxSTC_COFFEESCRIPT_COMMENTLINE
+#define wxSTC_COFFEESCRIPT_COMMENTDOC
+#define wxSTC_COFFEESCRIPT_NUMBER
+#define wxSTC_COFFEESCRIPT_WORD
+#define wxSTC_COFFEESCRIPT_STRING
+#define wxSTC_COFFEESCRIPT_CHARACTER
+#define wxSTC_COFFEESCRIPT_UUID
+#define wxSTC_COFFEESCRIPT_PREPROCESSOR
+#define wxSTC_COFFEESCRIPT_OPERATOR
+#define wxSTC_COFFEESCRIPT_IDENTIFIER
+#define wxSTC_COFFEESCRIPT_STRINGEOL
+#define wxSTC_COFFEESCRIPT_VERBATIM
+#define wxSTC_COFFEESCRIPT_REGEX
+#define wxSTC_COFFEESCRIPT_COMMENTLINEDOC
+#define wxSTC_COFFEESCRIPT_WORD2
+#define wxSTC_COFFEESCRIPT_COMMENTDOCKEYWORD
+#define wxSTC_COFFEESCRIPT_COMMENTDOCKEYWORDERROR
+#define wxSTC_COFFEESCRIPT_GLOBALCLASS
+#define wxSTC_COFFEESCRIPT_STRINGRAW
+#define wxSTC_COFFEESCRIPT_TRIPLEVERBATIM
+#define wxSTC_COFFEESCRIPT_COMMENTBLOCK
+#define wxSTC_COFFEESCRIPT_VERBOSE_REGEX
+#define wxSTC_COFFEESCRIPT_VERBOSE_REGEX_COMMENT
+#define wxSTC_COFFEESCRIPT_INSTANCEPROPERTY
 
 /// Lexical states for SCLEX_AVS
-%wxchkver_2_9_5 #define wxSTC_AVS_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_AVS_COMMENTBLOCK
-%wxchkver_2_9_5 #define wxSTC_AVS_COMMENTBLOCKN
-%wxchkver_2_9_5 #define wxSTC_AVS_COMMENTLINE
-%wxchkver_2_9_5 #define wxSTC_AVS_NUMBER
-%wxchkver_2_9_5 #define wxSTC_AVS_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_AVS_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_AVS_STRING
-%wxchkver_2_9_5 #define wxSTC_AVS_TRIPLESTRING
-%wxchkver_2_9_5 #define wxSTC_AVS_KEYWORD
-%wxchkver_2_9_5 #define wxSTC_AVS_FILTER 
-%wxchkver_2_9_5 #define wxSTC_AVS_PLUGIN
-%wxchkver_2_9_5 #define wxSTC_AVS_FUNCTION
-%wxchkver_2_9_5 #define wxSTC_AVS_CLIPPROP
-%wxchkver_2_9_5 #define wxSTC_AVS_USERDFN
+#define wxSTC_AVS_DEFAULT
+#define wxSTC_AVS_COMMENTBLOCK
+#define wxSTC_AVS_COMMENTBLOCKN
+#define wxSTC_AVS_COMMENTLINE
+#define wxSTC_AVS_NUMBER
+#define wxSTC_AVS_OPERATOR
+#define wxSTC_AVS_IDENTIFIER
+#define wxSTC_AVS_STRING
+#define wxSTC_AVS_TRIPLESTRING
+#define wxSTC_AVS_KEYWORD
+#define wxSTC_AVS_FILTER 
+#define wxSTC_AVS_PLUGIN
+#define wxSTC_AVS_FUNCTION
+#define wxSTC_AVS_CLIPPROP
+#define wxSTC_AVS_USERDFN
 
 /// Lexical states for SCLEX_ECL
-%wxchkver_2_9_5 #define wxSTC_ECL_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_ECL_COMMENT
-%wxchkver_2_9_5 #define wxSTC_ECL_COMMENTLINE
-%wxchkver_2_9_5 #define wxSTC_ECL_NUMBER
-%wxchkver_2_9_5 #define wxSTC_ECL_STRING
-%wxchkver_2_9_5 #define wxSTC_ECL_WORD0
-%wxchkver_2_9_5 #define wxSTC_ECL_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_ECL_CHARACTER
-%wxchkver_2_9_5 #define wxSTC_ECL_UUID
-%wxchkver_2_9_5 #define wxSTC_ECL_PREPROCESSOR
-%wxchkver_2_9_5 #define wxSTC_ECL_UNKNOWN
-%wxchkver_2_9_5 #define wxSTC_ECL_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_ECL_STRINGEOL
-%wxchkver_2_9_5 #define wxSTC_ECL_VERBATIM
-%wxchkver_2_9_5 #define wxSTC_ECL_REGEX
-%wxchkver_2_9_5 #define wxSTC_ECL_COMMENTLINEDOC
-%wxchkver_2_9_5 #define wxSTC_ECL_WORD1
-%wxchkver_2_9_5 #define wxSTC_ECL_COMMENTDOCKEYWORD
-%wxchkver_2_9_5 #define wxSTC_ECL_COMMENTDOCKEYWORDERROR
-%wxchkver_2_9_5 #define wxSTC_ECL_WORD2
-%wxchkver_2_9_5 #define wxSTC_ECL_WORD3
-%wxchkver_2_9_5 #define wxSTC_ECL_WORD4
-%wxchkver_2_9_5 #define wxSTC_ECL_WORD5
-%wxchkver_2_9_5 #define wxSTC_ECL_COMMENTDOC
-%wxchkver_2_9_5 #define wxSTC_ECL_ADDED
-%wxchkver_2_9_5 #define wxSTC_ECL_DELETED
-%wxchkver_2_9_5 #define wxSTC_ECL_CHANGED
-%wxchkver_2_9_5 #define wxSTC_ECL_MOVED
+#define wxSTC_ECL_DEFAULT
+#define wxSTC_ECL_COMMENT
+#define wxSTC_ECL_COMMENTLINE
+#define wxSTC_ECL_NUMBER
+#define wxSTC_ECL_STRING
+#define wxSTC_ECL_WORD0
+#define wxSTC_ECL_OPERATOR
+#define wxSTC_ECL_CHARACTER
+#define wxSTC_ECL_UUID
+#define wxSTC_ECL_PREPROCESSOR
+#define wxSTC_ECL_UNKNOWN
+#define wxSTC_ECL_IDENTIFIER
+#define wxSTC_ECL_STRINGEOL
+#define wxSTC_ECL_VERBATIM
+#define wxSTC_ECL_REGEX
+#define wxSTC_ECL_COMMENTLINEDOC
+#define wxSTC_ECL_WORD1
+#define wxSTC_ECL_COMMENTDOCKEYWORD
+#define wxSTC_ECL_COMMENTDOCKEYWORDERROR
+#define wxSTC_ECL_WORD2
+#define wxSTC_ECL_WORD3
+#define wxSTC_ECL_WORD4
+#define wxSTC_ECL_WORD5
+#define wxSTC_ECL_COMMENTDOC
+#define wxSTC_ECL_ADDED
+#define wxSTC_ECL_DELETED
+#define wxSTC_ECL_CHANGED
+#define wxSTC_ECL_MOVED
 
 /// Lexical states for SCLEX_OSCRIPT
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_LINE_COMMENT
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_BLOCK_COMMENT
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_DOC_COMMENT
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_PREPROCESSOR
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_NUMBER
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_SINGLEQUOTE_STRING
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_DOUBLEQUOTE_STRING
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_CONSTANT
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_GLOBAL
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_KEYWORD
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_LABEL
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_TYPE
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_FUNCTION
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_OBJECT
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_PROPERTY
-%wxchkver_2_9_5 #define wxSTC_OSCRIPT_METHOD
+#define wxSTC_OSCRIPT_DEFAULT
+#define wxSTC_OSCRIPT_LINE_COMMENT
+#define wxSTC_OSCRIPT_BLOCK_COMMENT
+#define wxSTC_OSCRIPT_DOC_COMMENT
+#define wxSTC_OSCRIPT_PREPROCESSOR
+#define wxSTC_OSCRIPT_NUMBER
+#define wxSTC_OSCRIPT_SINGLEQUOTE_STRING
+#define wxSTC_OSCRIPT_DOUBLEQUOTE_STRING
+#define wxSTC_OSCRIPT_CONSTANT
+#define wxSTC_OSCRIPT_IDENTIFIER
+#define wxSTC_OSCRIPT_GLOBAL
+#define wxSTC_OSCRIPT_KEYWORD
+#define wxSTC_OSCRIPT_OPERATOR
+#define wxSTC_OSCRIPT_LABEL
+#define wxSTC_OSCRIPT_TYPE
+#define wxSTC_OSCRIPT_FUNCTION
+#define wxSTC_OSCRIPT_OBJECT
+#define wxSTC_OSCRIPT_PROPERTY
+#define wxSTC_OSCRIPT_METHOD
 
 /// Lexical states for SCLEX_VISUALPROLOG
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_DEFAULT
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_KEY_MAJOR
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_KEY_MINOR
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_KEY_DIRECTIVE
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_COMMENT_BLOCK
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_COMMENT_LINE
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_COMMENT_KEY
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_COMMENT_KEY_ERROR
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_IDENTIFIER
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_VARIABLE
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_ANONYMOUS
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_NUMBER
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_OPERATOR
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_CHARACTER
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_CHARACTER_TOO_MANY
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_CHARACTER_ESCAPE_ERROR
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_STRING
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_STRING_ESCAPE
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_STRING_ESCAPE_ERROR
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_STRING_EOL_OPEN
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_STRING_VERBATIM
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_STRING_VERBATIM_SPECIAL
-%wxchkver_2_9_5 #define wxSTC_VISUALPROLOG_STRING_VERBATIM_EOL
+#define wxSTC_VISUALPROLOG_DEFAULT
+#define wxSTC_VISUALPROLOG_KEY_MAJOR
+#define wxSTC_VISUALPROLOG_KEY_MINOR
+#define wxSTC_VISUALPROLOG_KEY_DIRECTIVE
+#define wxSTC_VISUALPROLOG_COMMENT_BLOCK
+#define wxSTC_VISUALPROLOG_COMMENT_LINE
+#define wxSTC_VISUALPROLOG_COMMENT_KEY
+#define wxSTC_VISUALPROLOG_COMMENT_KEY_ERROR
+#define wxSTC_VISUALPROLOG_IDENTIFIER
+#define wxSTC_VISUALPROLOG_VARIABLE
+#define wxSTC_VISUALPROLOG_ANONYMOUS
+#define wxSTC_VISUALPROLOG_NUMBER
+#define wxSTC_VISUALPROLOG_OPERATOR
+#define wxSTC_VISUALPROLOG_CHARACTER
+#define wxSTC_VISUALPROLOG_CHARACTER_TOO_MANY
+#define wxSTC_VISUALPROLOG_CHARACTER_ESCAPE_ERROR
+#define wxSTC_VISUALPROLOG_STRING
+#define wxSTC_VISUALPROLOG_STRING_ESCAPE
+#define wxSTC_VISUALPROLOG_STRING_ESCAPE_ERROR
+#define wxSTC_VISUALPROLOG_STRING_EOL_OPEN
+#define wxSTC_VISUALPROLOG_STRING_VERBATIM
+#define wxSTC_VISUALPROLOG_STRING_VERBATIM_SPECIAL
+#define wxSTC_VISUALPROLOG_STRING_VERBATIM_EOL
 
 /// Lexical states for SCLEX_STTXT
-%wxchkver_3_1_0 #define wxSTC_STTXT_DEFAULT
-%wxchkver_3_1_0 #define wxSTC_STTXT_COMMENT
-%wxchkver_3_1_0 #define wxSTC_STTXT_COMMENTLINE
-%wxchkver_3_1_0 #define wxSTC_STTXT_KEYWORD
-%wxchkver_3_1_0 #define wxSTC_STTXT_TYPE
-%wxchkver_3_1_0 #define wxSTC_STTXT_FUNCTION
-%wxchkver_3_1_0 #define wxSTC_STTXT_FB
-%wxchkver_3_1_0 #define wxSTC_STTXT_NUMBER
-%wxchkver_3_1_0 #define wxSTC_STTXT_HEXNUMBER
-%wxchkver_3_1_0 #define wxSTC_STTXT_PRAGMA
-%wxchkver_3_1_0 #define wxSTC_STTXT_OPERATOR
-%wxchkver_3_1_0 #define wxSTC_STTXT_CHARACTER
-%wxchkver_3_1_0 #define wxSTC_STTXT_STRING1
-%wxchkver_3_1_0 #define wxSTC_STTXT_STRING2
-%wxchkver_3_1_0 #define wxSTC_STTXT_STRINGEOL
-%wxchkver_3_1_0 #define wxSTC_STTXT_IDENTIFIER
-%wxchkver_3_1_0 #define wxSTC_STTXT_DATETIME
-%wxchkver_3_1_0 #define wxSTC_STTXT_VARS
-%wxchkver_3_1_0 #define wxSTC_STTXT_PRAGMAS
+#define wxSTC_STTXT_DEFAULT
+#define wxSTC_STTXT_COMMENT
+#define wxSTC_STTXT_COMMENTLINE
+#define wxSTC_STTXT_KEYWORD
+#define wxSTC_STTXT_TYPE
+#define wxSTC_STTXT_FUNCTION
+#define wxSTC_STTXT_FB
+#define wxSTC_STTXT_NUMBER
+#define wxSTC_STTXT_HEXNUMBER
+#define wxSTC_STTXT_PRAGMA
+#define wxSTC_STTXT_OPERATOR
+#define wxSTC_STTXT_CHARACTER
+#define wxSTC_STTXT_STRING1
+#define wxSTC_STTXT_STRING2
+#define wxSTC_STTXT_STRINGEOL
+#define wxSTC_STTXT_IDENTIFIER
+#define wxSTC_STTXT_DATETIME
+#define wxSTC_STTXT_VARS
+#define wxSTC_STTXT_PRAGMAS
 
 /// Lexical states for SCLEX_KVIRC
-%wxchkver_3_1_0 #define wxSTC_KVIRC_DEFAULT
-%wxchkver_3_1_0 #define wxSTC_KVIRC_COMMENT
-%wxchkver_3_1_0 #define wxSTC_KVIRC_COMMENTBLOCK
-%wxchkver_3_1_0 #define wxSTC_KVIRC_STRING
-%wxchkver_3_1_0 #define wxSTC_KVIRC_WORD
-%wxchkver_3_1_0 #define wxSTC_KVIRC_KEYWORD
-%wxchkver_3_1_0 #define wxSTC_KVIRC_FUNCTION_KEYWORD
-%wxchkver_3_1_0 #define wxSTC_KVIRC_FUNCTION
-%wxchkver_3_1_0 #define wxSTC_KVIRC_VARIABLE
-%wxchkver_3_1_0 #define wxSTC_KVIRC_NUMBER
-%wxchkver_3_1_0 #define wxSTC_KVIRC_OPERATOR
-%wxchkver_3_1_0 #define wxSTC_KVIRC_STRING_FUNCTION
-%wxchkver_3_1_0 #define wxSTC_KVIRC_STRING_VARIABLE
+#define wxSTC_KVIRC_DEFAULT
+#define wxSTC_KVIRC_COMMENT
+#define wxSTC_KVIRC_COMMENTBLOCK
+#define wxSTC_KVIRC_STRING
+#define wxSTC_KVIRC_WORD
+#define wxSTC_KVIRC_KEYWORD
+#define wxSTC_KVIRC_FUNCTION_KEYWORD
+#define wxSTC_KVIRC_FUNCTION
+#define wxSTC_KVIRC_VARIABLE
+#define wxSTC_KVIRC_NUMBER
+#define wxSTC_KVIRC_OPERATOR
+#define wxSTC_KVIRC_STRING_FUNCTION
+#define wxSTC_KVIRC_STRING_VARIABLE
 
 /// Lexical states for SCLEX_RUST
-%wxchkver_3_1_0 #define wxSTC_RUST_DEFAULT
-%wxchkver_3_1_0 #define wxSTC_RUST_COMMENTBLOCK
-%wxchkver_3_1_0 #define wxSTC_RUST_COMMENTLINE
-%wxchkver_3_1_0 #define wxSTC_RUST_COMMENTBLOCKDOC
-%wxchkver_3_1_0 #define wxSTC_RUST_COMMENTLINEDOC
-%wxchkver_3_1_0 #define wxSTC_RUST_NUMBER
-%wxchkver_3_1_0 #define wxSTC_RUST_WORD
-%wxchkver_3_1_0 #define wxSTC_RUST_WORD2
-%wxchkver_3_1_0 #define wxSTC_RUST_WORD3
-%wxchkver_3_1_0 #define wxSTC_RUST_WORD4
-%wxchkver_3_1_0 #define wxSTC_RUST_WORD5
-%wxchkver_3_1_0 #define wxSTC_RUST_WORD6
-%wxchkver_3_1_0 #define wxSTC_RUST_WORD7
-%wxchkver_3_1_0 #define wxSTC_RUST_STRING
-%wxchkver_3_1_0 #define wxSTC_RUST_STRINGR
-%wxchkver_3_1_0 #define wxSTC_RUST_CHARACTER
-%wxchkver_3_1_0 #define wxSTC_RUST_OPERATOR
-%wxchkver_3_1_0 #define wxSTC_RUST_IDENTIFIER
-%wxchkver_3_1_0 #define wxSTC_RUST_LIFETIME
-%wxchkver_3_1_0 #define wxSTC_RUST_MACRO
-%wxchkver_3_1_0 #define wxSTC_RUST_LEXERROR
-%wxchkver_3_1_0 #define wxSTC_RUST_BYTESTRING
-%wxchkver_3_1_0 #define wxSTC_RUST_BYTESTRINGR
-%wxchkver_3_1_0 #define wxSTC_RUST_BYTECHARACTER
+#define wxSTC_RUST_DEFAULT
+#define wxSTC_RUST_COMMENTBLOCK
+#define wxSTC_RUST_COMMENTLINE
+#define wxSTC_RUST_COMMENTBLOCKDOC
+#define wxSTC_RUST_COMMENTLINEDOC
+#define wxSTC_RUST_NUMBER
+#define wxSTC_RUST_WORD
+#define wxSTC_RUST_WORD2
+#define wxSTC_RUST_WORD3
+#define wxSTC_RUST_WORD4
+#define wxSTC_RUST_WORD5
+#define wxSTC_RUST_WORD6
+#define wxSTC_RUST_WORD7
+#define wxSTC_RUST_STRING
+#define wxSTC_RUST_STRINGR
+#define wxSTC_RUST_CHARACTER
+#define wxSTC_RUST_OPERATOR
+#define wxSTC_RUST_IDENTIFIER
+#define wxSTC_RUST_LIFETIME
+#define wxSTC_RUST_MACRO
+#define wxSTC_RUST_LEXERROR
+#define wxSTC_RUST_BYTESTRING
+#define wxSTC_RUST_BYTESTRINGR
+#define wxSTC_RUST_BYTECHARACTER
 
 /// Lexical states for SCLEX_DMAP
-%wxchkver_3_1_0 #define wxSTC_DMAP_DEFAULT
-%wxchkver_3_1_0 #define wxSTC_DMAP_COMMENT
-%wxchkver_3_1_0 #define wxSTC_DMAP_NUMBER
-%wxchkver_3_1_0 #define wxSTC_DMAP_STRING1
-%wxchkver_3_1_0 #define wxSTC_DMAP_STRING2
-%wxchkver_3_1_0 #define wxSTC_DMAP_STRINGEOL
-%wxchkver_3_1_0 #define wxSTC_DMAP_OPERATOR
-%wxchkver_3_1_0 #define wxSTC_DMAP_IDENTIFIER
-%wxchkver_3_1_0 #define wxSTC_DMAP_WORD
-%wxchkver_3_1_0 #define wxSTC_DMAP_WORD2
-%wxchkver_3_1_0 #define wxSTC_DMAP_WORD3
+#define wxSTC_DMAP_DEFAULT
+#define wxSTC_DMAP_COMMENT
+#define wxSTC_DMAP_NUMBER
+#define wxSTC_DMAP_STRING1
+#define wxSTC_DMAP_STRING2
+#define wxSTC_DMAP_STRINGEOL
+#define wxSTC_DMAP_OPERATOR
+#define wxSTC_DMAP_IDENTIFIER
+#define wxSTC_DMAP_WORD
+#define wxSTC_DMAP_WORD2
+#define wxSTC_DMAP_WORD3
 
 /// Lexical states for SCLEX_DMIS
-%wxchkver_3_1_0 #define wxSTC_DMIS_DEFAULT
-%wxchkver_3_1_0 #define wxSTC_DMIS_COMMENT
-%wxchkver_3_1_0 #define wxSTC_DMIS_STRING
-%wxchkver_3_1_0 #define wxSTC_DMIS_NUMBER
-%wxchkver_3_1_0 #define wxSTC_DMIS_KEYWORD
-%wxchkver_3_1_0 #define wxSTC_DMIS_MAJORWORD
-%wxchkver_3_1_0 #define wxSTC_DMIS_MINORWORD
-%wxchkver_3_1_0 #define wxSTC_DMIS_UNSUPPORTED_MAJOR
-%wxchkver_3_1_0 #define wxSTC_DMIS_UNSUPPORTED_MINOR
-%wxchkver_3_1_0 #define wxSTC_DMIS_LABEL
+#define wxSTC_DMIS_DEFAULT
+#define wxSTC_DMIS_COMMENT
+#define wxSTC_DMIS_STRING
+#define wxSTC_DMIS_NUMBER
+#define wxSTC_DMIS_KEYWORD
+#define wxSTC_DMIS_MAJORWORD
+#define wxSTC_DMIS_MINORWORD
+#define wxSTC_DMIS_UNSUPPORTED_MAJOR
+#define wxSTC_DMIS_UNSUPPORTED_MINOR
+#define wxSTC_DMIS_LABEL
 
 /// Lexical states for SCLEX_REGISTRY
-%wxchkver_3_1_0 #define wxSTC_REG_DEFAULT
-%wxchkver_3_1_0 #define wxSTC_REG_COMMENT
-%wxchkver_3_1_0 #define wxSTC_REG_VALUENAME
-%wxchkver_3_1_0 #define wxSTC_REG_STRING
-%wxchkver_3_1_0 #define wxSTC_REG_HEXDIGIT
-%wxchkver_3_1_0 #define wxSTC_REG_VALUETYPE
-%wxchkver_3_1_0 #define wxSTC_REG_ADDEDKEY
-%wxchkver_3_1_0 #define wxSTC_REG_DELETEDKEY
-%wxchkver_3_1_0 #define wxSTC_REG_ESCAPED
-%wxchkver_3_1_0 #define wxSTC_REG_KEYPATH_GUID
-%wxchkver_3_1_0 #define wxSTC_REG_STRING_GUID
-%wxchkver_3_1_0 #define wxSTC_REG_PARAMETER
-%wxchkver_3_1_0 #define wxSTC_REG_OPERATOR
+#define wxSTC_REG_DEFAULT
+#define wxSTC_REG_COMMENT
+#define wxSTC_REG_VALUENAME
+#define wxSTC_REG_STRING
+#define wxSTC_REG_HEXDIGIT
+#define wxSTC_REG_VALUETYPE
+#define wxSTC_REG_ADDEDKEY
+#define wxSTC_REG_DELETEDKEY
+#define wxSTC_REG_ESCAPED
+#define wxSTC_REG_KEYPATH_GUID
+#define wxSTC_REG_STRING_GUID
+#define wxSTC_REG_PARAMETER
+#define wxSTC_REG_OPERATOR
 
 /// Lexical state for SCLEX_BIBTEX
-%wxchkver_3_1_0 #define wxSTC_BIBTEX_DEFAULT
-%wxchkver_3_1_0 #define wxSTC_BIBTEX_ENTRY
-%wxchkver_3_1_0 #define wxSTC_BIBTEX_UNKNOWN_ENTRY
-%wxchkver_3_1_0 #define wxSTC_BIBTEX_KEY
-%wxchkver_3_1_0 #define wxSTC_BIBTEX_PARAMETER
-%wxchkver_3_1_0 #define wxSTC_BIBTEX_VALUE
-%wxchkver_3_1_0 #define wxSTC_BIBTEX_COMMENT
+#define wxSTC_BIBTEX_DEFAULT
+#define wxSTC_BIBTEX_ENTRY
+#define wxSTC_BIBTEX_UNKNOWN_ENTRY
+#define wxSTC_BIBTEX_KEY
+#define wxSTC_BIBTEX_PARAMETER
+#define wxSTC_BIBTEX_VALUE
+#define wxSTC_BIBTEX_COMMENT
 
 /// Lexical state for SCLEX_SREC
-%wxchkver_3_1_0 #define wxSTC_HEX_DEFAULT
-%wxchkver_3_1_0 #define wxSTC_HEX_RECSTART
-%wxchkver_3_1_0 #define wxSTC_HEX_RECTYPE
-%wxchkver_3_1_0 #define wxSTC_HEX_RECTYPE_UNKNOWN
-%wxchkver_3_1_0 #define wxSTC_HEX_BYTECOUNT
-%wxchkver_3_1_0 #define wxSTC_HEX_BYTECOUNT_WRONG
-%wxchkver_3_1_0 #define wxSTC_HEX_NOADDRESS
-%wxchkver_3_1_0 #define wxSTC_HEX_DATAADDRESS
-%wxchkver_3_1_0 #define wxSTC_HEX_RECCOUNT
-%wxchkver_3_1_0 #define wxSTC_HEX_STARTADDRESS
-%wxchkver_3_1_0 #define wxSTC_HEX_ADDRESSFIELD_UNKNOWN
-%wxchkver_3_1_0 #define wxSTC_HEX_EXTENDEDADDRESS
-%wxchkver_3_1_0 #define wxSTC_HEX_DATA_ODD
-%wxchkver_3_1_0 #define wxSTC_HEX_DATA_EVEN
-%wxchkver_3_1_0 #define wxSTC_HEX_DATA_UNKNOWN
-%wxchkver_3_1_0 #define wxSTC_HEX_DATA_EMPTY
-%wxchkver_3_1_0 #define wxSTC_HEX_CHECKSUM
-%wxchkver_3_1_0 #define wxSTC_HEX_CHECKSUM_WRONG
-%wxchkver_3_1_0 #define wxSTC_HEX_GARBAGE
+#define wxSTC_HEX_DEFAULT
+#define wxSTC_HEX_RECSTART
+#define wxSTC_HEX_RECTYPE
+#define wxSTC_HEX_RECTYPE_UNKNOWN
+#define wxSTC_HEX_BYTECOUNT
+#define wxSTC_HEX_BYTECOUNT_WRONG
+#define wxSTC_HEX_NOADDRESS
+#define wxSTC_HEX_DATAADDRESS
+#define wxSTC_HEX_RECCOUNT
+#define wxSTC_HEX_STARTADDRESS
+#define wxSTC_HEX_ADDRESSFIELD_UNKNOWN
+#define wxSTC_HEX_EXTENDEDADDRESS
+#define wxSTC_HEX_DATA_ODD
+#define wxSTC_HEX_DATA_EVEN
+#define wxSTC_HEX_DATA_UNKNOWN
+#define wxSTC_HEX_DATA_EMPTY
+#define wxSTC_HEX_CHECKSUM
+#define wxSTC_HEX_CHECKSUM_WRONG
+#define wxSTC_HEX_GARBAGE
 
 /// Lexical state for SCLEX_IHEX (shared with Srec)
 /// Lexical state for SCLEX_TEHEX (shared with Srec)
 /// Lexical states for SCLEX_JSON
-%wxchkver_3_1_1 #define wxSTC_JSON_DEFAULT
-%wxchkver_3_1_1 #define wxSTC_JSON_NUMBER
-%wxchkver_3_1_1 #define wxSTC_JSON_STRING
-%wxchkver_3_1_1 #define wxSTC_JSON_STRINGEOL
-%wxchkver_3_1_1 #define wxSTC_JSON_PROPERTYNAME
-%wxchkver_3_1_1 #define wxSTC_JSON_ESCAPESEQUENCE
-%wxchkver_3_1_1 #define wxSTC_JSON_LINECOMMENT
-%wxchkver_3_1_1 #define wxSTC_JSON_BLOCKCOMMENT
-%wxchkver_3_1_1 #define wxSTC_JSON_OPERATOR
-%wxchkver_3_1_1 #define wxSTC_JSON_URI
-%wxchkver_3_1_1 #define wxSTC_JSON_COMPACTIRI
-%wxchkver_3_1_1 #define wxSTC_JSON_KEYWORD
-%wxchkver_3_1_1 #define wxSTC_JSON_LDKEYWORD
-%wxchkver_3_1_1 #define wxSTC_JSON_ERROR
-%wxchkver_3_1_1 #define wxSTC_EDI_DEFAULT
-%wxchkver_3_1_1 #define wxSTC_EDI_SEGMENTSTART
-%wxchkver_3_1_1 #define wxSTC_EDI_SEGMENTEND
-%wxchkver_3_1_1 #define wxSTC_EDI_SEP_ELEMENT
-%wxchkver_3_1_1 #define wxSTC_EDI_SEP_COMPOSITE
-%wxchkver_3_1_1 #define wxSTC_EDI_SEP_RELEASE
-%wxchkver_3_1_1 #define wxSTC_EDI_UNA
-%wxchkver_3_1_1 #define wxSTC_EDI_UNH
-%wxchkver_3_1_1 #define wxSTC_EDI_BADSEGMENT
-
-// deprecated items
-!%wxchkver_2_8 #define wxSTC_LEX_ASP
-!%wxchkver_2_8 #define wxSTC_LEX_PHP
-!%wxchkver_2_9_2 #define wxSTC_ERLANG_SEPARATOR
-!%wxchkver_2_9_2 #define wxSTC_FOLDFLAG_BOX
-!%wxchkver_2_9_2 #define wxSTC_FOLDLEVELBOXFOOTERFLAG
-!%wxchkver_2_9_2 #define wxSTC_FOLDLEVELBOXHEADERFLAG
-!%wxchkver_2_9_2 #define wxSTC_FOLDLEVELCONTRACTED
-!%wxchkver_2_9_2 #define wxSTC_FOLDLEVELUNINDENT
-!%wxchkver_3_1_1 #define wxSTC_INDIC0_MASK
-!%wxchkver_3_1_1 #define wxSTC_INDIC1_MASK
-!%wxchkver_3_1_1 #define wxSTC_INDIC2_MASK
-!%wxchkver_3_1_1 #define wxSTC_INDICS_MASK
-!%wxchkver_3_1_1 #define wxSTC_SCMOD_ALT
-!%wxchkver_3_1_1 #define wxSTC_SCMOD_CTRL
-!%wxchkver_3_1_1 #define wxSTC_SCMOD_NORM
-!%wxchkver_3_1_1 #define wxSTC_SCMOD_SHIFT
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_BLOCK
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_BLOCK_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_CHARACTER
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_CHARACTER_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_COMMENT1
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_COMMENT1_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_COMMENT2
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_COMMENT2_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_COMMENT3
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_COMMENT3_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_COMMENT4
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_COMMENT4_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_COMMENT5
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_COMMENT5_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_COMMENT6
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_COMMENT6_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_DEFAULT
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_DEFAULT_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_END
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_END_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_IDENTIFIER
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_IDENTIFIER_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_NUMBER
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_NUMBER_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_OPERATOR
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_OPERATOR_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_PREPROCESSOR
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_PREPROCESSOR_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_STRING
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_STRING_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_WORD
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_4GL_WORD_
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_SCMOD_META
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_SCMOD_SUPER
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_SCVS_NONE
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_SCVS_RECTANGULARSELECTION
-!%wxchkver_3_1_1 && %wxchkver_2_9_5 #define wxSTC_SCVS_USERACCESSIBLE
-!%wxchkver_3_1_1 && %wxchkver_3_1_0 #define wxSTC_TECHNOLOGY_DIRECTWRITEDC
-!%wxchkver_3_1_1 && %wxchkver_3_1_0 #define wxSTC_TECHNOLOGY_DIRECTWRITERETAIN
-%wxchkver_2_9_5 && !%wxchkver_3_1_0 #define wxSTC_COFFEESCRIPT_HASHQUOTEDSTRING
-// #define wxSTC_CP_DBCS - removed in 2.9.5
-//#define wxSTC_FS_ASM        - Removed in 2.9.5
-//#define wxSTC_FS_BINNUMBER  - Removed in 2.9.5
-//#define wxSTC_FS_ERROR      - Removed in 2.9.5
-//#define wxSTC_FS_HEXNUMBER  - Removed in 2.9.5
-//#define wxSTC_FS_LABEL      - Removed in 2.9.5
+#define wxSTC_JSON_DEFAULT
+#define wxSTC_JSON_NUMBER
+#define wxSTC_JSON_STRING
+#define wxSTC_JSON_STRINGEOL
+#define wxSTC_JSON_PROPERTYNAME
+#define wxSTC_JSON_ESCAPESEQUENCE
+#define wxSTC_JSON_LINECOMMENT
+#define wxSTC_JSON_BLOCKCOMMENT
+#define wxSTC_JSON_OPERATOR
+#define wxSTC_JSON_URI
+#define wxSTC_JSON_COMPACTIRI
+#define wxSTC_JSON_KEYWORD
+#define wxSTC_JSON_LDKEYWORD
+#define wxSTC_JSON_ERROR
+#define wxSTC_EDI_DEFAULT
+#define wxSTC_EDI_SEGMENTSTART
+#define wxSTC_EDI_SEGMENTEND
+#define wxSTC_EDI_SEP_ELEMENT
+#define wxSTC_EDI_SEP_COMPOSITE
+#define wxSTC_EDI_SEP_RELEASE
+#define wxSTC_EDI_UNA
+#define wxSTC_EDI_UNH
+#define wxSTC_EDI_BADSEGMENT
 
 //}}}
 //----------------------------------------------------------------------
@@ -2638,7 +2574,7 @@
 #define wxSTC_CMD_DELWORDRIGHT
 
 /// Delete the word to the right of the caret, but not the trailing non-word characters.
-%wxchkver_2_9_5 #define wxSTC_CMD_DELWORDRIGHTEND
+#define wxSTC_CMD_DELWORDRIGHTEND
 
 /// Cut the line containing the caret.
 #define wxSTC_CMD_LINECUT
@@ -2795,26 +2731,26 @@
 #define wxSTC_CMD_WORDRIGHTENDEXTEND
 
 /// Centre current line in window.
-%wxchkver_2_9_5 #define wxSTC_CMD_VERTICALCENTRECARET
+#define wxSTC_CMD_VERTICALCENTRECARET
 
 /// Move the selected lines up one line, shifting the line above after the selection
-%wxchkver_2_9_5 #define wxSTC_CMD_MOVESELECTEDLINESUP
+#define wxSTC_CMD_MOVESELECTEDLINESUP
 
 /// Move the selected lines down one line, shifting the line below before the selection
-%wxchkver_2_9_5 #define wxSTC_CMD_MOVESELECTEDLINESDOWN
+#define wxSTC_CMD_MOVESELECTEDLINESDOWN
 
 /// Scroll to start of document.
-%wxchkver_2_9_5 #define wxSTC_CMD_SCROLLTOSTART
+#define wxSTC_CMD_SCROLLTOSTART
 
 /// Scroll to end of document.
-%wxchkver_2_9_5 #define wxSTC_CMD_SCROLLTOEND
+#define wxSTC_CMD_SCROLLTOEND
 
 /// Move caret to before first visible character on display line.
 /// If already there move to first character on display line.
-%wxchkver_3_1_0 #define wxSTC_CMD_VCHOMEDISPLAY
+#define wxSTC_CMD_VCHOMEDISPLAY
 
 /// Like VCHomeDisplay but extending selection to new caret position.
-%wxchkver_3_1_0 #define wxSTC_CMD_VCHOMEDISPLAYEXTEND
+#define wxSTC_CMD_VCHOMEDISPLAYEXTEND
 
 
 //}}}
@@ -2836,4531 +2772,2375 @@ class wxStyledTextCtrl : public wxControl
 {
     wxStyledTextCtrl(wxWindow *parent, wxWindowID id, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = 0, const wxString &name = "wxStyledTextCtrl");
 
+    bool Create(wxWindow *parent, wxWindowID id=wxID_ANY, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = 0, const wxString& name = "wxStyledTextCtrl");
 
     //----------------------------------------------------------------------
     // Generated method declaration section {{{
 
-
-    /**
-        @member_group_name{TextRetrievalAndModification, Text retrieval and modification}
-    */
-    //@{
-
-    /**
-        Add text to the document at current position.
-    */
+    // Add text to the document at current position.
     void AddText(const wxString& text);
 
-    /**
-        Add array of cells to document.
-    */
+    // Add array of cells to document.
     //void AddStyledText(const wxMemoryBuffer& data);
 
-    /**
-        Insert string at a position.
-    */
+    // Insert string at a position.
     void InsertText(int pos, const wxString& text);
 
-    /**
-        Change the text that is being inserted in response to wxSTC_MOD_INSERTCHECK
+    // Change the text that is being inserted in response to wxSTC_MOD_INSERTCHECK
+    void ChangeInsertion(int length, const wxString& text);
 
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void ChangeInsertion(int length, const wxString& text);
-
-    /**
-        Delete all text in the document.
-    */
+    // Delete all text in the document.
     void ClearAll();
 
-    /**
-        Delete a range of text in the document.
-    */
-    %wxchkver_2_9_5 void DeleteRange(int pos, int deleteLength);
+    // Delete a range of text in the document.
+    void DeleteRange(int start, int lengthDelete);
 
-    /**
-        Set all style bytes to 0, remove all folding information.
-    */
+    // Set all style bytes to 0, remove all folding information.
     void ClearDocumentStyle();
 
-    /**
-        Returns the character byte at the position.
-    */
-    int GetCharAt(int pos) const;
-
-    /**
-        Returns the style byte at the position.
-    */
-    int GetStyleAt(int pos) const;
-
-    /**
-        Remember the current position in the undo history as the position
-        at which the document was saved.
-    */
-    void SetSavePoint();
-
-    /**
-        Retrieve a buffer of cells.
-    */
-    //wxMemoryBuffer GetStyledText(int startPos, int endPos);
-
-    /**
-        In read-only mode?
-    */
-    bool GetReadOnly() const;
-
-    /**
-        Retrieve the contents of a line.
-    */
-    wxString GetLine(int line) const;
-
-    /**
-        Retrieve a range of text.
-    */
-    wxString GetTextRange(int startPos, int endPos);
-
-    /**
-        Replace the selected text with the argument text.
-    */
-    void ReplaceSelection(const wxString& text);
-
-    /**
-        Set to read only or read write.
-    */
-    void SetReadOnly(bool readOnly);
-
-    /**
-        Replace the contents of the document with the argument text.
-    */
-    void SetText(const wxString& text);
-
-    /**
-        Retrieve all the text in the document.
-    */
-    wxString GetText() const;
-
-    /**
-        Append a string to the end of the document without changing the selection.
-    */
-    void AppendText(const wxString& text);
-
-    /**
-        Enlarge the document to a particular size of text bytes.
-    */
-    void Allocate(int bytes);
-
-    /**
-        Release all extended (>255) style numbers
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void ReleaseAllExtendedStyles();
-
-    /**
-        Allocate some extended (>255) style numbers and return the start of the range
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int AllocateExtendedStyles(int numberStyles);
-
-    //@}
-
-    /**
-        @member_group_name{Searching, Searching and replacing}
-    */
-    //@{
-
-    /**
-        Find some text in the document.
-
-        @param minPos
-            The position (starting from zero) in the document at which to begin
-            the search
-        @param maxPos
-            The last position (starting from zero) in the document to which
-            the search will be restricted.
-        @param text
-            The text to search for.
-        @param flags
-            (Optional)  The search flags.  This should be a bit list containing
-             one or more of the @link wxStyledTextCtrl::wxSTC_FIND_WHOLEWORD
-            wxSTC_FIND_* @endlink constants.
-        @param findEnd
-            (Optional)  This parameter can optionally be used to receive the
-            end position (starting from zero) of the found text.  This is
-            primarily needed when searching using regular expressions.
-            This parameter is available since wxWidgets 3.1.1.
-        @return
-            The position (starting from zero) in the document at which the text
-            was found or wxSTC_INVALID_POSITION if the search fails.
-        @remarks
-            A backwards search can be performed by setting minPos to be greater
-            than maxPos.
-    */
-    int FindText(int minPos, int maxPos, const wxString& text, int flags=0);
-
-    /**
-        Sets the position that starts the target which is used for updating the
-        document without affecting the scroll position.
-    */
-    void SetTargetStart(int pos);
-
-    /**
-        Get the position that starts the target.
-    */
-    int GetTargetStart() const;
-
-    /**
-        Sets the position that ends the target which is used for updating the
-        document without affecting the scroll position.
-    */
-    void SetTargetEnd(int pos);
-
-    /**
-        Get the position that ends the target.
-    */
-    int GetTargetEnd() const;
-
-    /**
-        Sets both the start and end of the target in one call.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void SetTargetRange(int start, int end);
-
-    /**
-        Retrieve the text in the target.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 wxString GetTargetText() const;
-
-    /**
-        Make the target range start and end be the same as the selection range start and end.
-    */
-    void TargetFromSelection();
-
-    /**
-        Sets the target to the whole document.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void TargetWholeDocument();
-
-    /**
-        Replace the target text with the argument text.
-        Text is counted so it can contain NULs.
-        Returns the length of the replacement text.
-    */
-    int ReplaceTarget(const wxString& text);
-
-    /**
-        Replace the target text with the argument text after \\d processing.
-        Text is counted so it can contain NULs.
-        Looks for \\d where d is between 1 and 9 and replaces these with the strings
-        matched in the last search operation which were surrounded by \\( and \\).
-        Returns the length of the replacement text including any change
-        caused by processing the \\d patterns.
-    */
-    int ReplaceTargetRE(const wxString& text);
-
-    /**
-        Search for a counted string in the target and set the target to the found
-        range. Text is counted so it can contain NULs.
-        Returns length of range or -1 for failure in which case target is not moved.
-    */
-    int SearchInTarget(const wxString& text);
-
-    /**
-        Set the search flags used by SearchInTarget.
-
-        The input should be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_FIND_WHOLEWORD wxSTC_FIND_* @endlink constants.
-    */
-    void SetSearchFlags(int flags);
-
-    /**
-        Get the search flags used by SearchInTarget.
-
-        The return value will be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_FIND_WHOLEWORD wxSTC_FIND_* @endlink constants.
-    */
-    int GetSearchFlags() const;
-
-    /**
-        Retrieve the value of a tag from a regular expression search.
-    */
-    %wxchkver_2_9_5 wxString GetTag(int tagNumber) const;
-
-    /**
-        Sets the current caret position to be the search anchor.
-    */
-    void SearchAnchor();
-
-    /**
-        Find some text starting at the search anchor.
-        Does not ensure the selection is visible.
-    */
-    int SearchNext(int flags, const wxString& text);
-
-    /**
-        Find some text starting at the search anchor and moving backwards.
-        Does not ensure the selection is visible.
-    */
-    int SearchPrev(int flags, const wxString& text);
-
-    //@}
-
-    /**
-        @member_group_name{Overtype, Overtype}
-    */
-    //@{
-
-    /**
-        Set to overtype (true) or insert mode.
-    */
-    void SetOvertype(bool overtype);
-
-    /**
-        Returns true if overtype mode is active otherwise false is returned.
-    */
-    bool GetOvertype() const;
-
-    //@}
-
-    /**
-        @member_group_name{CutCopyAndPaste, Cut copy and paste}
-    */
-    //@{
-
-    /**
-        Will a paste succeed?
-    */
-    bool CanPaste() const;
-
-    /**
-        Cut the selection to the clipboard.
-    */
-    void Cut();
-
-    /**
-        Copy the selection to the clipboard.
-    */
-    void Copy();
-
-    /**
-        Paste the contents of the clipboard into the document replacing the selection.
-    */
-    void Paste();
-
-    /**
-        Clear the selection.
-    */
-    void Clear();
-
-    /**
-        Copy a range of text to the clipboard. Positions are clipped into the document.
-    */
-    void CopyRange(int start, int end);
-
-    /**
-        Copy argument text to the clipboard.
-    */
-    void CopyText(int length, const wxString& text);
-
-    /**
-        Enable/Disable convert-on-paste for line endings
-    */
-    void SetPasteConvertEndings(bool convert);
-
-    /**
-        Get convert-on-paste setting
-    */
-    bool GetPasteConvertEndings() const;
-
-    /**
-        Copy the selection, if selection empty copy the line with the caret
-    */
-    %wxchkver_2_9_5 void CopyAllowLine();
-
-    //@}
-
-    /**
-        @member_group_name{ErrorHandling, Error handling}
-    */
-    //@{
-
-    /**
-        Change error status - 0 = OK.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_STATUS_OK wxSTC_STATUS_* @endlink constants.
-    */
-    void SetStatus(int statusCode);
-
-    /**
-        Get error status.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_STATUS_OK wxSTC_STATUS_* @endlink constants.
-    */
-    int GetStatus() const;
-
-    //@}
-
-    /**
-        @member_group_name{UndoAndRedo, Undo and Redo}
-    */
-    //@{
-
-    /**
-        Redoes the next action on the undo history.
-    */
-    void Redo();
-
-    /**
-        Choose between collecting actions into the undo
-        history and discarding them.
-    */
-    void SetUndoCollection(bool collectUndo);
-
-    /**
-        Are there any redoable actions in the undo history?
-    */
-    bool CanRedo() const;
-
-    /**
-        Is undo history being collected?
-    */
-    bool GetUndoCollection() const;
-
-    /**
-        Start a sequence of actions that is undone and redone as a unit.
-        May be nested.
-    */
-    void BeginUndoAction();
-
-    /**
-        End a sequence of actions that is undone and redone as a unit.
-    */
-    void EndUndoAction();
-
-    /**
-        Are there any undoable actions in the undo history?
-    */
-    bool CanUndo() const;
-
-    /**
-        Delete the undo history.
-    */
-    void EmptyUndoBuffer();
-
-    /**
-        Undo one action in the undo history.
-    */
-    void Undo();
-
-    /**
-        Add a container action to the undo stack
-
-        The flags argument can be either 0 or wxSTC_UNDO_MAY_COALESCE.
-    */
-    %wxchkver_2_9_5 void AddUndoAction(int token, int flags);
-
-    //@}
-
-    /**
-        @member_group_name{SelectionAndInformation, Selection and information}
-    */
-    //@{
-
-    /**
-        Returns the number of bytes in the document.
-    */
+    // Returns the number of bytes in the document.
     int GetLength() const;
 
-    /**
-        Returns the position of the caret.
-    */
+    // Returns the character byte at the position.
+    int GetCharAt(int pos) const;
+
+    // Returns the position of the caret.
     int GetCurrentPos() const;
 
-    /**
-        Returns the position of the opposite end of the selection to the caret.
-    */
+    // Returns the position of the opposite end of the selection to the caret.
     int GetAnchor() const;
 
-    /**
-        Select all the text in the document.
-    */
+    // Returns the style byte at the position.
+    int GetStyleAt(int pos) const;
+
+    // Redoes the next action on the undo history.
+    void Redo();
+
+    // Choose between collecting actions into the undo
+    // history and discarding them.
+    void SetUndoCollection(bool collectUndo);
+
+    // Select all the text in the document.
     void SelectAll();
 
-    /**
-        Find the position from a point within the window.
-    */
-    %wxchkver_3_1_0 int PositionFromPoint(wxPoint pt) const;
+    // Remember the current position in the undo history as the position
+    // at which the document was saved.
+    void SetSavePoint();
 
-    /**
-        Find the position from a point within the window but return
-        wxSTC_INVALID_POSITION if not close to text.
-    */
-    int PositionFromPointClose(int x, int y);
+    // Retrieve a buffer of cells.
+    //wxMemoryBuffer GetStyledText(int startPos, int endPos);
 
-    /**
-        Set caret to start of a line and ensure it is visible.
-    */
-    void GotoLine(int line);
+    // Are there any redoable actions in the undo history?
+    bool CanRedo() const;
 
-    /**
-        Set caret to a position and ensure it is visible.
-    */
-    void GotoPos(int pos);
+    // Retrieve the line number at which a particular marker is located.
+    int MarkerLineFromHandle(int markerHandle);
 
-    /**
-        Set the selection anchor to a position. The anchor is the opposite
-        end of the selection from the caret.
-    */
-    void SetAnchor(int posAnchor);
+    // Delete a marker.
+    void MarkerDeleteHandle(int markerHandle);
 
-    /**
-        Retrieve the text of the line containing the caret.
+    // Is undo history being collected?
+    bool GetUndoCollection() const;
 
-        linePos can optionally be passed in to receive the index of the
-        caret on the line.
-    */
-    wxString GetCurLine();
-
-    /**
-        Retrieve the column number of a position, taking tab width into account.
-    */
-    int GetColumn(int pos) const;
-
-    /**
-        Count characters between two positions.
-    */
-    %wxchkver_2_9_5 int CountCharacters(int startPos, int endPos);
-
-    /**
-        Get the position after the last visible characters on a line.
-    */
-    int GetLineEndPosition(int line) const;
-
-    /**
-        Sets the position of the caret.
-    */
-    void SetCurrentPos(int pos);
-
-    /**
-        Sets the position that starts the selection - this becomes the anchor.
-    */
-    void SetSelectionStart(int pos);
-
-    /**
-        Returns the position at the start of the selection.
-    */
-    int GetSelectionStart() const;
-
-    /**
-        Sets the position that ends the selection - this becomes the caret.
-    */
-    void SetSelectionEnd(int pos);
-
-    /**
-        Returns the position at the end of the selection.
-    */
-    int GetSelectionEnd() const;
-
-    /**
-        Set caret to a position, while removing any existing selection.
-    */
-    %wxchkver_2_9_5 void SetEmptySelection(int pos);
-
-    /**
-        Returns the number of lines in the document. There is always at least one.
-    */
-    int GetLineCount() const;
-
-    /**
-        Is the document different from when it was last saved?
-    */
-    bool GetModify() const;
-
-    /**
-        Retrieve the selected text.
-    */
-    wxString GetSelectedText();
-
-    /**
-        Draw the selection in normal style or with selection highlighted.
-    */
-    void HideSelection(bool normal);
-
-    /**
-        Retrieve the point in the window where a position is displayed.
-    */
-    wxPoint PointFromPosition(int pos);
-
-    /**
-        Retrieve the line containing a position.
-    */
-    int LineFromPosition(int pos) const;
-
-    /**
-        Retrieve the position at the start of a line.
-    */
-    int PositionFromLine(int line) const;
-
-    /**
-        Retrieve the number of characters in the document.
-    */
-    int GetTextLength() const;
-
-    /**
-        Measure the pixel width of some text in a particular style.
-        Does not handle tab or control characters.
-    */
-    int TextWidth(int style, const wxString& text);
-
-    /**
-        Retrieve the height of a particular line of text in pixels.
-    */
-    int TextHeight(int line);
-
-    /**
-        Move the caret inside current view if it's not there already.
-    */
-    void MoveCaretInsideView();
-
-    /**
-        How many characters are on a line, including end of line characters?
-    */
-    int LineLength(int line) const;
-
-    /**
-        Retrieves the number of lines completely visible.
-    */
-    int LinesOnScreen() const;
-
-    /**
-        Is the selection rectangular? The alternative is the more common stream selection.
-    */
-    bool SelectionIsRectangle() const;
-
-    /**
-        Set the last x chosen value to be the caret x position.
-    */
-    void ChooseCaretX();
-
-    /**
-        Given a valid document position, return the previous position taking code
-        page into account. Returns 0 if passed 0.
-    */
-    int PositionBefore(int pos);
-
-    /**
-        Given a valid document position, return the next position taking code
-        page into account. Maximum value returned is the last position in the document.
-    */
-    int PositionAfter(int pos);
-
-    /**
-        Given a valid document position, return a position that differs in a number
-        of characters. Returned value is always between 0 and last position in document.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int PositionRelative(int pos, int relative);
-
-    /**
-        Set the selection mode to stream (wxSTC_SEL_STREAM) or rectangular (wxSTC_SEL_RECTANGLE/wxSTC_SEL_THIN) or
-        by lines (wxSTC_SEL_LINES).
-    */
-    void SetSelectionMode(int mode);
-
-    /**
-        Get the mode of the current selection.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_SEL_STREAM wxSTC_SEL_* @endlink constants.
-    */
-    int GetSelectionMode() const;
-
-    /**
-        Retrieve the position of the start of the selection at the given line (wxSTC_INVALID_POSITION if no selection on this line).
-    */
-    int GetLineSelStartPosition(int line);
-
-    /**
-        Retrieve the position of the end of the selection at the given line (wxSTC_INVALID_POSITION if no selection on this line).
-    */
-    int GetLineSelEndPosition(int line);
-
-    /**
-        Find the position of a column on a line taking into account tabs and
-        multi-byte characters. If beyond end of line, return line end position.
-    */
-    int FindColumn(int line, int column);
-
-    /**
-        Find the position of a character from a point within the window.
-    */
-    %wxchkver_2_9_5 int CharPositionFromPoint(int x, int y);
-
-    /**
-        Find the position of a character from a point within the window.
-        Return wxSTC_INVALID_POSITION if not close to text.
-    */
-    %wxchkver_2_9_5 int CharPositionFromPointClose(int x, int y);
-
-    /**
-        Set whether switching to rectangular mode while selecting with the mouse is allowed.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void SetMouseSelectionRectangularSwitch(bool mouseSelectionRectangularSwitch);
-
-    /**
-        Whether switching to rectangular mode while selecting with the mouse is allowed.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 bool GetMouseSelectionRectangularSwitch() const;
-
-    /**
-        Move the selected lines up one line, shifting the line above after the selection
-    */
-    %wxchkver_2_9_5 void MoveSelectedLinesUp();
-
-    /**
-        Move the selected lines down one line, shifting the line below before the selection
-    */
-    %wxchkver_2_9_5 void MoveSelectedLinesDown();
-
-    //@}
-
-    /**
-        @member_group_name{MultipleSelectionAndVirtualSpace, Multiple Selection and Virtual Space}
-    */
-    //@{
-
-    /**
-        Change the effect of pasting when there are multiple selections.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_MULTIPASTE_ONCE wxSTC_MULTIPASTE_* @endlink constants.
-    */
-    %wxchkver_2_9_5 void SetMultiPaste(int multiPaste);
-
-    /**
-        Retrieve the effect of pasting when there are multiple selections.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_MULTIPASTE_ONCE wxSTC_MULTIPASTE_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int GetMultiPaste() const;
-
-    /**
-        Set whether multiple selections can be made
-    */
-    %wxchkver_2_9_5 void SetMultipleSelection(bool multipleSelection);
-
-    /**
-        Whether multiple selections can be made
-    */
-    %wxchkver_2_9_5 bool GetMultipleSelection() const;
-
-    /**
-        Set whether typing can be performed into multiple selections
-    */
-    %wxchkver_2_9_5 void SetAdditionalSelectionTyping(bool additionalSelectionTyping);
-
-    /**
-        Whether typing can be performed into multiple selections
-    */
-    %wxchkver_2_9_5 bool GetAdditionalSelectionTyping() const;
-
-    /**
-        Set whether additional carets will blink
-    */
-    %wxchkver_2_9_5 void SetAdditionalCaretsBlink(bool additionalCaretsBlink);
-
-    /**
-        Whether additional carets will blink
-    */
-    %wxchkver_2_9_5 bool GetAdditionalCaretsBlink() const;
-
-    /**
-        Set whether additional carets are visible
-    */
-    %wxchkver_2_9_5 void SetAdditionalCaretsVisible(bool additionalCaretsBlink);
-
-    /**
-        Whether additional carets are visible
-    */
-    %wxchkver_2_9_5 bool GetAdditionalCaretsVisible() const;
-
-    /**
-        How many selections are there?
-    */
-    %wxchkver_2_9_5 int GetSelections() const;
-
-    /**
-        Is every selected range empty?
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 bool GetSelectionEmpty() const;
-
-    /**
-        Clear selections to a single empty stream selection
-    */
-    %wxchkver_2_9_5 void ClearSelections();
-
-    /**
-        Add a selection
-    */
-    %wxchkver_2_9_5 int AddSelection(int caret, int anchor);
-
-    /**
-        Drop one selection
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void DropSelectionN(int selection);
-
-    /**
-        Set the main selection
-    */
-    %wxchkver_2_9_5 void SetMainSelection(int selection);
-
-    /**
-        Which selection is the main selection
-    */
-    %wxchkver_2_9_5 int GetMainSelection() const;
-
-    /**
-        Set the caret position of the nth selection.
-    */
-    %wxchkver_2_9_5 void SetSelectionNCaret(int selection, int pos);
-
-    /**
-        Return the caret position of the nth selection.
-    */
-    %wxchkver_2_9_5 int GetSelectionNCaret(int selection) const;
-
-    /**
-        Set the anchor position of the nth selection.
-    */
-    %wxchkver_2_9_5 void SetSelectionNAnchor(int selection, int posAnchor);
-
-    /**
-        Return the anchor position of the nth selection.
-    */
-    %wxchkver_2_9_5 int GetSelectionNAnchor(int selection) const;
-
-    /**
-        Set the virtual space of the caret of the nth selection.
-    */
-    %wxchkver_2_9_5 void SetSelectionNCaretVirtualSpace(int selection, int space);
-
-    /**
-        Return the virtual space of the caret of the nth selection.
-    */
-    %wxchkver_2_9_5 int GetSelectionNCaretVirtualSpace(int selection) const;
-
-    /**
-        Set the virtual space of the anchor of the nth selection.
-    */
-    %wxchkver_2_9_5 void SetSelectionNAnchorVirtualSpace(int selection, int space);
-
-    /**
-        Return the virtual space of the anchor of the nth selection.
-    */
-    %wxchkver_2_9_5 int GetSelectionNAnchorVirtualSpace(int selection) const;
-
-    /**
-        Sets the position that starts the selection - this becomes the anchor.
-    */
-    %wxchkver_2_9_5 void SetSelectionNStart(int selection, int pos);
-
-    /**
-        Returns the position at the start of the selection.
-    */
-    %wxchkver_2_9_5 int GetSelectionNStart(int selection) const;
-
-    /**
-        Sets the position that ends the selection - this becomes the currentPosition.
-    */
-    %wxchkver_2_9_5 void SetSelectionNEnd(int selection, int pos);
-
-    /**
-        Returns the position at the end of the selection.
-    */
-    %wxchkver_2_9_5 int GetSelectionNEnd(int selection) const;
-
-    /**
-        Set the caret position of the rectangular selection.
-    */
-    %wxchkver_2_9_5 void SetRectangularSelectionCaret(int pos);
-
-    /**
-        Return the caret position of the rectangular selection.
-    */
-    %wxchkver_2_9_5 int GetRectangularSelectionCaret() const;
-
-    /**
-        Set the anchor position of the rectangular selection.
-    */
-    %wxchkver_2_9_5 void SetRectangularSelectionAnchor(int posAnchor);
-
-    /**
-        Return the anchor position of the rectangular selection.
-    */
-    %wxchkver_2_9_5 int GetRectangularSelectionAnchor() const;
-
-    /**
-        Set the virtual space of the caret of the rectangular selection.
-    */
-    %wxchkver_2_9_5 void SetRectangularSelectionCaretVirtualSpace(int space);
-
-    /**
-        Return the virtual space of the caret of the rectangular selection.
-    */
-    %wxchkver_2_9_5 int GetRectangularSelectionCaretVirtualSpace() const;
-
-    /**
-        Set the virtual space of the anchor of the rectangular selection.
-    */
-    %wxchkver_2_9_5 void SetRectangularSelectionAnchorVirtualSpace(int space);
-
-    /**
-        Return the virtual space of the anchor of the rectangular selection.
-    */
-    %wxchkver_2_9_5 int GetRectangularSelectionAnchorVirtualSpace() const;
-
-    /**
-        Set options for virtual space behaviour.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_VS_NONE wxSTC_VS_* @endlink constants.
-    */
-    %wxchkver_2_9_5 void SetVirtualSpaceOptions(int virtualSpaceOptions);
-
-    /**
-        Return options for virtual space behaviour.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_VS_NONE wxSTC_VS_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int GetVirtualSpaceOptions() const;
-
-    /**
-        On GTK+, allow selecting the modifier key to use for mouse-based
-        rectangular selection. Often the window manager requires Alt+Mouse Drag
-        for moving windows.
-        Valid values are wxSTC_KEYMOD_CTRL (default), wxSTC_KEYMOD_ALT, or wxSTC_KEYMOD_SUPER.
-    */
-    %wxchkver_2_9_5 void SetRectangularSelectionModifier(int modifier);
-
-    /**
-        Get the modifier key used for rectangular selection.
-
-        The return value will be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_KEYMOD_NORM wxSTC_KEYMOD_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int GetRectangularSelectionModifier() const;
-
-    /**
-        Set the foreground colour of additional selections.
-        Must have previously called SetSelFore with non-zero first argument for this to have an effect.
-    */
-    %wxchkver_2_9_5 void SetAdditionalSelForeground(const wxColour& fore);
-
-    /**
-        Set the background colour of additional selections.
-        Must have previously called SetSelBack with non-zero first argument for this to have an effect.
-    */
-    %wxchkver_2_9_5 void SetAdditionalSelBackground(const wxColour& back);
-
-    /**
-        Set the alpha of the selection.
-    */
-    %wxchkver_2_9_5 void SetAdditionalSelAlpha(int alpha);
-
-    /**
-        Get the alpha of the selection.
-    */
-    %wxchkver_2_9_5 int GetAdditionalSelAlpha() const;
-
-    /**
-        Set the foreground colour of additional carets.
-    */
-    %wxchkver_2_9_5 void SetAdditionalCaretForeground(const wxColour& fore);
-
-    /**
-        Get the foreground colour of additional carets.
-    */
-    %wxchkver_2_9_5 wxColour GetAdditionalCaretForeground() const;
-
-    /**
-        Set the main selection to the next selection.
-    */
-    %wxchkver_2_9_5 void RotateSelection();
-
-    /**
-        Swap that caret and anchor of the main selection.
-    */
-    %wxchkver_2_9_5 void SwapMainAnchorCaret();
-
-    /**
-        Add the next occurrence of the main selection to the set of selections as main.
-        If the current selection is empty then select word around caret.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void MultipleSelectAddNext();
-
-    /**
-        Add each occurrence of the main selection in the target to the set of selections.
-        If the current selection is empty then select word around caret.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void MultipleSelectAddEach();
-
-    //@}
-
-    /**
-        @member_group_name{ScrollingAndAutomaticScrolling, Scrolling and automatic scrolling}
-    */
-    //@{
-
-    /**
-        Show or hide the horizontal scroll bar.
-    */
-    void SetUseHorizontalScrollBar(bool show);
-
-    /**
-        Is the horizontal scroll bar visible?
-    */
-    bool GetUseHorizontalScrollBar() const;
-
-    /**
-        Retrieve the display line at the top of the display.
-    */
-    int GetFirstVisibleLine() const;
-
-    /**
-        Scroll horizontally and vertically.
-    */
-    void LineScroll(int columns, int lines);
-
-    /**
-        Ensure the caret is visible.
-    */
-    void EnsureCaretVisible();
-
-    /**
-        Scroll the argument positions and the range between them into view giving
-        priority to the primary position then the secondary position.
-        This may be used to make a search match visible.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void ScrollRange(int secondary, int primary);
-
-    /**
-        Sets the document width assumed for scrolling.
-    */
-    void SetScrollWidth(int pixelWidth);
-
-    /**
-        Retrieve the document width assumed for scrolling.
-    */
-    int GetScrollWidth() const;
-
-    /**
-        Sets whether the maximum width line displayed is used to set scroll width.
-    */
-    %wxchkver_2_9_5 void SetScrollWidthTracking(bool tracking);
-
-    /**
-        Retrieve whether the scroll width tracks wide lines.
-    */
-    %wxchkver_2_9_5 bool GetScrollWidthTracking() const;
-
-    /**
-        Sets the scroll range so that maximum scroll position has
-        the last line at the bottom of the view (default).
-        Setting this to false allows scrolling one page below the last line.
-    */
-    void SetEndAtLastLine(bool endAtLastLine);
-
-    /**
-        Retrieve whether the maximum scroll position has the last
-        line at the bottom of the view.
-    */
-    bool GetEndAtLastLine() const;
-
-    /**
-        Show or hide the vertical scroll bar.
-    */
-    void SetUseVerticalScrollBar(bool show);
-
-    /**
-        Is the vertical scroll bar visible?
-    */
-    bool GetUseVerticalScrollBar() const;
-
-    /**
-        Scroll so that a display line is at the top of the display.
-    */
-    %wxchkver_2_9_5 void SetFirstVisibleLine(int lineDisplay);
-
-    /**
-        Set the way the display area is determined when a particular line
-        is to be moved to by Find, FindNext, GotoLine, etc.
-
-        The first argument should be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_VISIBLE_SLOP wxSTC_VISIBLE_* @endlink constants.
-    */
-    void SetVisiblePolicy(int visiblePolicy, int visibleSlop);
-
-    /**
-        Set the xOffset (ie, horizontal scroll position).
-    */
-    void SetXOffset(int newOffset);
-
-    /**
-        Get the xOffset (ie, horizontal scroll position).
-    */
-    int GetXOffset() const;
-
-    /**
-        Set the way the caret is kept visible when going sideways.
-        The exclusion zone is given in pixels.
-
-        The first argument should be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_CARET_SLOP wxSTC_CARET_* @endlink constants.
-    */
-    void SetXCaretPolicy(int caretPolicy, int caretSlop);
-
-    /**
-        Set the way the line the caret is on is kept visible.
-        The exclusion zone is given in lines.
-
-        The first argument should be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_CARET_SLOP wxSTC_CARET_* @endlink constants.
-    */
-    void SetYCaretPolicy(int caretPolicy, int caretSlop);
-
-    //@}
-
-    /**
-        @member_group_name{WhiteSpace, White space}
-    */
-    //@{
-
-    /**
-        Are white space characters currently visible?
-        Returns one of wxSTC_WS_* constants.
-    */
+    // Are white space characters currently visible?
+    // Returns one of wxSTC_WS_* constants.
     int GetViewWhiteSpace() const;
 
-    /**
-        Make white space characters invisible, always visible or visible outside indentation.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_WS_INVISIBLE wxSTC_WS_* @endlink  constants.
-    */
+    // Make white space characters invisible, always visible or visible outside indentation.
     void SetViewWhiteSpace(int viewWS);
 
-    /**
-        Retrieve the current tab draw mode.
-        Returns one of wxSTC_TD_* constants.
+    // Retrieve the current tab draw mode.
+    // Returns one of wxSTC_TD_* constants.
+    int GetTabDrawMode() const;
 
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 int GetTabDrawMode() const;
+    // Set how tabs are drawn when visible.
+    void SetTabDrawMode(int tabDrawMode);
 
-    /**
-        Set how tabs are drawn when visible.
+    // Find the position from a point within the window.
+    int PositionFromPoint(wxPoint pt) const;
 
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_TD_LONGARROW wxSTC_TD_* @endlink constants.
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void SetTabDrawMode(int tabDrawMode);
+    // Find the position from a point within the window but return
+    // wxSTC_INVALID_POSITION if not close to text.
+    int PositionFromPointClose(int x, int y);
 
-    /**
-        Set the foreground colour of all whitespace and whether to use this setting.
-    */
-    void SetWhitespaceForeground(bool useSetting, const wxColour& fore);
+    // Set caret to start of a line and ensure it is visible.
+    void GotoLine(int line);
 
-    /**
-        Set the background colour of all whitespace and whether to use this setting.
-    */
-    void SetWhitespaceBackground(bool useSetting, const wxColour& back);
+    // Set caret to a position and ensure it is visible.
+    void GotoPos(int caret);
 
-    /**
-        Set the size of the dots used to mark space characters.
-    */
-    %wxchkver_2_9_5 void SetWhitespaceSize(int size);
+    // Set the selection anchor to a position. The anchor is the opposite
+    // end of the selection from the caret.
+    void SetAnchor(int anchor);
 
-    /**
-        Get the size of the dots used to mark space characters.
-    */
-    %wxchkver_2_9_5 int GetWhitespaceSize() const;
+    // %override GetCurLine
+    // C++ Func: wxString GetCurLine(int* linePos=NULL);
+    // Retrieve the text of the line containing the caret.
+    wxString GetCurLine();
 
-    /**
-        Set extra ascent for each line
-    */
-    %wxchkver_2_9_5 void SetExtraAscent(int extraAscent);
-
-    /**
-        Get extra ascent for each line
-    */
-    %wxchkver_2_9_5 int GetExtraAscent() const;
-
-    /**
-        Set extra descent for each line
-    */
-    %wxchkver_2_9_5 void SetExtraDescent(int extraDescent);
-
-    /**
-        Get extra descent for each line
-    */
-    %wxchkver_2_9_5 int GetExtraDescent() const;
-
-    //@}
-
-    /**
-        @member_group_name{Cursor, Cursor}
-    */
-    //@{
-
-    /**
-        Sets the cursor to one of the wxSTC_CURSOR* values.
-    */
-    void SetSTCCursor(int cursorType);
-
-    /**
-        Get cursor type.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_CURSORNORMAL wxSTC_CURSOR* @endlink constants.
-    */
-    int GetSTCCursor() const;
-
-    //@}
-
-    /**
-        @member_group_name{MouseCapture, Mouse capture}
-    */
-    //@{
-
-    /**
-        Set whether the mouse is captured when its button is pressed.
-    */
-    void SetMouseDownCaptures(bool captures);
-
-    /**
-        Get whether mouse gets captured.
-    */
-    bool GetMouseDownCaptures() const;
-
-    /**
-        Set whether the mouse wheel can be active outside the window.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void SetMouseWheelCaptures(bool captures);
-
-    /**
-        Get whether mouse wheel can be active outside the window.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 bool GetMouseWheelCaptures() const;
-
-    //@}
-
-    /**
-        @member_group_name{LineEndings, Line endings}
-    */
-    //@{
-
-    /**
-        Convert all line endings in the document to one mode.
-    */
-    void ConvertEOLs(int eolMode);
-
-    /**
-        Retrieve the current end of line mode - one of wxSTC_EOL_CRLF, wxSTC_EOL_CR, or wxSTC_EOL_LF.
-    */
-    int GetEOLMode() const;
-
-    /**
-        Set the current end of line mode.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_EOL_CRLF wxSTC_EOL_* @endlink  constants.
-    */
-    void SetEOLMode(int eolMode);
-
-    /**
-        Are the end of line characters visible?
-    */
-    bool GetViewEOL() const;
-
-    /**
-        Make the end of line characters visible or invisible.
-    */
-    void SetViewEOL(bool visible);
-
-    /**
-        Set the line end types that the application wants to use. May not be used if incompatible with lexer or encoding.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_LINE_END_TYPE_DEFAULT wxSTC_LINE_END_TYPE_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void SetLineEndTypesAllowed(int lineEndBitSet);
-
-    /**
-        Get the line end types currently allowed.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_LINE_END_TYPE_DEFAULT wxSTC_LINE_END_TYPE_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int GetLineEndTypesAllowed() const;
-
-    /**
-        Get the line end types currently recognised. May be a subset of the allowed types due to lexer limitation.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_LINE_END_TYPE_DEFAULT wxSTC_LINE_END_TYPE_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int GetLineEndTypesActive() const;
-
-    /**
-        Bit set of LineEndType enumertion for which line ends beyond the standard
-        LF, CR, and CRLF are supported by the lexer.
-
-        The return value will be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_LINE_END_TYPE_DEFAULT wxSTC_LINE_END_TYPE_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int GetLineEndTypesSupported() const;
-
-    //@}
-
-    /**
-        @member_group_name{Words, Words}
-    */
-    //@{
-
-    /**
-        Set the set of characters making up words for when moving or selecting by word.
-        First sets defaults like SetCharsDefault.
-    */
-    void SetWordChars(const wxString& characters);
-
-    /**
-        Get the set of characters making up words for when moving or selecting by word.
-    */
-    %wxchkver_2_9_5 wxString GetWordChars() const;
-
-    /**
-        Get position of start of word.
-    */
-    int WordStartPosition(int pos, bool onlyWordCharacters);
-
-    /**
-        Get position of end of word.
-    */
-    int WordEndPosition(int pos, bool onlyWordCharacters);
-
-    /**
-        Is the range start..end considered a word?
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 bool IsRangeWord(int start, int end);
-
-    /**
-        Set the set of characters making up whitespace for when moving or selecting by word.
-        Should be called after SetWordChars.
-    */
-    void SetWhitespaceChars(const wxString& characters);
-
-    /**
-        Get the set of characters making up whitespace for when moving or selecting by word.
-    */
-    %wxchkver_2_9_5 wxString GetWhitespaceChars() const;
-
-    /**
-        Set the set of characters making up punctuation characters
-        Should be called after SetWordChars.
-    */
-    %wxchkver_2_9_5 void SetPunctuationChars(const wxString& characters);
-
-    /**
-        Get the set of characters making up punctuation characters
-    */
-    %wxchkver_2_9_5 wxString GetPunctuationChars() const;
-
-    /**
-        Reset the set of characters for whitespace and word characters to the defaults.
-    */
-    void SetCharsDefault();
-
-    //@}
-
-    /**
-        @member_group_name{Styling, Styling}
-    */
-    //@{
-
-    /**
-        Retrieve the position of the last correctly styled character.
-    */
+    // Retrieve the position of the last correctly styled character.
     int GetEndStyled() const;
 
-    /**
-        Set the current styling position to start.
-    */
-    void StartStyling(int pos, unsigned int mask); // wxLua - mask is unsigned to keep all the bits
+    // Convert all line endings in the document to one mode.
+    void ConvertEOLs(int eolMode);
 
-    /**
-        Change style from current styling position for length characters to a style
-        and move the current styling position to after this newly styled segment.
-    */
+    // Retrieve the current end of line mode - one of wxSTC_EOL_CRLF, wxSTC_EOL_CR, or wxSTC_EOL_LF.
+    int GetEOLMode() const;
+
+    // Set the current end of line mode.
+    void SetEOLMode(int eolMode);
+
+    // Set the current styling position to start.
+    void StartStyling(int start);
+
+    // Change style from current styling position for length characters to a style
+    // and move the current styling position to after this newly styled segment.
     void SetStyling(int length, int style);
 
-    /**
-        Set the styles for a segment of the document.
-    */
-    void SetStyleBytes(int length, char* styleBytes);
-
-    /**
-        Used to hold extra styling information for each line.
-    */
-    void SetLineState(int line, int state);
-
-    /**
-        Retrieve the extra styling information for a line.
-    */
-    int GetLineState(int line) const;
-
-    /**
-        Retrieve the last line number that has line state.
-    */
-    int GetMaxLineState() const;
-
-    /**
-        Sets limits to idle styling.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_IDLESTYLING_NONE wxSTC_IDLESTYLING_* @endlink constants.
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void SetIdleStyling(int idleStyling);
-
-    /**
-        Retrieve the limits to idle styling.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_IDLESTYLING_NONE wxSTC_IDLESTYLING_* @endlink constants.
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 int GetIdleStyling() const;
-
-    //@}
-
-    /**
-        @member_group_name{StyleDefinition, Style definition}
-    */
-    //@{
-
-    /**
-        Clear all the styles and make equivalent to the global default style.
-    */
-    void StyleClearAll();
-
-    /**
-        Set the foreground colour of a style.
-    */
-    void StyleSetForeground(int style, const wxColour& fore);
-
-    /**
-        Set the background colour of a style.
-    */
-    void StyleSetBackground(int style, const wxColour& back);
-
-    /**
-        Set a style to be bold or not.
-    */
-    void StyleSetBold(int style, bool bold);
-
-    /**
-        Set a style to be italic or not.
-    */
-    void StyleSetItalic(int style, bool italic);
-
-    /**
-        Set the size of characters of a style.
-    */
-    void StyleSetSize(int style, int sizePoints);
-
-    /**
-        Set the font of a style.
-    */
-    void StyleSetFaceName(int style, const wxString& fontName);
-
-    /**
-        Set a style to have its end of line filled or not.
-    */
-    void StyleSetEOLFilled(int style, bool filled);
-
-    /**
-        Reset the default style to its state at startup
-    */
-    void StyleResetDefault();
-
-    /**
-        Set a style to be underlined or not.
-    */
-    void StyleSetUnderline(int style, bool underline);
-
-    /**
-        Get the foreground colour of a style.
-    */
-    %wxchkver_2_9_5 wxColour StyleGetForeground(int style) const;
-
-    /**
-        Get the background colour of a style.
-    */
-    %wxchkver_2_9_5 wxColour StyleGetBackground(int style) const;
-
-    /**
-        Get is a style bold or not.
-    */
-    %wxchkver_2_9_5 bool StyleGetBold(int style) const;
-
-    /**
-        Get is a style italic or not.
-    */
-    %wxchkver_2_9_5 bool StyleGetItalic(int style) const;
-
-    /**
-        Get the size of characters of a style.
-    */
-    %wxchkver_2_9_5 int StyleGetSize(int style) const;
-
-    /**
-        Get the font facename of a style
-    */
-    %wxchkver_2_9_5 wxString StyleGetFaceName(int style);
-
-    /**
-        Get is a style to have its end of line filled or not.
-    */
-    %wxchkver_2_9_5 bool StyleGetEOLFilled(int style) const;
-
-    /**
-        Get is a style underlined or not.
-    */
-    %wxchkver_2_9_5 bool StyleGetUnderline(int style) const;
-
-    /**
-        Get is a style mixed case, or to force upper or lower case.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_CASE_MIXED wxSTC_CASE_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int StyleGetCase(int style) const;
-
-    /**
-        Get the character get of the font in a style.
-    */
-    %wxchkver_2_9_5 int StyleGetCharacterSet(int style) const;
-
-    /**
-        Get is a style visible or not.
-    */
-    %wxchkver_2_9_5 bool StyleGetVisible(int style) const;
-
-    /**
-        Get is a style changeable or not (read only).
-        Experimental feature, currently buggy.
-    */
-    %wxchkver_2_9_5 bool StyleGetChangeable(int style) const;
-
-    /**
-        Get is a style a hotspot or not.
-    */
-    %wxchkver_2_9_5 bool StyleGetHotSpot(int style) const;
-
-    /**
-        Set a style to be mixed case, or to force upper or lower case.
-
-        The second argument should be one of the
-        @link wxStyledTextCtrl::wxSTC_CASE_MIXED wxSTC_CASE_* @endlink constants.
-    */
-    void StyleSetCase(int style, int caseForce);
-
-    /**
-        Set the size of characters of a style. Size is in points multiplied by 100.
-    */
-    %wxchkver_2_9_5 void StyleSetSizeFractional(int style, int caseForce);
-
-    /**
-        Get the size of characters of a style in points multiplied by 100
-    */
-    %wxchkver_2_9_5 int StyleGetSizeFractional(int style) const;
-
-    /**
-        Set the weight of characters of a style.
-
-        The second argument can be an integer or one of the
-        @link wxStyledTextCtrl::wxSTC_WEIGHT_NORMAL wxSTC_WEIGHT_* @endlink constants.
-    */
-    %wxchkver_2_9_5 void StyleSetWeight(int style, int weight);
-
-    /**
-        Get the weight of characters of a style.
-
-        The return value will be an integer that is possibly one of the
-        @link wxStyledTextCtrl::wxSTC_WEIGHT_NORMAL wxSTC_WEIGHT_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int StyleGetWeight(int style) const;
-
-    /**
-        Set the character set of the font in a style.
-
-        Converts the Scintilla character set values to a wxFontEncoding.
-    */
-    void StyleSetCharacterSet(int style, int characterSet);
-
-    /**
-        Set a style to be a hotspot or not.
-    */
-    void StyleSetHotSpot(int style, bool hotspot);
-
-    /**
-        Set a style to be visible or not.
-    */
-    void StyleSetVisible(int style, bool visible);
-
-    /**
-        Set a style to be changeable or not (read only).
-        Experimental feature, currently buggy.
-    */
-    void StyleSetChangeable(int style, bool changeable);
-
-    //@}
-
-    /**
-        @member_group_name{CaretAndSelectionStyles, Caret selection and hotspot styles}
-    */
-    //@{
-
-    /**
-        Set the foreground colour of the main and additional selections and whether to use this setting.
-    */
-    void SetSelForeground(bool useSetting, const wxColour& fore);
-
-    /**
-        Set the background colour of the main and additional selections and whether to use this setting.
-    */
-    void SetSelBackground(bool useSetting, const wxColour& back);
-
-    /**
-        Get the alpha of the selection.
-    */
-    %wxchkver_2_8_12 int GetSelAlpha() const;
-
-    /**
-        Set the alpha of the selection.
-    */
-    %wxchkver_2_8_12 void SetSelAlpha(int alpha);
-
-    /**
-        Is the selection end of line filled?
-    */
-    %wxchkver_2_9_5 bool GetSelEOLFilled() const;
-
-    /**
-        Set the selection to have its end of line filled or not.
-    */
-    %wxchkver_2_9_5 void SetSelEOLFilled(bool filled);
-
-    /**
-        Set the foreground colour of the caret.
-    */
-    void SetCaretForeground(const wxColour& fore);
-
-    /**
-        Get the time in milliseconds that the caret is on and off.
-    */
-    int GetCaretPeriod() const;
-
-    /**
-        Get the time in milliseconds that the caret is on and off. 0 = steady on.
-    */
-    void SetCaretPeriod(int periodMilliseconds);
-
-    /**
-        Is the background of the line containing the caret in a different colour?
-    */
-    bool GetCaretLineVisible() const;
-
-    /**
-        Display the background of the line containing the caret in a different colour.
-    */
-    void SetCaretLineVisible(bool show);
-
-    /**
-        Get the colour of the background of the line containing the caret.
-    */
-    %wxchkver_2_8  wxColour GetCaretLineBackground() const;
-
-    /**
-        Set the colour of the background of the line containing the caret.
-    */
-    %wxchkver_2_8  void SetCaretLineBackground(const wxColour& back);
-
-    /**
-        Get the foreground colour of the caret.
-    */
-    wxColour GetCaretForeground() const;
-
-    /**
-        Set the width of the insert mode caret.
-    */
-    void SetCaretWidth(int pixelWidth);
-
-    /**
-        Returns the width of the insert mode caret.
-    */
-    int GetCaretWidth() const;
-
-    /**
-        Set a fore colour for active hotspots.
-    */
-    void SetHotspotActiveForeground(bool useSetting, const wxColour& fore);
-
-    /**
-        Get the fore colour for active hotspots.
-    */
-    %wxchkver_2_9_5 wxColour GetHotspotActiveForeground() const;
-
-    /**
-        Set a back colour for active hotspots.
-    */
-    void SetHotspotActiveBackground(bool useSetting, const wxColour& back);
-
-    /**
-        Get the back colour for active hotspots.
-    */
-    %wxchkver_2_9_5 wxColour GetHotspotActiveBackground() const;
-
-    /**
-        Enable / Disable underlining active hotspots.
-    */
-    void SetHotspotActiveUnderline(bool underline);
-
-    /**
-        Get whether underlining for active hotspots.
-    */
-    %wxchkver_2_9_5 bool GetHotspotActiveUnderline() const;
-
-    /**
-        Limit hotspots to single line so hotspots on two lines don't merge.
-    */
-    void SetHotspotSingleLine(bool singleLine);
-
-    /**
-        Get the HotspotSingleLine property
-    */
-    %wxchkver_2_9_5 bool GetHotspotSingleLine() const;
-
-    /**
-        Can the caret preferred x position only be changed by explicit movement commands?
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_CARETSTICKY_OFF wxSTC_CARETSTICKY_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int GetCaretSticky() const;
-
-    /**
-        Stop the caret preferred x position changing when the user types.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_CARETSTICKY_OFF wxSTC_CARETSTICKY_* @endlink constants.
-    */
-    %wxchkver_2_9_5 void SetCaretSticky(int useCaretStickyBehaviour);
-
-    /**
-        Switch between sticky and non-sticky: meant to be bound to a key.
-    */
-    void ToggleCaretSticky();
-
-    /**
-        Set background alpha of the caret line.
-    */
-    %wxchkver_2_8_12 void SetCaretLineBackAlpha(int alpha);
-
-    /**
-        Get the background alpha of the caret line.
-    */
-    %wxchkver_2_8_12 int GetCaretLineBackAlpha() const;
-
-    /**
-        Set the style of the caret to be drawn.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_CARETSTYLE_INVISIBLE wxSTC_CARETSTYLE_* @endlink constants.
-    */
-    %wxchkver_2_9_5 void SetCaretStyle(int caretStyle);
-
-    /**
-        Returns the current style of the caret.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_CARETSTYLE_INVISIBLE wxSTC_CARETSTYLE_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int GetCaretStyle() const;
-
-    /**
-        Is the caret line always visible?
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 bool GetCaretLineVisibleAlways() const;
-
-    /**
-        Sets the caret line to always visible.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void SetCaretLineVisibleAlways(bool alwaysVisible);
-
-    //@}
-
-    /**
-        @member_group_name{CharacterRepresentations, Character representations}
-    */
-    //@{
-
-    /**
-        Change the way control characters are displayed:
-        If symbol is < 32, keep the drawn way, else, use the given character.
-    */
-    void SetControlCharSymbol(int symbol);
-
-    /**
-        Get the way control characters are displayed.
-    */
-    int GetControlCharSymbol() const;
-
-    /**
-        Set the way a character is drawn.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void SetRepresentation(const wxString& encodedCharacter, const wxString& representation);
-
-    /**
-        Set the way a character is drawn.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 wxString GetRepresentation(const wxString& encodedCharacter) const;
-
-    /**
-        Remove a character representation.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void ClearRepresentation(const wxString& encodedCharacter);
-
-    //@}
-
-    /**
-        @member_group_name{Margins, Margins}
-    */
-    //@{
-
-    /**
-        Set a margin to be either numeric or symbolic.
-
-        The second argument should be one of the
-        @link wxStyledTextCtrl::wxSTC_MARGIN_SYMBOL wxSTC_MARGIN_* @endlink constants.
-    */
-    void SetMarginType(int margin, int marginType);
-
-    /**
-        Retrieve the type of a margin.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_MARGIN_SYMBOL wxSTC_MARGIN_* @endlink constants.
-    */
-    int GetMarginType(int margin) const;
-
-    /**
-        Set the width of a margin to a width expressed in pixels.
-    */
-    void SetMarginWidth(int margin, int pixelWidth);
-
-    /**
-        Retrieve the width of a margin in pixels.
-    */
-    int GetMarginWidth(int margin) const;
-
-    /**
-        Set a mask that determines which markers are displayed in a margin.
-    */
-    void SetMarginMask(int margin, unsigned int mask); // NOTE: wxSTC has "int mask", but we need all the bits so we force uint
-
-    /**
-        Retrieve the marker mask of a margin.
-    */
-    unsigned int GetMarginMask(int margin) const;
-
-    /**
-        Make a margin sensitive or insensitive to mouse clicks.
-    */
-    void SetMarginSensitive(int margin, bool sensitive);
-
-    /**
-        Retrieve the mouse click sensitivity of a margin.
-    */
-    bool GetMarginSensitive(int margin) const;
-
-    /**
-        Set the cursor shown when the mouse is inside a margin.
-
-        The second argument should be one of the
-        @link wxStyledTextCtrl::wxSTC_CURSORNORMAL wxSTC_CURSOR* @endlink constants.
-    */
-    %wxchkver_2_9_5 void SetMarginCursor(int margin, int cursor);
-
-    /**
-        Retrieve the cursor shown in a margin.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_CURSORNORMAL wxSTC_CURSOR* @endlink constants.
-    */
-    %wxchkver_2_9_5 int GetMarginCursor(int margin) const;
-
-    /**
-        Set the background colour of a margin. Only visible for wxSTC_MARGIN_COLOUR.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void SetMarginBackground(int margin, const wxColour& back);
-
-    /**
-        Retrieve the background colour of a margin
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 wxColour GetMarginBackground(int margin) const;
-
-    /**
-        Allocate a non-standard number of margins.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void SetMarginCount(int margins);
-
-    /**
-        How many margins are there?.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 int GetMarginCount() const;
-
-    /**
-        Sets the size in pixels of the left margin.
-    */
-    void SetMarginLeft(int pixelWidth);
-
-    /**
-        Returns the size in pixels of the left margin.
-    */
-    int GetMarginLeft() const;
-
-    /**
-        Sets the size in pixels of the right margin.
-    */
-    void SetMarginRight(int pixelWidth);
-
-    /**
-        Returns the size in pixels of the right margin.
-    */
-    int GetMarginRight() const;
-
-    /**
-        Set one of the colours used as a chequerboard pattern in the fold margin
-    */
-    void SetFoldMarginColour(bool useSetting, const wxColour& back);
-
-    /**
-        Set the other colour used as a chequerboard pattern in the fold margin
-    */
-    void SetFoldMarginHiColour(bool useSetting, const wxColour& fore);
-
-    /**
-        Set the text in the text margin for a line
-    */
-    %wxchkver_2_9_5 void MarginSetText(int line, const wxString& text);
-
-    /**
-        Get the text in the text margin for a line
-    */
-    %wxchkver_2_9_5 wxString MarginGetText(int line) const;
-
-    /**
-        Set the style number for the text margin for a line
-    */
-    %wxchkver_2_9_5 void MarginSetStyle(int line, int style);
-
-    /**
-        Get the style number for the text margin for a line
-    */
-    %wxchkver_2_9_5 int MarginGetStyle(int line) const;
-
-    /**
-        Set the style in the text margin for a line
-    */
-    %wxchkver_2_9_5 void MarginSetStyles(int line, const wxString& styles);
-
-    /**
-        Get the styles in the text margin for a line
-    */
-    %wxchkver_2_9_5 wxString MarginGetStyles(int line) const;
-
-    /**
-        Clear the margin text on all lines
-    */
-    %wxchkver_2_9_5 void MarginTextClearAll();
-
-    /**
-        Get the start of the range of style numbers used for margin text
-    */
-    %wxchkver_2_9_5 void MarginSetStyleOffset(int style);
-
-    /**
-        Get the start of the range of style numbers used for margin text
-    */
-    %wxchkver_2_9_5 int MarginGetStyleOffset() const;
-
-    /**
-        Set the margin options.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_MARGINOPTION_NONE wxSTC_MARGINOPTION_* @endlink constants.
-    */
-    %wxchkver_2_9_5 void SetMarginOptions(int marginOptions);
-
-    /**
-        Get the margin options.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_MARGINOPTION_NONE wxSTC_MARGINOPTION_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int GetMarginOptions() const;
-
-    //@}
-
-    /**
-        @member_group_name{Annotations, Annotations}
-    */
-    //@{
-
-    /**
-        Set the annotation text for a line
-    */
-    %wxchkver_2_9_5 void AnnotationSetText(int line, const wxString& text);
-
-    /**
-        Get the annotation text for a line
-    */
-    %wxchkver_2_9_5 wxString AnnotationGetText(int line) const;
-
-    /**
-        Set the style number for the annotations for a line
-    */
-    %wxchkver_2_9_5 void AnnotationSetStyle(int line, int style);
-
-    /**
-        Get the style number for the annotations for a line
-    */
-    %wxchkver_2_9_5 int AnnotationGetStyle(int line) const;
-
-    /**
-        Set the annotation styles for a line
-    */
-    %wxchkver_2_9_5 void AnnotationSetStyles(int line, const wxString& styles);
-
-    /**
-        Get the annotation styles for a line
-    */
-    %wxchkver_2_9_5 wxString AnnotationGetStyles(int line) const;
-
-    /**
-        Get the number of annotation lines for a line
-    */
-    %wxchkver_2_9_5 int AnnotationGetLines(int line) const;
-
-    /**
-        Clear the annotations from all lines
-    */
-    %wxchkver_2_9_5 void AnnotationClearAll();
-
-    /**
-        Set the visibility for the annotations for a view
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_ANNOTATION_HIDDEN wxSTC_ANNOTATION_* @endlink constants.
-    */
-    %wxchkver_2_9_5 void AnnotationSetVisible(int visible);
-
-    /**
-        Get the visibility for the annotations for a view
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_ANNOTATION_HIDDEN wxSTC_ANNOTATION_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int AnnotationGetVisible() const;
-
-    /**
-        Get the start of the range of style numbers used for annotations
-    */
-    %wxchkver_2_9_5 void AnnotationSetStyleOffset(int style);
-
-    /**
-        Get the start of the range of style numbers used for annotations
-    */
-    %wxchkver_2_9_5 int AnnotationGetStyleOffset() const;
-
-    //@}
-
-    /**
-        @member_group_name{OtherSettings, Other settings}
-    */
-    //@{
-
-    /**
-        Is drawing done first into a buffer or direct to the screen?
-    */
+    // Is drawing done first into a buffer or direct to the screen?
     bool GetBufferedDraw() const;
 
-    /**
-        If drawing is buffered then each line of text is drawn into a bitmap buffer
-        before drawing it to the screen to avoid flicker.
-    */
+    // If drawing is buffered then each line of text is drawn into a bitmap buffer
+    // before drawing it to the screen to avoid flicker.
     void SetBufferedDraw(bool buffered);
 
-    /**
-        Set the code page used to interpret the bytes of the document as characters.
-    */
-    void SetCodePage(int codePage);
-
-    /**
-        Is the IME displayed in a window or inline?
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_IME_WINDOWED wxSTC_IME_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int GetIMEInteraction() const;
-
-    /**
-        Choose to display the the IME in a winow or inline.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_IME_WINDOWED wxSTC_IME_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void SetIMEInteraction(int imeInteraction);
-
-    /**
-        Get the code page used to interpret the bytes of the document as characters.
-    */
-    int GetCodePage() const;
-
-    /**
-        Sets the degree of caching of layout information.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_CACHE_NONE wxSTC_CACHE_* @endlink constants.
-    */
-    void SetLayoutCache(int mode);
-
-    /**
-        Is drawing done in two phases with backgrounds drawn before foregrounds?
-    */
-    bool GetTwoPhaseDraw() const;
-
-    /**
-        In twoPhaseDraw mode, drawing is performed in two phases, first the background
-        and then the foreground. This avoids chopping off characters that overlap the next run.
-    */
-    void SetTwoPhaseDraw(bool twoPhase);
-
-    /**
-        How many phases is drawing done in?
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_PHASES_ONE wxSTC_PHASES_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int GetPhasesDraw() const;
-
-    /**
-        In one phase draw, text is drawn in a series of rectangular blocks with no overlap.
-        In two phase draw, text is drawn in a series of lines allowing runs to overlap horizontally.
-        In multiple phase draw, each element is drawn over the whole drawing area, allowing text
-        to overlap from one line to the next.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_PHASES_ONE wxSTC_PHASES_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void SetPhasesDraw(int phases);
-
-    /**
-        Change internal focus flag.
-    */
-    void SetSTCFocus(bool focus);
-
-    /**
-        Get internal focus flag.
-    */
-    bool GetSTCFocus() const;
-
-    /**
-        Set the technology used.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_TECHNOLOGY_DEFAULT wxSTC_TECHNOLOGY_* @endlink constants.
-    */
-    %wxchkver_2_9_5 void SetTechnology(int technology);
-
-    /**
-        Get the tech.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_TECHNOLOGY_DEFAULT wxSTC_TECHNOLOGY_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int GetTechnology() const;
-
-    //@}
-
-    /**
-        @member_group_name{BraceHighlighting, Brace highlighting}
-    */
-    //@{
-
-    /**
-        Highlight the characters at two positions.
-    */
-    void BraceHighlight(int pos1, int pos2);
-
-    /**
-        Use specified indicator to highlight matching braces instead of changing their style.
-    */
-    %wxchkver_2_9_5 void BraceHighlightIndicator(bool useBraceHighlightIndicator, int indicator);
-
-    /**
-        Highlight the character at a position indicating there is no matching brace.
-    */
-    void BraceBadLight(int pos);
-
-    /**
-        Use specified indicator to highlight non matching brace instead of changing its style.
-    */
-    %wxchkver_2_9_5 void BraceBadLightIndicator(bool useBraceBadLightIndicator, int indicator);
-
-    /**
-        Find the position of a matching brace or wxSTC_INVALID_POSITION if no match.
-        The maxReStyle must be 0 for now. It may be defined in a future release.
-    */
-    %wxchkver_3_1_1 int BraceMatch(int pos, int maxReStyle=0);
-
-    //@}
-
-    /**
-        @member_group_name{TabsAndIndentationGuides, Tabs and Indentation Guides}
-    */
-    //@{
-
-    /**
-        Change the visible size of a tab to be a multiple of the width of a space character.
-    */
+    // Change the visible size of a tab to be a multiple of the width of a space character.
     void SetTabWidth(int tabWidth);
 
-    /**
-        Retrieve the visible size of a tab.
-    */
+    // Retrieve the visible size of a tab.
     int GetTabWidth() const;
 
-    /**
-        Clear explicit tabstops on a line.
+    // Clear explicit tabstops on a line.
+    void ClearTabStops(int line);
 
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void ClearTabStops(int line);
+    // Add an explicit tab stop for a line.
+    void AddTabStop(int line, int x);
 
-    /**
-        Add an explicit tab stop for a line.
+    // Find the next explicit tab stop position on a line after a position.
+    int GetNextTabStop(int line, int x);
 
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void AddTabStop(int line, int x);
+    // Set the code page used to interpret the bytes of the document as characters.
+    void SetCodePage(int codePage);
 
-    /**
-        Find the next explicit tab stop position on a line after a position.
+    // Is the IME displayed in a window or inline?
+    int GetIMEInteraction() const;
 
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int GetNextTabStop(int line, int x);
+    // Choose to display the the IME in a winow or inline.
+    void SetIMEInteraction(int imeInteraction);
 
-    /**
-        Set the number of spaces used for one level of indentation.
-    */
-    void SetIndent(int indentSize);
-
-    /**
-        Retrieve indentation size.
-    */
-    int GetIndent() const;
-
-    /**
-        Indentation will only use space characters if useTabs is false, otherwise
-        it will use a combination of tabs and spaces.
-    */
-    void SetUseTabs(bool useTabs);
-
-    /**
-        Retrieve whether tabs will be used in indentation.
-    */
-    bool GetUseTabs() const;
-
-    /**
-        Change the indentation of a line to a number of columns.
-    */
-    void SetLineIndentation(int line, int indentSize);
-
-    /**
-        Retrieve the number of columns that a line is indented.
-    */
-    int GetLineIndentation(int line) const;
-
-    /**
-        Retrieve the position before the first non indentation character on a line.
-    */
-    int GetLineIndentPosition(int line) const;
-
-    /**
-        Show or hide indentation guides.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_IV_NONE wxSTC_IV_* @endlink constants.
-    */
-    %wxchkver_2_9_5 void SetIndentationGuides(int indentView);
-
-    /**
-        Are the indentation guides visible?
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_IV_NONE wxSTC_IV_* @endlink constants.
-    */
-    !%wxchkver_2_9_5 bool GetIndentationGuides();
-
-    /**
-        Set the highlighted indentation guide column.
-        0 = no highlighted guide.
-    */
-    void SetHighlightGuide(int column);
-
-    /**
-        Get the highlighted indentation guide column.
-    */
-    int GetHighlightGuide() const;
-
-    /**
-        Sets whether a tab pressed when caret is within indentation indents.
-    */
-    void SetTabIndents(bool tabIndents);
-
-    /**
-        Does a tab pressed when caret is within indentation indent?
-    */
-    bool GetTabIndents() const;
-
-    /**
-        Sets whether a backspace pressed when caret is within indentation unindents.
-    */
-    void SetBackSpaceUnIndents(bool bsUnIndents);
-
-    /**
-        Does a backspace pressed when caret is within indentation unindent?
-    */
-    bool GetBackSpaceUnIndents() const;
-
-    //@}
-
-    /**
-        @member_group_name{Markers, Markers}
-    */
-    //@{
-
-    /**
-        Retrieve the line number at which a particular marker is located.
-    */
-    int MarkerLineFromHandle(int handle);
-
-    /**
-        Delete a marker.
-    */
-    void MarkerDeleteHandle(int handle);
-
-    /**
-        Set the symbol used for a particular marker number,
-        and optionally the fore and background colours.
-
-        The second argument should be one of the
-        @link wxStyledTextCtrl::wxSTC_MARK_CIRCLE wxSTC_MARK_* @endlink constants.
-    */
+    // Set the symbol used for a particular marker number,
+    // and optionally the fore and background colours.
     void MarkerDefine(int markerNumber, int markerSymbol, const wxColour& foreground = wxNullColour, const wxColour& background = wxNullColour);
 
-    /**
-        Set the foreground colour used for a particular marker number.
-    */
+    // Set the foreground colour used for a particular marker number.
     void MarkerSetForeground(int markerNumber, const wxColour& fore);
 
-    /**
-        Set the background colour used for a particular marker number.
-    */
+    // Set the background colour used for a particular marker number.
     void MarkerSetBackground(int markerNumber, const wxColour& back);
 
-    /**
-        Set the background colour used for a particular marker number when its folding block is selected.
-    */
-    %wxchkver_2_9_5 void MarkerSetBackgroundSelected(int markerNumber, const wxColour& back);
+    // Set the background colour used for a particular marker number when its folding block is selected.
+    void MarkerSetBackgroundSelected(int markerNumber, const wxColour& back);
 
-    /**
-        Enable/disable highlight for current folding bloc (smallest one that contains the caret)
-    */
-    %wxchkver_2_9_5 void MarkerEnableHighlight(bool enabled);
+    // Enable/disable highlight for current folding bloc (smallest one that contains the caret)
+    void MarkerEnableHighlight(bool enabled);
 
-    /**
-        Add a marker to a line, returning an ID which can be used to find or delete the marker.
-    */
+    // Add a marker to a line, returning an ID which can be used to find or delete the marker.
     int MarkerAdd(int line, int markerNumber);
 
-    /**
-        Delete a marker from a line.
-    */
+    // Delete a marker from a line.
     void MarkerDelete(int line, int markerNumber);
 
-    /**
-        Delete all markers with a particular number from all lines.
-    */
+    // Delete all markers with a particular number from all lines.
     void MarkerDeleteAll(int markerNumber);
 
-    /**
-        Get a bit mask of all the markers set on a line.
-    */
-    unsigned int MarkerGet(int line); // wxLua - mask is unsigned to keep all the bits
+    // Get a bit mask of all the markers set on a line.
+    int MarkerGet(int line);
 
-    /**
-        Find the next line at or after lineStart that includes a marker in mask.
-        Return -1 when no more lines.
-    */
-    int MarkerNext(int lineStart, unsigned int markerMask); // wxLua - mask is unsigned to keep all the bits
+    // Find the next line at or after lineStart that includes a marker in mask.
+    // Return -1 when no more lines.
+    int MarkerNext(int lineStart, int markerMask);
 
-    /**
-        Find the previous line before lineStart that includes a marker in mask.
-    */
-    int MarkerPrevious(int lineStart, unsigned int markerMask); // wxLua - mask is unsigned to keep all the bits
+    // Find the previous line before lineStart that includes a marker in mask.
+    int MarkerPrevious(int lineStart, int markerMask);
 
-    /**
-        Define a marker from a bitmap
-    */
+    // Define a marker from a bitmap
     void MarkerDefineBitmap(int markerNumber, const wxBitmap& bmp);
 
-    /**
-        Add a set of markers to a line.
-    */
-    void MarkerAddSet(int line, int set);
-
-    /**
-        Set the alpha used for a marker that is drawn in the text area, not the margin.
-    */
-    %wxchkver_2_8_12 void MarkerSetAlpha(int markerNumber, int alpha);
-
-    /**
-        Which symbol was defined for markerNumber with MarkerDefine
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_MARK_CIRCLE wxSTC_MARK_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int GetMarkerSymbolDefined(int markerNumber);
-
-    /**
-        Set the width for future RGBA image data.
-    */
-    %wxchkver_2_9_5 void RGBAImageSetWidth(int width);
-
-    /**
-        Set the height for future RGBA image data.
-    */
-    %wxchkver_2_9_5 void RGBAImageSetHeight(int height);
-
-    /**
-        Set the scale factor in percent for future RGBA image data.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void RGBAImageSetScale(int scalePercent);
-
-    /**
-        Define a marker from RGBA data.
-        It has the width and height from RGBAImageSetWidth/Height
-    */
-    %wxchkver_2_9_5 void MarkerDefineRGBAImage(int markerNumber, const unsigned char* pixels);
-
-    //@}
-
-    /**
-        @member_group_name{Indicators, Indicators}
-    */
-    //@{
-
-    /**
-        Set an indicator to plain, squiggle or TT.
-
-        The second argument should be one of the
-        @link wxStyledTextCtrl::wxSTC_INDIC_PLAIN wxSTC_INDIC_* @endlink constants.
-    */
-    void IndicatorSetStyle(int indic, int style);
-
-    /**
-        Retrieve the style of an indicator.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_INDIC_PLAIN wxSTC_INDIC_* @endlink constants.
-    */
-    int IndicatorGetStyle(int indic) const;
-
-    /**
-        Set the foreground colour of an indicator.
-    */
-    void IndicatorSetForeground(int indic, const wxColour& fore);
-
-    /**
-        Retrieve the foreground colour of an indicator.
-    */
-    wxColour IndicatorGetForeground(int indic) const;
-
-    /**
-    // Set an indicator to draw under text or over(default).
-    */
-    %wxchkver_2_9_5 void IndicatorSetUnder(int indic, bool under);
-
-    /**
-        Retrieve whether indicator drawn under or over text.
-    */
-    %wxchkver_2_9_5 bool IndicatorGetUnder(int indic) const;
-
-    /**
-        Set a hover indicator to plain, squiggle or TT.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void IndicatorSetHoverStyle(int indic, int style);
-
-    /**
-        Retrieve the hover style of an indicator.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int IndicatorGetHoverStyle(int indic) const;
-
-    /**
-        Set the foreground hover colour of an indicator.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void IndicatorSetHoverForeground(int indic, const wxColour& fore);
-
-    /**
-        Retrieve the foreground hover colour of an indicator.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 wxColour IndicatorGetHoverForeground(int indic) const;
-
-    /**
-        Set the attributes of an indicator.
-
-        The second argument should be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_INDICFLAG_VALUEFORE wxSTC_INDICFLAG_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void IndicatorSetFlags(int indic, int flags);
-
-    /**
-        Retrieve the attributes of an indicator.
-
-        The return value will be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_INDICFLAG_VALUEFORE wxSTC_INDICFLAG_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int IndicatorGetFlags(int indic) const;
-
-    /**
-        Set the indicator used for IndicatorFillRange and IndicatorClearRange
-    */
-    %wxchkver_2_9_5 void SetIndicatorCurrent(int indicator);
-
-    /**
-        Get the current indicator
-    */
-    %wxchkver_2_9_5 int GetIndicatorCurrent() const;
-
-    /**
-        Set the value used for IndicatorFillRange
-    */
-    %wxchkver_2_9_5 void SetIndicatorValue(int value);
-
-    /**
-        Get the current indicator value
-    */
-    %wxchkver_2_9_5 int GetIndicatorValue() const;
-
-    /**
-        Turn a indicator on over a range.
-    */
-    %wxchkver_2_9_5 void IndicatorFillRange(int position, int fillLength);
-
-    /**
-        Turn a indicator off over a range.
-    */
-    %wxchkver_2_9_5 void IndicatorClearRange(int position, int clearLength);
-
-    /**
-        Are any indicators present at pos?
-    */
-    %wxchkver_2_9_5 int IndicatorAllOnFor(int position);
-
-    /**
-        What value does a particular indicator have at a position?
-    */
-    %wxchkver_2_9_5 int IndicatorValueAt(int indicator, int position);
-
-    /**
-        Where does a particular indicator start?
-    */
-    %wxchkver_2_9_5 int IndicatorStart(int indicator, int position);
-
-    /**
-        Where does a particular indicator end?
-    */
-    %wxchkver_2_9_5 int IndicatorEnd(int indicator, int position);
-
-    /**
-        Set the alpha fill colour of the given indicator.
-    */
-    %wxchkver_2_9_5 void IndicatorSetAlpha(int indicator, int alpha);
-
-    /**
-        Get the alpha fill colour of the given indicator.
-    */
-    %wxchkver_2_9_5 int IndicatorGetAlpha(int indicator) const;
-
-    /**
-        Set the alpha outline colour of the given indicator.
-    */
-    %wxchkver_2_9_5 void IndicatorSetOutlineAlpha(int indicator, int alpha);
-
-    /**
-        Get the alpha outline colour of the given indicator.
-    */
-    %wxchkver_2_9_5 int IndicatorGetOutlineAlpha(int indicator) const;
-
-    //@}
-
-    /**
-        @member_group_name{Autocompletion, Autocompletion}
-    */
-    //@{
-
-    /**
-        Display a auto-completion list.
-        The lengthEntered parameter indicates how many characters before
-        the caret should be used to provide context.
-    */
-    void AutoCompShow(int lenEntered, const wxString& itemList);
-
-    /**
-        Remove the auto-completion list from the screen.
-    */
-    void AutoCompCancel();
-
-    /**
-        Is there an auto-completion list visible?
-    */
-    bool AutoCompActive();
-
-    /**
-        Retrieve the position of the caret when the auto-completion list was displayed.
-    */
-    int AutoCompPosStart();
-
-    /**
-        User has selected an item so remove the list and insert the selection.
-    */
-    void AutoCompComplete();
-
-    /**
-        Define a set of character that when typed cancel the auto-completion list.
-    */
-    void AutoCompStops(const wxString& characterSet);
-
-    /**
-        Change the separator character in the string setting up an auto-completion list.
-        Default is space but can be changed if items contain space.
-    */
-    void AutoCompSetSeparator(int separatorCharacter);
-
-    /**
-        Retrieve the auto-completion list separator character.
-    */
-    int AutoCompGetSeparator() const;
-
-    /**
-        Select the item in the auto-completion list that starts with a string.
-    */
-    void AutoCompSelect(const wxString& text);
-
-    /**
-        Should the auto-completion list be cancelled if the user backspaces to a
-        position before where the box was created.
-    */
-    void AutoCompSetCancelAtStart(bool cancel);
-
-    /**
-        Retrieve whether auto-completion cancelled by backspacing before start.
-    */
-    bool AutoCompGetCancelAtStart() const;
-
-    /**
-        Define a set of characters that when typed will cause the autocompletion to
-        choose the selected item.
-    */
-    void AutoCompSetFillUps(const wxString& characterSet);
-
-    /**
-        Should a single item auto-completion list automatically choose the item.
-    */
-    void AutoCompSetChooseSingle(bool chooseSingle);
-
-    /**
-        Retrieve whether a single item auto-completion list automatically choose the item.
-    */
-    bool AutoCompGetChooseSingle() const;
-
-    /**
-        Set whether case is significant when performing auto-completion searches.
-    */
-    void AutoCompSetIgnoreCase(bool ignoreCase);
-
-    /**
-        Retrieve state of ignore case flag.
-    */
-    bool AutoCompGetIgnoreCase() const;
-
-    /**
-        Set whether or not autocompletion is hidden automatically when nothing matches.
-    */
-    void AutoCompSetAutoHide(bool autoHide);
-
-    /**
-        Retrieve whether or not autocompletion is hidden automatically when nothing matches.
-    */
-    bool AutoCompGetAutoHide() const;
-
-    /**
-        Set whether or not autocompletion deletes any word characters
-        after the inserted text upon completion.
-    */
-    void AutoCompSetDropRestOfWord(bool dropRestOfWord);
-
-    /**
-        Retrieve whether or not autocompletion deletes any word characters
-        after the inserted text upon completion.
-    */
-    bool AutoCompGetDropRestOfWord() const;
-
-    /**
-        Register an image for use in autocompletion lists.
-    */
-    void RegisterImage(int type, const wxBitmap& bmp);
-
-    /**
-        Clear all the registered images.
-    */
-    void ClearRegisteredImages();
-
-    /**
-        Retrieve the auto-completion list type-separator character.
-    */
-    int AutoCompGetTypeSeparator() const;
-
-    /**
-        Change the type-separator character in the string setting up an auto-completion list.
-        Default is '?' but can be changed if items contain '?'.
-    */
-    void AutoCompSetTypeSeparator(int separatorCharacter);
-
-    /**
-        Set the maximum width, in characters, of auto-completion and user lists.
-        Set to 0 to autosize to fit longest item, which is the default.
-    */
-    void AutoCompSetMaxWidth(int characterCount);
-
-    /**
-        Get the maximum width, in characters, of auto-completion and user lists.
-    */
-    int AutoCompGetMaxWidth() const;
-
-    /**
-        Set the maximum height, in rows, of auto-completion and user lists.
-        The default is 5 rows.
-    */
-    void AutoCompSetMaxHeight(int rowCount);
-
-    /**
-        Set the maximum height, in rows, of auto-completion and user lists.
-    */
-    int AutoCompGetMaxHeight() const;
-
-    /**
-        Get currently selected item position in the auto-completion list
-    */
-    int AutoCompGetCurrent() const;
-
-    /**
-        Get currently selected item text in the auto-completion list
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 wxString AutoCompGetCurrentText() const;
-
-    /**
-        Set auto-completion case insensitive behaviour to either prefer case-sensitive matches or have no preference.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_CASEINSENSITIVEBEHAVIOUR_RESPECTCASE wxSTC_CASEINSENSITIVEBEHAVIOUR_* @endlink constants.
-    */
-    %wxchkver_2_9_5 void AutoCompSetCaseInsensitiveBehaviour(int behaviour);
-
-    /**
-        Get auto-completion case insensitive behaviour.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_CASEINSENSITIVEBEHAVIOUR_RESPECTCASE wxSTC_CASEINSENSITIVEBEHAVIOUR_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int AutoCompGetCaseInsensitiveBehaviour() const;
-
-    /**
-        Change the effect of autocompleting when there are multiple selections.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_MULTIAUTOC_ONCE wxSTC_MULTIAUTOC_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void AutoCompSetMulti(int multi);
-
-    /**
-        Retrieve the effect of autocompleting when there are multiple selections.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_MULTIAUTOC_ONCE wxSTC_MULTIAUTOC_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int AutoCompGetMulti() const;
-
-    /**
-        Set the way autocompletion lists are ordered.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_ORDER_PRESORTED wxSTC_ORDER_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void AutoCompSetOrder(int order);
-
-    /**
-        Get the way autocompletion lists are ordered.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_ORDER_PRESORTED wxSTC_ORDER_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int AutoCompGetOrder() const;
-
-    /**
-        Register an RGBA image for use in autocompletion lists.
-        It has the width and height from RGBAImageSetWidth/Height
-    */
-    %wxchkver_2_9_5 void RegisterRGBAImage(int type, const unsigned char* pixels);
-
-    //@}
-
-    /**
-        @member_group_name{UserLists, User lists}
-    */
-    //@{
-
-    /**
-        Display a list of strings and send notification when user chooses one.
-    */
-    void UserListShow(int listType, const wxString& itemList);
-
-    //@}
-
-    /**
-        @member_group_name{CallTips, Call tips}
-    */
-    //@{
-
-    /**
-        Show a call tip containing a definition near position pos.
-    */
-    void CallTipShow(int pos, const wxString& definition);
-
-    /**
-        Remove the call tip from the screen.
-    */
-    void CallTipCancel();
-
-    /**
-        Is there an active call tip?
-    */
-    bool CallTipActive();
-
-    /**
-        Retrieve the position where the caret was before displaying the call tip.
-
-        @since 3.1.0
-    */
-    int CallTipPosAtStart();
-
-    /**
-        Set the start position in order to change when backspacing removes the calltip.
-    */
-    %wxchkver_3_1_0 void CallTipSetPosAtStart(int posStart);
-
-    /**
-        Highlight a segment of the definition.
-    */
-    void CallTipSetHighlight(int start, int end);
-
-    /**
-        Set the background colour for the call tip.
-    */
-    void CallTipSetBackground(const wxColour& back);
-
-    /**
-        Set the foreground colour for the call tip.
-    */
-    void CallTipSetForeground(const wxColour& fore);
-
-    /**
-        Set the foreground colour for the highlighted part of the call tip.
-    */
-    void CallTipSetForegroundHighlight(const wxColour& fore);
-
-    /**
-        Enable use of wxSTC_STYLE_CALLTIP and set call tip tab size in pixels.
-    */
-    %wxchkver_2_8_12 void CallTipUseStyle(int tabSize);
-
-    /**
-        Set position of calltip, above or below text.
-    */
-    %wxchkver_2_9_5 void CallTipSetPosition(bool above);
-
-    //@}
-
-    /**
-        @member_group_name{KeyboardCommands, Keyboard commands}
-    */
-    //@{
-
-    /**
-        Move caret down one line.
-    */
-    void LineDown();
-
-    /**
-        Move caret down one line extending selection to new caret position.
-    */
-    void LineDownExtend();
-
-    /**
-        Move caret up one line.
-    */
-    void LineUp();
-
-    /**
-        Move caret up one line extending selection to new caret position.
-    */
-    void LineUpExtend();
-
-    /**
-        Move caret left one character.
-    */
-    void CharLeft();
-
-    /**
-        Move caret left one character extending selection to new caret position.
-    */
-    void CharLeftExtend();
-
-    /**
-        Move caret right one character.
-    */
-    void CharRight();
-
-    /**
-        Move caret right one character extending selection to new caret position.
-    */
-    void CharRightExtend();
-
-    /**
-        Move caret left one word.
-    */
-    void WordLeft();
-
-    /**
-        Move caret left one word extending selection to new caret position.
-    */
-    void WordLeftExtend();
-
-    /**
-        Move caret right one word.
-    */
-    void WordRight();
-
-    /**
-        Move caret right one word extending selection to new caret position.
-    */
-    void WordRightExtend();
-
-    /**
-        Move caret to first position on line.
-    */
-    void Home();
-
-    /**
-        Move caret to first position on line extending selection to new caret position.
-    */
-    void HomeExtend();
-
-    /**
-        Move caret to last position on line.
-    */
-    void LineEnd();
-
-    /**
-        Move caret to last position on line extending selection to new caret position.
-    */
-    void LineEndExtend();
-
-    /**
-        Move caret to first position in document.
-    */
-    void DocumentStart();
-
-    /**
-        Move caret to first position in document extending selection to new caret position.
-    */
-    void DocumentStartExtend();
-
-    /**
-        Move caret to last position in document.
-    */
-    void DocumentEnd();
-
-    /**
-        Move caret to last position in document extending selection to new caret position.
-    */
-    void DocumentEndExtend();
-
-    /**
-        Move caret one page up.
-    */
-    void PageUp();
-
-    /**
-        Move caret one page up extending selection to new caret position.
-    */
-    void PageUpExtend();
-
-    /**
-        Move caret one page down.
-    */
-    void PageDown();
-
-    /**
-        Move caret one page down extending selection to new caret position.
-    */
-    void PageDownExtend();
-
-    /**
-        Switch from insert to overtype mode or the reverse.
-    */
-    void EditToggleOvertype();
-
-    /**
-        Cancel any modes such as call tip or auto-completion list display.
-    */
-    void Cancel();
-
-    /**
-        Delete the selection or if no selection, the character before the caret.
-    */
-    void DeleteBack();
-
-    /**
-        If selection is empty or all on one line replace the selection with a tab character.
-        If more than one line selected, indent the lines.
-    */
-    void Tab();
-
-    /**
-        Dedent the selected lines.
-    */
-    void BackTab();
-
-    /**
-        Insert a new line, may use a CRLF, CR or LF depending on EOL mode.
-    */
-    void NewLine();
-
-    /**
-        Insert a Form Feed character.
-    */
-    void FormFeed();
-
-    /**
-        Move caret to before first visible character on line.
-        If already there move to first character on line.
-    */
-    void VCHome();
-
-    /**
-        Like VCHome but extending selection to new caret position.
-    */
-    void VCHomeExtend();
-
-    /**
-        Delete the word to the left of the caret.
-    */
-    void DelWordLeft();
-
-    /**
-        Delete the word to the right of the caret.
-    */
-    void DelWordRight();
-
-    /**
-        Delete the word to the right of the caret, but not the trailing non-word characters.
-    */
-    %wxchkver_2_9_5 void DelWordRightEnd();
-
-    /**
-        Cut the line containing the caret.
-    */
-    void LineCut();
-
-    /**
-        Delete the line containing the caret.
-    */
-    void LineDelete();
-
-    /**
-        Switch the current line with the previous.
-    */
-    void LineTranspose();
-
-    /**
-        Duplicate the current line.
-    */
-    void LineDuplicate();
-
-    /**
-        Transform the selection to lower case.
-    */
-    void LowerCase();
-
-    /**
-        Transform the selection to upper case.
-    */
-    void UpperCase();
-
-    /**
-        Scroll the document down, keeping the caret visible.
-    */
-    void LineScrollDown();
-
-    /**
-        Scroll the document up, keeping the caret visible.
-    */
-    void LineScrollUp();
-
-    /**
-        Delete the selection or if no selection, the character before the caret.
-        Will not delete the character before at the start of a line.
-    */
-    void DeleteBackNotLine();
-
-    /**
-        Move caret to first position on display line.
-    */
-    void HomeDisplay();
-
-    /**
-        Move caret to first position on display line extending selection to
-        new caret position.
-    */
-    void HomeDisplayExtend();
-
-    /**
-        Move caret to last position on display line.
-    */
-    void LineEndDisplay();
-
-    /**
-        Move caret to last position on display line extending selection to new
-        caret position.
-    */
-    void LineEndDisplayExtend();
-
-    /**
-        Like Home but when word-wrap is enabled goes first to start of display line
-        HomeDisplay, then to start of document line Home.
-    */
-    void HomeWrap();
-
-    /**
-        Like HomeExtend but when word-wrap is enabled extends first to start of display line
-        HomeDisplayExtend, then to start of document line HomeExtend.
-    */
-    void HomeWrapExtend();
-
-    /**
-        Like LineEnd but when word-wrap is enabled goes first to end of display line
-        LineEndDisplay, then to start of document line LineEnd.
-    */
-    void LineEndWrap();
-
-    /**
-        Like LineEndExtend but when word-wrap is enabled extends first to end of display line
-        LineEndDisplayExtend, then to start of document line LineEndExtend.
-    */
-    void LineEndWrapExtend();
-
-    /**
-        Like VCHome but when word-wrap is enabled goes first to start of display line
-        VCHomeDisplay, then behaves like VCHome.
-    */
-    void VCHomeWrap();
-
-    /**
-        Like VCHomeExtend but when word-wrap is enabled extends first to start of display line
-        VCHomeDisplayExtend, then behaves like VCHomeExtend.
-    */
-    void VCHomeWrapExtend();
-
-    /**
-        Copy the line containing the caret.
-    */
-    void LineCopy();
-
-    /**
-        Move to the previous change in capitalisation.
-    */
-    void WordPartLeft();
-
-    /**
-        Move to the previous change in capitalisation extending selection
-        to new caret position.
-    */
-    void WordPartLeftExtend();
-
-    /**
-        Move to the change next in capitalisation.
-    */
-    void WordPartRight();
-
-    /**
-        Move to the next change in capitalisation extending selection
-        to new caret position.
-    */
-    void WordPartRightExtend();
-
-    /**
-        Delete back from the current position to the start of the line.
-    */
-    void DelLineLeft();
-
-    /**
-        Delete forwards from the current position to the end of the line.
-    */
-    void DelLineRight();
-
-    /**
-        Move caret down one paragraph (delimited by empty lines).
-    */
-    void ParaDown();
-
-    /**
-        Extend selection down one paragraph (delimited by empty lines).
-    */
-    void ParaDownExtend();
-
-    /**
-        Move caret up one paragraph (delimited by empty lines).
-    */
-    void ParaUp();
-
-    /**
-        Extend selection up one paragraph (delimited by empty lines).
-    */
-    void ParaUpExtend();
-
-    /**
-        Move caret down one line, extending rectangular selection to new caret position.
-    */
-    void LineDownRectExtend();
-
-    /**
-        Move caret up one line, extending rectangular selection to new caret position.
-    */
-    void LineUpRectExtend();
-
-    /**
-        Move caret left one character, extending rectangular selection to new caret position.
-    */
-    void CharLeftRectExtend();
-
-    /**
-        Move caret right one character, extending rectangular selection to new caret position.
-    */
-    void CharRightRectExtend();
-
-    /**
-        Move caret to first position on line, extending rectangular selection to new caret position.
-    */
-    void HomeRectExtend();
-
-    /**
-        Move caret to before first visible character on line.
-        If already there move to first character on line.
-        In either case, extend rectangular selection to new caret position.
-    */
-    void VCHomeRectExtend();
-
-    /**
-        Move caret to last position on line, extending rectangular selection to new caret position.
-    */
-    void LineEndRectExtend();
-
-    /**
-        Move caret one page up, extending rectangular selection to new caret position.
-    */
-    void PageUpRectExtend();
-
-    /**
-        Move caret one page down, extending rectangular selection to new caret position.
-    */
-    void PageDownRectExtend();
-
-    /**
-        Move caret to top of page, or one page up if already at top of page.
-    */
-    void StutteredPageUp();
-
-    /**
-        Move caret to top of page, or one page up if already at top of page, extending selection to new caret position.
-    */
-    void StutteredPageUpExtend();
-
-    /**
-        Move caret to bottom of page, or one page down if already at bottom of page.
-    */
-    void StutteredPageDown();
-
-    /**
-        Move caret to bottom of page, or one page down if already at bottom of page, extending selection to new caret position.
-    */
-    void StutteredPageDownExtend();
-
-    /**
-        Move caret left one word, position cursor at end of word.
-    */
-    void WordLeftEnd();
-
-    /**
-        Move caret left one word, position cursor at end of word, extending selection to new caret position.
-    */
-    void WordLeftEndExtend();
-
-    /**
-        Move caret right one word, position cursor at end of word.
-    */
-    void WordRightEnd();
-
-    /**
-        Move caret right one word, position cursor at end of word, extending selection to new caret position.
-    */
-    void WordRightEndExtend();
-
-    /**
-        Duplicate the selection. If selection empty duplicate the line containing the caret.
-    */
-    void SelectionDuplicate();
-
-    /**
-        Centre current line in window.
-    */
-    %wxchkver_2_9_5 void VerticalCentreCaret();
-
-    /**
-        Scroll to start of document.
-    */
-    %wxchkver_2_9_5 void ScrollToStart();
-
-    /**
-        Scroll to end of document.
-    */
-    %wxchkver_2_9_5 void ScrollToEnd();
-
-    /**
-        Move caret to before first visible character on display line.
-        If already there move to first character on display line.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void VCHomeDisplay();
-
-    /**
-        Like VCHomeDisplay but extending selection to new caret position.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void VCHomeDisplayExtend();
-
-    //@}
-
-    /**
-        @member_group_name{KeyBindings, Key bindings}
-    */
-    //@{
-
-    /**
-        When key+modifier combination keyDefinition is pressed perform sciCommand.
-
-        The second argument should be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_KEYMOD_NORM wxSTC_KEYMOD_* @endlink constants
-        and the third argument should be one of the
-        @link wxStyledTextCtrl::wxSTC_CMD_BACKTAB wxSTC_CMD_* @endlink constants.
-    */
+    // Add a set of markers to a line.
+    void MarkerAddSet(int line, int markerSet);
+
+    // Set the alpha used for a marker that is drawn in the text area, not the margin.
+    void MarkerSetAlpha(int markerNumber, int alpha);
+
+    // Set a margin to be either numeric or symbolic.
+    void SetMarginType(int margin, int marginType);
+
+    // Retrieve the type of a margin.
+    int GetMarginType(int margin) const;
+
+    // Set the width of a margin to a width expressed in pixels.
+    void SetMarginWidth(int margin, int pixelWidth);
+
+    // Retrieve the width of a margin in pixels.
+    int GetMarginWidth(int margin) const;
+
+    // Set a mask that determines which markers are displayed in a margin.
+    void SetMarginMask(int margin, int mask);
+
+    // Retrieve the marker mask of a margin.
+    int GetMarginMask(int margin) const;
+
+    // Make a margin sensitive or insensitive to mouse clicks.
+    void SetMarginSensitive(int margin, bool sensitive);
+
+    // Retrieve the mouse click sensitivity of a margin.
+    bool GetMarginSensitive(int margin) const;
+
+    // Set the cursor shown when the mouse is inside a margin.
+    void SetMarginCursor(int margin, int cursor);
+
+    // Retrieve the cursor shown in a margin.
+    int GetMarginCursor(int margin) const;
+
+    // Set the background colour of a margin. Only visible for wxSTC_MARGIN_COLOUR.
+    void SetMarginBackground(int margin, const wxColour& back);
+
+    // Retrieve the background colour of a margin
+    wxColour GetMarginBackground(int margin) const;
+
+    // Allocate a non-standard number of margins.
+    void SetMarginCount(int margins);
+
+    // How many margins are there?.
+    int GetMarginCount() const;
+
+    // Clear all the styles and make equivalent to the global default style.
+    void StyleClearAll();
+
+    // Set the foreground colour of a style.
+    void StyleSetForeground(int style, const wxColour& fore);
+
+    // Set the background colour of a style.
+    void StyleSetBackground(int style, const wxColour& back);
+
+    // Set a style to be bold or not.
+    void StyleSetBold(int style, bool bold);
+
+    // Set a style to be italic or not.
+    void StyleSetItalic(int style, bool italic);
+
+    // Set the size of characters of a style.
+    void StyleSetSize(int style, int sizePoints);
+
+    // Set the font of a style.
+    void StyleSetFaceName(int style, const wxString& fontName);
+
+    // Set a style to have its end of line filled or not.
+    void StyleSetEOLFilled(int style, bool eolFilled);
+
+    // Reset the default style to its state at startup
+    void StyleResetDefault();
+
+    // Set a style to be underlined or not.
+    void StyleSetUnderline(int style, bool underline);
+
+    // Get the foreground colour of a style.
+    wxColour StyleGetForeground(int style) const;
+
+    // Get the background colour of a style.
+    wxColour StyleGetBackground(int style) const;
+
+    // Get is a style bold or not.
+    bool StyleGetBold(int style) const;
+
+    // Get is a style italic or not.
+    bool StyleGetItalic(int style) const;
+
+    // Get the size of characters of a style.
+    int StyleGetSize(int style) const;
+
+    // Get the font facename of a style
+    wxString StyleGetFaceName(int style);
+
+    // Get is a style to have its end of line filled or not.
+    bool StyleGetEOLFilled(int style) const;
+
+    // Get is a style underlined or not.
+    bool StyleGetUnderline(int style) const;
+
+    // Get is a style mixed case, or to force upper or lower case.
+    int StyleGetCase(int style) const;
+
+    // Get the character get of the font in a style.
+    int StyleGetCharacterSet(int style) const;
+
+    // Get is a style visible or not.
+    bool StyleGetVisible(int style) const;
+
+    // Get is a style changeable or not (read only).
+    // Experimental feature, currently buggy.
+    bool StyleGetChangeable(int style) const;
+
+    // Get is a style a hotspot or not.
+    bool StyleGetHotSpot(int style) const;
+
+    // Set a style to be mixed case, or to force upper or lower case.
+    void StyleSetCase(int style, int caseVisible);
+
+    // Set the size of characters of a style. Size is in points multiplied by 100.
+    void StyleSetSizeFractional(int style, int sizeHundredthPoints);
+
+    // Get the size of characters of a style in points multiplied by 100
+    int StyleGetSizeFractional(int style) const;
+
+    // Set the weight of characters of a style.
+    void StyleSetWeight(int style, int weight);
+
+    // Get the weight of characters of a style.
+    int StyleGetWeight(int style) const;
+
+    // Set the character set of the font in a style.
+    void StyleSetCharacterSet(int style, int characterSet);
+
+    // Set a style to be a hotspot or not.
+    void StyleSetHotSpot(int style, bool hotspot);
+
+    // Set the foreground colour of the main and additional selections and whether to use this setting.
+    void SetSelForeground(bool useSetting, const wxColour& fore);
+
+    // Set the background colour of the main and additional selections and whether to use this setting.
+    void SetSelBackground(bool useSetting, const wxColour& back);
+
+    // Get the alpha of the selection.
+    int GetSelAlpha() const;
+
+    // Set the alpha of the selection.
+    void SetSelAlpha(int alpha);
+
+    // Is the selection end of line filled?
+    bool GetSelEOLFilled() const;
+
+    // Set the selection to have its end of line filled or not.
+    void SetSelEOLFilled(bool filled);
+
+    // Set the foreground colour of the caret.
+    void SetCaretForeground(const wxColour& fore);
+
+    // When key+modifier combination keyDefinition is pressed perform sciCommand.
     void CmdKeyAssign(int key, int modifiers, int cmd);
 
-    /**
-        When key+modifier combination keyDefinition is pressed do nothing.
-
-        The second argument should be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_KEYMOD_NORM wxSTC_KEYMOD_* @endlink constants.
-    */
+    // When key+modifier combination keyDefinition is pressed do nothing.
     void CmdKeyClear(int key, int modifiers);
 
-    /**
-        Drop all key mappings.
-    */
+    // Drop all key mappings.
     void CmdKeyClearAll();
 
-    //@}
+    // %overried SetStyleBytes
+    // Set the styles for a segment of the document.
+    void SetStyleBytes(int length, char* styleBytes);
 
-    /**
-        @member_group_name{PopupEditMenu, Popup edit menu}
-    */
-    //@{
+    // Set a style to be visible or not.
+    void StyleSetVisible(int style, bool visible);
 
-    /**
-        Set whether a pop up menu is displayed automatically when the user presses
-        the wrong mouse button on certain areas.
+    // Get the time in milliseconds that the caret is on and off.
+    int GetCaretPeriod() const;
 
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_POPUP_NEVER wxSTC_POPUP_* @endlink constants.
-        @remarks
-        When wxContextMenuEvent is used to create a custom popup menu,
-        this function should be called with wxSTC_POPUP_NEVER.  Otherwise
-        the default menu will be shown instead of the custom one.
-    */
-    %wxchkver_3_1_1 void UsePopUp(int popUpMode);
+    // Get the time in milliseconds that the caret is on and off. 0 = steady on.
+    void SetCaretPeriod(int periodMilliseconds);
 
-    //@}
+    // Set the set of characters making up words for when moving or selecting by word.
+    // First sets defaults like SetCharsDefault.
+    void SetWordChars(const wxString& characters);
 
-    /**
-        @member_group_name{MacroRecording, Macro recording}
-    */
-    //@{
+    // Get the set of characters making up words for when moving or selecting by word.
+    wxString GetWordChars() const;
 
-    /**
-        Start notifying the container of all key presses and commands.
-    */
-    void StartRecord();
+    // Start a sequence of actions that is undone and redone as a unit.
+    // May be nested.
+    void BeginUndoAction();
 
-    /**
-        Stop notifying the container of all key presses and commands.
-    */
-    void StopRecord();
+    // End a sequence of actions that is undone and redone as a unit.
+    void EndUndoAction();
 
-    //@}
+    // Set an indicator to plain, squiggle or TT.
+    void IndicatorSetStyle(int indicator, int indicatorStyle);
 
-    /**
-        @member_group_name{Printing, Printing}
-    */
-    //@{
+    // Retrieve the style of an indicator.
+    int IndicatorGetStyle(int indicator) const;
 
-    /**
-        Sets the print magnification added to the point size of each style for printing.
-    */
-    void SetPrintMagnification(int magnification);
+    // Set the foreground colour of an indicator.
+    void IndicatorSetForeground(int indicator, const wxColour& fore);
 
-    /**
-        Returns the print magnification.
-    */
-    int GetPrintMagnification() const;
+    // Retrieve the foreground colour of an indicator.
+    wxColour IndicatorGetForeground(int indicator) const;
 
-    /**
-        Modify colours when printing for clearer printed text.
+    // Set an indicator to draw under text or over(default).
+    void IndicatorSetUnder(int indicator, bool under);
 
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_PRINT_NORMAL wxSTC_PRINT_* @endlink constants.
-    */
-    void SetPrintColourMode(int mode);
+    // Retrieve whether indicator drawn under or over text.
+    bool IndicatorGetUnder(int indicator) const;
 
-    /**
-        Returns the print colour mode.
+    // Set a hover indicator to plain, squiggle or TT.
+    void IndicatorSetHoverStyle(int indicator, int indicatorStyle);
 
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_PRINT_NORMAL wxSTC_PRINT_* @endlink constants.
-    */
-    int GetPrintColourMode() const;
+    // Retrieve the hover style of an indicator.
+    int IndicatorGetHoverStyle(int indicator) const;
 
-    /**
-        On Windows, will draw the document into a display context such as a printer.
-    */
-    int FormatRange(bool   doDraw, int    startPos, int    endPos, wxDC*  draw, wxDC*  target,  const wxRect& renderRect, const wxRect& pageRect);
+    // Set the foreground hover colour of an indicator.
+    void IndicatorSetHoverForeground(int indicator, const wxColour& fore);
 
-    /**
-        Set printing to line wrapped (wxSTC_WRAP_WORD) or not line wrapped (wxSTC_WRAP_NONE).
-    */
-    void SetPrintWrapMode(int mode);
+    // Retrieve the foreground hover colour of an indicator.
+    wxColour IndicatorGetHoverForeground(int indicator) const;
 
-    /**
-        Is printing line wrapped?
+    // Set the attributes of an indicator.
+    void IndicatorSetFlags(int indicator, int flags);
 
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_WRAP_NONE wxSTC_WRAP_* @endlink constants.
-    */
-    int GetPrintWrapMode() const;
+    // Retrieve the attributes of an indicator.
+    int IndicatorGetFlags(int indicator) const;
 
-    //@}
+    // Set the foreground colour of all whitespace and whether to use this setting.
+    void SetWhitespaceForeground(bool useSetting, const wxColour& fore);
 
-    /**
-        @member_group_name{DirectAccess, Direct access}
-    */
-    //@{
+    // Set the background colour of all whitespace and whether to use this setting.
+    void SetWhitespaceBackground(bool useSetting, const wxColour& back);
 
-    /**
-        Retrieve a pointer to a function that processes messages for this Scintilla.
+    // Set the size of the dots used to mark space characters.
+    void SetWhitespaceSize(int size);
 
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void* GetDirectFunction() const;
+    // Get the size of the dots used to mark space characters.
+    int GetWhitespaceSize() const;
 
-    /**
-        Retrieve a pointer value to use as the first argument when calling
-        the function returned by GetDirectFunction.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void* GetDirectPointer() const;
-
-    /**
-        Compact the document buffer and return a read-only pointer to the
-        characters in the document.
-    */
-    //const char* GetCharacterPointer() const;
-
-    /**
-        Return a read-only pointer to a range of characters in the document.
-        May move the gap so that the range is contiguous, but will only move up
-        to lengthRange bytes.
-    */
-    //const char* GetRangePointer(int position, int rangeLength) const;
-
-    /**
-        Return a position which, to avoid performance costs, should not be within
-        the range of a call to GetRangePointer.
-    */
-    %wxchkver_2_9_5 int GetGapPosition() const;
-
-    //@}
-
-    /**
-        @member_group_name{MultipleViews, Multiple views}
-    */
-    //@{
-
-    /**
-        Retrieve a pointer to the document object.
-    */
-    void* GetDocPointer();
-
-    /**
-        Change the document object used.
-    */
-    void SetDocPointer(void* docPointer);
-
-    /**
-        Create a new document object.
-        Starts with reference count of 1 and not selected into editor.
-    */
-    void* CreateDocument();
-
-    /**
-        Extend life of document.
-    */
-    void AddRefDocument(void* docPointer);
-
-    /**
-        Release a reference to the document, deleting document if it fades to black.
-    */
-    void ReleaseDocument(void* docPointer);
-
-    //@}
-
-    /**
-        @member_group_name{BackgroundLoadSave, Background loading and saving}
-    */
-    //@{
-
-    /**
-        Create an ILoader*.
-    */
-    //void* CreateLoader(int bytes) const;
-
-    //@}
-
-    /**
-        @member_group_name{Folding, Folding}
-    */
-    //@{
-
-    /**
-        Find the display line of a document line taking hidden lines into account.
-    */
-    int VisibleFromDocLine(int line);
-
-    /**
-        Find the document line of a display line taking hidden lines into account.
-    */
-    int DocLineFromVisible(int lineDisplay);
-
-    /**
-        Set the fold level of a line.
-        This encodes an integer level along with flags indicating whether the
-        line is a header and whether it is effectively white space.
-    */
-    void SetFoldLevel(int line, int level);
-
-    /**
-        Retrieve the fold level of a line.
-    */
-    int GetFoldLevel(int line) const;
-
-    /**
-        Find the last child line of a header line.
-    */
-    int GetLastChild(int line, int level) const;
-
-    /**
-        Find the parent line of a child line.
-    */
-    int GetFoldParent(int line) const;
-
-    /**
-        Make a range of lines visible.
-    */
-    void ShowLines(int lineStart, int lineEnd);
-
-    /**
-        Make a range of lines invisible.
-    */
-    void HideLines(int lineStart, int lineEnd);
-
-    /**
-        Is a line visible?
-    */
-    bool GetLineVisible(int line) const;
-
-    /**
-        Are all lines visible?
-    */
-    %wxchkver_2_9_5 bool GetAllLinesVisible() const;
-
-    /**
-        Show the children of a header line.
-    */
-    void SetFoldExpanded(int line, bool expanded);
-
-    /**
-        Is a header line expanded?
-    */
-    bool GetFoldExpanded(int line) const;
-
-    /**
-        Switch a header line between expanded and contracted.
-    */
-    void ToggleFold(int line);
-
-    /**
-        Switch a header line between expanded and contracted and show some text after the line.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void ToggleFoldShowText(int line, const wxString& text);
-
-    /**
-        Set the style of fold display text
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_FOLDDISPLAYTEXT_HIDDEN wxSTC_FOLDDISPLAYTEXT_* @endlink constants.
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void FoldDisplayTextSetStyle(int style);
-
-    /**
-        Expand or contract a fold header.
-
-        The second argument should be one of the
-        @link wxStyledTextCtrl::wxSTC_FOLDACTION_CONTRACT wxSTC_FOLDACTION_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void FoldLine(int line, int action);
-
-    /**
-        Expand or contract a fold header and its children.
-
-        The second argument should be one of the
-        @link wxStyledTextCtrl::wxSTC_FOLDACTION_CONTRACT wxSTC_FOLDACTION_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void FoldChildren(int line, int action);
-
-    /**
-        Expand a fold header and all children. Use the level argument instead of the line's current level.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void ExpandChildren(int line, int level);
-
-    /**
-        Expand or contract all fold headers.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_FOLDACTION_CONTRACT wxSTC_FOLDACTION_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void FoldAll(int action);
-
-    /**
-        Ensure a particular line is visible by expanding any header line hiding it.
-    */
-    void EnsureVisible(int line);
-
-    /**
-        Set automatic folding behaviours.
-
-        The input should be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_AUTOMATICFOLD_SHOW wxSTC_AUTOMATICFOLD_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void SetAutomaticFold(int automaticFold);
-
-    /**
-        Get automatic folding behaviours.
-
-        The return value will be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_AUTOMATICFOLD_SHOW wxSTC_AUTOMATICFOLD_* @endlink constants.
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int GetAutomaticFold() const;
-
-    /**
-        Set some style options for folding.
-
-        The second argument should be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_FOLDFLAG_LINEBEFORE_EXPANDED wxSTC_FOLDFLAG_* @endlink constants.
-    */
-    void SetFoldFlags(int flags);
-
-    /**
-        Ensure a particular line is visible by expanding any header line hiding it.
-        Use the currently set visibility policy to determine which range to display.
-    */
-    void EnsureVisibleEnforcePolicy(int line);
-
-    /**
-        Find the next line at or after lineStart that is a contracted fold header line.
-        Return -1 when no more lines.
-    */
-    %wxchkver_2_9_5 int ContractedFoldNext(int lineStart);
-
-    //@}
-
-    /**
-        @member_group_name{LineWrapping, Line wrapping}
-    */
-    //@{
-
-    /**
-        The number of display lines needed to wrap a document line
-    */
-    int WrapCount(int line);
-
-    /**
-        Sets whether text is word wrapped.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_WRAP_NONE wxSTC_WRAP_* @endlink constants.
-    */
-    void SetWrapMode(int mode);
-
-    /**
-        Retrieve whether text is word wrapped.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_WRAP_NONE wxSTC_WRAP_* @endlink constants.
-    */
-    int GetWrapMode() const;
-
-    /**
-        Set the display mode of visual flags for wrapped lines.
-
-        The input should be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_WRAPVISUALFLAG_NONE wxSTC_WRAPVISUALFLAG_* @endlink constants.
-    */
-    void SetWrapVisualFlags(int wrapVisualFlags);
-
-    /**
-        Retrive the display mode of visual flags for wrapped lines.
-
-        The return value will be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_WRAPVISUALFLAG_NONE wxSTC_WRAPVISUALFLAG_* @endlink constants.
-    */
-    int GetWrapVisualFlags() const;
-
-    /**
-        Set the location of visual flags for wrapped lines.
-
-        The input should be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_WRAPVISUALFLAGLOC_DEFAULT wxSTC_WRAPVISUALFLAGLOC_* @endlink constants.
-    */
-    void SetWrapVisualFlagsLocation(int wrapVisualFlagsLocation);
-
-    /**
-        Retrive the location of visual flags for wrapped lines.
-
-        The return value will be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_WRAPVISUALFLAGLOC_DEFAULT wxSTC_WRAPVISUALFLAGLOC_* @endlink constants.
-    */
-    int GetWrapVisualFlagsLocation() const;
-
-    /**
-        Set the start indent for wrapped lines.
-    */
-    void SetWrapStartIndent(int indent);
-
-    /**
-        Retrive the start indent for wrapped lines.
-    */
-    int GetWrapStartIndent() const;
-
-    /**
-        Sets how wrapped sublines are placed. Default is wxSTC_WRAPINDENT_FIXED.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_WRAPINDENT_FIXED wxSTC_WRAPINDENT_* @endlink constants.
-    */
-    %wxchkver_2_9_5 void SetWrapIndentMode(int mode);
-
-    /**
-        Retrieve how wrapped sublines are placed. Default is wxSTC_WRAPINDENT_FIXED.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_WRAPINDENT_FIXED wxSTC_WRAPINDENT_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int GetWrapIndentMode() const;
-
-    /**
-        Retrieve the degree of caching of layout information.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_CACHE_NONE wxSTC_CACHE_* @endlink constants.
-    */
-    int GetLayoutCache() const;
-
-    /**
-        Join the lines in the target.
-    */
-    void LinesJoin();
-
-    /**
-        Split the lines in the target into lines that are less wide than pixelWidth
-        where possible.
-    */
-    void LinesSplit(int pixelWidth);
-
-    /**
-        Set number of entries in position cache
-    */
-    %wxchkver_2_9_5 void SetPositionCacheSize(int size);
-
-    /**
-        How many entries are allocated to the position cache?
-    */
-    %wxchkver_2_9_5 int GetPositionCacheSize() const;
-
-    //@}
-
-    /**
-        @member_group_name{Zooming, Zooming}
-    */
-    //@{
-
-    /**
-        Magnify the displayed text by increasing the sizes by 1 point.
-    */
-    void ZoomIn();
-
-    /**
-        Make the displayed text smaller by decreasing the sizes by 1 point.
-    */
-    void ZoomOut();
-
-    /**
-        Set the zoom level. This number of points is added to the size of all fonts.
-        It may be positive to magnify or negative to reduce.
-    */
-    void SetZoom(int zoom);
-
-    /**
-        Retrieve the zoom level.
-    */
-    int GetZoom() const;
-
-    //@}
-
-    /**
-        @member_group_name{LongLines, Long lines}
-    */
-    //@{
-
-    /**
-        Retrieve the column number which text should be kept within.
-    */
-    int GetEdgeColumn() const;
-
-    /**
-        Set the column number of the edge.
-        If text goes past the edge then it is highlighted.
-    */
-    void SetEdgeColumn(int column);
-
-    /**
-        Retrieve the edge highlight mode.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_EDGE_NONE wxSTC_EDGE_* @endlink constants.
-    */
-    int GetEdgeMode() const;
-
-    /**
-        The edge may be displayed by a line (wxSTC_EDGE_LINE/wxSTC_EDGE_MULTILINE) or by highlighting text that
-        goes beyond it (wxSTC_EDGE_BACKGROUND) or not displayed at all (wxSTC_EDGE_NONE).
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_EDGE_NONE wxSTC_EDGE_* @endlink constants.
-    */
-    void SetEdgeMode(int mode);
-
-    /**
-        Retrieve the colour used in edge indication.
-    */
-    wxColour GetEdgeColour() const;
-
-    /**
-        Change the colour used in edge indication.
-    */
-    void SetEdgeColour(const wxColour& edgeColour);
-
-    /**
-        Add a new vertical edge to the view.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void MultiEdgeAddLine(int column, const wxColour& edgeColour);
-
-    /**
-        Clear all vertical edges.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void MultiEdgeClearAll();
-
-    //@}
-
-    /**
-        @member_group_name{Lexer, Lexer}
-    */
-    //@{
-
-    /**
-        Indicate that the internal state of a lexer has changed over a range and therefore
-        there may be a need to redraw.
-    */
-    %wxchkver_2_9_5 int ChangeLexerState(int start, int end);
-
-    /**
-        Set the lexing language of the document.
-
-        The input should be one of the
-        @link wxStyledTextCtrl::wxSTC_LEX_A68K wxSTC_LEX_* @endlink constants.
-    */
-    void SetLexer(int lexer);
-
-    /**
-        Retrieve the lexing language of the document.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_LEX_A68K wxSTC_LEX_* @endlink constants.
-    */
-    int GetLexer() const;
-
-    /**
-        Colourise a segment of the document using the current lexing language.
-    */
-    void Colourise(int start, int end);
-
-    /**
-        Set up a value that may be used by a lexer for some optional feature.
-    */
-    void SetProperty(const wxString& key, const wxString& value);
-
-    /**
-        Set up the key words used by the lexer.
-    */
-    void SetKeyWords(int keywordSet, const wxString& keyWords);
-
-    /**
-        Set the lexing language of the document based on string name.
-    */
-    void SetLexerLanguage(const wxString& language);
-
-    /**
-        Load a lexer library (dll / so).
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 void LoadLexerLibrary(const wxString& path);
-
-    /**
-        Retrieve a "property" value previously set with SetProperty.
-    */
-    wxString GetProperty(const wxString& key);
-
-    /**
-        Retrieve a "property" value previously set with SetProperty,
-        with "$()" variable replacement on returned buffer.
-    */
-    wxString GetPropertyExpanded(const wxString& key);
-
-    /**
-        Retrieve a "property" value previously set with SetProperty,
-        interpreted as an int AFTER any "$()" variable replacement.
-    */
-    %wxchkver_3_1_1 int GetPropertyInt(const wxString &key, int defaultValue=0) const;
-
-    /**
-        Retrieve the lexing language of the document.
-
-        @since 3.1.1
-    */
-    %wxchkver_3_1_1 wxString GetLexerLanguage() const;
-
-    /**
-        For private communication between an application and a known lexer.
-    */
-    %wxchkver_3_1_0 void* PrivateLexerCall(int operation, void* pointer);
-
-    /**
-        Retrieve a '\\n' separated list of properties understood by the current lexer.
-    */
-    %wxchkver_2_9_5 wxString PropertyNames() const;
-
-    /**
-        Retrieve the type of a property.
-
-        The return value will be one of the
-        @link wxStyledTextCtrl::wxSTC_TYPE_BOOLEAN wxSTC_TYPE_* @endlink constants.
-    */
-    %wxchkver_2_9_5 int PropertyType(const wxString& name);
-
-    /**
-        Describe a property.
-    */
-    %wxchkver_2_9_5 wxString DescribeProperty(const wxString& name) const;
-
-    /**
-        Retrieve a '\\n' separated list of descriptions of the keyword sets understood by the current lexer.
-    */
-    %wxchkver_2_9_5 wxString DescribeKeyWordSets() const;
-
-    /**
-        Allocate a set of sub styles for a particular base style, returning start of range
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int AllocateSubStyles(int styleBase, int numberStyles);
-
-    /**
-        The starting style number for the sub styles associated with a base style
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int GetSubStylesStart(int styleBase) const;
-
-    /**
-        The number of sub styles associated with a base style
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int GetSubStylesLength(int styleBase) const;
-
-    /**
-        For a sub style, return the base style, else return the argument.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int GetStyleFromSubStyle(int subStyle) const;
-
-    /**
-        For a secondary style, return the primary style, else return the argument.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int GetPrimaryStyleFromStyle(int style) const;
-
-    /**
-        Free allocated sub styles
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void FreeSubStyles();
-
-    /**
-        Set the identifiers that are shown in a particular style
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 void SetIdentifiers(int style, const wxString& identifiers);
-
-    /**
-        Where styles are duplicated by a feature such as active/inactive code
-        return the distance between the two types.
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 int DistanceToSecondaryStyles() const;
-
-    /**
-        Get the set of base styles that can be extended with sub styles
-
-        @since 3.1.0
-    */
-    %wxchkver_3_1_0 wxString GetSubStyleBases() const;
-
-    //@}
-
-    /**
-        @member_group_name{Notifications, Event related items}
-    */
-    //@{
-
-    /**
-        Sets the time the mouse must sit still to generate a mouse dwell event.
-
-        The input should be a time in milliseconds or wxSTC_TIME_FOREVER.
-    */
-    void SetMouseDwellTime(int periodMilliseconds);
-
-    /**
-        Retrieve the time the mouse must sit still to generate a mouse dwell event.
-
-        The return value will be a time in milliseconds or wxSTC_TIME_FOREVER.
-    */
-    int GetMouseDwellTime() const;
-
-    /**
-        Set which document modification events are sent to the container.
-
-        The input should be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_MOD_INSERTTEXT wxSTC_MOD_* @endlink constants,
-        the @link wxStyledTextCtrl::wxSTC_PERFORMED_REDO wxSTC_PERFORMED_* @endlink constants,
-        wxSTC_STARTACTION, wxSTC_MULTILINEUNDOREDO, wxSTC_MULTISTEPUNDOREDO, and wxSTC_LASTSTEPINUNDOREDO.
-        The input can also be wxSTC_MODEVENTMASKALL to indicate that all changes
-        should generate events.
-    */
-    void SetModEventMask(int mask);
-
-    /**
-        Get which document modification events are sent to the container.
-
-        The return value will wxSTC_MODEVENTMASKALL if all changes generate
-        events.  Otherwise it will be a bit list containing one or more of the
-        @link wxStyledTextCtrl::wxSTC_MOD_INSERTTEXT wxSTC_MOD_* @endlink constants,
-        the @link wxStyledTextCtrl::wxSTC_PERFORMED_REDO wxSTC_PERFORMED_* @endlink constants,
-        wxSTC_STARTACTION, wxSTC_MULTILINEUNDOREDO, wxSTC_MULTISTEPUNDOREDO, and wxSTC_LASTSTEPINUNDOREDO.
-    */
-    int GetModEventMask() const;
-
-    /**
-        Set the identifier reported as idFrom in notification messages.
-    */
-    %wxchkver_2_9_5 void SetIdentifier(int identifier);
-
-    /**
-        Get the identifier.
-    */
-    %wxchkver_2_9_5 int GetIdentifier() const;
-
-    //@}
-
-    /**
-        @member_group_name{DeprecatedMessages, Deprecated items}
-
-        These methods should not be used in new code.
-    */
-    //@{
-
-    /**
-        Divide each styling byte into lexical class bits (default: 5) and indicator
-        bits (default: 3). If a lexer requires more than 32 lexical states, then this
-        is used to expand the possible states.
-
-        @deprecated
-    */
+    // Divide each styling byte into lexical class bits (default: 5) and indicator
+    // bits (default: 3). If a lexer requires more than 32 lexical states, then this
+    // is used to expand the possible states.
+    //wxDEPRECATED_MSG( "This method uses a function deprecated in the Scintilla library." )
     void SetStyleBits(int bits);
 
-    /**
-        Retrieve number of bits in style bytes used to hold the lexical state.
-
-        @deprecated
-    */
+    // Retrieve number of bits in style bytes used to hold the lexical state.
+    //wxDEPRECATED_MSG( "This method uses a function deprecated in the Scintilla library." )
     int GetStyleBits() const;
 
-    /**
-        Retrieve the number of bits the current lexer needs for styling.
+    // Used to hold extra styling information for each line.
+    void SetLineState(int line, int state);
 
-        @deprecated
-    */
+    // Retrieve the extra styling information for a line.
+    int GetLineState(int line) const;
+
+    // Retrieve the last line number that has line state.
+    int GetMaxLineState() const;
+
+    // Is the background of the line containing the caret in a different colour?
+    bool GetCaretLineVisible() const;
+
+    // Display the background of the line containing the caret in a different colour.
+    void SetCaretLineVisible(bool show);
+
+    // Get the colour of the background of the line containing the caret.
+    wxColour GetCaretLineBackground() const;
+
+    // Set the colour of the background of the line containing the caret.
+    void SetCaretLineBackground(const wxColour& back);
+
+    // Set a style to be changeable or not (read only).
+    // Experimental feature, currently buggy.
+    void StyleSetChangeable(int style, bool changeable);
+
+    // Display a auto-completion list.
+    // The lengthEntered parameter indicates how many characters before
+    // the caret should be used to provide context.
+    void AutoCompShow(int lengthEntered, const wxString& itemList);
+
+    // Remove the auto-completion list from the screen.
+    void AutoCompCancel();
+
+    // Is there an auto-completion list visible?
+    bool AutoCompActive();
+
+    // Retrieve the position of the caret when the auto-completion list was displayed.
+    int AutoCompPosStart();
+
+    // User has selected an item so remove the list and insert the selection.
+    void AutoCompComplete();
+
+    // Define a set of character that when typed cancel the auto-completion list.
+    void AutoCompStops(const wxString& characterSet);
+
+    // Change the separator character in the string setting up an auto-completion list.
+    // Default is space but can be changed if items contain space.
+    void AutoCompSetSeparator(int separatorCharacter);
+
+    // Retrieve the auto-completion list separator character.
+    int AutoCompGetSeparator() const;
+
+    // Select the item in the auto-completion list that starts with a string.
+    void AutoCompSelect(const wxString& select);
+
+    // Should the auto-completion list be cancelled if the user backspaces to a
+    // position before where the box was created.
+    void AutoCompSetCancelAtStart(bool cancel);
+
+    // Retrieve whether auto-completion cancelled by backspacing before start.
+    bool AutoCompGetCancelAtStart() const;
+
+    // Define a set of characters that when typed will cause the autocompletion to
+    // choose the selected item.
+    void AutoCompSetFillUps(const wxString& characterSet);
+
+    // Should a single item auto-completion list automatically choose the item.
+    void AutoCompSetChooseSingle(bool chooseSingle);
+
+    // Retrieve whether a single item auto-completion list automatically choose the item.
+    bool AutoCompGetChooseSingle() const;
+
+    // Set whether case is significant when performing auto-completion searches.
+    void AutoCompSetIgnoreCase(bool ignoreCase);
+
+    // Retrieve state of ignore case flag.
+    bool AutoCompGetIgnoreCase() const;
+
+    // Display a list of strings and send notification when user chooses one.
+    void UserListShow(int listType, const wxString& itemList);
+
+    // Set whether or not autocompletion is hidden automatically when nothing matches.
+    void AutoCompSetAutoHide(bool autoHide);
+
+    // Retrieve whether or not autocompletion is hidden automatically when nothing matches.
+    bool AutoCompGetAutoHide() const;
+
+    // Set whether or not autocompletion deletes any word characters
+    // after the inserted text upon completion.
+    void AutoCompSetDropRestOfWord(bool dropRestOfWord);
+
+    // Retrieve whether or not autocompletion deletes any word characters
+    // after the inserted text upon completion.
+    bool AutoCompGetDropRestOfWord() const;
+
+    // Register an image for use in autocompletion lists.
+    void RegisterImage(int type, const wxBitmap& bmp);
+
+    // Clear all the registered images.
+    void ClearRegisteredImages();
+
+    // Retrieve the auto-completion list type-separator character.
+    int AutoCompGetTypeSeparator() const;
+
+    // Change the type-separator character in the string setting up an auto-completion list.
+    // Default is '?' but can be changed if items contain '?'.
+    void AutoCompSetTypeSeparator(int separatorCharacter);
+
+    // Set the maximum width, in characters, of auto-completion and user lists.
+    // Set to 0 to autosize to fit longest item, which is the default.
+    void AutoCompSetMaxWidth(int characterCount);
+
+    // Get the maximum width, in characters, of auto-completion and user lists.
+    int AutoCompGetMaxWidth() const;
+
+    // Set the maximum height, in rows, of auto-completion and user lists.
+    // The default is 5 rows.
+    void AutoCompSetMaxHeight(int rowCount);
+
+    // Set the maximum height, in rows, of auto-completion and user lists.
+    int AutoCompGetMaxHeight() const;
+
+    // Set the number of spaces used for one level of indentation.
+    void SetIndent(int indentSize);
+
+    // Retrieve indentation size.
+    int GetIndent() const;
+
+    // Indentation will only use space characters if useTabs is false, otherwise
+    // it will use a combination of tabs and spaces.
+    void SetUseTabs(bool useTabs);
+
+    // Retrieve whether tabs will be used in indentation.
+    bool GetUseTabs() const;
+
+    // Change the indentation of a line to a number of columns.
+    void SetLineIndentation(int line, int indentation);
+
+    // Retrieve the number of columns that a line is indented.
+    int GetLineIndentation(int line) const;
+
+    // Retrieve the position before the first non indentation character on a line.
+    int GetLineIndentPosition(int line) const;
+
+    // Retrieve the column number of a position, taking tab width into account.
+    int GetColumn(int pos) const;
+
+    // Count characters between two positions.
+    int CountCharacters(int start, int end);
+
+    // Show or hide the horizontal scroll bar.
+    void SetUseHorizontalScrollBar(bool visible);
+
+    // Is the horizontal scroll bar visible?
+    bool GetUseHorizontalScrollBar() const;
+
+    // Show or hide indentation guides.
+    void SetIndentationGuides(int indentView);
+
+    // Are the indentation guides visible?
+    int GetIndentationGuides() const;
+
+    // Set the highlighted indentation guide column.
+    // 0 = no highlighted guide.
+    void SetHighlightGuide(int column);
+
+    // Get the highlighted indentation guide column.
+    int GetHighlightGuide() const;
+
+    // Get the position after the last visible characters on a line.
+    int GetLineEndPosition(int line) const;
+
+    // Get the code page used to interpret the bytes of the document as characters.
+    int GetCodePage() const;
+
+    // Get the foreground colour of the caret.
+    wxColour GetCaretForeground() const;
+
+    // In read-only mode?
+    bool GetReadOnly() const;
+
+    // Sets the position of the caret.
+    void SetCurrentPos(int caret);
+
+    // Sets the position that starts the selection - this becomes the anchor.
+    void SetSelectionStart(int anchor);
+
+    // Returns the position at the start of the selection.
+    int GetSelectionStart() const;
+
+    // Sets the position that ends the selection - this becomes the caret.
+    void SetSelectionEnd(int caret);
+
+    // Returns the position at the end of the selection.
+    int GetSelectionEnd() const;
+
+    // Set caret to a position, while removing any existing selection.
+    void SetEmptySelection(int caret);
+
+    // Sets the print magnification added to the point size of each style for printing.
+    void SetPrintMagnification(int magnification);
+
+    // Returns the print magnification.
+    int GetPrintMagnification() const;
+
+    // Modify colours when printing for clearer printed text.
+    void SetPrintColourMode(int mode);
+
+    // Returns the print colour mode.
+    int GetPrintColourMode() const;
+
+    // Find some text in the document.
+    //int FindText(int minPos, int maxPos, const wxString& text, int flags=0, int* findEnd=NULL);
+    int FindText(int minPos, int maxPos, const wxString& text, int flags=0);
+
+    // On Windows, will draw the document into a display context such as a printer.
+    int FormatRange(bool doDraw,  int startPos, int endPos, wxDC* draw, wxDC* target, wxRect renderRect, wxRect pageRect);
+
+    // Retrieve the display line at the top of the display.
+    int GetFirstVisibleLine() const;
+
+    // Retrieve the contents of a line.
+    wxString GetLine(int line) const;
+
+    // Returns the number of lines in the document. There is always at least one.
+    int GetLineCount() const;
+
+    // Sets the size in pixels of the left margin.
+    void SetMarginLeft(int pixelWidth);
+
+    // Returns the size in pixels of the left margin.
+    int GetMarginLeft() const;
+
+    // Sets the size in pixels of the right margin.
+    void SetMarginRight(int pixelWidth);
+
+    // Returns the size in pixels of the right margin.
+    int GetMarginRight() const;
+
+    // Is the document different from when it was last saved?
+    bool GetModify() const;
+
+    // Retrieve the selected text.
+    wxString GetSelectedText();
+
+    // Retrieve a range of text.
+    wxString GetTextRange(int startPos, int endPos);
+
+    // Draw the selection in normal style or with selection highlighted.
+    void HideSelection(bool hide);
+
+    // Retrieve the point in the window where a position is displayed.
+    wxPoint PointFromPosition(int pos);
+
+    // Retrieve the line containing a position.
+    int LineFromPosition(int pos) const;
+
+    // Retrieve the position at the start of a line.
+    int PositionFromLine(int line) const;
+
+    // Scroll horizontally and vertically.
+    void LineScroll(int columns, int lines);
+
+    // Ensure the caret is visible.
+    void EnsureCaretVisible();
+
+    // Scroll the argument positions and the range between them into view giving
+    // priority to the primary position then the secondary position.
+    // This may be used to make a search match visible.
+    void ScrollRange(int secondary, int primary);
+
+    // Replace the selected text with the argument text.
+    void ReplaceSelection(const wxString& text);
+
+    // Set to read only or read write.
+    void SetReadOnly(bool readOnly);
+
+    // Will a paste succeed?
+    bool CanPaste() const;
+
+    // Are there any undoable actions in the undo history?
+    bool CanUndo() const;
+
+    // Delete the undo history.
+    void EmptyUndoBuffer();
+
+    // Undo one action in the undo history.
+    void Undo();
+
+    // Cut the selection to the clipboard.
+    void Cut();
+
+    // Copy the selection to the clipboard.
+    void Copy();
+
+    // Paste the contents of the clipboard into the document replacing the selection.
+    void Paste();
+
+    // Clear the selection.
+    void Clear();
+
+    // Replace the contents of the document with the argument text.
+    void SetText(const wxString& text);
+
+    // Retrieve all the text in the document.
+    wxString GetText() const;
+
+    // Retrieve the number of characters in the document.
+    int GetTextLength() const;
+
+    // Retrieve a pointer to a function that processes messages for this Scintilla.
+    void* GetDirectFunction() const;
+
+    // Retrieve a pointer value to use as the first argument when calling
+    // the function returned by GetDirectFunction.
+    void* GetDirectPointer() const;
+
+    // Set to overtype (true) or insert mode.
+    void SetOvertype(bool overType);
+
+    // Returns true if overtype mode is active otherwise false is returned.
+    bool GetOvertype() const;
+
+    // Set the width of the insert mode caret.
+    void SetCaretWidth(int pixelWidth);
+
+    // Returns the width of the insert mode caret.
+    int GetCaretWidth() const;
+
+    // Sets the position that starts the target which is used for updating the
+    // document without affecting the scroll position.
+    void SetTargetStart(int start);
+
+    // Get the position that starts the target.
+    int GetTargetStart() const;
+
+    // Sets the position that ends the target which is used for updating the
+    // document without affecting the scroll position.
+    void SetTargetEnd(int end);
+
+    // Get the position that ends the target.
+    int GetTargetEnd() const;
+
+    // Sets both the start and end of the target in one call.
+    void SetTargetRange(int start, int end);
+
+    // Retrieve the text in the target.
+    wxString GetTargetText() const;
+
+    // Make the target range start and end be the same as the selection range start and end.
+    void TargetFromSelection();
+
+    // Sets the target to the whole document.
+    void TargetWholeDocument();
+
+    // Replace the target text with the argument text.
+    // Text is counted so it can contain NULs.
+    // Returns the length of the replacement text.
+    int ReplaceTarget(const wxString& text);
+
+    // Replace the target text with the argument text after \\d processing.
+    // Text is counted so it can contain NULs.
+    // Looks for \\d where d is between 1 and 9 and replaces these with the strings
+    // matched in the last search operation which were surrounded by \\( and \\).
+    // Returns the length of the replacement text including any change
+    // caused by processing the \\d patterns.
+    int ReplaceTargetRE(const wxString& text);
+
+    // Search for a counted string in the target and set the target to the found
+    // range. Text is counted so it can contain NULs.
+    // Returns length of range or -1 for failure in which case target is not moved.
+    int SearchInTarget(const wxString& text);
+
+    // Set the search flags used by SearchInTarget.
+    void SetSearchFlags(int searchFlags);
+
+    // Get the search flags used by SearchInTarget.
+    int GetSearchFlags() const;
+
+    // Show a call tip containing a definition near position pos.
+    void CallTipShow(int pos, const wxString& definition);
+
+    // Remove the call tip from the screen.
+    void CallTipCancel();
+
+    // Is there an active call tip?
+    bool CallTipActive();
+
+    // Retrieve the position where the caret was before displaying the call tip.
+    int CallTipPosAtStart();
+
+    // Set the start position in order to change when backspacing removes the calltip.
+    void CallTipSetPosAtStart(int posStart);
+
+    // Highlight a segment of the definition.
+    void CallTipSetHighlight(int highlightStart, int highlightEnd);
+
+    // Set the background colour for the call tip.
+    void CallTipSetBackground(const wxColour& back);
+
+    // Set the foreground colour for the call tip.
+    void CallTipSetForeground(const wxColour& fore);
+
+    // Set the foreground colour for the highlighted part of the call tip.
+    void CallTipSetForegroundHighlight(const wxColour& fore);
+
+    // Enable use of wxSTC_STYLE_CALLTIP and set call tip tab size in pixels.
+    void CallTipUseStyle(int tabSize);
+
+    // Set position of calltip, above or below text.
+    void CallTipSetPosition(bool above);
+
+    // Find the display line of a document line taking hidden lines into account.
+    int VisibleFromDocLine(int docLine);
+
+    // Find the document line of a display line taking hidden lines into account.
+    int DocLineFromVisible(int displayLine);
+
+    // The number of display lines needed to wrap a document line
+    int WrapCount(int docLine);
+
+    // Set the fold level of a line.
+    // This encodes an integer level along with flags indicating whether the
+    // line is a header and whether it is effectively white space.
+    void SetFoldLevel(int line, int level);
+
+    // Retrieve the fold level of a line.
+    int GetFoldLevel(int line) const;
+
+    // Find the last child line of a header line.
+    int GetLastChild(int line, int level) const;
+
+    // Find the parent line of a child line.
+    int GetFoldParent(int line) const;
+
+    // Make a range of lines visible.
+    void ShowLines(int lineStart, int lineEnd);
+
+    // Make a range of lines invisible.
+    void HideLines(int lineStart, int lineEnd);
+
+    // Is a line visible?
+    bool GetLineVisible(int line) const;
+
+    // Are all lines visible?
+    bool GetAllLinesVisible() const;
+
+    // Show the children of a header line.
+    void SetFoldExpanded(int line, bool expanded);
+
+    // Is a header line expanded?
+    bool GetFoldExpanded(int line) const;
+
+    // Switch a header line between expanded and contracted.
+    void ToggleFold(int line);
+
+    // Switch a header line between expanded and contracted and show some text after the line.
+    void ToggleFoldShowText(int line, const wxString& text);
+
+    // Set the style of fold display text
+    void FoldDisplayTextSetStyle(int style);
+
+    // Expand or contract a fold header.
+    void FoldLine(int line, int action);
+
+    // Expand or contract a fold header and its children.
+    void FoldChildren(int line, int action);
+
+    // Expand a fold header and all children. Use the level argument instead of the line's current level.
+    void ExpandChildren(int line, int level);
+
+    // Expand or contract all fold headers.
+    void FoldAll(int action);
+
+    // Ensure a particular line is visible by expanding any header line hiding it.
+    void EnsureVisible(int line);
+
+    // Set automatic folding behaviours.
+    void SetAutomaticFold(int automaticFold);
+
+    // Get automatic folding behaviours.
+    int GetAutomaticFold() const;
+
+    // Set some style options for folding.
+    void SetFoldFlags(int flags);
+
+    // Ensure a particular line is visible by expanding any header line hiding it.
+    // Use the currently set visibility policy to determine which range to display.
+    void EnsureVisibleEnforcePolicy(int line);
+
+    // Sets whether a tab pressed when caret is within indentation indents.
+    void SetTabIndents(bool tabIndents);
+
+    // Does a tab pressed when caret is within indentation indent?
+    bool GetTabIndents() const;
+
+    // Sets whether a backspace pressed when caret is within indentation unindents.
+    void SetBackSpaceUnIndents(bool bsUnIndents);
+
+    // Does a backspace pressed when caret is within indentation unindent?
+    bool GetBackSpaceUnIndents() const;
+
+    // Sets the time the mouse must sit still to generate a mouse dwell event.
+    void SetMouseDwellTime(int periodMilliseconds);
+
+    // Retrieve the time the mouse must sit still to generate a mouse dwell event.
+    int GetMouseDwellTime() const;
+
+    // Get position of start of word.
+    int WordStartPosition(int pos, bool onlyWordCharacters);
+
+    // Get position of end of word.
+    int WordEndPosition(int pos, bool onlyWordCharacters);
+
+    // Is the range start..end considered a word?
+    bool IsRangeWord(int start, int end);
+
+    // Sets limits to idle styling.
+    void SetIdleStyling(int idleStyling);
+
+    // Retrieve the limits to idle styling.
+    int GetIdleStyling() const;
+
+    // Sets whether text is word wrapped.
+    void SetWrapMode(int wrapMode);
+
+    // Retrieve whether text is word wrapped.
+    int GetWrapMode() const;
+
+    // Set the display mode of visual flags for wrapped lines.
+    void SetWrapVisualFlags(int wrapVisualFlags);
+
+    // Retrive the display mode of visual flags for wrapped lines.
+    int GetWrapVisualFlags() const;
+
+    // Set the location of visual flags for wrapped lines.
+    void SetWrapVisualFlagsLocation(int wrapVisualFlagsLocation);
+
+    // Retrive the location of visual flags for wrapped lines.
+    int GetWrapVisualFlagsLocation() const;
+
+    // Set the start indent for wrapped lines.
+    void SetWrapStartIndent(int indent);
+
+    // Retrive the start indent for wrapped lines.
+    int GetWrapStartIndent() const;
+
+    // Sets how wrapped sublines are placed. Default is wxSTC_WRAPINDENT_FIXED.
+    void SetWrapIndentMode(int wrapIndentMode);
+
+    // Retrieve how wrapped sublines are placed. Default is wxSTC_WRAPINDENT_FIXED.
+    int GetWrapIndentMode() const;
+
+    // Sets the degree of caching of layout information.
+    void SetLayoutCache(int cacheMode);
+
+    // Retrieve the degree of caching of layout information.
+    int GetLayoutCache() const;
+
+    // Sets the document width assumed for scrolling.
+    void SetScrollWidth(int pixelWidth);
+
+    // Retrieve the document width assumed for scrolling.
+    int GetScrollWidth() const;
+
+    // Sets whether the maximum width line displayed is used to set scroll width.
+    void SetScrollWidthTracking(bool tracking);
+
+    // Retrieve whether the scroll width tracks wide lines.
+    bool GetScrollWidthTracking() const;
+
+    // Measure the pixel width of some text in a particular style.
+    // Does not handle tab or control characters.
+    int TextWidth(int style, const wxString& text);
+
+    // Sets the scroll range so that maximum scroll position has
+    // the last line at the bottom of the view (default).
+    // Setting this to false allows scrolling one page below the last line.
+    void SetEndAtLastLine(bool endAtLastLine);
+
+    // Retrieve whether the maximum scroll position has the last
+    // line at the bottom of the view.
+    bool GetEndAtLastLine() const;
+
+    // Retrieve the height of a particular line of text in pixels.
+    int TextHeight(int line);
+
+    // Show or hide the vertical scroll bar.
+    void SetUseVerticalScrollBar(bool visible);
+
+    // Is the vertical scroll bar visible?
+    bool GetUseVerticalScrollBar() const;
+
+    // Append a string to the end of the document without changing the selection.
+    void AppendText(const wxString& text);
+
+    // Is drawing done in two phases with backgrounds drawn before foregrounds?
+    bool GetTwoPhaseDraw() const;
+
+    // In twoPhaseDraw mode, drawing is performed in two phases, first the background
+    // and then the foreground. This avoids chopping off characters that overlap the next run.
+    void SetTwoPhaseDraw(bool twoPhase);
+
+    // How many phases is drawing done in?
+    int GetPhasesDraw() const;
+
+    // In one phase draw, text is drawn in a series of rectangular blocks with no overlap.
+    // In two phase draw, text is drawn in a series of lines allowing runs to overlap horizontally.
+    // In multiple phase draw, each element is drawn over the whole drawing area, allowing text
+    // to overlap from one line to the next.
+    void SetPhasesDraw(int phases);
+
+    // Choose the quality level for text.
+    void SetFontQuality(int fontQuality);
+
+    // Retrieve the quality level for text.
+    int GetFontQuality() const;
+
+    // Scroll so that a display line is at the top of the display.
+    void SetFirstVisibleLine(int displayLine);
+
+    // Change the effect of pasting when there are multiple selections.
+    void SetMultiPaste(int multiPaste);
+
+    // Retrieve the effect of pasting when there are multiple selections.
+    int GetMultiPaste() const;
+
+    // Retrieve the value of a tag from a regular expression search.
+    wxString GetTag(int tagNumber) const;
+
+    // Join the lines in the target.
+    void LinesJoin();
+
+    // Split the lines in the target into lines that are less wide than pixelWidth
+    // where possible.
+    void LinesSplit(int pixelWidth);
+
+    // Set one of the colours used as a chequerboard pattern in the fold margin
+    void SetFoldMarginColour(bool useSetting, const wxColour& back);
+
+    // Set the other colour used as a chequerboard pattern in the fold margin
+    void SetFoldMarginHiColour(bool useSetting, const wxColour& fore);
+
+    // Move caret down one line.
+    void LineDown();
+
+    // Move caret down one line extending selection to new caret position.
+    void LineDownExtend();
+
+    // Move caret up one line.
+    void LineUp();
+
+    // Move caret up one line extending selection to new caret position.
+    void LineUpExtend();
+
+    // Move caret left one character.
+    void CharLeft();
+
+    // Move caret left one character extending selection to new caret position.
+    void CharLeftExtend();
+
+    // Move caret right one character.
+    void CharRight();
+
+    // Move caret right one character extending selection to new caret position.
+    void CharRightExtend();
+
+    // Move caret left one word.
+    void WordLeft();
+
+    // Move caret left one word extending selection to new caret position.
+    void WordLeftExtend();
+
+    // Move caret right one word.
+    void WordRight();
+
+    // Move caret right one word extending selection to new caret position.
+    void WordRightExtend();
+
+    // Move caret to first position on line.
+    void Home();
+
+    // Move caret to first position on line extending selection to new caret position.
+    void HomeExtend();
+
+    // Move caret to last position on line.
+    void LineEnd();
+
+    // Move caret to last position on line extending selection to new caret position.
+    void LineEndExtend();
+
+    // Move caret to first position in document.
+    void DocumentStart();
+
+    // Move caret to first position in document extending selection to new caret position.
+    void DocumentStartExtend();
+
+    // Move caret to last position in document.
+    void DocumentEnd();
+
+    // Move caret to last position in document extending selection to new caret position.
+    void DocumentEndExtend();
+
+    // Move caret one page up.
+    void PageUp();
+
+    // Move caret one page up extending selection to new caret position.
+    void PageUpExtend();
+
+    // Move caret one page down.
+    void PageDown();
+
+    // Move caret one page down extending selection to new caret position.
+    void PageDownExtend();
+
+    // Switch from insert to overtype mode or the reverse.
+    void EditToggleOvertype();
+
+    // Cancel any modes such as call tip or auto-completion list display.
+    void Cancel();
+
+    // Delete the selection or if no selection, the character before the caret.
+    void DeleteBack();
+
+    // If selection is empty or all on one line replace the selection with a tab character.
+    // If more than one line selected, indent the lines.
+    void Tab();
+
+    // Dedent the selected lines.
+    void BackTab();
+
+    // Insert a new line, may use a CRLF, CR or LF depending on EOL mode.
+    void NewLine();
+
+    // Insert a Form Feed character.
+    void FormFeed();
+
+    // Move caret to before first visible character on line.
+    // If already there move to first character on line.
+    void VCHome();
+
+    // Like VCHome but extending selection to new caret position.
+    void VCHomeExtend();
+
+    // Magnify the displayed text by increasing the sizes by 1 point.
+    void ZoomIn();
+
+    // Make the displayed text smaller by decreasing the sizes by 1 point.
+    void ZoomOut();
+
+    // Delete the word to the left of the caret.
+    void DelWordLeft();
+
+    // Delete the word to the right of the caret.
+    void DelWordRight();
+
+    // Delete the word to the right of the caret, but not the trailing non-word characters.
+    void DelWordRightEnd();
+
+    // Cut the line containing the caret.
+    void LineCut();
+
+    // Delete the line containing the caret.
+    void LineDelete();
+
+    // Switch the current line with the previous.
+    void LineTranspose();
+
+    // Duplicate the current line.
+    void LineDuplicate();
+
+    // Transform the selection to lower case.
+    void LowerCase();
+
+    // Transform the selection to upper case.
+    void UpperCase();
+
+    // Scroll the document down, keeping the caret visible.
+    void LineScrollDown();
+
+    // Scroll the document up, keeping the caret visible.
+    void LineScrollUp();
+
+    // Delete the selection or if no selection, the character before the caret.
+    // Will not delete the character before at the start of a line.
+    void DeleteBackNotLine();
+
+    // Move caret to first position on display line.
+    void HomeDisplay();
+
+    // Move caret to first position on display line extending selection to
+    // new caret position.
+    void HomeDisplayExtend();
+
+    // Move caret to last position on display line.
+    void LineEndDisplay();
+
+    // Move caret to last position on display line extending selection to new
+    // caret position.
+    void LineEndDisplayExtend();
+
+    // Like Home but when word-wrap is enabled goes first to start of display line
+    // HomeDisplay, then to start of document line Home.
+    void HomeWrap();
+
+    // Like HomeExtend but when word-wrap is enabled extends first to start of display line
+    // HomeDisplayExtend, then to start of document line HomeExtend.
+    void HomeWrapExtend();
+
+    // Like LineEnd but when word-wrap is enabled goes first to end of display line
+    // LineEndDisplay, then to start of document line LineEnd.
+    void LineEndWrap();
+
+    // Like LineEndExtend but when word-wrap is enabled extends first to end of display line
+    // LineEndDisplayExtend, then to start of document line LineEndExtend.
+    void LineEndWrapExtend();
+
+    // Like VCHome but when word-wrap is enabled goes first to start of display line
+    // VCHomeDisplay, then behaves like VCHome.
+    void VCHomeWrap();
+
+    // Like VCHomeExtend but when word-wrap is enabled extends first to start of display line
+    // VCHomeDisplayExtend, then behaves like VCHomeExtend.
+    void VCHomeWrapExtend();
+
+    // Copy the line containing the caret.
+    void LineCopy();
+
+    // Move the caret inside current view if it's not there already.
+    void MoveCaretInsideView();
+
+    // How many characters are on a line, including end of line characters?
+    int LineLength(int line) const;
+
+    // Highlight the characters at two positions.
+    void BraceHighlight(int posA, int posB);
+
+    // Use specified indicator to highlight matching braces instead of changing their style.
+    void BraceHighlightIndicator(bool useSetting, int indicator);
+
+    // Highlight the character at a position indicating there is no matching brace.
+    void BraceBadLight(int pos);
+
+    // Use specified indicator to highlight non matching brace instead of changing its style.
+    void BraceBadLightIndicator(bool useSetting, int indicator);
+
+    // Find the position of a matching brace or wxSTC_INVALID_POSITION if no match.
+    // The maxReStyle must be 0 for now. It may be defined in a future release.
+    int BraceMatch(int pos, int maxReStyle=0);
+
+    // Are the end of line characters visible?
+    bool GetViewEOL() const;
+
+    // Make the end of line characters visible or invisible.
+    void SetViewEOL(bool visible);
+
+    // Retrieve a pointer to the document object.
+    void* GetDocPointer();
+
+    // Change the document object used.
+    void SetDocPointer(void* docPointer);
+
+    // Set which document modification events are sent to the container.
+    void SetModEventMask(int eventMask);
+
+    // Retrieve the column number which text should be kept within.
+    int GetEdgeColumn() const;
+
+    // Set the column number of the edge.
+    // If text goes past the edge then it is highlighted.
+    void SetEdgeColumn(int column);
+
+    // Retrieve the edge highlight mode.
+    int GetEdgeMode() const;
+
+    // The edge may be displayed by a line (wxSTC_EDGE_LINE/wxSTC_EDGE_MULTILINE) or by highlighting text that
+    // goes beyond it (wxSTC_EDGE_BACKGROUND) or not displayed at all (wxSTC_EDGE_NONE).
+    void SetEdgeMode(int edgeMode);
+
+    // Retrieve the colour used in edge indication.
+    wxColour GetEdgeColour() const;
+
+    // Change the colour used in edge indication.
+    void SetEdgeColour(const wxColour& edgeColour);
+
+    // Add a new vertical edge to the view.
+    void MultiEdgeAddLine(int column, const wxColour& edgeColour);
+
+    // Clear all vertical edges.
+    void MultiEdgeClearAll();
+
+    // Sets the current caret position to be the search anchor.
+    void SearchAnchor();
+
+    // Find some text starting at the search anchor.
+    // Does not ensure the selection is visible.
+    int SearchNext(int searchFlags, const wxString& text);
+
+    // Find some text starting at the search anchor and moving backwards.
+    // Does not ensure the selection is visible.
+    int SearchPrev(int searchFlags, const wxString& text);
+
+    // Retrieves the number of lines completely visible.
+    int LinesOnScreen() const;
+
+    // Set whether a pop up menu is displayed automatically when the user presses
+    // the wrong mouse button on certain areas.
+    void UsePopUp(int popUpMode);
+
+    // Is the selection rectangular? The alternative is the more common stream selection.
+    bool SelectionIsRectangle() const;
+
+    // Set the zoom level. This number of points is added to the size of all fonts.
+    // It may be positive to magnify or negative to reduce.
+    void SetZoom(int zoomInPoints);
+
+    // Retrieve the zoom level.
+    int GetZoom() const;
+
+    // Create a new document object.
+    // Starts with reference count of 1 and not selected into editor.
+    void* CreateDocument();
+
+    // Extend life of document.
+    void AddRefDocument(void* docPointer);
+
+    // Release a reference to the document, deleting document if it fades to black.
+    void ReleaseDocument(void* docPointer);
+
+    // Get which document modification events are sent to the container.
+    int GetModEventMask() const;
+
+    // Change internal focus flag.
+    void SetSTCFocus(bool focus);
+
+    // Get internal focus flag.
+    bool GetSTCFocus() const;
+
+    // Change error status - 0 = OK.
+    void SetStatus(int status);
+
+    // Get error status.
+    int GetStatus() const;
+
+    // Set whether the mouse is captured when its button is pressed.
+    void SetMouseDownCaptures(bool captures);
+
+    // Get whether mouse gets captured.
+    bool GetMouseDownCaptures() const;
+
+    // Set whether the mouse wheel can be active outside the window.
+    void SetMouseWheelCaptures(bool captures);
+
+    // Get whether mouse wheel can be active outside the window.
+    bool GetMouseWheelCaptures() const;
+
+    // Sets the cursor to one of the wxSTC_CURSOR* values.
+    void SetSTCCursor(int cursorType);
+
+    // Get cursor type.
+    int GetSTCCursor() const;
+
+    // Change the way control characters are displayed:
+    // If symbol is < 32, keep the drawn way, else, use the given character.
+    void SetControlCharSymbol(int symbol);
+
+    // Get the way control characters are displayed.
+    int GetControlCharSymbol() const;
+
+    // Move to the previous change in capitalisation.
+    void WordPartLeft();
+
+    // Move to the previous change in capitalisation extending selection
+    // to new caret position.
+    void WordPartLeftExtend();
+
+    // Move to the change next in capitalisation.
+    void WordPartRight();
+
+    // Move to the next change in capitalisation extending selection
+    // to new caret position.
+    void WordPartRightExtend();
+
+    // Set the way the display area is determined when a particular line
+    // is to be moved to by Find, FindNext, GotoLine, etc.
+    void SetVisiblePolicy(int visiblePolicy, int visibleSlop);
+
+    // Delete back from the current position to the start of the line.
+    void DelLineLeft();
+
+    // Delete forwards from the current position to the end of the line.
+    void DelLineRight();
+
+    // Set the xOffset (ie, horizontal scroll position).
+    void SetXOffset(int xOffset);
+
+    // Get the xOffset (ie, horizontal scroll position).
+    int GetXOffset() const;
+
+    // Set the last x chosen value to be the caret x position.
+    void ChooseCaretX();
+
+    // Set the way the caret is kept visible when going sideways.
+    // The exclusion zone is given in pixels.
+    void SetXCaretPolicy(int caretPolicy, int caretSlop);
+
+    // Set the way the line the caret is on is kept visible.
+    // The exclusion zone is given in lines.
+    void SetYCaretPolicy(int caretPolicy, int caretSlop);
+
+    // Set printing to line wrapped (wxSTC_WRAP_WORD) or not line wrapped (wxSTC_WRAP_NONE).
+    void SetPrintWrapMode(int wrapMode);
+
+    // Is printing line wrapped?
+    int GetPrintWrapMode() const;
+
+    // Set a fore colour for active hotspots.
+    void SetHotspotActiveForeground(bool useSetting, const wxColour& fore);
+
+    // Get the fore colour for active hotspots.
+    wxColour GetHotspotActiveForeground() const;
+
+    // Set a back colour for active hotspots.
+    void SetHotspotActiveBackground(bool useSetting, const wxColour& back);
+
+    // Get the back colour for active hotspots.
+    wxColour GetHotspotActiveBackground() const;
+
+    // Enable / Disable underlining active hotspots.
+    void SetHotspotActiveUnderline(bool underline);
+
+    // Get whether underlining for active hotspots.
+    bool GetHotspotActiveUnderline() const;
+
+    // Limit hotspots to single line so hotspots on two lines don't merge.
+    void SetHotspotSingleLine(bool singleLine);
+
+    // Get the HotspotSingleLine property
+    bool GetHotspotSingleLine() const;
+
+    // Move caret down one paragraph (delimited by empty lines).
+    void ParaDown();
+
+    // Extend selection down one paragraph (delimited by empty lines).
+    void ParaDownExtend();
+
+    // Move caret up one paragraph (delimited by empty lines).
+    void ParaUp();
+
+    // Extend selection up one paragraph (delimited by empty lines).
+    void ParaUpExtend();
+
+    // Given a valid document position, return the previous position taking code
+    // page into account. Returns 0 if passed 0.
+    int PositionBefore(int pos);
+
+    // Given a valid document position, return the next position taking code
+    // page into account. Maximum value returned is the last position in the document.
+    int PositionAfter(int pos);
+
+    // Given a valid document position, return a position that differs in a number
+    // of characters. Returned value is always between 0 and last position in document.
+    int PositionRelative(int pos, int relative);
+
+    // Copy a range of text to the clipboard. Positions are clipped into the document.
+    void CopyRange(int start, int end);
+
+    // Copy argument text to the clipboard.
+    void CopyText(int length, const wxString& text);
+    
+    // Set the selection mode to stream (wxSTC_SEL_STREAM) or rectangular (wxSTC_SEL_RECTANGLE/wxSTC_SEL_THIN) or
+    // by lines (wxSTC_SEL_LINES).
+    void SetSelectionMode(int selectionMode);
+
+    // Get the mode of the current selection.
+    int GetSelectionMode() const;
+
+    // Retrieve the position of the start of the selection at the given line (wxSTC_INVALID_POSITION if no selection on this line).
+    int GetLineSelStartPosition(int line);
+
+    // Retrieve the position of the end of the selection at the given line (wxSTC_INVALID_POSITION if no selection on this line).
+    int GetLineSelEndPosition(int line);
+
+    // Move caret down one line, extending rectangular selection to new caret position.
+    void LineDownRectExtend();
+
+    // Move caret up one line, extending rectangular selection to new caret position.
+    void LineUpRectExtend();
+
+    // Move caret left one character, extending rectangular selection to new caret position.
+    void CharLeftRectExtend();
+
+    // Move caret right one character, extending rectangular selection to new caret position.
+    void CharRightRectExtend();
+
+    // Move caret to first position on line, extending rectangular selection to new caret position.
+    void HomeRectExtend();
+
+    // Move caret to before first visible character on line.
+    // If already there move to first character on line.
+    // In either case, extend rectangular selection to new caret position.
+    void VCHomeRectExtend();
+
+    // Move caret to last position on line, extending rectangular selection to new caret position.
+    void LineEndRectExtend();
+
+    // Move caret one page up, extending rectangular selection to new caret position.
+    void PageUpRectExtend();
+
+    // Move caret one page down, extending rectangular selection to new caret position.
+    void PageDownRectExtend();
+
+    // Move caret to top of page, or one page up if already at top of page.
+    void StutteredPageUp();
+
+    // Move caret to top of page, or one page up if already at top of page, extending selection to new caret position.
+    void StutteredPageUpExtend();
+
+    // Move caret to bottom of page, or one page down if already at bottom of page.
+    void StutteredPageDown();
+
+    // Move caret to bottom of page, or one page down if already at bottom of page, extending selection to new caret position.
+    void StutteredPageDownExtend();
+
+    // Move caret left one word, position cursor at end of word.
+    void WordLeftEnd();
+
+    // Move caret left one word, position cursor at end of word, extending selection to new caret position.
+    void WordLeftEndExtend();
+
+    // Move caret right one word, position cursor at end of word.
+    void WordRightEnd();
+
+    // Move caret right one word, position cursor at end of word, extending selection to new caret position.
+    void WordRightEndExtend();
+
+    // Set the set of characters making up whitespace for when moving or selecting by word.
+    // Should be called after SetWordChars.
+    void SetWhitespaceChars(const wxString& characters);
+
+    // Get the set of characters making up whitespace for when moving or selecting by word.
+    wxString GetWhitespaceChars() const;
+
+    // Set the set of characters making up punctuation characters
+    // Should be called after SetWordChars.
+    void SetPunctuationChars(const wxString& characters);
+
+    // Get the set of characters making up punctuation characters
+    wxString GetPunctuationChars() const;
+
+    // Reset the set of characters for whitespace and word characters to the defaults.
+    void SetCharsDefault();
+
+    // Get currently selected item position in the auto-completion list
+    int AutoCompGetCurrent() const;
+
+    // Get currently selected item text in the auto-completion list
+    wxString AutoCompGetCurrentText() const;
+
+    // Set auto-completion case insensitive behaviour to either prefer case-sensitive matches or have no preference.
+    void AutoCompSetCaseInsensitiveBehaviour(int behaviour);
+
+    // Get auto-completion case insensitive behaviour.
+    int AutoCompGetCaseInsensitiveBehaviour() const;
+
+    // Change the effect of autocompleting when there are multiple selections.
+    void AutoCompSetMulti(int multi);
+
+    // Retrieve the effect of autocompleting when there are multiple selections.
+    int AutoCompGetMulti() const;
+
+    // Set the way autocompletion lists are ordered.
+    void AutoCompSetOrder(int order);
+
+    // Get the way autocompletion lists are ordered.
+    int AutoCompGetOrder() const;
+
+    // Enlarge the document to a particular size of text bytes.
+    void Allocate(int bytes);
+
+    // Find the position of a column on a line taking into account tabs and
+    // multi-byte characters. If beyond end of line, return line end position.
+    int FindColumn(int line, int column);
+
+    // Can the caret preferred x position only be changed by explicit movement commands?
+    int GetCaretSticky() const;
+
+    // Stop the caret preferred x position changing when the user types.
+    void SetCaretSticky(int useCaretStickyBehaviour);
+
+    // Switch between sticky and non-sticky: meant to be bound to a key.
+    void ToggleCaretSticky();
+
+    // Enable/Disable convert-on-paste for line endings
+    void SetPasteConvertEndings(bool convert);
+
+    // Get convert-on-paste setting
+    bool GetPasteConvertEndings() const;
+
+    // Duplicate the selection. If selection empty duplicate the line containing the caret.
+    void SelectionDuplicate();
+
+    // Set background alpha of the caret line.
+    void SetCaretLineBackAlpha(int alpha);
+
+    // Get the background alpha of the caret line.
+    int GetCaretLineBackAlpha() const;
+
+    // Set the style of the caret to be drawn.
+    void SetCaretStyle(int caretStyle);
+
+    // Returns the current style of the caret.
+    int GetCaretStyle() const;
+
+    // Set the indicator used for IndicatorFillRange and IndicatorClearRange
+    void SetIndicatorCurrent(int indicator);
+
+    // Get the current indicator
+    int GetIndicatorCurrent() const;
+
+    // Set the value used for IndicatorFillRange
+    void SetIndicatorValue(int value);
+
+    // Get the current indicator value
+    int GetIndicatorValue() const;
+
+    // Turn a indicator on over a range.
+    void IndicatorFillRange(int start, int lengthFill);
+
+    // Turn a indicator off over a range.
+    void IndicatorClearRange(int start, int lengthClear);
+
+    // Are any indicators present at pos?
+    int IndicatorAllOnFor(int pos);
+
+    // What value does a particular indicator have at a position?
+    int IndicatorValueAt(int indicator, int pos);
+
+    // Where does a particular indicator start?
+    int IndicatorStart(int indicator, int pos);
+
+    // Where does a particular indicator end?
+    int IndicatorEnd(int indicator, int pos);
+
+    // Set number of entries in position cache
+    void SetPositionCacheSize(int size);
+
+    // How many entries are allocated to the position cache?
+    int GetPositionCacheSize() const;
+
+    // Copy the selection, if selection empty copy the line with the caret
+    void CopyAllowLine();
+
+    // Compact the document buffer and return a read-only pointer to the
+    // characters in the document.
+    const char* GetCharacterPointer() const;
+
+    // Return a read-only pointer to a range of characters in the document.
+    // May move the gap so that the range is contiguous, but will only move up
+    // to lengthRange bytes.
+    const char* GetRangePointer(int position, int rangeLength) const;
+
+    // Return a position which, to avoid performance costs, should not be within
+    // the range of a call to GetRangePointer.
+    int GetGapPosition() const;
+
+    // Set the alpha fill colour of the given indicator.
+    void IndicatorSetAlpha(int indicator, int alpha);
+
+    // Get the alpha fill colour of the given indicator.
+    int IndicatorGetAlpha(int indicator) const;
+
+    // Set the alpha outline colour of the given indicator.
+    void IndicatorSetOutlineAlpha(int indicator, int alpha);
+
+    // Get the alpha outline colour of the given indicator.
+    int IndicatorGetOutlineAlpha(int indicator) const;
+
+    // Set extra ascent for each line
+    void SetExtraAscent(int extraAscent);
+
+    // Get extra ascent for each line
+    int GetExtraAscent() const;
+
+    // Set extra descent for each line
+    void SetExtraDescent(int extraDescent);
+
+    // Get extra descent for each line
+    int GetExtraDescent() const;
+
+    // Which symbol was defined for markerNumber with MarkerDefine
+    int GetMarkerSymbolDefined(int markerNumber);
+
+    // Set the text in the text margin for a line
+    void MarginSetText(int line, const wxString& text);
+
+    // Get the text in the text margin for a line
+    wxString MarginGetText(int line) const;
+
+    // Set the style number for the text margin for a line
+    void MarginSetStyle(int line, int style);
+
+    // Get the style number for the text margin for a line
+    int MarginGetStyle(int line) const;
+
+    // Set the style in the text margin for a line
+    void MarginSetStyles(int line, const wxString& styles);
+
+    // Get the styles in the text margin for a line
+    wxString MarginGetStyles(int line) const;
+
+    // Clear the margin text on all lines
+    void MarginTextClearAll();
+
+    // Get the start of the range of style numbers used for margin text
+    void MarginSetStyleOffset(int style);
+
+    // Get the start of the range of style numbers used for margin text
+    int MarginGetStyleOffset() const;
+
+    // Set the margin options.
+    void SetMarginOptions(int marginOptions);
+
+    // Get the margin options.
+    int GetMarginOptions() const;
+
+    // Set the annotation text for a line
+    void AnnotationSetText(int line, const wxString& text);
+
+    // Get the annotation text for a line
+    wxString AnnotationGetText(int line) const;
+
+    // Set the style number for the annotations for a line
+    void AnnotationSetStyle(int line, int style);
+
+    // Get the style number for the annotations for a line
+    int AnnotationGetStyle(int line) const;
+
+    // Set the annotation styles for a line
+    void AnnotationSetStyles(int line, const wxString& styles);
+
+    // Get the annotation styles for a line
+    wxString AnnotationGetStyles(int line) const;
+
+    // Get the number of annotation lines for a line
+    int AnnotationGetLines(int line) const;
+
+    // Clear the annotations from all lines
+    void AnnotationClearAll();
+
+    // Set the visibility for the annotations for a view
+    void AnnotationSetVisible(int visible);
+
+    // Get the visibility for the annotations for a view
+    int AnnotationGetVisible() const;
+
+    // Get the start of the range of style numbers used for annotations
+    void AnnotationSetStyleOffset(int style);
+
+    // Get the start of the range of style numbers used for annotations
+    int AnnotationGetStyleOffset() const;
+
+    // Release all extended (>255) style numbers
+    void ReleaseAllExtendedStyles();
+
+    // Allocate some extended (>255) style numbers and return the start of the range
+    int AllocateExtendedStyles(int numberStyles);
+
+    // Add a container action to the undo stack
+    void AddUndoAction(int token, int flags);
+
+    // Find the position of a character from a point within the window.
+    int CharPositionFromPoint(int x, int y);
+
+    // Find the position of a character from a point within the window.
+    // Return wxSTC_INVALID_POSITION if not close to text.
+    int CharPositionFromPointClose(int x, int y);
+
+    // Set whether switching to rectangular mode while selecting with the mouse is allowed.
+    void SetMouseSelectionRectangularSwitch(bool mouseSelectionRectangularSwitch);
+
+    // Whether switching to rectangular mode while selecting with the mouse is allowed.
+    bool GetMouseSelectionRectangularSwitch() const;
+
+    // Set whether multiple selections can be made
+    void SetMultipleSelection(bool multipleSelection);
+
+    // Whether multiple selections can be made
+    bool GetMultipleSelection() const;
+
+    // Set whether typing can be performed into multiple selections
+    void SetAdditionalSelectionTyping(bool additionalSelectionTyping);
+
+    // Whether typing can be performed into multiple selections
+    bool GetAdditionalSelectionTyping() const;
+
+    // Set whether additional carets will blink
+    void SetAdditionalCaretsBlink(bool additionalCaretsBlink);
+
+    // Whether additional carets will blink
+    bool GetAdditionalCaretsBlink() const;
+
+    // Set whether additional carets are visible
+    void SetAdditionalCaretsVisible(bool additionalCaretsVisible);
+
+    // Whether additional carets are visible
+    bool GetAdditionalCaretsVisible() const;
+
+    // How many selections are there?
+    int GetSelections() const;
+
+    // Is every selected range empty?
+    bool GetSelectionEmpty() const;
+
+    // Clear selections to a single empty stream selection
+    void ClearSelections();
+
+    // Add a selection
+    int AddSelection(int caret, int anchor);
+
+    // Drop one selection
+    void DropSelectionN(int selection);
+
+    // Set the main selection
+    void SetMainSelection(int selection);
+
+    // Which selection is the main selection
+    int GetMainSelection() const;
+
+    // Set the caret position of the nth selection.
+    void SetSelectionNCaret(int selection, int caret);
+
+    // Return the caret position of the nth selection.
+    int GetSelectionNCaret(int selection) const;
+
+    // Set the anchor position of the nth selection.
+    void SetSelectionNAnchor(int selection, int anchor);
+
+    // Return the anchor position of the nth selection.
+    int GetSelectionNAnchor(int selection) const;
+
+    // Set the virtual space of the caret of the nth selection.
+    void SetSelectionNCaretVirtualSpace(int selection, int space);
+
+    // Return the virtual space of the caret of the nth selection.
+    int GetSelectionNCaretVirtualSpace(int selection) const;
+
+    // Set the virtual space of the anchor of the nth selection.
+    void SetSelectionNAnchorVirtualSpace(int selection, int space);
+
+    // Return the virtual space of the anchor of the nth selection.
+    int GetSelectionNAnchorVirtualSpace(int selection) const;
+
+    // Sets the position that starts the selection - this becomes the anchor.
+    void SetSelectionNStart(int selection, int anchor);
+
+    // Returns the position at the start of the selection.
+    int GetSelectionNStart(int selection) const;
+
+    // Sets the position that ends the selection - this becomes the currentPosition.
+    void SetSelectionNEnd(int selection, int caret);
+
+    // Returns the position at the end of the selection.
+    int GetSelectionNEnd(int selection) const;
+
+    // Set the caret position of the rectangular selection.
+    void SetRectangularSelectionCaret(int caret);
+
+    // Return the caret position of the rectangular selection.
+    int GetRectangularSelectionCaret() const;
+
+    // Set the anchor position of the rectangular selection.
+    void SetRectangularSelectionAnchor(int anchor);
+
+    // Return the anchor position of the rectangular selection.
+    int GetRectangularSelectionAnchor() const;
+
+    // Set the virtual space of the caret of the rectangular selection.
+    void SetRectangularSelectionCaretVirtualSpace(int space);
+
+    // Return the virtual space of the caret of the rectangular selection.
+    int GetRectangularSelectionCaretVirtualSpace() const;
+
+    // Set the virtual space of the anchor of the rectangular selection.
+    void SetRectangularSelectionAnchorVirtualSpace(int space);
+
+    // Return the virtual space of the anchor of the rectangular selection.
+    int GetRectangularSelectionAnchorVirtualSpace() const;
+
+    // Set options for virtual space behaviour.
+    void SetVirtualSpaceOptions(int virtualSpaceOptions);
+
+    // Return options for virtual space behaviour.
+    int GetVirtualSpaceOptions() const;
+
+    // On GTK+, allow selecting the modifier key to use for mouse-based
+    // rectangular selection. Often the window manager requires Alt+Mouse Drag
+    // for moving windows.
+    // Valid values are wxSTC_KEYMOD_CTRL (default), wxSTC_KEYMOD_ALT, or wxSTC_KEYMOD_SUPER.
+    void SetRectangularSelectionModifier(int modifier);
+
+    // Get the modifier key used for rectangular selection.
+    int GetRectangularSelectionModifier() const;
+
+    // Set the foreground colour of additional selections.
+    // Must have previously called SetSelFore with non-zero first argument for this to have an effect.
+    void SetAdditionalSelForeground(const wxColour& fore);
+
+    // Set the background colour of additional selections.
+    // Must have previously called SetSelBack with non-zero first argument for this to have an effect.
+    void SetAdditionalSelBackground(const wxColour& back);
+    
+    // Set the alpha of the selection.
+    void SetAdditionalSelAlpha(int alpha);
+
+    // Get the alpha of the selection.
+    int GetAdditionalSelAlpha() const;
+
+    // Set the foreground colour of additional carets.
+    void SetAdditionalCaretForeground(const wxColour& fore);
+
+    // Get the foreground colour of additional carets.
+    wxColour GetAdditionalCaretForeground() const;
+
+    // Set the main selection to the next selection.
+    void RotateSelection();
+
+    // Swap that caret and anchor of the main selection.
+    void SwapMainAnchorCaret();
+
+    // Add the next occurrence of the main selection to the set of selections as main.
+    // If the current selection is empty then select word around caret.
+    void MultipleSelectAddNext();
+
+    // Add each occurrence of the main selection in the target to the set of selections.
+    // If the current selection is empty then select word around caret.
+    void MultipleSelectAddEach();
+
+    // Indicate that the internal state of a lexer has changed over a range and therefore
+    // there may be a need to redraw.
+    int ChangeLexerState(int start, int end);
+
+    // Find the next line at or after lineStart that is a contracted fold header line.
+    // Return -1 when no more lines.
+    int ContractedFoldNext(int lineStart);
+
+    // Centre current line in window.
+    void VerticalCentreCaret();
+
+    // Move the selected lines up one line, shifting the line above after the selection
+    void MoveSelectedLinesUp();
+
+    // Move the selected lines down one line, shifting the line below before the selection
+    void MoveSelectedLinesDown();
+
+    // Set the identifier reported as idFrom in notification messages.
+    void SetIdentifier(int identifier);
+
+    // Get the identifier.
+    int GetIdentifier() const;
+
+    // Set the width for future RGBA image data.
+    void RGBAImageSetWidth(int width);
+
+    // Set the height for future RGBA image data.
+    void RGBAImageSetHeight(int height);
+
+    // Set the scale factor in percent for future RGBA image data.
+    void RGBAImageSetScale(int scalePercent);
+
+    // Define a marker from RGBA data.
+    // It has the width and height from RGBAImageSetWidth/Height
+    void MarkerDefineRGBAImage(int markerNumber, const unsigned char* pixels);
+
+    // Register an RGBA image for use in autocompletion lists.
+    // It has the width and height from RGBAImageSetWidth/Height
+    void RegisterRGBAImage(int type, const unsigned char* pixels);
+
+    // Scroll to start of document.
+    void ScrollToStart();
+
+    // Scroll to end of document.
+    void ScrollToEnd();
+
+    // Set the technology used.
+    void SetTechnology(int technology);
+
+    // Get the tech.
+    int GetTechnology() const;
+
+    // Create an ILoader*.
+    void* CreateLoader(int bytes) const;
+
+    // Move caret to before first visible character on display line.
+    // If already there move to first character on display line.
+    void VCHomeDisplay();
+
+    // Like VCHomeDisplay but extending selection to new caret position.
+    void VCHomeDisplayExtend();
+
+    // Is the caret line always visible?
+    bool GetCaretLineVisibleAlways() const;
+
+    // Sets the caret line to always visible.
+    void SetCaretLineVisibleAlways(bool alwaysVisible);
+
+    // Set the line end types that the application wants to use. May not be used if incompatible with lexer or encoding.
+    void SetLineEndTypesAllowed(int lineEndBitSet);
+
+    // Get the line end types currently allowed.
+    int GetLineEndTypesAllowed() const;
+
+    // Get the line end types currently recognised. May be a subset of the allowed types due to lexer limitation.
+    int GetLineEndTypesActive() const;
+
+    // Set the way a character is drawn.
+    void SetRepresentation(const wxString& encodedCharacter, const wxString& representation);
+
+    // Set the way a character is drawn.
+    wxString GetRepresentation(const wxString& encodedCharacter) const;
+
+    // Remove a character representation.
+    void ClearRepresentation(const wxString& encodedCharacter);
+
+    // Start notifying the container of all key presses and commands.
+    void StartRecord();
+
+    // Stop notifying the container of all key presses and commands.
+    void StopRecord();
+
+    // Set the lexing language of the document.
+    void SetLexer(int lexer);
+
+    // Retrieve the lexing language of the document.
+    int GetLexer() const;
+
+    // Colourise a segment of the document using the current lexing language.
+    void Colourise(int start, int end);
+
+    // Set up a value that may be used by a lexer for some optional feature.
+    void SetProperty(const wxString& key, const wxString& value);
+
+    // Set up the key words used by the lexer.
+    void SetKeyWords(int keyWordSet, const wxString& keyWords);
+
+    // Set the lexing language of the document based on string name.
+    void SetLexerLanguage(const wxString& language);
+
+    // Load a lexer library (dll / so).
+    void LoadLexerLibrary(const wxString& path);
+
+    // Retrieve a "property" value previously set with SetProperty.
+    wxString GetProperty(const wxString& key);
+
+    // Retrieve a "property" value previously set with SetProperty,
+    // with "$()" variable replacement on returned buffer.
+    wxString GetPropertyExpanded(const wxString& key);
+
+    // Retrieve a "property" value previously set with SetProperty,
+    // interpreted as an int AFTER any "$()" variable replacement.
+    int GetPropertyInt(const wxString &key, int defaultValue=0) const;
+
+    // Retrieve the number of bits the current lexer needs for styling.
+    //wxDEPRECATED_MSG( "This method uses a function deprecated in the Scintilla library." )
     int GetStyleBitsNeeded() const;
 
-    //@}
+    // Retrieve the lexing language of the document.
+    wxString GetLexerLanguage() const;
 
-// deprecated items
-     %wxchkver_2_9_5 && !%wxchkver_3_1_0 bool GetKeysUnicode() const;
-     %wxchkver_2_9_5 && !%wxchkver_3_1_0 void SetKeysUnicode(bool keysUnicode);
-    !%wxchkver_2_8 void SetCaretLineBack(const wxColour& back);
-    !%wxchkver_2_8 wxColour GetCaretLineBack();
-    !%wxchkver_2_9_5 bool GetIndentationGuides();
-    !%wxchkver_2_9_5 void SetCaretSticky(bool useCaretStickyBehaviour);
-    !%wxchkver_2_9_5 void SetIndentationGuides(bool show);
-    !%wxchkver_3_1_0 int PositionFromPoint(const wxPoint& pt) const;
-    !%wxchkver_3_1_1 int BraceMatch(int pos);
-    !%wxchkver_3_1_1 int GetPropertyInt(const wxString& key) const;
-    !%wxchkver_3_1_1 void UsePopUp(bool allowPopUp);
-    // %override [Lua string styleBytes] wxStyledTextCtrl::SetStyleBytes(int length, Lua string styleBytes);
-    // Set an indicator to draw under text or over(default).
-    // These are like their namesakes Home(Extend)?, LineEnd(Extend)?, VCHome(Extend)?
-    // Valid values are SCMOD_CTRL(default), SCMOD_ALT, or SCMOD_SUPER.
-    //const char* GetCharacterPointer() const;
-    //const char* GetRangePointer(int position, int rangeLength) const;
-    //void AddStyledText(const wxMemoryBuffer& data);
-    //void* CreateLoader(int bytes) const;
-    //wxMemoryBuffer GetStyledText(int startPos, int endPos);
+    // %override PrivateLexerCall
+    // For private communication between an application and a known lexer.
+    void* PrivateLexerCall(int operation, void* pointer);
+
+    // Retrieve a '\\n' separated list of properties understood by the current lexer.
+    wxString PropertyNames() const;
+
+    // Retrieve the type of a property.
+    int PropertyType(const wxString& name);
+
+    // Describe a property.
+    wxString DescribeProperty(const wxString& name) const;
+
+    // Retrieve a '\\n' separated list of descriptions of the keyword sets understood by the current lexer.
+    wxString DescribeKeyWordSets() const;
+
+    // Bit set of LineEndType enumertion for which line ends beyond the standard
+    // LF, CR, and CRLF are supported by the lexer.
+    int GetLineEndTypesSupported() const;
+
+    // Allocate a set of sub styles for a particular base style, returning start of range
+    int AllocateSubStyles(int styleBase, int numberStyles);
+
+    // The starting style number for the sub styles associated with a base style
+    int GetSubStylesStart(int styleBase) const;
+
+    // The number of sub styles associated with a base style
+    int GetSubStylesLength(int styleBase) const;
+
+    // For a sub style, return the base style, else return the argument.
+    int GetStyleFromSubStyle(int subStyle) const;
+
+    // For a secondary style, return the primary style, else return the argument.
+    int GetPrimaryStyleFromStyle(int style) const;
+
+    // Free allocated sub styles
+    void FreeSubStyles();
+
+    // Set the identifiers that are shown in a particular style
+    void SetIdentifiers(int style, const wxString& identifiers);
+
+    // Where styles are duplicated by a feature such as active/inactive code
+    // return the distance between the two types.
+    int DistanceToSecondaryStyles() const;
+
+    // Get the set of base styles that can be extended with sub styles
+    wxString GetSubStyleBases() const;
 
     //}}}
     //----------------------------------------------------------------------
 
     // Manually declared methods
-    // ----------------------------------------------
-    /**
-        @member_group_name{additional_methods, Additional wxStyledTextCtrl methods}
 
-        In addition to the standard Scintilla functions, wxStyledTextCtrl
-        includes the following functions to simplify some tasks.
-    */
-    //@{
-
-    /**
-       Returns the line number of the line with the caret.
-    */
+    // Returns the line number of the line with the caret.
     int GetCurrentLine();
 
-    /**
-       Extract style settings from a spec-string which is composed of one or
-       more of the following comma separated elements:
-    
-          bold                    turns on bold
-          italic                  turns on italics
-          fore:[name or \#RRGGBB]  sets the foreground colour
-          back:[name or \#RRGGBB]  sets the background colour
-          face:[facename]         sets the font face name to use
-          size:[num]              sets the font size in points
-          eol                     turns on eol filling
-          underline               turns on underlining
-    */
+    // Extract style settings from a spec-string which is composed of one or
+    // more of the following comma separated elements:
+    //
+    //      bold                    turns on bold
+    //      italic                  turns on italics
+    //      fore:[name or #RRGGBB]  sets the foreground colour
+    //      back:[name or #RRGGBB]  sets the background colour
+    //      face:[facename]         sets the font face name to use
+    //      size:[num]              sets the font size in points
+    //      eol                     turns on eol filling
+    //      underline               turns on underlining
+    //
     void StyleSetSpec(int styleNum, const wxString& spec);
+    
+    
+    // Get the font of a style.
+    wxFont StyleGetFont(int style);
 
-    /**
-       Get the font of a style.
-    */
-    %wxchkver_2_9_5 wxFont StyleGetFont(int style);
 
-    /**
-       Set style size, face, bold, italic, and underline attributes from
-       a wxFont's attributes.
-    */
-    void StyleSetFont(int styleNum, wxFont& font);
+    // Set style size, face, bold, italic, and underline attributes from
+    // a wxFont's attributes.
+    void StyleSetFont(int styleNum, const wxFont& font);
 
-    /**
-       Set all font style attributes at once.
-    */
+    // Set all font style attributes at once.
     void StyleSetFontAttr(int styleNum, int size, const wxString& faceName, bool bold, bool italic, bool underline, wxFontEncoding encoding=wxFONTENCODING_DEFAULT);
 
-    /**
-       Set the font encoding to be used by a style.
-    */
+
+    // Set the font encoding to be used by a style.
     void StyleSetFontEncoding(int style, wxFontEncoding encoding);
 
-    /**
-       Perform one of the operations defined by the wxSTC_CMD_* constants.
-    */
+
+    // Perform one of the operations defined by the wxSTC_CMD_* constants.
     void CmdKeyExecute(int cmd);
 
-    /**
-       Set the left and right margin in the edit area, measured in pixels.
-    */
+
+    // Set the left and right margin in the edit area, measured in pixels.
     void SetMargins(int left, int right);
 
-    /**
-       Scroll enough to make the given line visible
-    */
+
+    // Scroll enough to make the given line visible
     void ScrollToLine(int line);
 
-    /**
-       Scroll enough to make the given column visible
-    */
+
+    // Scroll enough to make the given column visible
     void ScrollToColumn(int column);
 
-    /**
-       Scintilla API call.
-    */
-    long SendMsg(int msg, long wp=0, long lp=0);
 
-    /**
-       Set the vertical scrollbar to use instead of the one that's built-in.
-    */
+    // Send a message to Scintilla
+    //
+    // NB: this method is not really const as it can modify the control but it
+    //     has to be declared as such as it's called from both const and
+    //     non-const methods and we can't distinguish between the two
+    //wxIntPtr SendMsg(int msg, wxUIntPtr wp=0, wxIntPtr lp=0) const;
+    long SendMsg(int msg, long wp=0, long lp=0) const;
+
+
+    // Set the vertical scrollbar to use instead of the one that's built-in.
     void SetVScrollBar(wxScrollBar* bar);
 
-    /**
-       Set the horizontal scrollbar to use instead of the one that's built-in.
-    */
+
+    // Set the horizontal scrollbar to use instead of the one that's built-in.
     void SetHScrollBar(wxScrollBar* bar);
 
-    /**
-       Can be used to prevent the EVT_CHAR handler from adding the char
-    */
+    // Can be used to prevent the EVT_CHAR handler from adding the char
     bool GetLastKeydownProcessed();
     void SetLastKeydownProcessed(bool val);
 
-    /**
-       Write the contents of the editor to filename
-    */
+/*
+    // if we derive from wxTextAreaBase it already provides these methods
+#if !wxUSE_TEXTCTRL
+    // Write the contents of the editor to filename
     bool SaveFile(const wxString& filename);
 
-    /**
-       Load the contents of filename into the editor
-    */
+    // Load the contents of filename into the editor
     bool LoadFile(const wxString& filename);
+#endif // !wxUSE_TEXTCTRL
+*/
 
-    /**
-       Allow for simulating a DnD DragEnter
+/*
+#ifdef STC_USE_DND
+    // Allow for simulating a DnD DragEnter
+    wxDragResult DoDragEnter(wxCoord x, wxCoord y, wxDragResult def);
 
-       @since 3.1.0
-    */
-    // wxDragResult DoDragEnter(wxCoord x, wxCoord y, wxDragResult defaultRes);
+    // Allow for simulating a DnD DragOver
+    wxDragResult DoDragOver(wxCoord x, wxCoord y, wxDragResult def);
 
-    /**
-       Allow for simulating a DnD DragOver
-    */
-    // wxDragResult DoDragOver(wxCoord x, wxCoord y, wxDragResult defaultRes);
+    // Allow for simulating a DnD DragLeave
+    void DoDragLeave();
 
-    /**
-       Allow for simulating a DnD DragLeave
-
-       @since 3.1.0
-    */
-    %wxchkver_3_1_0 void DoDragLeave();
-
-    /**
-       Allow for simulating a DnD DropText
-    */
+    // Allow for simulating a DnD DropText
     bool DoDropText(long x, long y, const wxString& data);
+#endif
+*/
 
-    /**
-       Specify whether anti-aliased fonts should be used.
+    // Specify whether anti-aliased fonts should be used.  Will have no effect
+    // on some platforms, but on some (wxMac for example) can greatly improve
+    // performance.
+    void SetUseAntiAliasing(bool useAA);
 
-      This will have no effect on some platforms, but on some (wxMac for
-      example) can greatly improve performance.
-    */
-    !%wxchkver_3_1_0 void SetUseAntiAliasing(bool useAA);
+    // Returns the current UseAntiAliasing setting.
+    bool GetUseAntiAliasing();
 
-    /**
-       Returns the current UseAntiAliasing setting.
-    */
-    !%wxchkver_3_1_0 bool GetUseAntiAliasing();
-
-    /**
-       Clear annotations from the given line.
-    */
-    %wxchkver_2_9_5 void AnnotationClearLine(int line);
-
-    //@}
+    // Clear annotations from the given line.
+    void AnnotationClearLine(int line);
 
 
-    // Raw versions
-    // ----------------------------------------------
-    /**
-        @member_group_name{raw_variants , Raw variants  }
 
-        These methods allow data to be sent to or received from the control
-        using character buffers instead of using a wxString.
-    */
-    //@{
+    // The following methods are nearly equivalent to their similarly named
+    // cousins above.  The difference is that these methods bypass wxString
+    // and always use a char* even if used in a unicode build of wxWidgets.
+    // In that case the character data will be utf-8 encoded since that is
+    // what is used internally by Scintilla in unicode builds.
 
-    /**
-       Add text to the document at current position.
-    */
+    // Add text to the document at current position.
     void AddTextRaw(const char* text, int length=-1);
 
-    /**
-       Insert string at a position.
-    */
+    // Insert string at a position.
     void InsertTextRaw(int pos, const char* text);
 
-    /**
-       Retrieve the text of the line containing the caret.
-       Returns the index of the caret on the line.
-    */
-//    wxCharBuffer GetCurLineRaw(int* linePos=NULL);
+    // Retrieve the text of the line containing the caret.
+    // Returns the index of the caret on the line.
+    //wxCharBuffer GetCurLineRaw(int* linePos=NULL);
 
-    /**
-       Retrieve the contents of a line.
-    */
+    // Retrieve the contents of a line.
     wxCharBuffer GetLineRaw(int line);
 
-    /**
-       Retrieve the selected text.
-    */
+    // Retrieve the selected text.
     wxCharBuffer GetSelectedTextRaw();
 
-    /**
-       Retrieve the target text.
+    // Retrieve the target text.
+    wxCharBuffer GetTargetTextRaw();
 
-       @since 3.1.1
-    */
-    %wxchkver_3_1_1 wxCharBuffer GetTargetTextRaw();
-
-    /**
-       Retrieve a range of text.
-    */
+    // Retrieve a range of text.
     wxCharBuffer GetTextRangeRaw(int startPos, int endPos);
 
-    /**
-       Replace the contents of the document with the argument text.
-    */
+    // Replace the contents of the document with the argument text.
     void SetTextRaw(const char* text);
 
-    /**
-       Retrieve all the text in the document.
-    */
+    // Retrieve all the text in the document.
     wxCharBuffer GetTextRaw();
 
-    /**
-       Append a string to the end of the document without changing the selection.
-    */
+    // Append a string to the end of the document without changing the selection.
     void AppendTextRaw(const char* text, int length=-1);
 
-    //@}
+    // implement wxTextEntryBase pure virtual methods
+    // ----------------------------------------------
 
+    virtual void WriteText(const wxString& text);
+    virtual void Remove(long from, long to);
+    virtual void Replace(long from, long to, const wxString& text);
 
-// deprecated items
-    !%wxchkver_3_1_0 bool GetUseAntiAliasing();
-    !%wxchkver_3_1_0 void SetUseAntiAliasing(bool useAA);
-    // static wxVersionInfo GetLibraryVersionInfo();
-    // wxDragResult DoDragEnter(wxCoord x, wxCoord y, wxDragResult defaultRes);
-    // wxDragResult DoDragOver(wxCoord x, wxCoord y, wxDragResult defaultRes);
-//    wxCharBuffer GetCurLineRaw(int* linePos=NULL);
+    virtual void SetInsertionPoint(long pos);
+    virtual long GetInsertionPoint() const;
+    virtual long GetLastPosition() const;
 
-    // wxTextEntryBase pure virtual methods
+    virtual void SetSelection(long from, long to);
+    virtual void SelectNone();
 
+		// %override [int from, int to] wxStyledTextCtrl::GetSelection();
+    // C++ Func: virtual void GetSelection(long *from, long *to) const
     // Retrieve the start and end positions of the current selection.
-    void GetSelection();
-    // Select a range of text.
-    void SetSelection(int start, int end);
-    // ....the rest is skipped
+    virtual void GetSelection() const;
 
-    // wxTextAreaBase pure virtual methods
-    // ....skipped
+    virtual bool IsEditable() const;
+    virtual void SetEditable(bool editable);
 
+
+    // implement wxTextAreaBase pure virtual methods
+    // ---------------------------------------------
+
+    virtual int GetLineLength(long lineNo) const;
+    virtual wxString GetLineText(long lineNo) const;
+    virtual int GetNumberOfLines() const;
+
+    virtual bool IsModified() const;
+    virtual void MarkDirty();
+    virtual void DiscardEdits();
+
+    //virtual bool SetStyle(long WXUNUSED(start), long WXUNUSED(end), const wxTextAttr& WXUNUSED(style));
+    //virtual bool GetStyle(long WXUNUSED(position), wxTextAttr& WXUNUSED(style));
+    //virtual bool SetDefaultStyle(const wxTextAttr& WXUNUSED(style));
+
+    //virtual long XYToPosition(long x, long y) const;
+    //virtual bool PositionToXY(long pos, long *x, long *y) const;
+    virtual void ShowPosition(long pos);
+
+    virtual wxTextCtrlHitTestResult HitTest(const wxPoint& pt, long *pos) const;
+
+    // just unhide it
+    virtual wxTextCtrlHitTestResult HitTest(const wxPoint& pt, wxTextCoord *col, wxTextCoord *row);
+
+    // methods deprecated due to changes in the scintilla library
+    // ---------------------------------------------
+
+    //static wxVersionInfo GetLibraryVersionInfo();
+        
 };
 
 //----------------------------------------------------------------------
@@ -7373,7 +5153,7 @@ class %delete wxStyledTextEvent : public wxCommandEvent
     %wxEventType wxEVT_STC_SAVEPOINTREACHED    // EVT_STC_SAVEPOINTREACHED(id, fn);
     %wxEventType wxEVT_STC_SAVEPOINTLEFT       // EVT_STC_SAVEPOINTLEFT(id, fn);
     %wxEventType wxEVT_STC_ROMODIFYATTEMPT     // EVT_STC_ROMODIFYATTEMPT(id, fn);
-    %wxEventType wxEVT_STC_KEY                 // EVT_STC_KEY(id, fn);
+    //%wxEventType wxEVT_STC_KEY                 // EVT_STC_KEY(id, fn);
     %wxEventType wxEVT_STC_DOUBLECLICK         // EVT_STC_DOUBLECLICK(id, fn);
     %wxEventType wxEVT_STC_UPDATEUI            // EVT_STC_UPDATEUI(id, fn);
     %wxEventType wxEVT_STC_MODIFIED            // EVT_STC_MODIFIED(id, fn);
@@ -7382,7 +5162,7 @@ class %delete wxStyledTextEvent : public wxCommandEvent
     %wxEventType wxEVT_STC_NEEDSHOWN           // EVT_STC_NEEDSHOWN(id, fn);
     %wxEventType wxEVT_STC_PAINTED             // EVT_STC_PAINTED(id, fn);
     %wxEventType wxEVT_STC_USERLISTSELECTION   // EVT_STC_USERLISTSELECTION(id, fn);
-    %wxEventType wxEVT_STC_URIDROPPED          // EVT_STC_URIDROPPED(id, fn);
+    //%wxEventType wxEVT_STC_URIDROPPED          // EVT_STC_URIDROPPED(id, fn);
     %wxEventType wxEVT_STC_DWELLSTART          // EVT_STC_DWELLSTART(id, fn);
     %wxEventType wxEVT_STC_DWELLEND            // EVT_STC_DWELLEND(id, fn);
     %wxEventType wxEVT_STC_START_DRAG          // EVT_STC_START_DRAG(id, fn);
@@ -7393,13 +5173,15 @@ class %delete wxStyledTextEvent : public wxCommandEvent
     %wxEventType wxEVT_STC_HOTSPOT_DCLICK      // EVT_STC_HOTSPOT_DCLICK(id, fn);
     %wxEventType wxEVT_STC_CALLTIP_CLICK       // EVT_STC_CALLTIP_CLICK(id, fn);
     %wxEventType wxEVT_STC_AUTOCOMP_SELECTION  // EVT_STC_AUTOCOMP_SELECTION(id, fn);
-    %wxchkver_3_1_0 %wxEventType wxEVT_STC_INDICATOR_CLICK       // EVT_STC_INDICATOR_CLICK(id, fn);
-    %wxchkver_3_1_0 %wxEventType wxEVT_STC_INDICATOR_RELEASE     // EVT_STC_INDICATOR_RELEASE(id, fn);
-    %wxchkver_3_1_0 %wxEventType wxEVT_STC_AUTOCOMP_CANCELLED    // EVT_STC_AUTOCOMP_CANCELLED(id, fn);
-    %wxchkver_3_1_0 %wxEventType wxEVT_STC_AUTOCOMP_CHAR_DELETED // EVT_STC_AUTOCOMP_CHAR_DELETED(id, fn);
-    %wxchkver_3_1_0 %wxEventType wxEVT_STC_HOTSPOT_RELEASE_CLICK // EVT_STC_HOTSPOT_RELEASE_CLICK(id, fn);
-    %wxchkver_3_1_0 %wxEventType wxEVT_STC_CLIPBOARD_COPY        // EVT_STC_CLIPBOARD_COPY(id, fn);
-    %wxchkver_3_1_0 %wxEventType wxEVT_STC_CLIPBOARD_PASTE       // EVT_STC_CLIPBOARD_PASTE(id, fn);
+    %wxEventType wxEVT_STC_INDICATOR_CLICK       // EVT_STC_INDICATOR_CLICK(id, fn);
+    %wxEventType wxEVT_STC_INDICATOR_RELEASE     // EVT_STC_INDICATOR_RELEASE(id, fn);
+    %wxEventType wxEVT_STC_AUTOCOMP_CANCELLED    // EVT_STC_AUTOCOMP_CANCELLED(id, fn);
+    %wxEventType wxEVT_STC_AUTOCOMP_CHAR_DELETED // EVT_STC_AUTOCOMP_CHAR_DELETED(id, fn);
+    %wxEventType wxEVT_STC_HOTSPOT_RELEASE_CLICK // EVT_STC_HOTSPOT_RELEASE_CLICK(id, fn);
+    %wxEventType wxEVT_STC_CLIPBOARD_COPY        // EVT_STC_CLIPBOARD_COPY(id, fn);
+    %wxEventType wxEVT_STC_CLIPBOARD_PASTE       // EVT_STC_CLIPBOARD_PASTE(id, fn);
+    %wxEventType wxEVT_STC_AUTOCOMP_COMPLETED        // EVT_STC_AUTOCOMP_COMPLETED(id, fn)
+    %wxEventType wxEVT_STC_MARGIN_RIGHT_CLICK       // EVT_STC_MARGIN_RIGHT_CLICK(id, fn)
 
     wxStyledTextEvent(wxEventType commandType = 0, int id = 0);
     void SetPosition(int pos);
@@ -7420,12 +5202,12 @@ class %delete wxStyledTextEvent : public wxCommandEvent
     void SetListType(int val);
     void SetX(int val);
     void SetY(int val);
-    %wxchkver_2_9_5 void SetToken(int val);
-    %wxchkver_2_9_5 void SetAnnotationLinesAdded(int val);
-    %wxchkver_2_9_5 void SetUpdated(int val);
+    void SetToken(int val);
+    void SetAnnotationLinesAdded(int val);
+    void SetUpdated(int val);
     // Kept for backwards compatibility, use SetString().
     void SetDragText(const wxString& val);
-    %wxchkver_3_1_0 void SetDragFlags(int flags);
+    void SetDragFlags(int flags);
     void SetDragResult(wxDragResult val);
     // This method is kept mainly for backwards compatibility, use
     // SetDragFlags() in the new code.
@@ -7449,11 +5231,11 @@ class %delete wxStyledTextEvent : public wxCommandEvent
     int  GetListType() const;
     int  GetX() const;
     int  GetY() const;
-    %wxchkver_2_9_5 int  GetToken() const;
-    %wxchkver_2_9_5 int  GetAnnotationsLinesAdded() const;
-    %wxchkver_2_9_5 int  GetUpdated() const;
+    int  GetToken() const;
+    int  GetAnnotationsLinesAdded() const;
+    int  GetUpdated() const;
     wxString GetDragText();
-    %wxchkver_3_1_0 int GetDragFlags();
+    int GetDragFlags();
     wxDragResult GetDragResult();
     bool GetDragAllowMove();
 

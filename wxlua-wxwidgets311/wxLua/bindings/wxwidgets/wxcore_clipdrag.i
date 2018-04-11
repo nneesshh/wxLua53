@@ -16,8 +16,7 @@
 
 class wxClipboard : public wxObject
 {
-   !%wxchkver_2_6 #define_pointer wxTheClipboard
-    %wxchkver_2_6 static wxClipboard *Get( );
+    static wxClipboard *Get( );
 
     // No constructor, use global clipboard from static Get() function only
 
@@ -47,8 +46,6 @@ class %delete wxClipboardLocker
 // ---------------------------------------------------------------------------
 // wxClipboardTextEvent
 
-#if %wxchkver_2_8
-
 #include "wx/event.h"
 
 class %delete wxClipboardTextEvent : public wxCommandEvent
@@ -59,8 +56,6 @@ class %delete wxClipboardTextEvent : public wxCommandEvent
 
     wxClipboardTextEvent(wxEventType type = wxEVT_NULL, wxWindowID winid = 0 );
 };
-
-#endif //%wxchkver_2_8
 
 #endif //wxLUA_USE_wxClipboard && wxUSE_CLIPBOARD
 
@@ -192,7 +187,7 @@ class %delete wxDataObjectComposite : public wxDataObject
     wxDataObjectComposite( );
 
     void Add(%ungc wxDataObjectSimple *dataObject, bool preferred = false );
-    %wxchkver_2_8 wxDataFormat GetReceivedFormat() const;
+    wxDataFormat GetReceivedFormat() const;
 };
 
 // ---------------------------------------------------------------------------
@@ -247,8 +242,6 @@ class %delete wxBitmapDataObject : public wxDataObjectSimple
 // ---------------------------------------------------------------------------
 // wxURLDataObject - is simply wxTextDataObject with a different name
 
-#if %wxchkver_2_8
-
 class %delete wxURLDataObject : public wxTextDataObject
 {
     wxURLDataObject(const wxString& url = "" );
@@ -256,8 +249,6 @@ class %delete wxURLDataObject : public wxTextDataObject
     wxString GetURL() const;
     void SetURL(const wxString& url );
 };
-
-#endif //%wxchkver_2_8
 
 #endif //wxLUA_USE_wxDataObject && wxUSE_DATAOBJ
 

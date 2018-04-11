@@ -231,8 +231,8 @@ static int LUACALL wxLua_wxSocketBase_LastCount(lua_State *L)
     wxSocketBase * self = (wxSocketBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSocketBase);
     // call LastCount
     unsigned long returns = (self->LastCount());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -391,14 +391,14 @@ static int LUACALL wxLua_wxSocketBase_SaveState(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_SetClientData[] = { &wxluatype_wxSocketBase, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_SetClientData[] = { &wxluatype_wxSocketBase, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSocketBase_SetClientData(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSocketBase_SetClientData[1] = {{ wxLua_wxSocketBase_SetClientData, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxSocketBase_SetClientData }};
 //     void SetClientData(voidptr_long number); // C++ is (void *clientData) You can put a number here
 static int LUACALL wxLua_wxSocketBase_SetClientData(lua_State *L)
 {
     // voidptr_long number
-    long number = (long)wxlua_getnumbertype(L, 2);
+    long number = (long)wxlua_getintegertype(L, 2);
     // get this
     wxSocketBase * self = (wxSocketBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSocketBase);
     // call SetClientData
@@ -407,7 +407,7 @@ static int LUACALL wxLua_wxSocketBase_SetClientData(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_SetEventHandler[] = { &wxluatype_wxSocketBase, &wxluatype_wxEvtHandler, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_SetEventHandler[] = { &wxluatype_wxSocketBase, &wxluatype_wxEvtHandler, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSocketBase_SetEventHandler(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSocketBase_SetEventHandler[1] = {{ wxLua_wxSocketBase_SetEventHandler, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxSocketBase_SetEventHandler }};
 //     void SetEventHandler(wxEvtHandler& handler, int id = -1 );
@@ -416,7 +416,7 @@ static int LUACALL wxLua_wxSocketBase_SetEventHandler(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int id = -1
-    int id = (argCount >= 3 ? (int)wxlua_getnumbertype(L, 3) : -1);
+    int id = (argCount >= 3 ? (int)wxlua_getintegertype(L, 3) : -1);
     // wxEvtHandler handler
     wxEvtHandler * handler = (wxEvtHandler *)wxluaT_getuserdatatype(L, 2, wxluatype_wxEvtHandler);
     // get this
@@ -459,14 +459,14 @@ static int LUACALL wxLua_wxSocketBase_SetNotify(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_SetTimeout[] = { &wxluatype_wxSocketBase, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_SetTimeout[] = { &wxluatype_wxSocketBase, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSocketBase_SetTimeout(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSocketBase_SetTimeout[1] = {{ wxLua_wxSocketBase_SetTimeout, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxSocketBase_SetTimeout }};
 //     void SetTimeout(int seconds );
 static int LUACALL wxLua_wxSocketBase_SetTimeout(lua_State *L)
 {
     // int seconds
-    int seconds = (int)wxlua_getnumbertype(L, 2);
+    int seconds = (int)wxlua_getintegertype(L, 2);
     // get this
     wxSocketBase * self = (wxSocketBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSocketBase);
     // call SetTimeout
@@ -497,7 +497,7 @@ static int LUACALL wxLua_wxSocketBase_Unread(lua_State *L)
 }
 
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_Wait[] = { &wxluatype_wxSocketBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_Wait[] = { &wxluatype_wxSocketBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSocketBase_Wait(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSocketBase_Wait[1] = {{ wxLua_wxSocketBase_Wait, WXLUAMETHOD_METHOD, 1, 3, s_wxluatypeArray_wxLua_wxSocketBase_Wait }};
 //     bool Wait(long seconds = -1, long millisecond = 0 );
@@ -506,9 +506,9 @@ static int LUACALL wxLua_wxSocketBase_Wait(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // long millisecond = 0
-    long millisecond = (argCount >= 3 ? (long)wxlua_getnumbertype(L, 3) : 0);
+    long millisecond = (argCount >= 3 ? (long)wxlua_getintegertype(L, 3) : 0);
     // long seconds = -1
-    long seconds = (argCount >= 2 ? (long)wxlua_getnumbertype(L, 2) : -1);
+    long seconds = (argCount >= 2 ? (long)wxlua_getintegertype(L, 2) : -1);
     // get this
     wxSocketBase * self = (wxSocketBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSocketBase);
     // call Wait
@@ -519,7 +519,7 @@ static int LUACALL wxLua_wxSocketBase_Wait(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_WaitForLost[] = { &wxluatype_wxSocketBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_WaitForLost[] = { &wxluatype_wxSocketBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSocketBase_WaitForLost(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSocketBase_WaitForLost[1] = {{ wxLua_wxSocketBase_WaitForLost, WXLUAMETHOD_METHOD, 1, 3, s_wxluatypeArray_wxLua_wxSocketBase_WaitForLost }};
 //     bool WaitForLost(long seconds = -1, long millisecond = 0 );
@@ -528,9 +528,9 @@ static int LUACALL wxLua_wxSocketBase_WaitForLost(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // long millisecond = 0
-    long millisecond = (argCount >= 3 ? (long)wxlua_getnumbertype(L, 3) : 0);
+    long millisecond = (argCount >= 3 ? (long)wxlua_getintegertype(L, 3) : 0);
     // long seconds = -1
-    long seconds = (argCount >= 2 ? (long)wxlua_getnumbertype(L, 2) : -1);
+    long seconds = (argCount >= 2 ? (long)wxlua_getintegertype(L, 2) : -1);
     // get this
     wxSocketBase * self = (wxSocketBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSocketBase);
     // call WaitForLost
@@ -541,7 +541,7 @@ static int LUACALL wxLua_wxSocketBase_WaitForLost(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_WaitForRead[] = { &wxluatype_wxSocketBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_WaitForRead[] = { &wxluatype_wxSocketBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSocketBase_WaitForRead(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSocketBase_WaitForRead[1] = {{ wxLua_wxSocketBase_WaitForRead, WXLUAMETHOD_METHOD, 1, 3, s_wxluatypeArray_wxLua_wxSocketBase_WaitForRead }};
 //     bool WaitForRead(long seconds = -1, long millisecond = 0 );
@@ -550,9 +550,9 @@ static int LUACALL wxLua_wxSocketBase_WaitForRead(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // long millisecond = 0
-    long millisecond = (argCount >= 3 ? (long)wxlua_getnumbertype(L, 3) : 0);
+    long millisecond = (argCount >= 3 ? (long)wxlua_getintegertype(L, 3) : 0);
     // long seconds = -1
-    long seconds = (argCount >= 2 ? (long)wxlua_getnumbertype(L, 2) : -1);
+    long seconds = (argCount >= 2 ? (long)wxlua_getintegertype(L, 2) : -1);
     // get this
     wxSocketBase * self = (wxSocketBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSocketBase);
     // call WaitForRead
@@ -563,7 +563,7 @@ static int LUACALL wxLua_wxSocketBase_WaitForRead(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_WaitForWrite[] = { &wxluatype_wxSocketBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketBase_WaitForWrite[] = { &wxluatype_wxSocketBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSocketBase_WaitForWrite(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSocketBase_WaitForWrite[1] = {{ wxLua_wxSocketBase_WaitForWrite, WXLUAMETHOD_METHOD, 1, 3, s_wxluatypeArray_wxLua_wxSocketBase_WaitForWrite }};
 //     bool WaitForWrite(long seconds = -1, long millisecond = 0 );
@@ -572,9 +572,9 @@ static int LUACALL wxLua_wxSocketBase_WaitForWrite(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // long millisecond = 0
-    long millisecond = (argCount >= 3 ? (long)wxlua_getnumbertype(L, 3) : 0);
+    long millisecond = (argCount >= 3 ? (long)wxlua_getintegertype(L, 3) : 0);
     // long seconds = -1
-    long seconds = (argCount >= 2 ? (long)wxlua_getnumbertype(L, 2) : -1);
+    long seconds = (argCount >= 2 ? (long)wxlua_getintegertype(L, 2) : -1);
     // get this
     wxSocketBase * self = (wxSocketBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSocketBase);
     // call WaitForWrite
@@ -712,7 +712,7 @@ static int LUACALL wxLua_wxSocketClient_Connect(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketClient_WaitOnConnect[] = { &wxluatype_wxSocketClient, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketClient_WaitOnConnect[] = { &wxluatype_wxSocketClient, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSocketClient_WaitOnConnect(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSocketClient_WaitOnConnect[1] = {{ wxLua_wxSocketClient_WaitOnConnect, WXLUAMETHOD_METHOD, 1, 3, s_wxluatypeArray_wxLua_wxSocketClient_WaitOnConnect }};
 //     bool WaitOnConnect(long seconds = -1, long milliseconds = 0 );
@@ -721,9 +721,9 @@ static int LUACALL wxLua_wxSocketClient_WaitOnConnect(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // long milliseconds = 0
-    long milliseconds = (argCount >= 3 ? (long)wxlua_getnumbertype(L, 3) : 0);
+    long milliseconds = (argCount >= 3 ? (long)wxlua_getintegertype(L, 3) : 0);
     // long seconds = -1
-    long seconds = (argCount >= 2 ? (long)wxlua_getnumbertype(L, 2) : -1);
+    long seconds = (argCount >= 2 ? (long)wxlua_getintegertype(L, 2) : -1);
     // get this
     wxSocketClient * self = (wxSocketClient *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSocketClient);
     // call WaitOnConnect
@@ -831,7 +831,7 @@ static int LUACALL wxLua_wxSocketServer_AcceptWith(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketServer_WaitForAccept[] = { &wxluatype_wxSocketServer, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketServer_WaitForAccept[] = { &wxluatype_wxSocketServer, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSocketServer_WaitForAccept(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSocketServer_WaitForAccept[1] = {{ wxLua_wxSocketServer_WaitForAccept, WXLUAMETHOD_METHOD, 1, 3, s_wxluatypeArray_wxLua_wxSocketServer_WaitForAccept }};
 //     bool WaitForAccept(long seconds = -1, long millisecond = 0 );
@@ -840,9 +840,9 @@ static int LUACALL wxLua_wxSocketServer_WaitForAccept(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // long millisecond = 0
-    long millisecond = (argCount >= 3 ? (long)wxlua_getnumbertype(L, 3) : 0);
+    long millisecond = (argCount >= 3 ? (long)wxlua_getintegertype(L, 3) : 0);
     // long seconds = -1
-    long seconds = (argCount >= 2 ? (long)wxlua_getnumbertype(L, 2) : -1);
+    long seconds = (argCount >= 2 ? (long)wxlua_getintegertype(L, 2) : -1);
     // get this
     wxSocketServer * self = (wxSocketServer *)wxluaT_getuserdatatype(L, 1, wxluatype_wxSocketServer);
     // call WaitForAccept
@@ -962,7 +962,7 @@ static int LUACALL wxLua_wxSocketEvent_GetSocketEvent(lua_State *L)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketEvent_delete[] = { &wxluatype_wxSocketEvent, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSocketEvent_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxSocketEvent_delete }};
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketEvent_constructor[] = { &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxSocketEvent_constructor[] = { &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxSocketEvent_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSocketEvent_constructor[1] = {{ wxLua_wxSocketEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 1, s_wxluatypeArray_wxLua_wxSocketEvent_constructor }};
 //     wxSocketEvent(int id = 0 );
@@ -971,7 +971,7 @@ static int LUACALL wxLua_wxSocketEvent_constructor(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int id = 0
-    int id = (argCount >= 1 ? (int)wxlua_getnumbertype(L, 1) : 0);
+    int id = (argCount >= 1 ? (int)wxlua_getintegertype(L, 1) : 0);
     // call constructor
     wxSocketEvent* returns = new wxSocketEvent(id);
     // add to tracked memory list
@@ -1166,8 +1166,8 @@ static int LUACALL wxLua_wxIPaddress_Service2(lua_State *L)
     wxIPaddress * self = (wxIPaddress *)wxluaT_getuserdatatype(L, 1, wxluatype_wxIPaddress);
     // call Service
     unsigned short returns = (self->Service());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -1562,8 +1562,8 @@ static int LUACALL wxLua_wxHTTP_GetResponse(lua_State *L)
     wxHTTP * self = (wxHTTP *)wxluaT_getuserdatatype(L, 1, wxluatype_wxHTTP);
     // call GetResponse
     int returns = (self->GetResponse());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -1655,14 +1655,14 @@ static int LUACALL wxLua_wxFTP_ChDir(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxFTP_CheckCommand[] = { &wxluatype_wxFTP, &wxluatype_TSTRING, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxFTP_CheckCommand[] = { &wxluatype_wxFTP, &wxluatype_TSTRING, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxFTP_CheckCommand(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFTP_CheckCommand[1] = {{ wxLua_wxFTP_CheckCommand, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxFTP_CheckCommand }};
 //     bool CheckCommand(const wxString& command, char ret );
 static int LUACALL wxLua_wxFTP_CheckCommand(lua_State *L)
 {
     // char ret
-    char ret = (char)wxlua_getnumbertype(L, 3);
+    char ret = (char)wxlua_getintegertype(L, 3);
     // const wxString command
     const wxString command = wxlua_getwxStringtype(L, 2);
     // get this
@@ -1731,8 +1731,8 @@ static int LUACALL wxLua_wxFTP_GetFileSize(lua_State *L)
     wxFTP * self = (wxFTP *)wxluaT_getuserdatatype(L, 1, wxluatype_wxFTP);
     // call GetFileSize
     int returns = (self->GetFileSize(filename));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -1903,8 +1903,8 @@ static int LUACALL wxLua_wxFTP_SendCommand(lua_State *L)
     wxFTP * self = (wxFTP *)wxluaT_getuserdatatype(L, 1, wxluatype_wxFTP);
     // call SendCommand
     char returns = (self->SendCommand(command));
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -2095,33 +2095,10 @@ static int LUACALL wxLua_wxURI_BuildUnescapedURI(lua_State *L)
     return 1;
 }
 
-
-#if (!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
-static wxLuaArgType s_wxluatypeArray_wxLua_wxURI_Create1[] = { &wxluatype_wxURI, &wxluatype_TSTRING, NULL };
-static int LUACALL wxLua_wxURI_Create1(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxURI_Create1[1] = {{ wxLua_wxURI_Create1, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxURI_Create1 }};
-//     !%wxchkver_2_9_2 wxString Create(const wxString& uri );
-static int LUACALL wxLua_wxURI_Create1(lua_State *L)
-{
-    // const wxString uri
-    const wxString uri = wxlua_getwxStringtype(L, 2);
-    // get this
-    wxURI * self = (wxURI *)wxluaT_getuserdatatype(L, 1, wxluatype_wxURI);
-    // call Create
-    wxString returns = (self->Create(uri));
-    // push the result string
-    wxlua_pushwxString(L, returns);
-
-    return 1;
-}
-
-#endif // (!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
-
-#if (wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxURI_Create[] = { &wxluatype_wxURI, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxURI_Create(lua_State *L);
-// static wxLuaBindCFunc s_wxluafunc_wxLua_wxURI_Create[1] = {{ wxLua_wxURI_Create, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxURI_Create }};
-//     %wxchkver_2_9_2 bool Create(const wxString& uri );
+static wxLuaBindCFunc s_wxluafunc_wxLua_wxURI_Create[1] = {{ wxLua_wxURI_Create, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxURI_Create }};
+//     bool Create(const wxString& uri );
 static int LUACALL wxLua_wxURI_Create(lua_State *L)
 {
     // const wxString uri
@@ -2135,8 +2112,6 @@ static int LUACALL wxLua_wxURI_Create(lua_State *L)
 
     return 1;
 }
-
-#endif // (wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxURI_GetFragment[] = { &wxluatype_wxURI, NULL };
 static int LUACALL wxLua_wxURI_GetFragment(lua_State *L);
@@ -2426,7 +2401,7 @@ static int LUACALL wxLua_wxURI_IsReference(lua_State *L)
     return 1;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxURI_Resolve[] = { &wxluatype_wxURI, &wxluatype_wxURI, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxURI_Resolve[] = { &wxluatype_wxURI, &wxluatype_wxURI, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxURI_Resolve(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxURI_Resolve[1] = {{ wxLua_wxURI_Resolve, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxURI_Resolve }};
 //     void Resolve(const wxURI& base, int flags = wxURI_STRICT );
@@ -2435,7 +2410,7 @@ static int LUACALL wxLua_wxURI_Resolve(lua_State *L)
     // get number of arguments
     int argCount = lua_gettop(L);
     // int flags = wxURI_STRICT
-    int flags = (argCount >= 3 ? (int)wxlua_getnumbertype(L, 3) : wxURI_STRICT);
+    int flags = (argCount >= 3 ? (int)wxlua_getintegertype(L, 3) : wxURI_STRICT);
     // const wxURI base
     const wxURI * base = (const wxURI *)wxluaT_getuserdatatype(L, 2, wxluatype_wxURI);
     // get this
@@ -2556,23 +2531,6 @@ static int LUACALL wxLua_wxURI_constructor(lua_State *L)
 
 
 
-#if ((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS))||((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS))
-// function overload table
-static wxLuaBindCFunc s_wxluafunc_wxLua_wxURI_Create_overload[] =
-{
-
-#if (!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
-    { wxLua_wxURI_Create1, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxURI_Create1 },
-#endif // (!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
-
-#if (wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
-    { wxLua_wxURI_Create, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxURI_Create },
-#endif // (wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
-};
-static int s_wxluafunc_wxLua_wxURI_Create_overload_count = sizeof(s_wxluafunc_wxLua_wxURI_Create_overload)/sizeof(wxLuaBindCFunc);
-
-#endif // ((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS))||((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS))
-
 #if (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxURI_constructor_overload[] =
@@ -2595,11 +2553,7 @@ void wxLua_wxURI_delete_function(void** p)
 wxLuaBindMethod wxURI_methods[] = {
     { "BuildURI", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxURI_BuildURI, 1, NULL },
     { "BuildUnescapedURI", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxURI_BuildUnescapedURI, 1, NULL },
-
-#if ((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS))||((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS))
-    { "Create", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxURI_Create_overload, s_wxluafunc_wxLua_wxURI_Create_overload_count, 0 },
-#endif // ((!wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS))||((wxCHECK_VERSION(2,9,2)) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS))
-
+    { "Create", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxURI_Create, 1, NULL },
     { "GetFragment", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxURI_GetFragment, 1, NULL },
     { "GetHostType", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxURI_GetHostType, 1, NULL },
     { "GetPassword", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxURI_GetPassword, 1, NULL },

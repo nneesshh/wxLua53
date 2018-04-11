@@ -10,7 +10,7 @@
 // ---------------------------------------------------------------------------
 // wxAboutDialog
 
-#if %wxchkver_2_8 && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
+#if wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
 
 #include "wx/aboutdlg.h"
 
@@ -76,13 +76,13 @@ class %delete wxAboutDialogInfo
 
 void wxAboutBox(const wxAboutDialogInfo& info );
 
-#endif //%wxchkver_2_8 && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
+#endif // wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
 
 
 // ---------------------------------------------------------------------------
 // wxAnimation
 
-#if %wxchkver_2_8 && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+#if wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
 
 #include "wx/animate.h"
 
@@ -136,7 +136,7 @@ class wxAnimationCtrl : public wxControl
     virtual void Stop( );
 };
 
-#endif // %wxchkver_2_8 && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+#endif // wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
 
 
 // ---------------------------------------------------------------------------
@@ -162,9 +162,8 @@ class wxBitmapComboBox : public wxControl
     wxBitmap GetItemBitmap(unsigned int n) const;
 
     int Insert(const wxString& item, const wxBitmap& bitmap, unsigned int pos );
- #if !%wxchkver_2_9_0 || %wxchkver_2_9_5 // This function body was missing so you'd get linker errors
+    // This function body was missing so you'd get linker errors
     int Insert(const wxString& item, const wxBitmap& bitmap, unsigned int pos, voidptr_long data ); // C++ is (void *clientData) You can put a number here
- #endif
     int Insert(const wxString& item, const wxBitmap& bitmap, unsigned int pos, wxClientData *clientData );
 
     void SetItemBitmap(unsigned int n, const wxBitmap& bitmap );
@@ -233,10 +232,6 @@ class wxCalendarCtrl : public wxControl
 
     void     SetDate(const wxDateTime& date );
     wxDateTime GetDate() const;
-
-    #if !%wxchkver_2_9_2
-        void     EnableYearChange(bool enable = true );
-    #endif
 
     void     EnableMonthChange(bool enable = true );
     void     EnableHolidayDisplay(bool display = true );
@@ -316,9 +311,8 @@ class %delete wxCalendarEvent : public wxDateEvent
     %wxEventType wxEVT_CALENDAR_DOUBLECLICKED      // EVT_CALENDAR(id, fn );
     %wxEventType wxEVT_CALENDAR_WEEKDAY_CLICKED    // EVT_CALENDAR_WEEKDAY_CLICKED(id, fn );
 
-    %wxchkver_2_9_2 wxCalendarEvent(const wxCalendarEvent& event );
-    !%wxchkver_2_9_2 wxCalendarEvent(wxCalendarCtrl *cal, wxEventType type );
-    %wxchkver_2_9_2 wxCalendarEvent(wxWindow *win, const wxDateTime& dt, wxEventType type );
+    wxCalendarEvent(const wxCalendarEvent& event );
+    wxCalendarEvent(wxWindow *win, const wxDateTime& dt, wxEventType type );
 
     wxDateTime::WeekDay GetWeekDay() const;
     void SetWeekDay(const wxDateTime::WeekDay wd );
@@ -330,7 +324,7 @@ class %delete wxCalendarEvent : public wxDateEvent
 // ---------------------------------------------------------------------------
 // wxHyperlinkCtrl
 
-#if %wxchkver_2_8 && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#if wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
 
 #include "wx/hyperlink.h"
 
@@ -373,7 +367,7 @@ class %delete wxHyperlinkEvent : public wxCommandEvent
     void SetURL(const wxString &url );
 };
 
-#endif // %wxchkver_2_8 && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#endif // wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
 
 
 // ---------------------------------------------------------------------------
@@ -651,7 +645,7 @@ class %delete wxTaskBarIcon : public wxEvtHandler
 
     // virtual wxMenu*  CreatePopupMenu( );
     bool IsIconInstalled( );
-    %wxchkver_2_4 bool IsOk( );
+    bool IsOk( );
     virtual bool PopupMenu(wxMenu* menu );
 
     // call RemoveIcon() or delete this if you want your program to exit, must have called SetIcon( );
@@ -710,8 +704,8 @@ class %delete wxJoystick : public wxObject
     int GetMovementThreshold() const;
     int GetNumberAxes() const;
     int GetNumberButtons() const;
-    %wxchkver_2_8 static int GetNumberJoysticks() const;
-    !%wxchkver_2_8 int GetNumberJoysticks() const;
+    static int GetNumberJoysticks() const;
+
     int GetPollingMax() const;
     int GetPollingMin() const;
     int GetProductId() const;
@@ -787,7 +781,7 @@ wxUSE_SOUND|(%msw&wxUSE_WAVE) #define wxSOUND_SYNC
 wxUSE_SOUND|(%msw&wxUSE_WAVE) #define wxSOUND_ASYNC
 wxUSE_SOUND|(%msw&wxUSE_WAVE) #define wxSOUND_LOOP
 
-#if %wxchkver_2_6 && wxUSE_SOUND
+#if wxUSE_SOUND
 
 #include "wx/sound.h"
 
@@ -806,27 +800,7 @@ class %delete wxSound : public wxObject
     static void Stop( );
 };
 
-#endif // %wxchkver_2_6 && wxUSE_SOUND
-
-// ---------------------------------------------------------------------------
-//  wxWave
-
-#if %msw && !%wxchkver_2_6 && wxUSE_WAVE
-
-#include "wx/wave.h"
-
-class %delete wxWave : public wxObject
-{
-    wxWave( );
-    wxWave(const wxString& fileName, bool isResource = false );
-    bool Create(const wxString& fileName, bool isResource = false );
-
-    bool IsOk() const;
-    !%wxchkver_2_6 bool Play(bool async = true, bool looped = false) const;
-    %wxchkver_2_6 bool Play(unsigned int flags = wxSOUND_ASYNC) const;
-};
-
-#endif // %msw && !%wxchkver_2_6 && wxUSE_WAVE
+#endif // wxUSE_SOUND
 
 #endif //wxLUA_USE_wxWave
 

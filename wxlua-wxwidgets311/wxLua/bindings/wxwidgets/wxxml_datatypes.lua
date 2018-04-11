@@ -383,7 +383,7 @@ wxxml_dataTypeTable =
     ValueType = "class",
   },
   wxDirTraverseResult = {
-    Condition = "(wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxDir)",
+    Condition = "wxLUA_USE_wxDir",
     IsNumber = true,
     Name = "wxDirTraverseResult",
     ValueType = "enum",
@@ -433,7 +433,6 @@ wxxml_dataTypeTable =
     ValueType = "class",
   },
   wxEventCategory = {
-    Condition = "wxCHECK_VERSION(3,1,1)",
     IsNumber = true,
     Name = "wxEventCategory",
     ValueType = "enum",
@@ -471,13 +470,13 @@ wxxml_dataTypeTable =
     ValueType = "class",
   },
   wxFSWPathType = {
-    Condition = "wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)",
+    Condition = "wxUSE_FSWATCHER",
     IsNumber = true,
     Name = "wxFSWPathType",
     ValueType = "enum",
   },
   wxFSWWarningType = {
-    Condition = "wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)",
+    Condition = "wxUSE_FSWATCHER",
     IsNumber = true,
     Name = "wxFSWWarningType",
     ValueType = "enum",
@@ -519,7 +518,6 @@ wxxml_dataTypeTable =
     ValueType = "class",
   },
   wxFileKind = {
-    Condition = "wxLUA_USE_wxFile && wxUSE_FILE",
     IsNumber = true,
     Name = "wxFileKind",
     ValueType = "enum",
@@ -566,7 +564,7 @@ wxxml_dataTypeTable =
     BaseClasses = {
       [1] = "wxEvtHandler",
     },
-    Condition = "wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)",
+    Condition = "wxUSE_FSWATCHER",
     IsNumber = false,
     Name = "wxFileSystemWatcher",
     ValueType = "class",
@@ -575,7 +573,7 @@ wxxml_dataTypeTable =
     BaseClasses = {
       [1] = "wxEvent",
     },
-    Condition = "wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)",
+    Condition = "wxUSE_FSWATCHER",
     IsNumber = false,
     Name = "wxFileSystemWatcherEvent",
     ValueType = "class",
@@ -663,12 +661,6 @@ wxxml_dataTypeTable =
     Name = "wxInternetFSHandler",
     ValueType = "class",
   },
-  wxKeyType = {
-    Condition = "wxLUA_USE_wxList && !wxUSE_STL",
-    IsNumber = true,
-    Name = "wxKeyType",
-    ValueType = "enum",
-  },
   wxLanguage = {
     Condition = "wxUSE_INTL",
     IsNumber = true,
@@ -682,16 +674,10 @@ wxxml_dataTypeTable =
     ValueType = "struct",
   },
   wxLayoutDirection = {
-    Condition = "(wxCHECK_VERSION(2,8,0)) && (wxUSE_INTL)",
+    Condition = "wxUSE_INTL",
     IsNumber = true,
     Name = "wxLayoutDirection",
     ValueType = "enum",
-  },
-  wxList = {
-    Condition = "wxLUA_USE_wxList && !wxUSE_STL",
-    IsNumber = false,
-    Name = "wxList",
-    ValueType = "class",
   },
   wxLocalFSHandler = {
     BaseClasses = {
@@ -809,20 +795,27 @@ wxxml_dataTypeTable =
     Name = "wxMimeTypesManager",
     ValueType = "class",
   },
-  wxNode = {
-    Condition = "wxLUA_USE_wxList && !wxUSE_STL",
-    IsNumber = false,
-    Name = "wxNode",
-    ValueType = "class",
-  },
   wxObject = {
-    Condition = "wxLUA_USE_wxObject",
     IsNumber = false,
     Name = "wxObject",
     ValueType = "class",
   },
+  wxObjectList = {
+    IsNumber = false,
+    Name = "wxObjectList",
+    ValueType = "class",
+  },
+  ["wxObjectList::const_iterator"] = {
+    IsNumber = false,
+    Name = "wxObjectList::const_iterator",
+    ValueType = "class",
+  },
+  ["wxObjectList::iterator"] = {
+    IsNumber = false,
+    Name = "wxObjectList::iterator",
+    ValueType = "class",
+  },
   wxObjectRefData = {
-    Condition = "wxLUA_USE_wxObject",
     IsNumber = false,
     Name = "wxObjectRefData",
     ValueType = "class",
@@ -881,6 +874,11 @@ wxxml_dataTypeTable =
     Name = "wxPortId",
     ValueType = "enum",
   },
+  wxPosixPermissions = {
+    IsNumber = true,
+    Name = "wxPosixPermissions",
+    ValueType = "enum",
+  },
   wxRegEx = {
     Condition = "wxLUA_USE_wxRegEx && wxUSE_REGEX",
     IsNumber = false,
@@ -888,7 +886,6 @@ wxxml_dataTypeTable =
     ValueType = "class",
   },
   wxSeekMode = {
-    Condition = "wxLUA_USE_wxFile && wxUSE_FILE",
     IsNumber = true,
     Name = "wxSeekMode",
     ValueType = "enum",
@@ -900,7 +897,7 @@ wxxml_dataTypeTable =
     ValueType = "class",
   },
   wxSizeConvention = {
-    Condition = "(wxCHECK_VERSION(3,1,1)) && (wxLUA_USE_wxFileName)",
+    Condition = "wxLUA_USE_wxFileName",
     IsNumber = true,
     Name = "wxSizeConvention",
     ValueType = "enum",
@@ -915,19 +912,19 @@ wxxml_dataTypeTable =
     ValueType = "class",
   },
   wxStandardPaths = {
-    Condition = "wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxStandardPaths",
+    Condition = "wxLUA_USE_wxStandardPaths",
     IsNumber = false,
     Name = "wxStandardPaths",
     ValueType = "class",
   },
   ["wxStandardPaths::Dir"] = {
-    Condition = "(wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxStandardPaths) && (wxCHECK_VERSION(3,1,1))",
+    Condition = "wxLUA_USE_wxStandardPaths",
     IsNumber = true,
     Name = "wxStandardPaths::Dir",
     ValueType = "enum",
   },
   ["wxStandardPaths::ResourceCat"] = {
-    Condition = "wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxStandardPaths",
+    Condition = "wxLUA_USE_wxStandardPaths",
     IsNumber = true,
     Name = "wxStandardPaths::ResourceCat",
     ValueType = "enum",
@@ -956,13 +953,11 @@ wxxml_dataTypeTable =
     ValueType = "special",
   },
   ["wxString::const_iterator"] = {
-    Condition = "wxCHECK_VERSION(2,9,0)",
     IsNumber = false,
     Name = "wxString::const_iterator",
     ValueType = "class",
   },
   ["wxString::iterator"] = {
-    Condition = "wxCHECK_VERSION(2,9,0)",
     IsNumber = false,
     Name = "wxString::iterator",
     ValueType = "class",
@@ -1153,15 +1148,6 @@ wxxml_preprocConditionTable =
   ["%win"] = "defined(__WXMSW__)",
   ["%wince"] = "defined(__WXWINCE__)",
   ["%wxHAS_NATIVE_RENDERER"] = "defined(wxHAS_NATIVE_RENDERER)",
-  ["%wxchkver_2_6"] = "wxCHECK_VERSION(2,6,0)",
-  ["%wxchkver_2_8"] = "wxCHECK_VERSION(2,8,0)",
-  ["%wxchkver_2_8_1"] = "wxCHECK_VERSION(2,8,1)",
-  ["%wxchkver_2_9"] = "wxCHECK_VERSION(2,9,0)",
-  ["%wxchkver_2_9_0"] = "wxCHECK_VERSION(2,9,0)",
-  ["%wxchkver_2_9_4"] = "wxCHECK_VERSION(2,9,4)",
-  ["%wxchkver_2_9_5"] = "wxCHECK_VERSION(2,9,5)",
-  ["%wxchkver_3_1_1"] = "wxCHECK_VERSION(3,1,1)",
-  ["%wxcompat_2_6"] = "(defined(WXWIN_COMPATIBILITY_2_6) && WXWIN_COMPATIBILITY_2_6)",
   ["%x11"] = "defined(__WXX11__)",
   WXWIN_COMPATIBILITY_2 = "(defined(WXWIN_COMPATIBILITY_2) && WXWIN_COMPATIBILITY_2)",
   WXWIN_COMPATIBILITY_2_2 = "(defined(WXWIN_COMPATIBILITY_2_2) && WXWIN_COMPATIBILITY_2_2)",

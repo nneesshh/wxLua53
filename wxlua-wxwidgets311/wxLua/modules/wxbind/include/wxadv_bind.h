@@ -43,25 +43,17 @@ extern WXDLLIMPEXP_BINDWXADV wxLuaBinding* wxLuaBinding_wxadv_init();
 // Includes
 // ---------------------------------------------------------------------------
 
-#if (defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)
-    #include "wx/wave.h"
-#endif // (defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)
-
-#if (wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave)
+#if (wxLUA_USE_wxWave) && (wxUSE_SOUND)
     #include "wx/sound.h"
-#endif // (wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave)
+#endif // (wxLUA_USE_wxWave) && (wxUSE_SOUND)
 
-#if wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
-    #include "wx/animate.h"
-#endif // wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
-
-#if wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
+#if wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
     #include "wx/aboutdlg.h"
-#endif // wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
+#endif // wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
 
-#if wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
-    #include "wx/hyperlink.h"
-#endif // wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#if wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+    #include "wx/animate.h"
+#endif // wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
 
 #if wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX
     #include "wx/bmpcbox.h"
@@ -79,6 +71,10 @@ extern WXDLLIMPEXP_BINDWXADV wxLuaBinding* wxLuaBinding_wxadv_init();
     #include "wx/grid.h"
     #include "wxbind/include/wxadv_wxladv.h"
 #endif // wxLUA_USE_wxGrid && wxUSE_GRID
+
+#if wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
+    #include "wx/hyperlink.h"
+#endif // wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
 
 #if wxLUA_USE_wxJoystick && wxUSE_JOYSTICK
     #include "wx/event.h"
@@ -106,27 +102,18 @@ extern WXDLLIMPEXP_BINDWXADV wxLuaBinding* wxLuaBinding_wxadv_init();
 // Lua Tag Method Values and Tables for each Class
 // ---------------------------------------------------------------------------
 
-#if (defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)
-    extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxWave;
-#endif // (defined(__WXMSW__) && !wxCHECK_VERSION(2,6,0) && wxUSE_WAVE) && (wxLUA_USE_wxWave)
-
-#if (wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave)
+#if (wxLUA_USE_wxWave) && (wxUSE_SOUND)
     extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxSound;
-#endif // (wxCHECK_VERSION(2,6,0) && wxUSE_SOUND) && (wxLUA_USE_wxWave)
+#endif // (wxLUA_USE_wxWave) && (wxUSE_SOUND)
 
-#if wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
+#if wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
+    extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxAboutDialogInfo;
+#endif // wxLUA_USE_wxAboutDialog && wxUSE_ABOUTDLG
+
+#if wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
     extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxAnimation;
     extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxAnimationCtrl;
-#endif // wxCHECK_VERSION(2,8,0) && wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
-
-#if wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
-    extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxAboutDialogInfo;
-#endif // wxCHECK_VERSION(2,8,0) && wxUSE_ABOUTDLG && wxLUA_USE_wxAboutDialog
-
-#if wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
-    extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxHyperlinkCtrl;
-    extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxHyperlinkEvent;
-#endif // wxCHECK_VERSION(2,8,0) && wxUSE_HYPERLINKCTRL && wxLUA_USE_wxHyperlinkCtrl
+#endif // wxLUA_USE_wxAnimation && wxUSE_ANIMATIONCTRL
 
 #if wxLUA_USE_wxBitmapComboBox && wxUSE_BITMAPCOMBOBOX
     extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxBitmapComboBox;
@@ -171,6 +158,11 @@ extern WXDLLIMPEXP_BINDWXADV wxLuaBinding* wxLuaBinding_wxadv_init();
     extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxGridTableMessage;
     extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxLuaGridTableBase;
 #endif // wxLUA_USE_wxGrid && wxUSE_GRID
+
+#if wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
+    extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxHyperlinkCtrl;
+    extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxHyperlinkEvent;
+#endif // wxLUA_USE_wxHyperlinkCtrl && wxUSE_HYPERLINKCTRL
 
 #if wxLUA_USE_wxJoystick && wxUSE_JOYSTICK
     extern WXDLLIMPEXP_DATA_BINDWXADV(int) wxluatype_wxJoystick;

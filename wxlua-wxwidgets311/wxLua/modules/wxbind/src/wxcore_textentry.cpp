@@ -266,16 +266,16 @@ static int LUACALL wxLua_wxTextEntryBase_GetMargins(lua_State *L)
 
 #endif // wxLUA_USE_wxPointSizeRect
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxTextEntryBase_GetRange[] = { &wxluatype_wxTextEntryBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxTextEntryBase_GetRange[] = { &wxluatype_wxTextEntryBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxTextEntryBase_GetRange(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxTextEntryBase_GetRange[1] = {{ wxLua_wxTextEntryBase_GetRange, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxTextEntryBase_GetRange }};
 //     virtual wxString GetRange(long from, long to) const;
 static int LUACALL wxLua_wxTextEntryBase_GetRange(lua_State *L)
 {
     // long to
-    long to = (long)wxlua_getnumbertype(L, 3);
+    long to = (long)wxlua_getintegertype(L, 3);
     // long from
-    long from = (long)wxlua_getnumbertype(L, 2);
+    long from = (long)wxlua_getintegertype(L, 2);
     // get this
     wxTextEntryBase * self = (wxTextEntryBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxTextEntryBase);
     // call GetRange
@@ -364,7 +364,7 @@ static int LUACALL wxLua_wxTextEntryBase_RemoveSelection(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxTextEntryBase_Replace[] = { &wxluatype_wxTextEntryBase, &wxluatype_TNUMBER, &wxluatype_TNUMBER, &wxluatype_TSTRING, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxTextEntryBase_Replace[] = { &wxluatype_wxTextEntryBase, &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxTextEntryBase_Replace(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxTextEntryBase_Replace[1] = {{ wxLua_wxTextEntryBase_Replace, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxTextEntryBase_Replace }};
 //     virtual void Replace(long from, long to, const wxString& value);
@@ -373,9 +373,9 @@ static int LUACALL wxLua_wxTextEntryBase_Replace(lua_State *L)
     // const wxString value
     const wxString value = wxlua_getwxStringtype(L, 4);
     // long to
-    long to = (long)wxlua_getnumbertype(L, 3);
+    long to = (long)wxlua_getintegertype(L, 3);
     // long from
-    long from = (long)wxlua_getnumbertype(L, 2);
+    long from = (long)wxlua_getintegertype(L, 2);
     // get this
     wxTextEntryBase * self = (wxTextEntryBase *)wxluaT_getuserdatatype(L, 1, wxluatype_wxTextEntryBase);
     // call Replace
@@ -740,8 +740,8 @@ static int LUACALL wxLua_wxTextEntry_GetInsertionPoint(lua_State *L)
     wxTextEntry * self = (wxTextEntry *)wxluaT_getuserdatatype(L, 1, wxluatype_wxTextEntry);
     // call GetInsertionPoint
     long  returns = (self->GetInsertionPoint());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -756,8 +756,8 @@ static int LUACALL wxLua_wxTextEntry_GetLastPosition(lua_State *L)
     wxTextEntry * self = (wxTextEntry *)wxluaT_getuserdatatype(L, 1, wxluatype_wxTextEntry);
     // call GetLastPosition
     long  returns = (self->GetLastPosition());
-    // push the result number
-    lua_pushnumber(L, returns);
+    // push the result integer
+    lua_pushinteger(L, returns);
 
     return 1;
 }
@@ -826,16 +826,16 @@ static int LUACALL wxLua_wxTextEntry_Redo(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxTextEntry_Remove[] = { &wxluatype_wxTextEntry, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxTextEntry_Remove[] = { &wxluatype_wxTextEntry, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxTextEntry_Remove(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxTextEntry_Remove[1] = {{ wxLua_wxTextEntry_Remove, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxTextEntry_Remove }};
 //     virtual void Remove(long from, long to);
 static int LUACALL wxLua_wxTextEntry_Remove(lua_State *L)
 {
     // long to
-    long to = (long)wxlua_getnumbertype(L, 3);
+    long to = (long)wxlua_getintegertype(L, 3);
     // long from
-    long from = (long)wxlua_getnumbertype(L, 2);
+    long from = (long)wxlua_getintegertype(L, 2);
     // get this
     wxTextEntry * self = (wxTextEntry *)wxluaT_getuserdatatype(L, 1, wxluatype_wxTextEntry);
     // call Remove
@@ -860,14 +860,14 @@ static int LUACALL wxLua_wxTextEntry_SetEditable(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxTextEntry_SetInsertionPoint[] = { &wxluatype_wxTextEntry, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxTextEntry_SetInsertionPoint[] = { &wxluatype_wxTextEntry, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxTextEntry_SetInsertionPoint(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxTextEntry_SetInsertionPoint[1] = {{ wxLua_wxTextEntry_SetInsertionPoint, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxTextEntry_SetInsertionPoint }};
 //     virtual void SetInsertionPoint(long pos);
 static int LUACALL wxLua_wxTextEntry_SetInsertionPoint(lua_State *L)
 {
     // long pos
-    long pos = (long)wxlua_getnumbertype(L, 2);
+    long pos = (long)wxlua_getintegertype(L, 2);
     // get this
     wxTextEntry * self = (wxTextEntry *)wxluaT_getuserdatatype(L, 1, wxluatype_wxTextEntry);
     // call SetInsertionPoint
@@ -892,16 +892,16 @@ static int LUACALL wxLua_wxTextEntry_SetMaxLength(lua_State *L)
     return 0;
 }
 
-static wxLuaArgType s_wxluatypeArray_wxLua_wxTextEntry_SetSelection[] = { &wxluatype_wxTextEntry, &wxluatype_TNUMBER, &wxluatype_TNUMBER, NULL };
+static wxLuaArgType s_wxluatypeArray_wxLua_wxTextEntry_SetSelection[] = { &wxluatype_wxTextEntry, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxTextEntry_SetSelection(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxTextEntry_SetSelection[1] = {{ wxLua_wxTextEntry_SetSelection, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxTextEntry_SetSelection }};
 //     virtual void SetSelection(long from, long to);
 static int LUACALL wxLua_wxTextEntry_SetSelection(lua_State *L)
 {
     // long to
-    long to = (long)wxlua_getnumbertype(L, 3);
+    long to = (long)wxlua_getintegertype(L, 3);
     // long from
-    long from = (long)wxlua_getnumbertype(L, 2);
+    long from = (long)wxlua_getintegertype(L, 2);
     // get this
     wxTextEntry * self = (wxTextEntry *)wxluaT_getuserdatatype(L, 1, wxluatype_wxTextEntry);
     // call SetSelection

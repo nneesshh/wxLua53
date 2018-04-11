@@ -7,8 +7,9 @@
 // wxWidgets:   Updated to 2.8.4
 // ===========================================================================
 
-// ---------------------------------------------------------------------------
-// wxString - A stub class for people who absolutely need wxStrings
+// ----------------------------------------------------------------------------
+// wxString: string class trying to be compatible with std::string, MFC
+//           CString and wxWindows 1.x wxString all at once
 //
 // wxLua uses Lua strings for almost everything and any function that takes
 // a wxString can take a Lua string. All functions that return a wxString
@@ -34,13 +35,11 @@ class %delete wxString
     static wxString From8BitData(const char* s);
     wxCharBuffer To8BitData();
 
-#if %wxchkver_2_9
     //wxString(wxString::const_iterator first, wxString::const_iterator last );
     wxString::const_iterator begin() const;
     wxString::iterator begin( );
     wxString::const_iterator end() const;
     wxString::iterator end( );
-#endif
 };
 
 // ---------------------------------------------------------------------------
@@ -48,8 +47,6 @@ class %delete wxString
 
 // wxWidgets has wxString iterators in < 2.9, but they are #if wxUSE_STL
 // so they are not necessary for anything, in 2.9 they are inputs to some functions.
-
-#if %wxchkver_2_9
 
 class %delete wxString::const_iterator
 {
@@ -80,8 +77,6 @@ class %delete wxString::iterator
     wxString::iterator operator+(ptrdiff_t n) const;
     wxString::iterator operator-(ptrdiff_t n) const;
 };
-
-#endif
 
 // ---------------------------------------------------------------------------
 // wxStringTokenizer
@@ -166,144 +161,141 @@ class wxClientDataContainer
     voidptr_long GetClientData() const; // C++ returns (void *) You get a number here
 };
 
-// ---------------------------------------------------------------------------
-// wxObject
+// ----------------------------------------------------------------------------
+// wxObject: the root class of wxWidgets object hierarchy
+// ----------------------------------------------------------------------------
 
-#if wxLUA_USE_wxObject
+//#if wxLUA_USE_wxObject
 
 #include "wx/object.h"
 
-wxObject* wxCreateDynamicObject(const wxString& className );
-
 class %delete wxObject
 {
-    wxObject( );
+    //wxDECLARE_ABSTRACT_CLASS(wxObject);
+    virtual wxClassInfo *GetClassInfo() const;
 
-    //void Dump(ostream& stream );
+    wxObject();
 
     // %override [new class type] wxObject::DynamicCast() converts the wxObject
     //    to an object of type classname
-    void *DynamicCast(const wxString &classname );
-
-    wxClassInfo* GetClassInfo( );
-    wxObjectRefData* GetRefData() const;
-    bool  IsKindOf(wxClassInfo *info );
-    bool IsSameAs(const wxObject& o) const;
-    void  Ref(const wxObject& clone );
-    void  SetRefData(wxObjectRefData* data );
-    void  UnRef( );
-
+    void *DynamicCast(const wxString &classname);
+    
     //wxObject& operator=(const wxObject& other );
+
+    bool IsKindOf(const wxClassInfo *info) const;
+    
+    wxObjectRefData* GetRefData() const;
+    void SetRefData(wxObjectRefData* data);
+    
+    // make a 'clone' of the object
+    void Ref(const wxObject& clone);
+
+    // destroy a reference
+    void UnRef();
+    
+    // Make sure this object has only one reference
+    void UnShare();
+
+    // check if this object references the same data as the other one
+    bool IsSameAs(const wxObject& o) const;
+
 };
+
+wxObject* wxCheckDynamicCast(wxObject *obj, wxClassInfo *classInfo);
 
 class wxObjectRefData // no %delete since this should be from a wxObject
 {
     int GetRefCount() const;
 };
 
-#endif //wxLUA_USE_wxObject
+class %delete wxObjectList
+{
+    wxObjectList();
+    
+    void push_front(wxObject *val);
+    void pop_front();
+  	void push_back(wxObject *val);
+  	void pop_back();
+  	
+  	wxObjectList::iterator insert(wxObjectList::const_iterator it, wxObject *val);
+  	wxObjectList::iterator insert(wxObjectList::const_iterator it, size_t count, wxObject *val);
+  	wxObjectList::iterator insert(wxObjectList::const_iterator it, wxObjectList::iterator first, wxObjectList::iterator last);
+  	
+  	void resize(size_t newsize);
+  	size_t size() const;
+  	size_t max_size() const;
+  	bool empty() const;
+
+    wxObjectList::const_iterator begin() const;
+    wxObjectList::iterator begin();
+    wxObjectList::const_iterator end() const;
+    wxObjectList::iterator end();
+    
+    wxObjectList::iterator erase(wxObjectList::const_iterator it);
+    void clear();
+
+};
+
+// ---------------------------------------------------------------------------
+// wxObjectList::const_iterator - A wxObjectList iterator class
+
+class %delete wxObjectList::const_iterator
+{
+    wxObjectList::const_iterator();
+    wxObjectList::const_iterator(const wxObjectList::const_iterator& i);
+    wxObjectList::const_iterator(const wxObjectList::iterator& i);
+
+    wxObjectList::const_iterator& operator=(const wxObjectList::const_iterator& i);
+    void operator++(); // it's best if we don't return the iterator
+};
+
+// ---------------------------------------------------------------------------
+// wxObjectList::iterator - A wxObjectList iterator class
+
+class %delete wxObjectList::iterator
+{
+    wxObjectList::iterator( );
+    wxObjectList::iterator(const wxObjectList::iterator& i);
+
+    wxObjectList::iterator& operator=(const wxObjectList::iterator& i);
+    void operator++(); // it's best if we don't return the iterator
+};
+
+//#endif //wxLUA_USE_wxObject
 
 // ---------------------------------------------------------------------------
 // wxClassInfo
 
 #if wxLUA_USE_wxClassInfo
 
-#include "wx/object.h"
+wxObject* wxCreateDynamicObject(const wxString& className);
 
 class wxClassInfo // no %delete since we're always getting a static instance
 {
     // %override wxClassInfo() constructor creates an instance using wxClassInfo::FindClass
-    wxClassInfo(const wxString &name );
+    // wxClassInfo(const wxChar *className, const wxClassInfo *baseInfo1, const wxClassInfo *baseInfo2, int size, wxObjectConstructorFn ctor)
+    wxClassInfo(const wxString &name);
 
-    wxObject* CreateObject( );
-    static wxClassInfo* FindClass(const wxString &name );
+    wxObject *CreateObject() const;
+    bool IsDynamic() const;
+    
+    wxString GetClassName() const;
     wxString GetBaseClassName1() const;
     wxString GetBaseClassName2() const;
-    const wxClassInfo  *GetBaseClass1() const;
-    const wxClassInfo  *GetBaseClass2() const;
-    wxString GetClassName() const;
+    const wxClassInfo * GetBaseClass1() const;
+    const wxClassInfo * GetBaseClass2() const;
     int GetSize() const;
-    bool IsDynamic( );
-    bool IsKindOf(wxClassInfo* info );
-
-    static const wxClassInfo  *GetFirst( );
-    const wxClassInfo         *GetNext() const;
+    
+    //wxObjectConstructorFn GetConstructor() const;
+    
+    static const wxClassInfo * GetFirst();
+    const wxClassInfo * GetNext() const;
+    static wxClassInfo *FindClass(const wxString& className);
+    
+    bool IsKindOf(const wxClassInfo *info) const;
 };
 
 #endif //wxLUA_USE_wxClassInfo
-
-
-// ---------------------------------------------------------------------------
-// wxList
-
-#if wxLUA_USE_wxList && !wxUSE_STL
-
-#include "wx/list.h"
-
-enum wxKeyType
-{
-    wxKEY_NONE,
-    wxKEY_INTEGER,
-    wxKEY_STRING
-};
-
-class %delete wxList // not derived from wxObject in 2.9
-{
-    wxList( );
-
-    wxNode *Append(wxObject *object );
-    wxNode *Append(long key, wxObject *object );
-    wxNode *Append(const wxString& key, wxObject *object );
-    void Clear( );
-    void DeleteContents(bool destroy );
-    bool DeleteNode(wxNode *pNode );
-    bool DeleteObject(wxObject *pObject );
-    wxNode* Find(wxObject* pObject );
-    wxNode *Find(long key );
-    wxNode *Find(const wxString &key );
-    int     GetCount() const;
-    wxNode *GetFirst( );
-    wxNode *GetLast( );
-    int     IndexOf(wxObject* pObject );
-    wxNode *Insert(wxObject *pObject );
-    wxNode *Insert(size_t position, wxObject *pObject );
-    wxNode *Insert(wxNode *pNode, wxObject *pObject );
-    bool    IsEmpty() const;
-    wxNode *Item(int iIndex) const;
-    wxNode *Member(wxObject *pObject );
-};
-
-// ---------------------------------------------------------------------------
-// wxNode - wxList
-
-class wxNode // no %delete since we get this from a wxList
-{
-    // no constructor, just use this from a wxList
-
-    wxObject *GetData( );
-    wxNode *GetNext( );
-    wxNode *GetPrevious( );
-    void SetData(wxObject *data );
-    //int IndexOf() - unfortunately a protected member of wxNodeBase
-
-    // To convert wxObject* GetData() to another type use wxObject::DynamicCast
-    // See wxMenuItemList, wxWindowList
-
-    // Example: How to use a wxWindowList
-    // frame = wx.wxFrame(wx.NULL, wx.wxID_ANY, "Test");
-    // win = wx.wxWindow(frame, wx.wxID_ANY );
-    // frame:Show(true );
-    // wlist = frame:GetChildren( );
-    // wlist:Item(0):GetData():DynamicCast("wxWindow"):SetBackgroundColour(wx.wxRED );
-
-    // Example: How to use a wxMenuItemList
-    // local fileMenu = wx.wxMenu( );
-    // fileMenu:Append(wx.wxID_EXIT, "E&xit", "Quit the program" );
-    // mList = fileMenu:GetMenuItems( );
-    // print(mList:GetCount(), mList:GetFirst():GetData():DynamicCast("wxMenuItem"):GetLabel() );
-};
-
-#endif //wxLUA_USE_wxList && !wxUSE_STL
 
 // ---------------------------------------------------------------------------
 // wxArray - Can't implement this since it's not really a class.
@@ -421,16 +413,13 @@ class %delete wxSortedArrayString : public wxArrayString
 
 //%include "wx/hash.h"
 
-//#if %wxchkver_2_6
 //class wxHashTable::Node
 //{
 //};
-//#endif
 
 //class wxHashTable : public wxObject
 //{
-//    !%wxchkver_2_6 wxHashTable(unsigned int key_type, int size = 1000 );
-//    %wxchkver_2_6 wxHashTable(wxKeyType key_type, int size = 1000 );
+//    wxHashTable(wxKeyType key_type, int size = 1000 );
 //    void BeginFind( );
 //    void Clear( );
 //    wxObject * Delete(long key );
@@ -438,8 +427,7 @@ class %delete wxSortedArrayString : public wxArrayString
 //    wxObject * Get(long key );
 //    wxObject * Get(const wxString &key );
 //    long MakeKey(const wxString& string );
-//    !%wxchkver_2_6 wxNode * Next( );
-//    %wxchkver_2_6 wxHashTable::Node * Next( );
+//    wxHashTable::Node * Next( );
 //    void Put(long key, wxObject *object );
 //    void Put(const wxString& key, wxObject *object );
 //    int GetCount() const;

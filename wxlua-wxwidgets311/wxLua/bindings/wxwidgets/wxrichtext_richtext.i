@@ -10,7 +10,7 @@
 // NOTE: This file is mostly copied from wxWidget's include/richtext/*.h headers
 // to make updating it easier.
 
-#if wxLUA_USE_wxRichText && %wxchkver_2_8 && wxUSE_RICHTEXT
+#if wxLUA_USE_wxRichText && wxUSE_RICHTEXT
 
 #include "wx/richtext/richtextbuffer.h"
 
@@ -944,10 +944,10 @@ class %delete wxRichTextParagraph : public wxRichTextBox
     virtual wxRichTextObject* SplitAt(long pos, wxRichTextObject** previousObject = NULL);
 
     /// Move content to a list from this point
-    virtual void MoveToList(wxRichTextObject* obj, wxList& list);
+    virtual void MoveToList(wxRichTextObject* obj, wxObjectList& list);
 
     /// Add content back from list
-    virtual void MoveFromList(wxList& list);
+    virtual void MoveFromList(wxObjectList& list);
 
     /// Get the plain text searching from the start or end of the range.
     /// The resulting string may be shorter than the range given.
@@ -1396,7 +1396,7 @@ class %delete wxRichTextBuffer : public wxRichTextParagraphLayoutBox
     //virtual void Dump(wxTextOutputStream& stream );
 
     /// Returns the file handlers
-    static wxList& GetHandlers( );
+    static wxObjectList& GetHandlers( );
 
     /// Adds a handler to the end
     static void AddHandler(wxRichTextFileHandler *handler);
@@ -1480,7 +1480,7 @@ class %delete wxRichTextCommand : public wxCommand
     void AddAction(wxRichTextAction* action);
     void ClearActions();
 
-    wxList& GetActions( );
+    wxObjectList& GetActions( );
 };
 
 /*!
@@ -1731,4 +1731,4 @@ wxString wxRichTextDecimalToRoman(long n);
 
 
 
-#endif // wxLUA_USE_wxRichText && %wxchkver_2_8 && wxUSE_RICHTEXT
+#endif // wxLUA_USE_wxRichText && wxUSE_RICHTEXT
