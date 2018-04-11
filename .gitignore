@@ -99,3 +99,7 @@ wxlua-wxwidgets311/wxLua/build/modules/wxlua/debug/CMakeFiles/
 wxlua-wxwidgets311/wxLua/build/modules/wxlua/debugger/CMakeFiles/
 
 wxlua-wxwidgets311/wxLua/build/CMakeCache\.txt
+
+wxlua-wxwidgets311/wxLua/modules/lua-5\.3/build/lua/Debug/
+
+wxlua-wxwidgets311/wxLua/modules/lua-5\.3/build/luacore/Debug/
